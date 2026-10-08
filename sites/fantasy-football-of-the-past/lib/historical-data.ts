@@ -32,7 +32,7 @@ for(const performance of PERFORMANCES)if(performance.seasonType==='REG'){
 const historicalDecodedPools=new Map<string,Performance[]>();
 const MAX_DECODED_CAREERS=24;
 const HISTORICAL_POOL_RULES:ScoringRules={...LEGACY_SCORING,mode:'historical'};
-// "View source" links open the site's own provenance file (scripts/summarize-historical-coverage.mjs).
+// "Source provenance" links open the site's own provenance file (scripts/summarize-historical-coverage.mjs).
 const HISTORICAL_COVERAGE_URL='/historical-coverage.json';
 function decodeHistorical(row:HistoricalRow):Performance{
  const [athleteId,season,sourceWeek,gameId,date,teamAtTime,opponent,seasonType,fileIndex,sourceLine,...values]=row;

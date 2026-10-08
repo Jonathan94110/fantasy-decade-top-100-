@@ -1,4 +1,4 @@
-// Publishes the historical game-log provenance that "View source" links point to:
+// Publishes the historical game-log provenance that "Source provenance" links point to:
 // public/historical-coverage.json#<revision>/<file>:L<line>. Values come from
 // data/historical-mode/coverage.json; external repository URLs are left out.
 import fs from 'node:fs';
