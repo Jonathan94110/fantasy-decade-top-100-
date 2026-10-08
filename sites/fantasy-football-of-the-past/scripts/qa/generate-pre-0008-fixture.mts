@@ -12,6 +12,7 @@
 //  * a solo season that is played, reset (copied into demo_archives) and started again (demo_drafts);
 //  * a strict unplayed draft unified to all-era scoring, which writes demo_scoring_backups from a
 //    pretty-printed row.
+// Every game statistic is synthetic (see synthesizeStats); IDs, dates, teams and source links are real.
 // League and team names are valid (<= 50 characters) but chosen so that a blanket text replacement of
 // "prime-rushmore:" or ".csv#L" would alter them. Revisions come from the API, so each revision column
 // matches state.revision exactly as production saves do.
@@ -33,9 +34,28 @@ try {
   const archive = execFileSync('git', ['archive', '--format=tar', OLD_COMMIT, '--', ...['lib', 'data', 'app/api', 'db', 'drizzle'].map(p => `${APP_PATH}/${p}`)], { cwd: top, maxBuffer: 1 << 30 });
   execFileSync('tar', ['-x', '-C', temp], { input: archive });
   symlinkSync(join(app, 'node_modules'), join(temp, APP_PATH, 'node_modules'));
+  synthesizeStats(join(temp, APP_PATH, 'lib/historical-data.ts'));
   await generate(new URL(`file://${join(temp, APP_PATH)}/`));
 } finally {
   rmSync(temp, { recursive: true, force: true });
+}
+
+// The fixture must not carry real game statistics. Before playing, the old decoder's stat values are replaced
+// with deterministic synthetic numbers (seeded by athlete, game and stat), keeping which values are null, so
+// eligibility, saved points, scores and winners stay internally consistent while no real value is stored.
+function synthesizeStats(file: string) {
+  let source = readFileSync(file, 'utf8');
+  const swaps: [string, string][] = [
+    ['STAT_KEYS.map((key,index)=>[key,values[index]])', 'STAT_KEYS.map((key,index)=>[key,__synth(values[index],`${athleteId}|${gameId}|${key}`)])'],
+    ['kickingKeys.map((key,i)=>[key,values[STAT_KEYS.length+i]])', 'kickingKeys.map((key,i)=>[key,__synth(values[STAT_KEYS.length+i],`${athleteId}|${gameId}|${key}`)])'],
+    ['(historicalSourceCoverage.statKeys as (keyof ScoringStats)[]).map((key,index)=>[key,values[index]])', '(historicalSourceCoverage.statKeys as (keyof ScoringStats)[]).map((key,index)=>[key,__synth(values[index],`${athleteId}|${gameId}|${key}`)])'],
+  ];
+  for (const [from, to] of swaps) {
+    if (!source.includes(from)) throw new Error(`Old decoder changed; cannot synthesize stats at: ${from}`);
+    source = source.replace(from, to);
+  }
+  source += `\nfunction __synth(value:unknown,seed:string){if(value===null||value===undefined)return value;let h=2166136261;for(let i=0;i<seed.length;i++){h^=seed.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0)%7;}\n`;
+  writeFileSync(file, source);
 }
 
 async function generate(root: URL) {
@@ -103,7 +123,8 @@ async function generate(root: URL) {
 
   const tables: Record<string, unknown[]> = {};
   for (const t of ['leagues', 'season_leagues', 'demo_drafts', 'demo_archives', 'demo_scoring_backups']) tables[t] = sql.prepare(`SELECT * FROM ${t} ORDER BY rowid`).all();
-  const meta = { generatedBy: 'scripts/qa/generate-pre-0008-fixture.mts', appCommit: OLD_COMMIT, migrationsApplied: readdirSync(new URL('drizzle/', root)).filter(f => f.endsWith('.sql')).sort(), names: NAMES };
+  const meta = { generatedBy: 'scripts/qa/generate-pre-0008-fixture.mts', appCommit: OLD_COMMIT, migrationsApplied: readdirSync(new URL('drizzle/', root)).filter(f => f.endsWith('.sql')).sort(), names: NAMES,
+    stats: 'synthetic: every stat value is a deterministic number 0-6 seeded by athlete, game and stat (nulls kept); no real game statistics are stored' };
   writeFileSync(out, JSON.stringify({ meta, tables }) + '\n');
   for (const [t, rows] of Object.entries(tables)) console.log(t, (rows as Json[]).map(r => `rev=${r.revision ?? r.source_revision} bytes=${String(r.state).length} prime-rushmore=${(String(r.state).match(/prime-rushmore/g) || []).length}`).join(' | '));
 }

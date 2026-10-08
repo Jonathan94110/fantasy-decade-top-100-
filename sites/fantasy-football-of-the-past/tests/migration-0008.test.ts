@@ -62,6 +62,7 @@ const hasGames=(table:string,row:Row)=>table!=='demo_scoring_backups'&&String(ro
 
 test('fixture holds pre-0008 saves: old IDs and links, consumed games, scores, revisions and risky names',()=>{
  assert.equal(fixture.meta.appCommit,'63d6379');
+ assert.match(String((fixture.meta as {stats?:string}).stats),/^synthetic/,'the fixture stores synthetic stats only');
  for(const table of TABLES)assert.ok(fixture.tables[table].length>0,`${table} has rows`);
  let played=0;
  for(const table of TABLES)for(const row of fixture.tables[table]){
@@ -104,7 +105,13 @@ test('0008 renames only game IDs and source fields; names, scores, other columns
    if(p.id.startsWith('nflverse:')){assert.deepEqual(p,priorPerformances.get(p.id),'modern records unchanged');modern++;continue;}
    const current=performancePool(p.athleteId,HISTORICAL).find(c=>c.id===p.id);
    assert.ok(current,`${p.id} resolves in the current pool`);
-   assert.deepEqual(p,JSON.parse(JSON.stringify(current)),`${p.id} equals the current record`);
+   // The fixture's stats are synthetic: every other field must equal the current record, and the stats must keep
+   // the current record's shape (keys and nulls) and be exactly what was saved before the migration.
+   const {stats,...rest}=p,{stats:currentStats,...currentRest}=JSON.parse(JSON.stringify(current));
+   assert.deepEqual(rest,currentRest,`${p.id} equals the current record apart from its synthetic stats`);
+   assert.deepEqual(Object.keys(stats),Object.keys(currentStats),`${p.id} stat keys`);
+   assert.deepEqual(Object.keys(stats).filter(k=>stats[k]===null),Object.keys(currentStats).filter(k=>currentStats[k]===null),`${p.id} unknown stats stay unknown`);
+   assert.deepEqual(stats,priorPerformances.get(p.id)?.stats,`${p.id} stats unchanged by the migration`);
    migrated++;
   }
   assert.deepEqual(new Set(s.used),new Set(performances(s).map(p=>p.id)),`${table}[${i}]: used still matches the games in history`);
