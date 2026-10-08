@@ -1,0 +1,53 @@
+game_id,team,opponent,name,completions,attempts,passing_yards,passing_tds,interceptions,carries,rushing_yards,rushing_tds,receptions,receiving_yards,receiving_tds,fg_made,fg_att,fg_made_0_39,fg_made_40_49,fg_made_50_plus,xp_made,xp_att,source
+1999_01_BAL_STL,STL,BAL,Kurt Warner,28,44,309,3,2,1,-1,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Marshall Faulk,0,0,0,0,0,19,54,0,7,72,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Justin Watson,0,0,0,0,0,1,5,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Robert Holcombe,0,0,0,0,0,4,1,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Isaac Bruce,0,0,0,0,0,0,0,0,8,92,1,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Az-Zahir Hakim,0,0,0,0,0,0,0,0,5,63,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Torry Holt,0,0,0,0,0,0,0,0,3,36,1,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Ricky Proehl,0,0,0,0,0,0,0,0,2,24,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,STL,BAL,Jeff Wilkins,0,0,0,0,0,0,0,0,0,0,0,2,2,1,0,1,3,3,profootballarchives.com/nflboxscores2/1999nfl002.html (FG 36 and 51)
+1999_01_BAL_STL,BAL,STL,Scott Mitchell,17,40,188,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Priest Holmes,0,0,0,0,0,12,52,0,2,3,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Chuck Evans,0,0,0,0,0,3,8,0,4,27,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Justin Armour,0,0,0,0,0,0,0,0,4,76,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Qadry Ismail,0,0,0,0,0,0,0,0,4,46,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Brandon Stokley,0,0,0,0,0,0,0,0,1,28,1,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,STL,Matt Stover,0,0,0,0,0,0,0,0,0,0,0,1,3,1,0,0,1,1,"profootballarchives.com/nflboxscores2/1999nfl002.html (FG 25; 2 misses from season 28/33)"
+2000_03_SD_KC,SD,KC,Moses Moreno,11,22,107,0,0,4,20,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Ryan Leaf,6,13,62,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Kenny Bynum,0,0,0,0,0,4,17,0,2,13,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Robert Chancey,0,0,0,0,0,4,8,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Terrell Fletcher,0,0,0,0,0,2,4,0,7,66,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Curtis Conway,0,0,0,0,0,0,0,0,2,18,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Fred McCrary,0,0,0,0,0,0,0,0,1,19,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,Trevor Gaylor,0,0,0,0,0,0,0,0,1,8,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,SD,KC,John Carney,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,1,profootballarchives.com/nflboxscores2/2000nfl039.html (FG 54)
+2000_03_SD_KC,KC,SD,Elvis Grbac,20,33,235,5,1,2,-2,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Frank Moreau,0,0,0,0,0,18,58,1,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Tony Richardson,0,0,0,0,0,6,40,0,4,22,1,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Mike Cloud,0,0,0,0,0,8,21,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Sylvester Morris,0,0,0,0,0,0,0,0,6,112,3,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Derrick Alexander,0,0,0,0,0,0,0,0,4,48,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Larry Parker,0,0,0,0,0,0,0,0,1,8,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_03_SD_KC,KC,SD,Pete Stoyanovich,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_06_BUF_MIA,BUF,MIA,Rob Johnson,11,26,178,0,0,4,44,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Doug Flutie,3,6,44,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Sammy Morris,0,0,0,0,0,5,17,1,2,6,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Jonathan Linton,0,0,0,0,0,7,11,0,1,1,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Shawn Bryson,0,0,0,0,0,5,4,0,1,32,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Eric Moulds,0,0,0,0,0,0,0,0,4,51,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Jeremy McDaniel,0,0,0,0,0,0,0,0,3,48,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Peerless Price,0,0,0,0,0,0,0,0,2,61,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Bobby Collins,0,0,0,0,0,0,0,0,1,23,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,BUF,MIA,Steve Christie,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,1,1,profootballarchives.com/nflboxscores2/2000nfl073.html (FG 35 and 23)
+2000_06_BUF_MIA,MIA,BUF,Jay Fiedler,14,24,142,1,1,5,29,0,0,0,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Lamar Smith,0,0,0,0,0,24,62,0,2,9,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Thurman Thomas,0,0,0,0,0,7,24,0,3,26,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Autry Denson,0,0,0,0,0,1,5,0,1,3,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Oronde Gadsden,0,0,0,0,0,0,0,0,3,33,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Leslie Shepherd,0,0,0,0,0,0,0,0,2,21,1,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Bert Emanuel,0,0,0,0,0,0,0,0,1,35,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Tony Martin,0,0,0,0,0,0,0,0,1,11,0,0,0,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,BUF,Olindo Mare,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,2,2,profootballarchives.com/nflboxscores2/2000nfl073.html (FG 30 and 33)

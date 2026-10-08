@@ -25,9 +25,10 @@ def score_kicking(df):
         + df["fg_made_40_49"] * k["fg_40_49"]
         + df["fg_made_50_plus"] * k["fg_50_plus"]
         + df["fg_made_unknown"] * k["fg_unknown_distance"]
-        + (df["fg_att"] - df["fg_made"]) * k["fg_missed"]
+        # Unknown attempts (before 1938) mean no known misses.
+        + (df["fg_att"].fillna(df["fg_made"]) - df["fg_made"]) * k["fg_missed"]
         + df["xp_made"] * k["xp_made"]
-        + (df["xp_att"] - df["xp_made"]) * k["xp_missed"]
+        + (df["xp_att"].fillna(df["xp_made"]) - df["xp_made"]) * k["xp_missed"]
     ).round(2)
     return df
 

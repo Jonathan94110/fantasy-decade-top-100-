@@ -1,0 +1,7 @@
+game_id,team,sacks,interceptions,fumble_recoveries,def_tds,st_tds,safeties,blocked_kicks,source
+1999_01_BAL_STL,STL,5,2,0,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+1999_01_BAL_STL,BAL,3,2,1,0,0,0,0,profootballarchives.com/nflboxscores2/1999nfl002.html
+2000_03_SD_KC,SD,2,1,0,1,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html (Dumas INT TD)
+2000_03_SD_KC,KC,6,1,1,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl039.html
+2000_06_BUF_MIA,BUF,1,1,0,0,0,0,0,profootballarchives.com/nflboxscores2/2000nfl073.html
+2000_06_BUF_MIA,MIA,6,1,1,1,0,1,0,profootballarchives.com/nflboxscores2/2000nfl073.html (Madison fumble-return TD; safety)

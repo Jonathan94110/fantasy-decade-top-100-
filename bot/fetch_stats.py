@@ -105,6 +105,8 @@ def rank_players(seasons, position, top):
     df = df.sort_values("season").reset_index(drop=True)
     best = df.loc[df.groupby(["key", "decade"])["fp"].idxmax(), ["key", "decade", "season", "fp"]]
     best = best.rename(columns={"season": "best_season", "fp": "best_season_fp"})
+    known_sum = lambda s: s.sum() if s.notna().all() else float("nan")  # noqa: E731
+    sums = {c: (c, known_sum if c in legacy.UNKNOWN_OK else "sum") for c in stats + fp_cols}
     totals = df.groupby(["key", "decade"], as_index=False).agg(
         player_id=("player_id", "last"),
         name=("name", "last"),
@@ -115,7 +117,7 @@ def rank_players(seasons, position, top):
         last_season=("season", "max"),
         seasons_played=("season", "nunique"),
         games=("games", "sum"),
-        **{c: (c, "sum") for c in stats + fp_cols},
+        **sums,
     )
     totals = totals.merge(best, on=["key", "decade"])
     totals["fp_per_game"] = (totals["fp"] / totals["games"].where(totals["games"] > 0)).round(2)
@@ -243,7 +245,9 @@ def build(top, force):
     seasons = seasons_from_games(player_games)
     old_seasons = legacy.load_player_seasons()
     if not old_seasons.empty:
-        old_seasons = ensure_columns(old_seasons.copy(), OFFENSE_STATS + KICKING_STATS)
+        old_seasons = ensure_columns(
+            old_seasons.copy(), [c for c in OFFENSE_STATS + KICKING_STATS if c not in legacy.UNKNOWN_OK]
+        )
         old_seasons["key"] = player_key(old_seasons)
         if "headshot_url" not in old_seasons.columns:
             old_seasons["headshot_url"] = None

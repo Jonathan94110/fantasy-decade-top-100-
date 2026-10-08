@@ -22,6 +22,9 @@ KICKER_CSV = SOURCES_DIR / "legacy_kicker_seasons.csv"
 DEFENSE_GAMES_CSV = SOURCES_DIR / "legacy_defense_games.csv"
 DEFENSE_SEASONS_CSV = SOURCES_DIR / "legacy_defense_seasons.csv"
 
+# Columns that may stay unknown (NaN) through scoring and into the published JSON.
+UNKNOWN_OK = {"fg_att", "xp_att"}
+
 # Season totals that legacy_defense_seasons.csv adds on top of the game rows.
 DEFENSE_SEASON_STATS = [c for c in DEFENSE_STATS if c != "points_allowed"]
 
@@ -60,13 +63,13 @@ def load_player_seasons():
         df = _read(path)
         if df.empty:
             continue
-        if path == KICKER_CSV:
-            # Attempts weren't recorded before 1938 (empty cells): treat as no known misses
-            # rather than 0 attempts, which would score every make as a negative miss.
-            for made, att in (("fg_made", "fg_att"), ("xp_made", "xp_att")):
-                df[att] = pd.to_numeric(df[att], errors="coerce").fillna(df[made])
         for col in stats:
-            df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0) if col in df else 0
+            if col in UNKNOWN_OK:
+                # Kicking attempts weren't recorded before 1938: keep them unknown (scored as no
+                # misses, published as null) rather than 0, which would score makes as misses.
+                df[col] = pd.to_numeric(df[col], errors="coerce") if col in df else float("nan")
+            else:
+                df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0) if col in df else 0
         df["games"] = pd.to_numeric(df["games"], errors="coerce").fillna(0).astype(int)
         df["source"] = "legacy"
         df["headshot_url"] = None
