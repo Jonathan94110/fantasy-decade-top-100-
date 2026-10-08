@@ -27,6 +27,7 @@ import {visibleDraftPicks} from '@/lib/draft-board';
 import {CommissionerControls,OnlineDraftStart} from './commissioner-controls';
 import {FantasyReplay} from './fantasy-replay';
 import type {Lineup} from '@/lib/game-engine';
+import {navigateWorkspace,useWorkspaceLocation} from '@/hooks/use-workspace-location';
 
 const allById=new Map(ALL_ATHLETES.map(a=>[a.id,a]));
 const playerName=(id:string)=>allById.get(id)?.name||'Unknown player';
@@ -38,7 +39,9 @@ export function SeasonWorkspace({league,busy,onAction,onBack,solo=false}:{league
  const scoring=scoringFor(league),catalog=useMemo(()=>athletesFor(scoring),[scoring]);
  const byId=useMemo(()=>new Map([...ALL_ATHLETES,...catalog].map(a=>[a.id,a])),[catalog]);
  const me=league.teams.find(t=>t.id===league.myTeamId)!;
- const [confirmBye,setConfirmBye]=useState(false),[view,setView]=useState('overview'),[position,setPosition]=useState<PlayerBrowsePosition>('ALL'),[era,setEra]=useState(0),[search,setSearch]=useState(''),[detail,setDetail]=useState<Athlete|null>(null),[lineupEdit,setLineupEdit]=useState<{base:string;round:number;value:Lineup}|null>(null),[closing,setClosing]=useState(false),[swapAdd,setSwapAdd]=useState(''),[swapDrop,setSwapDrop]=useState(''),[copied,setCopied]=useState(false),[autoPicking,setAutoPicking]=useState(false);
+ const workspaceScope=`season:${league.id}`;
+ const {view,setView,replayRound,setReplayRound}=useWorkspaceLocation(['overview','draft','roster','depth','trades','agents','results'],'overview',workspaceScope);
+ const [confirmBye,setConfirmBye]=useState(false),[position,setPosition]=useState<PlayerBrowsePosition>('ALL'),[era,setEra]=useState(0),[search,setSearch]=useState(''),[detail,setDetail]=useState<Athlete|null>(null),[lineupEdit,setLineupEdit]=useState<{base:string;round:number;value:Lineup}|null>(null),[closing,setClosing]=useState(false),[swapAdd,setSwapAdd]=useState(''),[swapDrop,setSwapDrop]=useState(''),[copied,setCopied]=useState(false),[autoPicking,setAutoPicking]=useState(false);
  const queue=useDraftQueue(`season:${league.id}`),rankings=useDraftRankings(solo?'/api/demo':`/api/leagues/${league.id}`,league.revision);
  const [sort,setSort]=useState('average');
  const savedLineup=JSON.stringify(me.lineup);
@@ -54,7 +57,6 @@ export function SeasonWorkspace({league,busy,onAction,onBack,solo=false}:{league
  const pool=availablePool.filter(a=>(position==='ALL'||a.position===position)&&matchesPlayableEra(a,era,league.used,scoring)&&normalizeSearch(`${a.name} ${a.club}`).includes(normalizeSearch(search))).sort((a,b)=>sort==='average'?(rankings.get(b.id)??-Infinity)-(rankings.get(a.id)??-Infinity)||a.name.localeCompare(b.name):sort==='games'?poolAvailability(b,league.used,scoring).count-poolAvailability(a,league.used,scoring).count:a.name.localeCompare(b.name));
  const latest=league.history.at(-1);
  const [replayRun,setReplayRun]=useState(0);
- const [replayRound,setReplayRound]=useState<number|null>(null);
  const [advancing,setAdvancing]=useState(false),[advanceError,setAdvanceError]=useState(''),[focusDestination,setFocusDestination]=useState<'roster'|'overview'|'results'|null>(null);
  const advancePending=useRef(false);
  const [focusRequest,setFocusRequest]=useState(0);
@@ -68,7 +70,7 @@ export function SeasonWorkspace({league,busy,onAction,onBack,solo=false}:{league
 
  const playoffBye=!isPlaying&&playoffCount(league)===6&&league.round===league.regularRounds+1&&league.playoffSeeds.slice(0,2).includes(me.id);
  const noMatchNote=league.status==='complete'?'Your season is complete. View the final results and saved matchups.':playoffBye?'First-round playoff bye. Your next personal matchup is in the semifinals. Follow the quarterfinals in the league view.':league.round>league.regularRounds?'Your team is outside the current playoff bracket. Follow the remaining matchups in the league view.':'No personal matchup is scheduled this week. View the league schedule.';
- function returnToSection(destination:'roster'|'overview'|'results'){setReplayRound(null);setAdvanceError('');setView(destination);setFocusDestination(destination);setFocusRequest(n=>n+1);}
+ function returnToSection(destination:'roster'|'overview'|'results'){navigateWorkspace({view:destination,replay:null,scope:workspaceScope});setAdvanceError('');setFocusDestination(destination);setFocusRequest(n=>n+1);}
  useEffect(()=>{
   if(!focusDestination||view!==focusDestination)return;
   const frame=requestAnimationFrame(()=>{const target=document.getElementById(focusDestination==='roster'?'season-lineup-setup':focusDestination==='results'?'season-final-results':'season-league-overview');target?.scrollIntoView({behavior:'instant',block:'start'});target?.focus({preventScroll:true});});

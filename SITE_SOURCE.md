@@ -1,6 +1,6 @@
 # Fantasy Football of the Past source
 
-The v42 app is in [sites/fantasy-football-of-the-past](sites/fantasy-football-of-the-past/README.md).
+The v43 app is in [sites/fantasy-football-of-the-past](sites/fantasy-football-of-the-past/README.md).
 
 Its [player-data contribution guide](sites/fantasy-football-of-the-past/PLAYER_DATA_CONTRIBUTING.md) explains the current unified pool, required game statistics, identity checks and source provenance.
 

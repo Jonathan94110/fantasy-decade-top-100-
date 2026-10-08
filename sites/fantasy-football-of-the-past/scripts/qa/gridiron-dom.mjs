@@ -24,6 +24,8 @@ globalThis.getComputedStyle=window.getComputedStyle.bind(window);
 globalThis.requestAnimationFrame=window.requestAnimationFrame.bind(window);
 globalThis.cancelAnimationFrame=window.cancelAnimationFrame.bind(window);
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+// RootLayout's account provider supplies this preference in the real app.
+document.documentElement.dataset.reduceMotion='true';
 const React=await import('react');const {createRoot}=await import('react-dom/client');
 
 const {DemoDraftRoom}=await import(pathToFileURL(root+'components/demo-draft-room.tsx').href);

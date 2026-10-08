@@ -1,8 +1,24 @@
 {
-  "sourceVersion": 42,
-  "sourceCommit": "df34c3417bf4f762a0f7c253cc7317195966295e",
-  "exportAuthorization": "Owner explicitly approved this public repository export on 2026-10-08; no new upstream license grant is asserted.",
+  "sourceVersion": 43,
+  "sourceCommit": "9ac9711fdf01bba9368e267fd523cd904052fae6",
+  "exportBaseCommit": "63d6379f4b9954992bc2f3e2311c3ed4f62070ec",
+  "exportAuthorization": "Owner explicitly approved this separate public repository branch export on 2026-10-08; no new upstream license grant is asserted.",
   "hostingConfiguration": "Live Site project identity omitted; generic local DB binding configuration supplied.",
+  "sourceEquivalence": "Every tracked v43 source file is copied byte for byte except .openai/hosting.json. The source README is mapped to docs/README_AT_V43.md. Public export README, contribution guide and this manifest are supplemental documentation.",
+  "excluded": [
+    "original Site hosting identity and private deployment configuration",
+    ".git and Site checkout history",
+    ".env and credentials",
+    "saved games/profiles and runtime databases",
+    "node_modules",
+    "compiled output",
+    "runtime/cache/log state",
+    "research and screenshots",
+    "separately staged records and raw upstream snapshots",
+    "unpublished fairness change",
+    "Claude app changes and migration 0008",
+    "separate 1999 proposal"
+  ],
   "files": [
     {
       "source": ".gitignore",
@@ -24,9 +40,33 @@
     },
     {
       "source": "README.md",
-      "export": "docs/README_AT_V42.md",
+      "export": "docs/README_AT_V43.md",
       "sha256": "572ffd1bd109bc5f91045f350447c41a5708a24019c5a1b2c516547402bb24f6",
       "bytes": 25224
+    },
+    {
+      "source": "app/account-entry.css",
+      "export": "app/account-entry.css",
+      "sha256": "68e1a76c75cad1a01f89eb2138548466fc682ca202d4e459630cfd7653d3672f",
+      "bytes": 7328
+    },
+    {
+      "source": "app/account-experience.css",
+      "export": "app/account-experience.css",
+      "sha256": "61c936bcc60b9892dff701b40a541d02f0a26ceac12dacabe18f305f0cef7709",
+      "bytes": 9074
+    },
+    {
+      "source": "app/api/account/route.ts",
+      "export": "app/api/account/route.ts",
+      "sha256": "b6c9fede87b960ecc05a5d7caba0373c5a533b33de4b8b1c1d86bc5283e51d13",
+      "bytes": 2272
+    },
+    {
+      "source": "app/api/dashboard/route.ts",
+      "export": "app/api/dashboard/route.ts",
+      "sha256": "967e3c87900ee2c7b20fcd626dafdccbccc5deaaed4997f916a2a805b8146a24",
+      "bytes": 1769
     },
     {
       "source": "app/api/demo/route.ts",
@@ -137,10 +177,16 @@
       "bytes": 1459
     },
     {
+      "source": "app/journey-status.css",
+      "export": "app/journey-status.css",
+      "sha256": "5e4bb7873178b18661c1ec50bf1ab3d4ae8c52b71af4ac861b9900ee1a738917",
+      "bytes": 1459
+    },
+    {
       "source": "app/layout.tsx",
       "export": "app/layout.tsx",
-      "sha256": "e6e0185b766c2b8099161503c82b972f91701cbf810d28165afe22ec5191cacc",
-      "bytes": 746
+      "sha256": "41ef0f0809292672e49f53fe559b5ac453ffbf4f7817d0c01c7fb2f821232eb5",
+      "bytes": 962
     },
     {
       "source": "app/league/page.tsx",
@@ -155,16 +201,22 @@
       "bytes": 483
     },
     {
+      "source": "app/login/page.tsx",
+      "export": "app/login/page.tsx",
+      "sha256": "f500a2337eb9d348e8dd70cc2d635761de42038e7157dd0f7c927a62948f4545",
+      "bytes": 404
+    },
+    {
       "source": "app/matchup/page.tsx",
       "export": "app/matchup/page.tsx",
-      "sha256": "cb57f466461833a15719499e4c119c1cd05f1ec02c12fa8401c5631f5317ac27",
-      "bytes": 36773
+      "sha256": "477460845e9449581efb1a489fcdaca802a2a2b6fce6109c2946f12240008f52",
+      "bytes": 38946
     },
     {
       "source": "app/page.tsx",
       "export": "app/page.tsx",
-      "sha256": "092bb014733a53bf4f37e2c0bb8cc17b1047c838cdaa481bbbf1c1e5f9354ae4",
-      "bytes": 117
+      "sha256": "df91675beda33eb15eec2f5f1a4daaddfea546a3ba3e2f72bddc5a46846445a1",
+      "bytes": 103
     },
     {
       "source": "app/profile/page.tsx",
@@ -221,6 +273,18 @@
       "bytes": 420
     },
     {
+      "source": "components/account-entry.tsx",
+      "export": "components/account-entry.tsx",
+      "sha256": "b3ef2b258ad450ed8bdb53c45051bba89a1837456aa2bc5810413e36e0c6f15d",
+      "bytes": 4442
+    },
+    {
+      "source": "components/account-session.tsx",
+      "export": "components/account-session.tsx",
+      "sha256": "eee587c90e501705547082d2eb4febd57a1728721a81b692a933f23a4c5d135e",
+      "bytes": 4987
+    },
+    {
       "source": "components/bench-points.tsx",
       "export": "components/bench-points.tsx",
       "sha256": "5e4c9aba9a5ff07a0d994242909450da96569f61d8dec301545e06468ce547b5",
@@ -257,10 +321,16 @@
       "bytes": 1082
     },
     {
+      "source": "components/dashboard.tsx",
+      "export": "components/dashboard.tsx",
+      "sha256": "22c3216d1659276435c72cceaa04b8953e7e9ecd3d631d2a6618b44f964d4287",
+      "bytes": 10006
+    },
+    {
       "source": "components/demo-draft-room.tsx",
       "export": "components/demo-draft-room.tsx",
-      "sha256": "2a7e324674175d6b5fef4b382f6d8f9f15a2e4aa05141371dd5100bb256b732c",
-      "bytes": 25700
+      "sha256": "c9ef33d5155dc8420a2d61cd7696318b1299bba9254c97ff3ebcb5ab7998d96d",
+      "bytes": 29716
     },
     {
       "source": "components/depth-chart-page.tsx",
@@ -313,8 +383,8 @@
     {
       "source": "components/game-header.tsx",
       "export": "components/game-header.tsx",
-      "sha256": "b219680ab3e32d26f3a3d3c1f1c4116b1bb2cb39e75f291ae0bb33818089cf72",
-      "bytes": 1974
+      "sha256": "a5c2931c90c1976a0fb9c2e39e4cca66ecfd475ff3cff7a9ab18caf743895595",
+      "bytes": 3232
     },
     {
       "source": "components/game-rules.tsx",
@@ -335,10 +405,16 @@
       "bytes": 8379
     },
     {
+      "source": "components/journey-status.tsx",
+      "export": "components/journey-status.tsx",
+      "sha256": "fc17c4e00ae85a0427dd2388c67085bbafe08bc48c389a9803d85251387a2c2b",
+      "bytes": 2739
+    },
+    {
       "source": "components/online-league.tsx",
       "export": "components/online-league.tsx",
-      "sha256": "05b0636c70825fc9b5ab12ab768435abcd7ca15f92ba5f83a0beb71201d1eded",
-      "bytes": 12484
+      "sha256": "689aed5c6f4db93b1e8b1466d32d38445a1acbddb5a1ce382c48a011d0e124ad",
+      "bytes": 16397
     },
     {
       "source": "components/player-browser-filters.tsx",
@@ -349,8 +425,8 @@
     {
       "source": "components/profile-settings.tsx",
       "export": "components/profile-settings.tsx",
-      "sha256": "066d6bbf253e371c7ee43ed45c7eb814b9771c3a6d202d64b623497676663550",
-      "bytes": 6826
+      "sha256": "2246a778ec0eeaca4a76c76afef20d920d5bece8d645593126fe28565a1ed9be",
+      "bytes": 10064
     },
     {
       "source": "components/replay-speed.tsx",
@@ -379,8 +455,8 @@
     {
       "source": "components/season-workspace.tsx",
       "export": "components/season-workspace.tsx",
-      "sha256": "20ce4a956203921e8a4495d45755f9e1a876f2c5cc38e14bcba566cd8e25210e",
-      "bytes": 47160
+      "sha256": "b37764c5c79c6a45d8d0dca40a5d86480c2163920f6cd1861982960948e04fe0",
+      "bytes": 47384
     },
     {
       "source": "components/trade-desk.tsx",
@@ -1145,6 +1221,18 @@
       "bytes": 1110
     },
     {
+      "source": "hooks/use-workspace-location.ts",
+      "export": "hooks/use-workspace-location.ts",
+      "sha256": "4c285baddabfbae7ae1a82f0dc31b6fdb6dd94675912904f0d99f09d4e55d003",
+      "bytes": 3592
+    },
+    {
+      "source": "lib/account-navigation.ts",
+      "export": "lib/account-navigation.ts",
+      "sha256": "9fc193b83956240445e9006f075eba3fdbf5e17d7aede45464c66fe3368c2279",
+      "bytes": 1107
+    },
+    {
       "source": "lib/classic-legends.ts",
       "export": "lib/classic-legends.ts",
       "sha256": "d1311d83f8fbce4c01fd67c5b203f6481728acd4aa5f92b0b578c088559ddb03",
@@ -1179,6 +1267,12 @@
       "export": "lib/connectors.ts",
       "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
       "bytes": 416
+    },
+    {
+      "source": "lib/dashboard-model.ts",
+      "export": "lib/dashboard-model.ts",
+      "sha256": "cdf3f3de0e16a40dfbd14d836e07d6e64f83507d92b14c39c888b56d63c10cf7",
+      "bytes": 4883
     },
     {
       "source": "lib/demo-data.ts",
@@ -1275,6 +1369,12 @@
       "export": "lib/historical-preview.ts",
       "sha256": "c95a61f1e8dbcaa16315355aed35a2e8c00b6e3a6033c730bdbae7238407e253",
       "bytes": 1856
+    },
+    {
+      "source": "lib/journey-fetch.ts",
+      "export": "lib/journey-fetch.ts",
+      "sha256": "64b1cab5e8aaff2adeedfd36009ce121c1949c38861ffcff7a60125c6f4dfdf2",
+      "bytes": 2568
     },
     {
       "source": "lib/player-filters.ts",
@@ -1565,6 +1665,12 @@
       "bytes": 10633
     },
     {
+      "source": "scripts/qa/account-session-dom.mjs",
+      "export": "scripts/qa/account-session-dom.mjs",
+      "sha256": "15d50be51e14534b24c0b8d1a8bcad31572650807da0769411db54c747341f04",
+      "bytes": 10921
+    },
+    {
       "source": "scripts/qa/catalog-mode-dom.mjs",
       "export": "scripts/qa/catalog-mode-dom.mjs",
       "sha256": "6e8837c9f4b6e3dbfb03fb0601605dcbab4bcddecc99694c61e76c687631c752",
@@ -1585,8 +1691,8 @@
     {
       "source": "scripts/qa/depth-chart-page-dom.mjs",
       "export": "scripts/qa/depth-chart-page-dom.mjs",
-      "sha256": "23d805fbe21210b341fdd43fcdf5d9bb359a83c15fbad6f0f83363766b4ed4b5",
-      "bytes": 13155
+      "sha256": "8ad942f8b695755a15c3bd8f997b10be6e867458ac2b428c63747de4f780f102",
+      "bytes": 13179
     },
     {
       "source": "scripts/qa/draft-assistant-dom.mjs",
@@ -1615,8 +1721,8 @@
     {
       "source": "scripts/qa/gridiron-dom.mjs",
       "export": "scripts/qa/gridiron-dom.mjs",
-      "sha256": "01be515016ffa4fadb2a93e259af5d7b54e0951c7ebf540a5fb4003c96a131de",
-      "bytes": 13290
+      "sha256": "b60bd7f3f165501b5b8c6fba2f70b6ab298f16e51ad41c6c6ecb2581c85d1c13",
+      "bytes": 13419
     },
     {
       "source": "scripts/qa/historical-game-review-dom.mjs",
@@ -1673,6 +1779,12 @@
       "bytes": 25537
     },
     {
+      "source": "scripts/qa/season-entry-dom.mjs",
+      "export": "scripts/qa/season-entry-dom.mjs",
+      "sha256": "0f7ce9518928915ab69281702de1bc4dae1002d7cf4cf253365a7bebcc55cdc0",
+      "bytes": 7079
+    },
+    {
       "source": "scripts/qa/trade-desk-dom.mjs",
       "export": "scripts/qa/trade-desk-dom.mjs",
       "sha256": "ac31ed9fc44a585470636f92e84da32d1d8cbe42d3ffe84f54b9dadc05efcd5f",
@@ -1721,6 +1833,18 @@
       "bytes": 1190
     },
     {
+      "source": "tests/account-api.test.ts",
+      "export": "tests/account-api.test.ts",
+      "sha256": "ced348ae582516ed21013fe01c2dbe109bd555f5d125ba3545864833144bab98",
+      "bytes": 5673
+    },
+    {
+      "source": "tests/account-navigation.test.ts",
+      "export": "tests/account-navigation.test.ts",
+      "sha256": "2f9d9c7282151b847506e4e57890fcf1f1496f5d734e30556daa282db9c3cad9",
+      "bytes": 1371
+    },
+    {
       "source": "tests/bench-points.test.ts",
       "export": "tests/bench-points.test.ts",
       "sha256": "6f8217bad9cc15f3f442f1df8714e0b4507ccca5435309218e01634bb3908f04",
@@ -1731,6 +1855,12 @@
       "export": "tests/classic-legends.test.ts",
       "sha256": "28d15a7c15361ca5c028b2a5198eb4e9a41cc2bdd9d1088d6762d6ff3e1b1beb",
       "bytes": 7927
+    },
+    {
+      "source": "tests/dashboard-api.test.ts",
+      "export": "tests/dashboard-api.test.ts",
+      "sha256": "867d6f46d363cfcf855f662089b82528ba374005df145620932de39d1bfbccec",
+      "bytes": 6494
     },
     {
       "source": "tests/demo-draft.test.ts",
@@ -1913,6 +2043,12 @@
       "bytes": 4069
     },
     {
+      "source": "tests/journey-fetch.test.ts",
+      "export": "tests/journey-fetch.test.ts",
+      "sha256": "8bfcdb93c05e8eda174ae6c3819c5c099bbd2d5188b453f8d9f7ca752339eebe",
+      "bytes": 3549
+    },
+    {
       "source": "tests/kickers.test.ts",
       "export": "tests/kickers.test.ts",
       "sha256": "2b077dd4cfa41f5090c908293603a8f595c7206847c04aa0318260c579f23281",
@@ -2025,6 +2161,12 @@
       "export": "tests/v26-archive-anchor.json",
       "sha256": "141e483f9f2d2ce4594149ef500bc1a69f32c4ba8b0e22e9d4679cec9c88113f",
       "bytes": 6887
+    },
+    {
+      "source": "tests/workspace-location.test.ts",
+      "export": "tests/workspace-location.test.ts",
+      "sha256": "456f5547ed8efe2ca6b56b5ccc81649264df69bc5e5e9893a3b0814d84840a3b",
+      "bytes": 2167
     },
     {
       "source": "tsconfig.json",

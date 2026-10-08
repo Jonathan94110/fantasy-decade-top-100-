@@ -1,6 +1,6 @@
 # Fantasy Football of the Past
 
-Source snapshot of the v42 app, from commit `df34c3417bf4f762a0f7c253cc7317195966295e`. It includes solo seasons, online leagues, quick matchups, the depth chart, historical previews and replay calculations.
+Source snapshot of the v43 app, from commit `9ac9711fdf01bba9368e267fd523cd904052fae6`. It includes solo seasons, online leagues, quick matchups, the depth chart, historical previews, replay calculations and the live v43 account/dashboard experience.
 
 Work inside this directory. The repository's existing rankings bot and root website remain independent.
 
@@ -33,7 +33,7 @@ Open the localhost URL printed by the dev server, normally `http://127.0.0.1:517
 
 Read [PLAYER_DATA_CONTRIBUTING.md](PLAYER_DATA_CONTRIBUTING.md) before adding records. New games use the uniform v5 all-era scoring contract. Saved games retain their own scoring contracts and completed records. Required unknown stats remain unknown; the 1950s gameplay pool is deferred.
 
-Current behavior is described in [scoring-mode-scaffold.md](docs/scoring-mode-scaffold.md) and [unified-draft.md](docs/unified-draft.md), and implemented in `lib/scoring-rules.ts` and `lib/historical-data.ts`. Older milestone documents, including `game-data-schema-for-deck.md` and [the original source README](docs/README_AT_V42.md), describe earlier phases and may contain superseded counts or defaults.
+Current behavior is described in [scoring-mode-scaffold.md](docs/scoring-mode-scaffold.md) and [unified-draft.md](docs/unified-draft.md), and implemented in `lib/scoring-rules.ts` and `lib/historical-data.ts`. Older milestone documents, including `game-data-schema-for-deck.md` and [the original source README](docs/README_AT_V43.md), describe earlier phases and may contain superseded counts or defaults.
 
 ## Validate changes
 
@@ -50,7 +50,7 @@ Mounted UI harnesses live in `scripts/qa/*-dom.mjs`. They require a separately i
 
 ## Export boundaries and provenance
 
-`SOURCE_EXPORT.json` records the original v42 commit and hashes of all 341 copied source files. The original README is retained under `docs/README_AT_V42.md`. The live hosting manifest was replaced with generic local configuration. Application code, runtime football assets, schema, migrations, tests, required build source, source attribution and license notices are retained.
+`SOURCE_EXPORT.json` records the original v43 commit and hashes of all 362 copied source files. The original README is retained byte for byte under `docs/README_AT_V43.md`. All 32 runtime football data files are unchanged from the prior authorized v42 export. The unpublished computer-draft fairness change, Claude app changes, migration 0008 and the separate 1999 proposal are excluded. The live hosting manifest was replaced with generic local configuration. Application code, runtime football assets, schema, migrations, tests, required build source, source attribution and license notices are retained.
 
 The owner explicitly authorized this public repository export on October 8, 2026. Existing data manifests record the earlier private publication decisions as historical provenance. This export does not assert an additional upstream license grant. Preserve the source-use disclosures in [DATA_SOURCES.md](DATA_SOURCES.md), the nflverse CC BY 4.0 notice and the MIT notices for bundled build/vendor source.
 

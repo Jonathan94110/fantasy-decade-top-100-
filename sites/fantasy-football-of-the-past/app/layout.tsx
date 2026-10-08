@@ -6,6 +6,10 @@ import "./broadcast.css";
 import "./broadcast-draft.css";
 import "./broadcast-season.css";
 import "./broadcast-replay.css";
+import "./account-experience.css";
+import "./account-entry.css";
+import "./journey-status.css";
+import { AccountSessionProvider } from "@/components/account-session";
 
 export const metadata: Metadata = {
   title: "Fantasy Football of the Past",
@@ -23,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased"><AccountSessionProvider>{children}</AccountSessionProvider></body>
     </html>
   );
 }

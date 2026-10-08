@@ -92,7 +92,7 @@ try{
  const savedBefore=JSON.stringify({solo,online});
  assert.equal(scoringFor(solo).mode,'historical');assert.equal(scoringFor(online).mode,'historical');
  await act(()=>app.render(React.createElement(DepthChartPage)));
- assert.equal(q('.depth-table'),null);assert.match(q('[role="status"]').textContent,/Loading every playable position/);
+ assert.equal(q('.depth-table'),null);assert.match(q('.depth-main [role="status"]').textContent,/Loading every playable position/);
  await act(()=>initial.resolve(bodies.solo));
  assert.equal(q('a[aria-current="page"]').textContent,'Depth chart');assert.match(q('.depth-heading').textContent,/Solo roster/);assert.match(q('.depth-heading').textContent,/Full PPR/);
  assert.match(q('.depth-heading').textContent,/All-era scoring/);assert.equal(q('select[aria-label="Scoring mode"]'),null);
@@ -128,7 +128,7 @@ try{
 
  // A different selected league must never show the previous scope while loading.
  const onlineLoad=delayedDepth();await choose('Depth chart league',online.id);
- assert.equal(q('.depth-table'),null);assert.equal(q('.depth-heading'),null);assert.match(q('[role="status"]').textContent,/Loading every playable position/);
+ assert.equal(q('.depth-table'),null);assert.equal(q('.depth-heading'),null);assert.match(q('.depth-main [role="status"]').textContent,/Loading every playable position/);
  await act(()=>onlineLoad.resolve(bodies.online));
  assert.match(q('.depth-heading').textContent,/Online roster/);assert.match(q('.depth-heading').textContent,/All-era scoring/);assert.match(q('.depth-heading').textContent,/Standard/);
  await act(()=>{const select=q('select[aria-label="Player position"]');select.value='K';select.dispatchEvent(new window.Event('change',{bubbles:true}));});assert.match(q('.depth-result-count').textContent,/40 K entries/);assert.match(q('.depth-chart').textContent,/no kicker slot/);assert.equal(JSON.stringify({solo,online}),savedBefore);

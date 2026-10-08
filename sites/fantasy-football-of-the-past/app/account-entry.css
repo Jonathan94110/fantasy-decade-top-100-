@@ -1,0 +1,80 @@
+/* Account entry and shared account navigation, using the existing stadium palette. */
+.fantasy-app .account-header .ff-header-inner { gap: 18px; flex-wrap: wrap; }
+.fantasy-app .account-header .ff-mode-nav { flex-wrap: nowrap; gap: 3px; }
+.fantasy-app .account-header .ff-mode-nav a { padding-inline: 10px; font-size: 12px!important; }
+.account-header-status { display: flex; align-items: center; flex-shrink: 0; min-height: 46px; }
+.account-header-profile { display: flex; align-items: center; gap: 9px; color: #eef4f7; padding: 8px 10px; border: 1px solid #375564; border-radius: 9px; min-height: 48px; }
+.account-header-profile:hover { background: #19313f; }
+.account-header-profile[aria-current=page] { border-color: #52d99d; }
+.account-header-profile .header-avatar { width: 30px; height: 30px; object-fit: cover; border-radius: 50%; }
+.account-header-profile span { min-width: 0; max-width: 138px; }
+.account-header-profile strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.4; }
+.account-header-profile small { display: block; color: #abc4d2; font-size: 10px; }
+.account-header-profile>svg { flex-shrink: 0; }
+.account-header-loading { color: #abc4d2; font-size: 12px; }
+.account-header-signin,.account-header-retry { display: inline-flex; align-items: center; gap: 7px; color: #bdf5df; min-height: 44px; padding: 9px 12px; background: #15382f; border: 1px solid #3d7961; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.account-header-retry { color: #f4dba9; background: #332e21; border-color: #746143; }
+.account-skip-link { position: absolute; left: 16px; top: 12px; z-index: 100; padding: 12px 16px; background: #ffc45b; color: #10212a; border-radius: 7px; transform: translateY(-180%); font-weight: 800; }
+.account-skip-link:focus { transform: translateY(0); }
+.account-entry-app { background: linear-gradient(90deg,#071821ed 5%,#081e2be3 50%,#081e2bee), url('/stadium-night.webp') center/cover fixed, #091620; }
+.account-entry-main { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: clamp(30px,7vw,100px); max-width: 1220px; margin: 0 auto; padding: clamp(40px,7vw,90px) 32px 60px; align-items: center; min-height: calc(100dvh - 185px); }
+.account-entry-story { max-width: 590px; }
+.account-entry-story h1 { margin: 18px 0 24px; font-size: clamp(62px,6.3vw,91px); letter-spacing: .7px; line-height: .98; }
+.account-entry-story h1 em { color: #ffc45b; font-style: normal; }
+.account-entry-story>p { color: #c8dbe5; max-width: 490px; line-height: 1.8; font-size: 17px; }
+.account-entry-benefits { list-style: none; padding: 0; margin: 35px 0 0; display: grid; gap: 23px; }
+.account-entry-benefits li { display: flex; gap: 15px; align-items: flex-start; }
+.account-entry-benefits svg { color: #6ae0ab; margin-top: 4px; flex-shrink: 0; }
+.account-entry-benefits strong { display: block; color: #edf6f9; font-size: 15px; }
+.account-entry-benefits small { display: block; color: #a8c0cf; margin-top: 3px; font-size: 13px; line-height: 1.65; }
+.account-entry-card { background: #102431f5; border: 1px solid #426477; border-radius: 18px; box-shadow: 0 28px 65px #0005; padding: clamp(25px,3vw,40px); align-self: center; }
+.account-entry-badge { display: grid; place-items: center; width: 54px; height: 54px; color: #7cebba; border: 1px solid #427d67; background: #173a32; border-radius: 13px; margin-bottom: 25px; }
+.account-entry-card h2 { font-size: 35px; margin: 12px 0 18px; line-height: 1.1; }
+.account-entry-card p { color: #bbcfdb; font-size: 14px; line-height: 1.75; }
+.account-entry-name strong { color: #fff; overflow-wrap: anywhere; }
+.account-entry-primary { width: 100%; justify-content: center; margin-top: 25px; display: flex; }
+.account-entry-card .account-entry-note { font-size: 12px; margin-top: 20px; color: #abc3d1; }
+.account-entry-secondary { display: block; text-align: center; font-size: 13px; margin-top: 20px; color: #b5efda; text-decoration: underline; text-underline-offset: 4px; min-height: 44px; padding: 8px; }
+.account-entry-access { display: flex; align-items: flex-start; gap: 11px; margin-top: 27px; padding-top: 22px; border-top: 1px solid #365365; }
+.account-entry-access svg { flex-shrink: 0; color: #87acbd; margin-top: 3px; }
+.account-entry-access p { font-size: 12px; line-height: 1.7; color: #a5becd; }
+.account-entry-help { display: inline-block; color: #c9e6ef; font-size: 12px; margin-top: 15px; text-decoration: underline; text-underline-offset: 4px; padding-block: 9px; min-height: 44px; }
+.account-entry-status { display: flex; gap: 9px; align-items: center; font-size: 14px; color: #c6dae6; min-height: 75px; }
+.account-loading-dot { width: 9px; height: 9px; border-radius: 50%; background: #52d99d; }
+.account-entry-unavailable { background: #332e21; border: 1px solid #766144; padding: 17px; border-radius: 9px; color: #ffe0ad; }
+.account-entry-unavailable p { margin-top: 8px; color: #e4d2b2; font-size: 13px; }
+.account-entry-card .account-entry-expired { color: #ffddb0; padding: 12px; background: #332e21; border: 1px solid #766144; border-radius: 8px; margin-bottom: 15px; }
+.account-entry-footer { max-width: 1220px; padding: 0 32px 26px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; color: #8aa8ba; font-size: 11px; }
+.account-entry-footer span { letter-spacing: 2px; font-size: 9px; }
+@media(max-width:1280px) {
+ .fantasy-app .account-header .ff-mode-nav { order: 3; width: 100%; margin: 0; overflow-x: auto; padding-block: 2px; }
+ .account-header-status { margin-left: auto; }
+}
+@media(max-width:760px) {
+ .fantasy-app .account-header .ff-header-inner { gap: 14px; padding: 15px 16px 10px; }
+ .fantasy-app .account-header .ff-mode-nav { flex-wrap: nowrap; width: 100%; margin: 0; }
+ .fantasy-app .account-header .ff-mode-nav a,.fantasy-app .account-header .ff-mode-nav a:first-child,.fantasy-app .account-header .ff-mode-nav a:last-child { display: flex; flex: 0 0 auto; white-space: nowrap; min-height: 44px; padding: 10px!important; font-size: 12px!important; }
+ .account-header-profile { border: 0; padding-inline: 0; }
+ .account-header-profile strong { max-width: 110px; }
+ .account-header-profile>svg:last-child { display: none; }
+ .account-entry-main { grid-template-columns: 1fr; padding: 35px 20px 35px; gap: 30px; min-height: auto; }
+ .account-entry-story h1 { font-size: 62px; margin: 15px 0 18px; }
+ .account-entry-story>p { font-size: 15px; }
+ .account-entry-benefits { display: none; }
+ .account-entry-card { padding: 25px; }
+ .account-entry-card h2 { font-size: 32px; }
+ .account-entry-badge { margin-bottom: 20px; }
+ .account-entry-footer { padding: 0 20px 25px; flex-wrap: wrap; gap: 10px; }
+ .account-entry-app { background-attachment: scroll; }
+}
+@media(max-width:400px) {
+ .fantasy-app .account-header .ff-brand-wordmark b { font-size: 21px; }
+ .fantasy-app .account-header .ff-brand { gap: 7px; font-size: 8px; letter-spacing: 1px; }
+ .account-header-profile strong { max-width: 80px; }
+ .account-header-profile small { font-size: 9px; }
+ .account-header-status { min-height: 43px; }
+ .account-header-loading { font-size: 10px; }
+ .account-header-signin,.account-header-retry { padding-inline: 8px; font-size: 11px; }
+ .account-entry-main { padding-inline: 16px; }
+ .account-entry-card { padding: 22px; }
+}
