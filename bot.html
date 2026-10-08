@@ -131,6 +131,7 @@
           <label class="check"><input type="checkbox" id="remember" /> Remember on this device</label>
           <button class="primary" id="connect" type="button">Connect</button>
         </div>
+        <p class="muted" style="font-size:0.82rem;margin:8px 0 0">A remembered token can be read by your other pages on the same github.io site, so give it a short expiry. "Forget token" removes it from this browser; delete it on GitHub to revoke it.</p>
         <div class="msg" id="connectMsg"></div>
       </section>
 
@@ -140,15 +141,15 @@
           <h2 style="margin:0">Run the bot</h2>
           <span class="muted" id="who"></span>
         </div>
-        <p class="muted">Downloads the latest stats, re-ranks every decade, commits the new data and redeploys your site. A run usually takes 2–4 minutes.</p>
+        <p class="muted">Downloads the latest stats, re-ranks every decade and commits the new data (and redeploys the site if GitHub Pages is on). A run usually takes 2–4 minutes.</p>
         <div class="row">
           <button class="go" id="run" type="button">▶ Run now</button>
           <label class="check"><input type="checkbox" id="force" /> Re-download everything (slower)</label>
-          <label style="flex:0 1 160px">Branch <input type="text" id="branch" spellcheck="false" /></label>
         </div>
         <div class="msg" id="runMsg"></div>
         <h2 style="margin-top:18px">Recent runs</h2>
         <ul class="runs" id="runs"><li class="muted">Loading…</li></ul>
+        <p class="muted" id="runsNote" style="font-size:0.85rem;margin:6px 0 0"></p>
       </section>
 
       <!-- Settings -->
@@ -159,6 +160,7 @@
         <div class="row" style="margin-top:14px">
           <button class="primary" id="save" type="button" disabled>Save</button>
           <button id="saveRun" type="button" disabled>Save &amp; run</button>
+          <span class="muted" id="saveHint" style="font-size:0.85rem"></span>
         </div>
         <div class="msg" id="saveMsg"></div>
       </section>
@@ -174,9 +176,7 @@
     <script>
       const WORKFLOW = "fantasy-stats.yml";
       const SETTINGS_PATH = "bot/scoring.json";
-
       const API = "https://api.github.com";
-
 
       // Data loads from next to the page (GitHub Pages or a local web server). If
       // that fails (private repo without Pages, or a page opened straight from
@@ -198,25 +198,31 @@
         } catch (e) {}
         const token = savedToken();
         if (!token) throw new Error("no-access");
-        const res = await fetch(`https://api.github.com/repos/${savedRepo() || guessRepo()}/contents/${path}`, {
+        const res = await fetch(`${API}/repos/${savedRepo() || guessRepo()}/contents/${path}`, {
+          cache: "no-store",
           headers: { Accept: "application/vnd.github.raw+json", Authorization: `Bearer ${token}`, "X-GitHub-Api-Version": "2022-11-28" },
         });
         if (!res.ok) throw new Error(`GitHub returned ${res.status} for ${path}`);
         return res.json();
       }
-      const STORE_KEY = TOKEN_KEY;
 
       const el = id => document.getElementById(id);
       const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
       const store = {
-        get(k) { try { return sessionStorage.getItem(k) || localStorage.getItem(k); } catch (e) { return null; } },
         set(k, v, persist) { try { (persist ? localStorage : sessionStorage).setItem(k, v); (persist ? sessionStorage : localStorage).removeItem(k); } catch (e) {} },
         clear(k) { try { sessionStorage.removeItem(k); localStorage.removeItem(k); } catch (e) {} },
-        where(k) { try { return localStorage.getItem(k) ? "remembered on this device" : "kept for this browser tab only"; } catch (e) { return "kept in memory"; } },
+        remembered(k) { try { return Boolean(localStorage.getItem(k)); } catch (e) { return false; } },
       };
 
-      const state = { token: null, repo: null, defaultBranch: "main", settings: null, sha: null, poll: null, dispatchedAt: 0 };
-
+      const state = {
+        token: null, repo: null, branch: "main",
+        settings: null, sha: null, saving: false,
+        poll: null, fails: 0, lastActive: false,
+        // The run this page started: its id when GitHub returns it, otherwise the
+        // highest run id seen before dispatching (any newer manual run is ours).
+        awaiting: false, runId: null, seenMaxId: 0, awaitingSince: 0,
+        latestMaxId: 0,
+      };
 
       function msg(id, text, kind) {
         const m = el(id);
@@ -226,6 +232,8 @@
 
       async function gh(path, opts = {}) {
         const res = await fetch(`${API}${path}`, {
+          // GitHub marks API responses cacheable for 60s; polling needs fresh data.
+          cache: "no-store",
           ...opts,
           headers: {
             Accept: "application/vnd.github+json",
@@ -249,10 +257,20 @@
         if (err.status === 403) return `The token can't ${action}. Check that it has Actions and Contents set to "Read and write" for this repository.`;
         if (err.status === 404) return `Not found while trying to ${action}. Check the repository name, and that the token was given access to it.`;
         if (err.status === 422) return `GitHub refused to ${action}: ${err.message}`;
+        if (!err.status) return `Couldn't reach GitHub to ${action}. Check your connection and try again.`;
         return `Couldn't ${action}: ${err.message}`;
       }
 
-      // --- last build (public, no token needed) ---
+      function updateButtons() {
+        const runBusy = state.awaiting || state.lastActive;
+        el("run").disabled = runBusy || state.saving;
+        // Saving commits to the branch; a run in progress would then fail to push.
+        const canSave = Boolean(state.settings) && !state.saving && !runBusy;
+        el("save").disabled = el("saveRun").disabled = !canSave;
+        el("saveHint").textContent = runBusy && state.settings ? "Saving is paused while the bot is running." : "";
+      }
+
+      // --- last build ---
       async function showLastBuild() {
         try {
           const idx = await getJSON("data/top100/index.json");
@@ -265,7 +283,7 @@
       }
 
       // --- connect ---
-      async function connect(token, repo, persist, quiet) {
+      async function connect(token, repo, persist, auto) {
         state.token = token.trim();
         state.repo = repo.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\/$/, "");
         if (!state.token || !/^[\w.-]+\/[\w.-]+$/.test(state.repo)) {
@@ -275,27 +293,30 @@
         msg("connectMsg", "Checking…");
         try {
           const info = await gh(`/repos/${state.repo}`);
-          state.defaultBranch = info.default_branch || "main";
+          state.branch = info.default_branch || "main";
           await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}`).catch(err => {
             if (err.status === 404) {
-              throw Object.assign(new Error(`The bot workflow isn't on ${state.defaultBranch} yet. Merge the bot branch into ${state.defaultBranch} first, then come back.`), { friendly: true });
+              throw Object.assign(new Error(`The bot workflow isn't on ${state.branch} in ${state.repo}.`), { friendly: true });
             }
             throw err;
           });
         } catch (err) {
-          msg("connectMsg", err.friendly ? err.message : explain(err, "read the repository"), "bad");
-          if (quiet) { store.clear(STORE_KEY); }
+          let text = err.friendly ? err.message : explain(err, "read the repository");
+          // Only forget a saved token when GitHub actually rejects it; a network
+          // blip or outage shouldn't force making a new one.
+          if (auto && err.status === 401) store.clear(TOKEN_KEY);
+          else if (auto) text += " Your saved token was kept; reload to try again.";
+          msg("connectMsg", text, "bad");
           return;
         }
-        store.set(STORE_KEY, state.token, persist);
+        store.set(TOKEN_KEY, state.token, persist);
         store.set(REPO_KEY, state.repo, true);
         el("token").value = "";
         msg("connectMsg", "");
         el("connectCard").classList.add("hidden");
         for (const id of ["runCard", "settingsCard", "signoutCard"]) el(id).classList.remove("hidden");
-        el("storedWhere").textContent = store.where(STORE_KEY);
-        el("who").textContent = state.repo;
-        el("branch").value = state.defaultBranch;
+        el("storedWhere").textContent = store.remembered(TOKEN_KEY) ? "remembered on this device" : "kept for this browser tab only";
+        el("who").textContent = `${state.repo} · ${state.branch}`;
         refreshRuns();
         loadSettings();
         showLastBuild();
@@ -307,13 +328,13 @@
         timed_out: ["bad", "Timed out"], skipped: ["", "Skipped"], neutral: ["", "Neutral"],
       };
       function pill(run) {
-        if (run.status !== "completed") return `<span class="pill run"><span class="spin">◌</span> ${run.status === "queued" ? "Queued" : "Running"}</span>`;
+        if (run.status !== "completed") return `<span class="pill run"><span class="spin">◌</span> ${run.status === "queued" || run.status === "waiting" || run.status === "pending" ? "Queued" : "Running"}</span>`;
         const [cls, label] = STATUS[run.conclusion] || ["", run.conclusion || "Done"];
-        return `<span class="pill ${cls}">${label}</span>`;
+        return `<span class="pill ${cls}">${esc(label)}</span>`;
       }
       const stepDot = s => s.status !== "completed" ? (s.status === "in_progress" ? '<span class="spin">◌</span>' : "·") : (s.conclusion === "success" ? "✓" : s.conclusion === "skipped" ? "–" : "✗");
       const ago = t => {
-        const s = Math.round((Date.now() - new Date(t)) / 1000);
+        const s = Math.max(0, Math.round((Date.now() - new Date(t)) / 1000));
         if (s < 60) return `${s}s ago`;
         if (s < 3600) return `${Math.round(s / 60)} min ago`;
         if (s < 86400) return `${Math.round(s / 3600)} h ago`;
@@ -321,62 +342,114 @@
       };
       const trigger = e => ({ workflow_dispatch: "manual", schedule: "weekly schedule" }[e] || e);
 
+      function findOurRun(runs) {
+        if (!state.awaiting) return null;
+        if (state.runId) return runs.find(r => r.id === state.runId) || null;
+        // Oldest new manual run, in case several were started at once.
+        const fresh = runs.filter(r => r.id > state.seenMaxId && r.event === "workflow_dispatch");
+        const ours = fresh.length ? fresh[fresh.length - 1] : null;
+        if (ours) state.runId = ours.id;
+        return ours;
+      }
+
+      function schedulePoll(delay) {
+        clearTimeout(state.poll);
+        state.poll = setTimeout(refreshRuns, delay);
+      }
+
       async function refreshRuns() {
         clearTimeout(state.poll);
-        let data;
+        let runs;
         try {
-          data = await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/runs?per_page=6`);
+          const data = await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/runs?per_page=6`);
+          runs = data.workflow_runs || [];
+          state.fails = 0;
         } catch (err) {
-          el("runs").innerHTML = `<li class="msg bad">${esc(explain(err, "list runs"))}</li>`;
+          const fatal = [401, 403, 404].includes(err.status);
+          const keepGoing = !fatal && (state.awaiting || state.lastActive);
+          // Keep the last good list on screen; just note the hiccup.
+          el("runsNote").textContent = keepGoing ? "Lost contact with GitHub for a moment; retrying…" : explain(err, "list runs");
+          if (keepGoing) {
+            state.fails += 1;
+            schedulePoll(Math.min(60000, 5000 * 2 ** state.fails));
+          } else {
+            state.awaiting = false;
+            state.lastActive = false;
+            updateButtons();
+          }
           return;
         }
-        const runs = data.workflow_runs || [];
+        el("runsNote").textContent = "";
+        state.latestMaxId = runs.reduce((m, r) => Math.max(m, r.id), state.latestMaxId);
+
+        let ours = findOurRun(runs);
+        if (state.awaiting && state.runId && !ours) {
+          try { ours = await gh(`/repos/${state.repo}/actions/runs/${state.runId}`); } catch (e) {}
+        }
         const active = runs.find(r => r.status !== "completed");
+        const watch = ours && ours.status !== "completed" ? ours : active;
         let steps = "";
-        if (active) {
+        if (watch) {
           try {
-            const jobs = await gh(`/repos/${state.repo}/actions/runs/${active.id}/jobs`);
+            const jobs = await gh(`/repos/${state.repo}/actions/runs/${watch.id}/jobs`);
             const job = (jobs.jobs || [])[0];
             if (job) steps = `<ul class="steps">${job.steps.map(s => `<li><span class="dot">${stepDot(s)}</span>${esc(s.name)}</li>`).join("")}</ul>`;
           } catch (e) {}
         }
         el("runs").innerHTML = runs.length
-          ? runs.map(r => `<li>${pill(r)}<span>${esc(trigger(r.event))} · ${esc(r.head_branch)}</span><span class="muted">${ago(r.created_at)}</span><a href="${esc(r.html_url)}" target="_blank" rel="noopener">details</a>${r === active ? steps : ""}</li>`).join("")
+          ? runs.map(r => `<li>${pill(r)}<span>${esc(trigger(r.event))} · ${esc(r.head_branch)}</span><span class="muted">${ago(r.created_at)}</span><a href="${esc(r.html_url)}" target="_blank" rel="noopener">details</a>${watch && r.id === watch.id ? steps : ""}</li>`).join("")
           : `<li class="muted">No runs yet.</li>`;
 
-        const justDispatched = Date.now() - state.dispatchedAt < 90000;
-        const finished = !active && runs[0] && new Date(runs[0].created_at).getTime() >= state.dispatchedAt - 60000 && state.dispatchedAt;
-        if (finished && runs[0].status === "completed") {
-          if (runs[0].conclusion === "success") {
-            msg("runMsg", "Done. New data is committed, and the site redeploy has started (it takes about a minute to go live).", "ok");
-            showLastBuild();
-          } else {
-            msg("runMsg", "The run didn't succeed. Open details to see the error.", "bad");
+        if (state.awaiting) {
+          if (ours && ours.status === "completed") {
+            if (ours.conclusion === "success") {
+              msg("runMsg", "Done. The new rankings are committed. If GitHub Pages is on, the site updates in about a minute.", "ok");
+              showLastBuild();
+            } else {
+              msg("runMsg", `The run ${ours.conclusion === "cancelled" ? "was cancelled" : "didn't succeed"}. Open details to see why.`, "bad");
+            }
+            state.awaiting = false;
+          } else if (!ours && Date.now() - state.awaitingSince > 120000) {
+            msg("runMsg", "GitHub accepted the request, but the run hasn't shown up after 2 minutes. Check the Actions tab on GitHub.", "bad");
+            state.awaiting = false;
           }
-          state.dispatchedAt = 0;
-          el("run").disabled = false;
         }
-        el("run").disabled = Boolean(active) || justDispatched && !finished;
-        if (active || justDispatched) state.poll = setTimeout(refreshRuns, 5000);
+        state.lastActive = Boolean(active);
+        updateButtons();
+        if (state.awaiting || active) schedulePoll(5000);
+      }
+
+      async function dispatch(withDetails) {
+        const body = { ref: state.branch, inputs: { force: el("force").checked ? "true" : "false" } };
+        if (withDetails) body.return_run_details = true;
+        return gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify(body) });
       }
 
       async function runBot() {
-        const branch = el("branch").value.trim() || state.defaultBranch;
-        el("run").disabled = true;
+        state.awaiting = true;
+        state.runId = null;
+        state.seenMaxId = state.latestMaxId;
+        state.awaitingSince = Date.now();
+        updateButtons();
         msg("runMsg", "Starting…");
+        let res;
         try {
-          await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/dispatches`, {
-            method: "POST",
-            body: JSON.stringify({ ref: branch, inputs: { force: el("force").checked ? "true" : "false" } }),
+          // Newer GitHub API versions can return the new run's id; older ones
+          // reject the extra field, so retry without it.
+          res = await dispatch(true).catch(err => {
+            if (err.status === 422 && /return_run_details/i.test(err.message)) return dispatch(false);
+            throw err;
           });
         } catch (err) {
+          state.awaiting = false;
+          updateButtons();
           msg("runMsg", explain(err, "start the bot"), "bad");
-          el("run").disabled = false;
           return false;
         }
-        state.dispatchedAt = Date.now();
+        const id = res && (res.workflow_run_id || res.id);
+        if (id) state.runId = id;
         msg("runMsg", "Started. Progress shows below; GitHub can take a few seconds to pick it up.");
-        setTimeout(refreshRuns, 3000);
+        schedulePoll(3000);
         return true;
       }
 
@@ -391,9 +464,34 @@
         sacks: "Sack", fumble_recoveries: "Fumble recovery", touchdowns: "Defensive / return TD", safeties: "Safety", blocked_kicks: "Blocked kick",
       };
       const GROUPS = [["offense", "Offense"], ["reception_formats", "Reception formats"], ["kicking", "Kickers"], ["defense", "Team defense"]];
+      const FORMATS = { ppr: "PPR", half_ppr: "Half PPR", standard: "Standard" };
 
       const decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, "")), c => c.charCodeAt(0)));
       const encode = text => { let bin = ""; new TextEncoder().encode(text).forEach(b => { bin += String.fromCharCode(b); }); return btoa(bin); };
+      const isNum = v => typeof v === "number" && Number.isFinite(v);
+
+      // The settings file comes from the repo; refuse anything that isn't the
+      // shape the bot expects before it gets near the page or the bot.
+      function checkSettings(s) {
+        if (!s || typeof s !== "object") return "it isn't a JSON object";
+        if (!Number.isInteger(s.list_size) || s.list_size < 1 || s.list_size > 500) return "list_size must be a whole number from 1 to 500";
+        if (!(s.rank_by in FORMATS)) return "rank_by must be ppr, half_ppr or standard";
+        for (const [key] of GROUPS) {
+          const group = s[key];
+          if (!group || typeof group !== "object") return `the "${key}" section is missing`;
+          for (const [k, v] of Object.entries(group)) {
+            if (k.startsWith("_") || k === "points_allowed") continue;
+            if (!isNum(v)) return `${key}.${k} must be a number`;
+          }
+        }
+        for (const f of Object.keys(FORMATS)) if (!isNum(s.reception_formats[f])) return `reception_formats.${f} must be a number`;
+        const tiers = s.defense.points_allowed;
+        if (!Array.isArray(tiers) || tiers.length < 1 || !tiers.every(t => Array.isArray(t) && t.length === 2 && isNum(t[0]) && isNum(t[1]))) {
+          return "defense.points_allowed must be a list of [points, fantasy points] pairs";
+        }
+        for (let i = 1; i < tiers.length; i++) if (tiers[i][0] <= tiers[i - 1][0]) return "points_allowed tiers must go up";
+        return null;
+      }
 
       function numField(path, label, value, step = "any") {
         return `<label>${esc(label)}<input type="number" step="${step}" data-path="${esc(path)}" value="${esc(value)}" /></label>`;
@@ -402,30 +500,37 @@
       function renderSettings() {
         const s = state.settings;
         let html = `<div class="grid">
-          ${numField("list_size", "Players per position per decade", s.list_size ?? 100, "1")}
-          <label>Rank QB/RB/WR by<select data-path="rank_by">${["ppr", "half_ppr", "standard"].map(f => `<option value="${f}" ${s.rank_by === f ? "selected" : ""}>${{ ppr: "PPR", half_ppr: "Half PPR", standard: "Standard" }[f]}</option>`).join("")}</select></label>
+          ${numField("list_size", "Players per position per decade", s.list_size, "1")}
+          <label>Rank QB/RB/WR by<select data-path="rank_by">${Object.entries(FORMATS).map(([f, label]) => `<option value="${f}" ${s.rank_by === f ? "selected" : ""}>${label}</option>`).join("")}</select></label>
         </div>`;
         for (const [key, title] of GROUPS) {
-          const group = s[key] || {};
-          const fields = Object.entries(group).filter(([k, v]) => !k.startsWith("_") && typeof v === "number");
+          const fields = Object.entries(s[key]).filter(([k, v]) => !k.startsWith("_") && isNum(v));
           html += `<h2 style="margin-top:18px">${title}</h2><div class="grid">${fields.map(([k, v]) => numField(`${key}.${k}`, LABELS[k] || k, v)).join("")}</div>`;
-          if (key === "defense" && Array.isArray(group.points_allowed)) {
-            html += `<p class="muted" style="margin:12px 0 6px">Points allowed per game (up to → fantasy points)</p><table class="tiers">${group.points_allowed.map(([max, pts], i) =>
-              `<tr><td>${i === group.points_allowed.length - 1 ? "more" : `up to <input type="number" step="1" data-tier="${i}" data-part="0" value="${max}" />`}</td><td>→</td><td><input type="number" step="any" data-tier="${i}" data-part="1" value="${pts}" /></td></tr>`).join("")}</table>`;
-          }
         }
+        const tiers = s.defense.points_allowed;
+        html += `<p class="muted" style="margin:12px 0 6px">Team defense: points allowed per game (up to → fantasy points)</p><table class="tiers">${tiers.map(([max, pts], i) =>
+          `<tr><td>${i === tiers.length - 1 ? "more" : `up to <input type="number" step="1" data-tier="${i}" data-part="0" value="${esc(max)}" />`}</td><td>→</td><td><input type="number" step="any" data-tier="${i}" data-part="1" value="${esc(pts)}" /></td></tr>`).join("")}</table>`;
         el("settingsForm").innerHTML = html;
-        el("save").disabled = el("saveRun").disabled = false;
+        updateButtons();
       }
 
       async function loadSettings() {
+        state.settings = null;
+        updateButtons();
         try {
-          const file = await gh(`/repos/${state.repo}/contents/${SETTINGS_PATH}?ref=${encodeURIComponent(el("branch").value || state.defaultBranch)}`);
+          const file = await gh(`/repos/${state.repo}/contents/${SETTINGS_PATH}?ref=${encodeURIComponent(state.branch)}`);
+          const parsed = JSON.parse(decode(file.content));
+          const problem = checkSettings(parsed);
+          if (problem) {
+            el("settingsForm").innerHTML = `<p class="msg bad">${esc(`The settings file in the repo looks broken (${problem}). Fix ${SETTINGS_PATH} on GitHub, then reload.`)}</p>`;
+            return;
+          }
           state.sha = file.sha;
-          state.settings = JSON.parse(decode(file.content));
+          state.settings = parsed;
           renderSettings();
         } catch (err) {
-          el("settingsForm").innerHTML = `<p class="msg bad">${esc(explain(err, "read the settings file"))}</p>`;
+          const text = err instanceof SyntaxError ? `${SETTINGS_PATH} isn't valid JSON. Fix it on GitHub, then reload.` : explain(err, "read the settings file");
+          el("settingsForm").innerHTML = `<p class="msg bad">${esc(text)}</p>`;
         }
       }
 
@@ -440,25 +545,23 @@
           if (input.value.trim() === "" || !Number.isFinite(v)) throw new Error(`"${input.closest("label").firstChild.textContent.trim()}" needs a number.`);
           target[parts[0]] = v;
         }
-        if (!Number.isInteger(s.list_size) || s.list_size < 1 || s.list_size > 500) throw new Error("Players per decade must be a whole number from 1 to 500.");
-        const tiers = s.defense.points_allowed;
         for (const input of el("settingsForm").querySelectorAll("[data-tier]")) {
           const v = Number(input.value);
           if (input.value.trim() === "" || !Number.isFinite(v)) throw new Error("Every points-allowed tier needs a number.");
-          tiers[Number(input.dataset.tier)][Number(input.dataset.part)] = v;
+          s.defense.points_allowed[Number(input.dataset.tier)][Number(input.dataset.part)] = v;
         }
-        for (let i = 1; i < tiers.length - 1; i++) {
-          if (tiers[i][0] <= tiers[i - 1][0]) throw new Error("Points-allowed tiers must go up from top to bottom.");
-        }
+        const problem = checkSettings(s);
+        if (problem) throw new Error(problem.charAt(0).toUpperCase() + problem.slice(1) + ".");
         return s;
       }
 
       async function saveSettings(thenRun) {
         let next;
         try { next = collectSettings(); } catch (e) { msg("saveMsg", e.message, "bad"); return; }
-        const branch = el("branch").value.trim() || state.defaultBranch;
-        el("save").disabled = el("saveRun").disabled = true;
+        state.saving = true;
+        updateButtons();
         msg("saveMsg", "Saving…");
+        let saved = false;
         try {
           const res = await gh(`/repos/${state.repo}/contents/${SETTINGS_PATH}`, {
             method: "PUT",
@@ -466,30 +569,31 @@
               message: "Update fantasy bot scoring settings",
               content: encode(JSON.stringify(next, null, 2) + "\n"),
               sha: state.sha,
-              branch,
+              branch: state.branch,
             }),
           });
           state.sha = res.content.sha;
           state.settings = next;
+          saved = true;
           msg("saveMsg", thenRun ? "Saved. Starting the bot…" : "Saved. Run the bot to apply the new settings.", "ok");
-          if (thenRun && await runBot()) msg("saveMsg", "Saved, and the bot is running with the new settings.", "ok");
         } catch (err) {
           const text = err.status === 409 ? "The settings changed on GitHub since this page loaded. Reload the page and try again." : explain(err, "save the settings");
           msg("saveMsg", text, "bad");
         } finally {
-          el("save").disabled = el("saveRun").disabled = false;
+          state.saving = false;
+          updateButtons();
         }
+        if (saved && thenRun && await runBot()) msg("saveMsg", "Saved, and the bot is running with the new settings.", "ok");
       }
 
       // --- wire up ---
-      el("connect").onclick = () => connect(el("token").value, el("repo").value, el("remember").checked);
+      el("connect").onclick = () => connect(el("token").value, el("repo").value, el("remember").checked, false);
       el("token").addEventListener("keydown", e => { if (e.key === "Enter") el("connect").click(); });
       el("run").onclick = runBot;
       el("save").onclick = () => saveSettings(false);
       el("saveRun").onclick = () => saveSettings(true);
-      el("branch").addEventListener("change", loadSettings);
       el("signout").onclick = () => {
-        store.clear(STORE_KEY);
+        store.clear(TOKEN_KEY);
         location.reload();
       };
       document.addEventListener("visibilitychange", () => { if (!document.hidden && state.token) refreshRuns(); });
@@ -499,7 +603,7 @@
       el("repoName1").textContent = startRepo.split("/")[1] || startRepo;
       showLastBuild();
       const startToken = savedToken();
-      if (startToken) connect(startToken, startRepo, store.where(STORE_KEY) === "remembered on this device", true);
+      if (startToken) connect(startToken, startRepo, store.remembered(TOKEN_KEY), true);
     </script>
   </body>
 </html>

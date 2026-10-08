@@ -159,7 +159,7 @@
       const state = { index: null, decade: null, pos: "QB", cache: {}, format: "fp_ppr", query: "", open: new Set() };
       try {
         const saved = JSON.parse(localStorage.getItem("top100-view") || "{}");
-        Object.assign(state, { pos: saved.pos || state.pos, format: saved.format || state.format, decade: saved.decade || null });
+        Object.assign(state, { pos: saved.pos || state.pos, format: saved.format || null, decade: saved.decade || null });
       } catch (e) {}
       const remember = () => { try { localStorage.setItem("top100-view", JSON.stringify({ pos: state.pos, format: state.format, decade: state.decade })); } catch (e) {} };
 
@@ -245,6 +245,10 @@
         }
         const decades = state.index.decades.map(d => d.decade);
         if (!decades.includes(state.decade)) state.decade = decades[decades.length - 1];
+        // Default to the format the bot ranked by, unless this viewer picked one.
+        const formats = [...el("format").options].map(o => o.value);
+        if (!formats.includes(state.format)) state.format = formats.includes(state.index.rank_by?.QB) ? state.index.rank_by.QB : "fp_ppr";
+        if (!POSITIONS.includes(state.pos)) state.pos = "QB";
         el("format").value = state.format;
         el("notes").innerHTML = state.index.coverage_notes.map(t => `<li>${esc(t)}</li>`).join("");
         drawControls();

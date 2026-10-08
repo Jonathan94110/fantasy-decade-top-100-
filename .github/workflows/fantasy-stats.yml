@@ -54,8 +54,17 @@ jobs:
           git config user.name "fantasy-stats-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update decade top 100 data"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          # Settings can be saved from bot.html while this runs; rebase onto
+          # the latest commit so the push isn't rejected. Only the bot writes data/.
+          for attempt in 1 2 3; do
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Could not push the new data after 3 attempts." >&2
+          exit 1
 
       # Pushes made with GITHUB_TOKEN don't trigger other workflows, so kick the
       # Pages deploy explicitly. Pages on a private repo needs a paid plan, so a
