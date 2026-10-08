@@ -33,6 +33,7 @@ function active(mode:typeof modes[number]){
 }
 const seeds=new Map(modes.map(mode=>[mode,active(mode)]));
 function freshSeason(mode:typeof modes[number]){return structuredClone(seeds.get(mode)!);}
+const {withBatch}=await import('./helpers/memory-d1-batch');
 function memoryDatabase(){
  const sql=new DatabaseSync(':memory:');for(const file of readdirSync(new URL('drizzle/',root)).filter(file=>file.endsWith('.sql')).sort())sql.exec(readFileSync(new URL(`drizzle/${file}`,root),'utf8'));
  return {sql,prepare(query:string){let args:SQLInputValue[]=[];return {bind(...values:unknown[]){args=values as SQLInputValue[];return this;},async first(){return sql.prepare(query).get(...args)||null;},async all(){return {results:sql.prepare(query).all(...args)};},async run(){return {meta:{changes:Number(sql.prepare(query).run(...args).changes)}};}};}};
@@ -108,7 +109,7 @@ test('short and late old formats defer rather than crowding rests, and early bad
 
 test('online GET previews and POST persists v1/v2 migration without losing locked lineup IDs or completed state',async()=>{
  for(const mode of modes)for(const version of [1,2] as const){
-  const db=memoryDatabase();audit.__weekFiveDatabase=db;const s=freshSeason(mode);pendingEarly(s,version,4);s.teams[0].locked=true;const raw=JSON.stringify(s);
+  const db=withBatch(memoryDatabase());audit.__weekFiveDatabase=db;const s=freshSeason(mode);pendingEarly(s,version,4);s.teams[0].locked=true;const raw=JSON.stringify(s);
   db.sql.prepare('INSERT INTO season_leagues (id,owner_id,invite_hash,state,revision,updated_at) VALUES (?,?,?,?,?,?)').run(s.id,s.ownerId,await inviteHash(s.inviteCode),raw,s.revision,s.createdAt);
   const context={params:Promise.resolve({id:s.id})},get=await onlineApi.GET(request('leagues/'+s.id),context);assert.equal(get.status,200);
   const preview=(await get.json() as {league:Season}).league;assert.equal(preview.byes!.version,3);assert.ok(Object.values(preview.byes!.weeks).every(week=>week>=5));assert.equal(db.sql.prepare('SELECT state FROM season_leagues WHERE id=?').get(s.id)!.state,raw);
@@ -121,7 +122,7 @@ test('online GET previews and POST persists v1/v2 migration without losing locke
 
 test('staged solo GET keeps picks private and POST normalizes v1/v2 maps through the saved draft reveal',async()=>{
  for(const mode of modes)for(const version of [1,2] as const){
-  const db=memoryDatabase();audit.__weekFiveDatabase=db;
+  const db=withBatch(memoryDatabase());audit.__weekFiveDatabase=db;
   const draft=newDemoDraft('Saved staged draft',1,{modern:true,capacity:2,opening:true,kickers:true,scoringMode:mode,orderMode:'manual',orderIndexes:[0,1]});
   draft.byes!.version=version;draft.byes!.firstWeek=1;draft.byes!.lastWeek=4;Object.keys(draft.byes!.weeks).forEach((id,index)=>{draft.byes!.weeks[id]=index%4+1;});const raw=JSON.stringify(draft);
   db.sql.prepare('INSERT INTO demo_drafts (owner_id,id,state,revision,updated_at) VALUES (?,?,?,?,?)').run('owner',draft.id,raw,draft.revision,draft.createdAt);

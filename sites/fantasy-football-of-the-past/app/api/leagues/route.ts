@@ -1,7 +1,7 @@
 import {database} from '@/db';
 import {parseScoringMode,newScoring} from '@/lib/scoring-rules';
 import {newSeason,joinSeason,publicSeason,SeasonRuleError} from '@/lib/season-engine';
-import {seasonReply,seasonIdentity,checkSeasonOrigin,makeInviteCode,inviteHash,commitSeason} from '@/lib/season-store';
+import {seasonReply,seasonIdentity,checkSeasonOrigin,makeInviteCode,inviteHash,commitSeason,seasonByInvite} from '@/lib/season-store';
 import type {Season,SeasonSummary} from '@/lib/season-model';
 export async function GET(request:Request){
  const id=seasonIdentity(request);if(!id)return seasonReply({error:'Sign in to create or join a league.',signin:true},401);
@@ -27,11 +27,11 @@ export async function POST(request:Request){
    const now=Date.now();await database().prepare('INSERT INTO season_join_attempts (user_id, window_at, attempts) VALUES (?, ?, 1) ON CONFLICT(user_id) DO UPDATE SET attempts = CASE WHEN window_at < ? THEN 1 ELSE attempts + 1 END, window_at = CASE WHEN window_at < ? THEN excluded.window_at ELSE window_at END').bind(id,now,now-60000,now-60000).run();
    const attempts=await database().prepare('SELECT attempts FROM season_join_attempts WHERE user_id = ?').bind(id).first<{attempts:number}>();if(attempts&&attempts.attempts>8)return seasonReply({error:'Too many join attempts. Wait a minute and try again.'},429);
    if(typeof body.code!=='string'||body.code.length>40)return seasonReply({error:'Enter the invitation code from your commissioner.'},400);
-   const row=await database().prepare('SELECT state, revision FROM season_leagues WHERE invite_hash = ?').bind(await inviteHash(body.code)).first<{state:string;revision:number}>();if(!row)return seasonReply({error:'That invitation code is not available. Check it with the commissioner.'},404);
-   const s=JSON.parse(row.state) as Season;
+   const saved=await seasonByInvite(await inviteHash(body.code));if(!saved)return seasonReply({error:'That invitation code is not available. Check it with the commissioner.'},404);
+   const s=saved.season;
    if(s.removedUserIds?.includes(id))return seasonReply({error:'Your membership in this league was removed.'},403);
    if(body.action==='inspectInvite')return seasonReply({invitation:{name:s.name,status:s.status,vacancies:s.teams.filter(t=>t.vacant).map(t=>({id:t.id,name:t.name,locked:t.locked})),canJoin:s.status==='lobby'&&s.teams.length<s.capacity}});
-   const next=joinSeason(s,id,body.teamName,body.teamId);if(s.teams.some(t=>t.userId===id))return seasonReply({league:publicSeason(s,id)});return await commitSeason(s,next,id);
+   const next=joinSeason(s,id,body.teamName,body.teamId);if(s.teams.some(t=>t.userId===id))return seasonReply({league:publicSeason(s,id)});return await commitSeason(s,next,id,saved.records);
   }
   return seasonReply({error:'Choose create or join.'},400);
  }catch(e){if(e instanceof SeasonRuleError)return seasonReply({error:e.message},400);return seasonReply({error:'The league could not be saved. Try again.'},503);}

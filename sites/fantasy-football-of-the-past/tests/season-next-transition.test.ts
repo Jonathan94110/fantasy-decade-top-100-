@@ -21,6 +21,8 @@ const {newSeason,joinSeason,seasonAction,publicSeason,currentPairs,standings}=aw
 const {demoDraftAction,demoReply}=await import('../lib/demo-draft-engine');
 const {seasonPhase}=await import('../lib/season-view');
 const {inviteHash}=await import('../lib/season-store');
+const {withBatch}=await import('./helpers/memory-d1-batch');
+const {savedLeague,savedDemo}=await import('./helpers/saved-state');
 const onlineApi=await import('../app/api/leagues/[id]/route');
 const soloApi=await import('../app/api/demo/route');
 const modes=['strict','historical'] as const;
@@ -29,13 +31,14 @@ function memoryDatabase(){
  const sql=new DatabaseSync(':memory:');
  for(const file of readdirSync(new URL('drizzle/',root)).filter(name=>name.endsWith('.sql')))sql.exec(readFileSync(new URL(`drizzle/${file}`,root),'utf8'));
  let gate:Promise<void>|undefined,release:(()=>void)|undefined,arrivals=0;
- return {sql,raceUpdates(){arrivals=0;gate=new Promise<void>(resolve=>{release=resolve;});},prepare(query:string){
+ const arrive=async()=>{if(gate){const pending=gate;if(++arrivals===2){release!();gate=undefined;}await pending;}};
+ return withBatch({sql,raceUpdates(){arrivals=0;gate=new Promise<void>(resolve=>{release=resolve;});},prepare(query:string){
   let values:SQLInputValue[]=[];
   return {bind(...args:unknown[]){values=args as SQLInputValue[];return this;},async first(){return sql.prepare(query).get(...values)||null;},async all(){return {results:sql.prepare(query).all(...values)};},async run(){
-   if(gate&&query.startsWith('UPDATE ')){const pending=gate;if(++arrivals===2){release!();gate=undefined;}await pending;}
+   if(query.startsWith('UPDATE '))await arrive();
    return {meta:{changes:Number(sql.prepare(query).run(...values).changes)}};
   }};
- }};
+ }},{beforeWrite:statements=>statements.some(statement=>statement.query?.startsWith('UPDATE '))?arrive():undefined});
 }
 function request(path:string,body:Record<string,unknown>,user='owner',origin='https://next.test'){
  return new Request(`https://next.test${path}`,{method:'POST',headers:{...(user?{'oai-authenticated-user-id':user}:{}),origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
@@ -150,7 +153,7 @@ test('online racing next commits once; stale, active, unauthorized and cross-ori
   assert.equal(String(db.sql.prepare('SELECT state FROM season_leagues WHERE id=?').get(saved.id)!.state),original);
   db.raceUpdates();const responses=await noPerformanceDraws(()=>Promise.all([onlineApi.POST(request(path,body),context),onlineApi.POST(request(path,body),context)]));
   assert.deepEqual(responses.map(response=>response.status).sort(),[200,409]);
-  const row=db.sql.prepare('SELECT state,revision FROM season_leagues WHERE id=?').get(saved.id)!,current=JSON.parse(String(row.state)) as Season;
+  const row=db.sql.prepare('SELECT state,revision FROM season_leagues WHERE id=?').get(saved.id)!,current=(await savedLeague(db.sql,saved.id))!;
   assert.equal(row.revision,saved.revision+1);assert.equal(current.round,2);assert.equal(current.status,'active');assert.equal(stableRecords(current),stableRecords(saved));
   await noPerformanceDraws(async()=>{assert.equal((await onlineApi.POST(request(path,body),context)).status,409);assert.equal((await onlineApi.POST(request(path,{...body,revision:current.revision}),context)).status,400);});
   assert.equal(String(db.sql.prepare('SELECT state FROM season_leagues WHERE id=?').get(saved.id)!.state),String(row.state));
@@ -166,7 +169,7 @@ test('solo racing next commits once and matching-revision or unauthorized retrie
   assert.equal((await soloApi.POST(request(path,body,'owner','https://other.test'))).status,403);
   db.raceUpdates();const responses=await noPerformanceDraws(()=>Promise.all([soloApi.POST(request(path,body)),soloApi.POST(request(path,body))]));
   assert.deepEqual(responses.map(response=>response.status).sort(),[200,409]);
-  const row=db.sql.prepare('SELECT state,revision FROM demo_drafts WHERE owner_id=?').get('owner')!,current=JSON.parse(String(row.state)) as DemoDraft;
+  const row=db.sql.prepare('SELECT state,revision FROM demo_drafts WHERE owner_id=?').get('owner')!,current=(await savedDemo(db.sql,'owner'))!;
   assert.equal(row.revision,saved.revision+1);assert.equal(current.season!.round,2);assert.equal(current.season!.status,'active');assert.equal(stableRecords(current.season!),stableRecords(saved.season!));
   await noPerformanceDraws(async()=>{assert.equal((await soloApi.POST(request(path,body))).status,409);assert.equal((await soloApi.POST(request(path,{...body,revision:current.revision}))).status,400);});
   assert.equal(String(db.sql.prepare('SELECT state FROM demo_drafts WHERE owner_id=?').get('owner')!.state),String(row.state));

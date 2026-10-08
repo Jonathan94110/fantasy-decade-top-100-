@@ -32,3 +32,13 @@ export const demoScoringBackups=sqliteTable('demo_scoring_backups',{
  sourceRevision:integer('source_revision').notNull(),state:text('state').notNull(),
  sourceUpdatedAt:text('source_updated_at').notNull(),createdAt:text('created_at').notNull(),
 },table=>[index('demo_scoring_backups_owner_draft').on(table.ownerId,table.draftId)]);
+
+// One immutable row per completed week. The season row lists these weeks by
+// number and checksum, so it stays bounded however long the season runs.
+export const seasonLeagueRounds=sqliteTable('season_league_rounds',{
+ leagueId:text('league_id').notNull(),number:integer('number').notNull(),state:text('state').notNull(),createdAt:text('created_at').notNull(),
+},table=>[primaryKey({columns:[table.leagueId,table.number]})]);
+// Keyed by draft ID, so reset archives and restores keep their weeks.
+export const demoDraftRounds=sqliteTable('demo_draft_rounds',{
+ draftId:text('draft_id').notNull(),number:integer('number').notNull(),state:text('state').notNull(),createdAt:text('created_at').notNull(),
+},table=>[primaryKey({columns:[table.draftId,table.number]})]);

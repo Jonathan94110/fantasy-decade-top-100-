@@ -1,6 +1,7 @@
 import type {DemoDraft} from './demo-draft-model';
 import type {League} from './game-engine';
 import type {Season} from './season-model';
+import {savedRoundCount} from './saved-rounds';
 
 export type SavedProgress = {
  id:string; name:string; stage:string; detail:string; action:string; href:string;
@@ -18,9 +19,9 @@ export function soloProgress(draft:DemoDraft,updatedAt:string):SavedProgress{
  const common={id:draft.id,name:me?.name||'My season',updatedAt,rosterCount:me?.roster.length??0,rosterSize:draft.rosterSize??6};
  if(draft.season){
   const season=draft.season,current=season.teams.find(team=>team.id===draft.humanTeamId);
-  if(season.status==='complete')return {...common,stage:'Season complete',detail:'Your final results and every saved matchup are ready to revisit.',action:'View final results',href:location('/demo','results'),completedRounds:season.history.length};
-  if(season.status==='review')return {...common,stage:`Week ${season.round} · Saved result`,detail:'The historical draw is saved. Watch the replay when you are ready.',action:`Watch Week ${season.round}`,href:location('/demo','results',season.round),completedRounds:season.history.length};
-  return {...common,stage:`Week ${season.round} · ${current?.locked?'Lineup locked':'Lineup open'}`,detail:current?.locked?'Your lineup is saved. Check the current week and league progress.':'Choose your starters, review any byes, then lock your lineup.',action:current?.locked?'Open current week':'Set my lineup',href:location('/demo',current?.locked?'overview':'roster'),completedRounds:season.history.length};
+  if(season.status==='complete')return {...common,stage:'Season complete',detail:'Your final results and every saved matchup are ready to revisit.',action:'View final results',href:location('/demo','results'),completedRounds:savedRoundCount(season)};
+  if(season.status==='review')return {...common,stage:`Week ${season.round} · Saved result`,detail:'The historical draw is saved. Watch the replay when you are ready.',action:`Watch Week ${season.round}`,href:location('/demo','results',season.round),completedRounds:savedRoundCount(season)};
+  return {...common,stage:`Week ${season.round} · ${current?.locked?'Lineup locked':'Lineup open'}`,detail:current?.locked?'Your lineup is saved. Check the current week and league progress.':'Choose your starters, review any byes, then lock your lineup.',action:current?.locked?'Open current week':'Set my lineup',href:location('/demo',current?.locked?'overview':'roster'),completedRounds:savedRoundCount(season)};
  }
  if(draft.status==='complete')return {...common,stage:'Draft complete',detail:'Your roster is saved. Review your team before starting Week 1.',action:'Review my team',href:'/demo?desk=draft',completedRounds:0};
  return {...common,stage:draft.orderRevealPending?'Draft order saved':`Draft round ${Math.floor(draft.pick/Math.max(1,draft.teams.length))+1}`,detail:draft.orderRevealPending?'Your draft order is waiting. Continue without a new lottery.':`${draft.picks.length} total picks saved. Continue from your place in the draft.`,action:'Continue my draft',href:'/demo?desk=draft',completedRounds:0};
@@ -28,7 +29,7 @@ export function soloProgress(draft:DemoDraft,updatedAt:string):SavedProgress{
 export function onlineProgress(season:Season,userId:string,updatedAt:string):SavedProgress{
  const me=season.teams.find(team=>team.userId===userId);
  const path=`/league?league=${encodeURIComponent(season.id)}`;
- const common={id:season.id,name:season.name,updatedAt,completedRounds:season.history.length};
+ const common={id:season.id,name:season.name,updatedAt,completedRounds:savedRoundCount(season)};
  if(season.status==='lobby')return {...common,stage:'League lobby',detail:`${season.teams.filter(team=>!team.vacant).length} of ${season.capacity} managers · ${me?.name||'Your team'}`,action:'Open league lobby',href:path};
  if(season.status==='draft')return {...common,stage:'Draft in progress',detail:`${season.pick} picks saved · ${me?.name||'Your team'}`,action:'Open draft room',href:location(path,'draft')};
  if(season.status==='complete')return {...common,stage:'Season complete',detail:`${me?.name||'Your team'} · Final results stay on record.`,action:'View final results',href:location(path,'results')};

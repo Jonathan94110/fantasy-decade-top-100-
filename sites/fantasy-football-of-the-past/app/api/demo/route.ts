@@ -4,9 +4,9 @@ import {newDemoDraft,demoDraftAction,demoReply,DemoRuleError} from '@/lib/demo-d
 import {SeasonRuleError} from '@/lib/season-engine';
 import type {DemoDraft} from '@/lib/demo-draft-model';
 import {draftInsights,draftRankings} from '@/lib/draft-insights';
-import {seasonReply,seasonIdentity,checkSeasonOrigin} from '@/lib/season-store';
+import {seasonReply,seasonIdentity,checkSeasonOrigin,demoRow,commitDemo} from '@/lib/season-store';
 import {unifiedDraftCandidate,unifyUnscoredDraft} from '@/lib/unified-draft';
-async function read(user:string){const row=await database().prepare('SELECT state FROM demo_drafts WHERE owner_id = ?').bind(user).first<{state:string}>();return row?JSON.parse(row.state) as DemoDraft:null;}
+async function read(user:string){return (await demoRow(user))?.demo??null;}
 async function savedArchives(user:string){
  const rows=await database().prepare('SELECT id, state, revision, archived_at FROM demo_archives WHERE owner_id = ? ORDER BY archived_at DESC').bind(user).all<{id:string;state:string;revision:number;archived_at:string}>();
  return {generation:Math.max(-1,...rows.results.map(row=>row.revision))+1,archives:rows.results.map(row=>{const saved=JSON.parse(row.state) as DemoDraft;return {id:row.id,name:saved.teams.find(t=>t.id===saved.humanTeamId)?.name||'Previous season',archivedAt:row.archived_at};})};
@@ -27,7 +27,7 @@ export async function POST(request:Request){
    if(body.action!=='create')throw new DemoRuleError('Scoring is fixed when your saved draft starts. Choose a mode when creating a new season.');
    try{parseScoringMode(body.scoringMode);}catch(e){throw new DemoRuleError(e instanceof Error?e.message:'Choose valid scoring rules.');}
   }
-  const current=await read(user);
+  const saved=await demoRow(user),current=saved?.demo??null,records=saved?.records??[];
   if(body.action==='unifyDraft'){
    if(!current)return seasonReply({error:'Your saved draft is unavailable.'},404);
    if(body.seasonId!==current.id||body.revision!==current.revision)return await reply(user,current,409);
@@ -39,8 +39,8 @@ export async function POST(request:Request){
    next.revision=current.revision+1;
    // The BEFORE UPDATE trigger captures the exact original DB row atomically.
    // A backup failure aborts this update; a concurrent action invalidates the CAS.
-   const result=await database().prepare('UPDATE demo_drafts SET state = ?, revision = ?, updated_at = ? WHERE owner_id = ? AND id = ? AND revision = ?').bind(JSON.stringify(next),next.revision,new Date().toISOString(),user,current.id,current.revision).run();
-   return await reply(user,await read(user),result.meta.changes?200:409);
+   const changes=await commitDemo(user,current,next,records);
+   return await reply(user,await read(user),changes?200:409);
   }
   if(body.action==='undoUnifiedDraft'){
    if(!current||body.seasonId!==current.id||body.revision!==current.revision)return await reply(user,current,409);
@@ -51,8 +51,8 @@ export async function POST(request:Request){
    expected.revision=current.revision;
    if(JSON.stringify(expected)!==JSON.stringify(current))return seasonReply({error:'Your draft has progressed. Its current scoring must stay fixed.'},400);
    original.revision=current.revision+1;original.unificationReverted=true;
-   const result=await database().prepare('UPDATE demo_drafts SET state = ?, revision = ?, updated_at = ? WHERE owner_id = ? AND id = ? AND revision = ?').bind(JSON.stringify(original),original.revision,new Date().toISOString(),user,current.id,current.revision).run();
-   return seasonReply(demoReply(await read(user)),result.meta.changes?200:409);
+   const changes=await commitDemo(user,current,original,records);
+   return seasonReply(demoReply(await read(user)),changes?200:409);
   }
   if(body.action==='reset'){
    if(body.confirm!==true||typeof body.seasonId!=='string')return seasonReply({error:'Confirm the reset of this specific solo season.'},400);
@@ -83,8 +83,7 @@ export async function POST(request:Request){
   if(!current)return seasonReply({error:'Start your draft first.'},404);
   if((body.seasonId!==undefined&&body.seasonId!==current.id)||body.revision!==current.revision)return seasonReply({error:'Your draft changed in another tab. Review the saved picks before choosing again.',...demoReply(current)},409);
   const next=demoDraftAction(current,body);next.revision=current.revision+1;
-  const result=await database().prepare('UPDATE demo_drafts SET state = ?, revision = ?, updated_at = ? WHERE owner_id = ? AND id = ? AND revision = ?').bind(JSON.stringify(next),next.revision,new Date().toISOString(),user,current.id,current.revision).run();
-  if(!result.meta.changes)return seasonReply({error:'Another pick was already saved. Review your latest draft.',...demoReply(await read(user))},409);
+  if(!await commitDemo(user,current,next,records))return seasonReply({error:'Another pick was already saved. Review your latest draft.',...demoReply(await read(user))},409);
   return seasonReply(demoReply(next));
  }catch(e){if(e instanceof DemoRuleError||e instanceof SeasonRuleError)return seasonReply({error:e.message},400);return seasonReply({error:'The action could not be saved. Refresh to check your saved draft or season before trying again.'},503);}
 }

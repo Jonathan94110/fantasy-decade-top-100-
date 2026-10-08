@@ -39,11 +39,12 @@ const availableSelection='historical';
 function finishDraft(draft:DemoDraft){let saved=draft;while(saved.status==='draft')saved=demoDraftAction(saved,{action:'draft',athleteId:athletesFor(scoringFor(saved)).find(a=>!demoPickReason(saved,saved.humanTeamId,a.id))!.id});return saved;}
 function fullLobby(mode:unknown='strict'){return joinSeason(newSeason('owner',{name:'Scoring league',teamName:'Owner',capacity:2,format:'seventeen',scoringMode:mode},'SCORING-CODE'),'manager','Manager');}
 function activeSeason(mode:unknown='strict'){let season=seasonAction(fullLobby(mode),'owner',{action:'startDraft',orderMode:'manual',orderIndexes:[0,1]});while(season.status==='draft')season=seasonAction(season,'owner',{action:'autopick'});return season;}
+const {withBatch}=await import('./helpers/memory-d1-batch');
 function memoryDatabase(){
  const sql=new DatabaseSync(':memory:');for(const file of readdirSync(new URL('drizzle/',root)).filter(f=>f.endsWith('.sql')).sort())sql.exec(readFileSync(new URL(`drizzle/${file}`,root),'utf8'));
  return {sql,writes:0,prepare(query:string){let args:SQLInputValue[]=[];return {bind(...values:unknown[]){args=values as SQLInputValue[];return this;},async first(){return sql.prepare(query).get(...args)||null;},async all(){return {results:sql.prepare(query).all(...args)};},async run(){audit.__scoringModeDatabase!.writes++;return {meta:{changes:Number(sql.prepare(query).run(...args).changes)}};}};}};
 }
-function fresh(){audit.__scoringModeDatabase=memoryDatabase();return audit.__scoringModeDatabase;}
+function fresh(){audit.__scoringModeDatabase=withBatch(memoryDatabase(),{beforeWrite:()=>{audit.__scoringModeDatabase!.writes++;}});return audit.__scoringModeDatabase;}
 function request(path:string,body?:Record<string,unknown>,user='owner'){return new Request(`https://scoring.test/api/${path}`,{method:body?'POST':'GET',headers:{'oai-authenticated-user-id':user,origin:'https://scoring.test','Content-Type':'application/json'},body:body?JSON.stringify(body):undefined});}
 function context(id:string){return {params:Promise.resolve({id})};}
 async function seedSeason(season:Season){const db=audit.__scoringModeDatabase!;db.sql.prepare('INSERT INTO season_leagues (id,owner_id,invite_hash,state,revision,updated_at) VALUES (?,?,?,?,?,?)').run(season.id,season.ownerId,await inviteHash(season.inviteCode),JSON.stringify(season),season.revision,season.createdAt);}
