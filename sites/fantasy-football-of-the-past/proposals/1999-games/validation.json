@@ -1,0 +1,161 @@
+{
+ "pass": true,
+ "base": "63d6379",
+ "validatedFiles": {
+  "batch-records.json": "47f90ac116fa6897a6cbd714de475002dc562521467e2b7299d8335f5301fa80",
+  "review-records.json": "78733216b40c240ff46a42477aa97c9501be45d227fce9e4f279a312a21191b9",
+  "batch-players.json": "1bcc3c63b00c4d6b6d43ee70ad67229c170ec939b8d0a6c33de1a879959980d5",
+  "summary.json": "275f98b4ad0e86d9b36bfd3bc18cfbfdfdfecfa293247ff627bce07494918f5a"
+ },
+ "checks": [
+  {
+   "name": "batch: row shape, season, week, date",
+   "pass": true,
+   "detail": {
+    "rows": 514,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "batch: IDs unique, no collision with 182173 existing performances, athlete in catalog, one game per week",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "batch: every game is an accepted 1999 game with matching date and teams, none excluded",
+   "pass": true,
+   "detail": {
+    "acceptedGames1999": 258,
+    "excluded": [
+     "1999_01_BAL_STL"
+    ],
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "batch: all 19 stats present and numeric (no nulls), counts nonnegative, defense fields zero",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "batch: scores under Standard, Half PPR and Full PPR with the current all-era rules",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "review (Derrick Walker, identity sign-off needed): row shape, season, week, date",
+   "pass": true,
+   "detail": {
+    "rows": 8,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "review (Derrick Walker, identity sign-off needed): IDs unique, no collision with 182173 existing performances, athlete in catalog, one game per week",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "review (Derrick Walker, identity sign-off needed): every game is an accepted 1999 game with matching date and teams, none excluded",
+   "pass": true,
+   "detail": {
+    "acceptedGames1999": 258,
+    "excluded": [
+     "1999_01_BAL_STL"
+    ],
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "review (Derrick Walker, identity sign-off needed): all 19 stats present and numeric (no nulls), counts nonnegative, defense fields zero",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "review (Derrick Walker, identity sign-off needed): scores under Standard, Half PPR and Full PPR with the current all-era rules",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "no batch player already exists in the game under a second (nflverse) ID",
+   "pass": true,
+   "detail": {
+    "players": 48,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "reconciliation: coverage gap = built + held + listed missing games, and no listed missing game is in the batch",
+   "pass": true,
+   "detail": {
+    "coverageGap": 547,
+    "built": 514,
+    "held": 8,
+    "listedMissing": 25,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "baseline on this commit matches the reviewed counts (1,308 athletes, 178,786 performances)",
+   "pass": true,
+   "detail": {
+    "athletes": 1308,
+    "performances": 178786,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "source file re-hashed: it is the pinned nflverse snapshot (CC BY 4.0)",
+   "pass": true,
+   "detail": {
+    "sha256": "5bf732d1dcb4a8f1927af074c05d5534f4b91abd6434fd4cf6130e8a20a91d20",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_1999.csv",
+    "failures": 0,
+    "examples": []
+   }
+  },
+  {
+   "name": "app files unchanged against 63d6379 (data, lib, app, components, drizzle, public, scripts, tests)",
+   "pass": true,
+   "detail": {
+    "failures": 0,
+    "examples": []
+   }
+  }
+ ],
+ "report": {
+  "dryRun": {
+   "performancesBefore": 178786,
+   "performancesIfAdded": 179300,
+   "added": 514,
+   "athletesGainingGames": 42,
+   "newAthletes": 0,
+   "note": "Information only. Rows keep each athlete's existing ID; no data file changes here. Integration and saved-game testing happen against v43."
+  }
+ }
+}

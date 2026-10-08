@@ -1,0 +1,90 @@
+{
+ "players": 48,
+ "playersBuilt": 42,
+ "playersAlreadyComplete": [
+  "Marshall Faulk",
+  "Isaac Bruce",
+  "Ben Coates",
+  "Eric Green",
+  "Jackie Harris"
+ ],
+ "identityNotEstablished": [],
+ "needsReviewerIdentityConfirmation": {
+  "Derrick Walker": 8
+ },
+ "games": 514,
+ "reviewGames": 8,
+ "playersWithNewGames": 42,
+ "reconciliation": {
+  "coverageGap": 547,
+  "builtForReview": 514,
+  "heldForIdentitySignOff": 8,
+  "notAvailableFromNflverse": 25,
+  "missingGamesListed": 25,
+  "unidentifiedMissing": 0,
+  "olderSourceAppearancesBeyondOfficialCount": 17
+ },
+ "followOn": {
+  "players": 60,
+  "olderSource1999Rows": 742,
+  "byPosition": {
+   "QB": 14,
+   "WR": 31,
+   "RB": 14,
+   "TE": 1
+  },
+  "note": "catalog athletes outside this batch with 1999 rows in the older source but no 1999 games in the game"
+ },
+ "leftOut": {
+  "already in data/nflverse/records.json": 62
+ },
+ "auditAgreement": {
+  "sameDateAndTeams": 522,
+  "notInAuditRows": 0
+ },
+ "source": {
+  "file": "stats_player_week_1999.csv",
+  "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_1999.csv",
+  "sha256": "5bf732d1dcb4a8f1927af074c05d5534f4b91abd6434fd4cf6130e8a20a91d20",
+  "pinnedIn": "data/nflverse/manifest.json",
+  "licence": "CC BY 4.0 (data/nflverse/LICENSE-nflverse.md)",
+  "attribution": "Data from nflverse (https://github.com/nflverse/nflverse-data), CC BY 4.0.",
+  "warning": "1999\u20132000 source data are no longer maintained by nflfastR; known invalid games are excluded.",
+  "identityFile": {
+   "file": "players.csv",
+   "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv",
+   "sha256": "d2ff1249643f165f678bddb9dcbfab12cee954df4ab96e3fc724786741021809",
+   "use": "gsis_id, name and birth date only"
+  }
+ },
+ "recordColumns": [
+  "athleteId",
+  "season",
+  "week",
+  "gameId",
+  "date",
+  "teamAtTime",
+  "opponent",
+  "seasonType",
+  "passingYards",
+  "passingTD",
+  "interceptions",
+  "rushingYards",
+  "rushingTD",
+  "receptions",
+  "receivingYards",
+  "receivingTD",
+  "fumblesLost",
+  "twoPoint",
+  "returnTD",
+  "sacks",
+  "defensiveInterceptions",
+  "fumbleRecoveries",
+  "defensiveTD",
+  "safeties",
+  "blockedKicks",
+  "pointsAllowed",
+  "fumbleRecoveryTD"
+ ],
+ "performanceIdFormat": "nflverse:<athleteId>:<gameId>"
+}

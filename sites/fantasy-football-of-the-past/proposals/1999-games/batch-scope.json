@@ -1,0 +1,485 @@
+{
+ "selection": "1990s top-30 QB/RB/WR (rankings bot) and TE (NFL.com-ranked) stars already in the game whose 1999 regular-season games are absent from it (coverage table v2, 2026-10-08).",
+ "players": [
+  {
+   "athleteId": "historical:player:9001",
+   "name": "Jim Harbaugh",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 8,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:7765",
+   "name": "Jeff George",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 9,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 12
+  },
+  {
+   "athleteId": "historical:player:16640",
+   "name": "Neil O'Donnell",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 14,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 8
+  },
+  {
+   "athleteId": "historical:player:3745",
+   "name": "Chris Chandler",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 15,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 12
+  },
+  {
+   "athleteId": "historical:player:1684",
+   "name": "Steve Beuerlein",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 23,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:15511",
+   "name": "Scott Mitchell",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 24,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 2
+  },
+  {
+   "athleteId": "historical:player:15295",
+   "name": "Chris Miller",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 25,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 3
+  },
+  {
+   "athleteId": "historical:player:12592",
+   "name": "Erik Kramer",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 26,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 6
+  },
+  {
+   "athleteId": "historical:player:17316",
+   "name": "Rodney Peete",
+   "rankingPosition": "QB",
+   "gamePosition": "QB",
+   "rank1990s": 30,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 2
+  },
+  {
+   "athleteId": "00-0005092",
+   "name": "Marshall Faulk",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 5,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 1
+  },
+  {
+   "athleteId": "historical:player:335",
+   "name": "Terry Allen",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 6,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:23284",
+   "name": "Chris Warren",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 8,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:9964",
+   "name": "Leroy Hoard",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 17,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:12331",
+   "name": "Terry Kirby",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 18,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:1540",
+   "name": "Edgar Bennett",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 19,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:13230",
+   "name": "Dorsey Levens",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 20,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:16098",
+   "name": "Adrian Murrell",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 22,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:15055",
+   "name": "Natrone Means",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 24,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 7
+  },
+  {
+   "athleteId": "historical:player:20757",
+   "name": "Robert Smith",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 26,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 13
+  },
+  {
+   "athleteId": "historical:player:397",
+   "name": "Kimble Anders",
+   "rankingPosition": "RB",
+   "gamePosition": "RB",
+   "rank1990s": 29,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 2
+  },
+  {
+   "athleteId": "historical:player:18724",
+   "name": "Andre Rison",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 5,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:15729",
+   "name": "Rob Moore",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 6,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 13
+  },
+  {
+   "athleteId": "historical:player:7411",
+   "name": "Irving Fryar",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 7,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:14280",
+   "name": "Terance Mathis",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 10,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:14193",
+   "name": "Tony Martin",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 11,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:17577",
+   "name": "Carl Pickens",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 12,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:15168",
+   "name": "Eric Metcalf",
+   "rankingPosition": "WR",
+   "gamePosition": "RB",
+   "rank1990s": 15,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:17986",
+   "name": "Ricky Proehl",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 18,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:6177",
+   "name": "Quinn Early",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 20,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 9
+  },
+  {
+   "athleteId": "00-0002099",
+   "name": "Isaac Bruce",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 21,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 1
+  },
+  {
+   "athleteId": "historical:player:8219",
+   "name": "Jeff Graham",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 22,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:18344",
+   "name": "Jake Reed",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 25,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:14461",
+   "name": "Ed McCaffrey",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 29,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:3292",
+   "name": "Chris Calloway",
+   "rankingPosition": "WR",
+   "gamePosition": "WR",
+   "rank1990s": 30,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 11
+  },
+  {
+   "athleteId": "00-0003142",
+   "name": "Ben Coates",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 2,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 1
+  },
+  {
+   "athleteId": "00-0006324",
+   "name": "Eric Green",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 3,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 2
+  },
+  {
+   "athleteId": "00-0006949",
+   "name": "Jackie Harris",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 7,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 3
+  },
+  {
+   "athleteId": "historical:player:14767",
+   "name": "Tony McGee",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 10,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:5947",
+   "name": "Troy Drayton",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 11,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 14
+  },
+  {
+   "athleteId": "historical:player:6014",
+   "name": "Rickey Dudley",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 13,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:15506",
+   "name": "Pete Mitchell",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 15,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 15
+  },
+  {
+   "athleteId": "historical:player:7978",
+   "name": "Andrew Glover",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 16,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:3858",
+   "name": "Mark Chmura",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 17,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 2
+  },
+  {
+   "athleteId": "historical:player:4831",
+   "name": "Howard Cross",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 19,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:20636",
+   "name": "Irv Smith",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 23,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 13
+  },
+  {
+   "athleteId": "historical:player:23088",
+   "name": "Derrick Walker",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 25,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 11
+  },
+  {
+   "athleteId": "historical:player:23679",
+   "name": "Ryan Wetnight",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 27,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  },
+  {
+   "athleteId": "historical:player:12244",
+   "name": "Brian Kinchen",
+   "rankingPosition": "TE",
+   "gamePosition": "TE",
+   "rank1990s": 29,
+   "status": "draftable",
+   "official1999Games": null,
+   "missing1999Games": 16
+  }
+ ]
+}

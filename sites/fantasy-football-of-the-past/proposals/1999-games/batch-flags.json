@@ -1,0 +1,374 @@
+[
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_03_ATL_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_04_STL_CIN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_05_SF_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_06_STL_ATL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_07_CLE_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_08_STL_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_09_STL_DET",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_10_CAR_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_11_STL_SF",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_12_NO_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_13_STL_CAR",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_14_STL_NO",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_15_NYG_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_16_CHI_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gameId": "1999_17_STL_PHI",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_03_ATL_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_04_STL_CIN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_05_SF_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_06_STL_ATL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_07_CLE_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_08_STL_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_09_STL_DET",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_10_CAR_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_11_STL_SF",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_12_NO_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_13_STL_CAR",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_14_STL_NO",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_15_NYG_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_16_CHI_STL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gameId": "1999_17_STL_PHI",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_01_NE_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_02_IND_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_03_NYG_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_04_NE_CLE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_05_NE_KC",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_06_MIA_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_07_DEN_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_08_NE_ARI",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_10_NYJ_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_11_NE_MIA",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_12_NE_BUF",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_14_NE_IND",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_15_NE_PHI",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_16_BUF_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gameId": "1999_17_BAL_NE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_01_NE_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_03_WAS_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_04_NYJ_DEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_05_JAX_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_06_IND_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_07_NYJ_OAK",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_13_NYJ_NYG",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gameId": "1999_14_MIA_NYJ",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_02_CLE_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_08_STL_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_09_TEN_MIA",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_10_TEN_CIN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_11_PIT_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_12_TEN_CLE",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_13_TEN_BAL",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_14_OAK_TEN",
+  "left out": "already in data/nflverse/records.json"
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gameId": "1999_16_JAX_TEN",
+  "left out": "already in data/nflverse/records.json"
+ }
+]

@@ -1,0 +1,1849 @@
+[
+ {
+  "athleteId": "historical:player:9001",
+  "name": "Jim Harbaugh",
+  "gamePosition": "QB",
+  "rank1990s": "QB #8",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0006808",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 14,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1963-12-23 match nflverse 00-0006808"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 14,
+  "batchGames": 14,
+  "gameGames1999After": 14,
+  "auditRows1999": 14,
+  "auditAgreement": {
+   "sameDateAndTeams": 14,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:7765",
+  "name": "Jeff George",
+  "gamePosition": "QB",
+  "rank1990s": "QB #9",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 12,
+  "gsisId": "00-0005885",
+  "gapReconciliation": {
+   "coverageGap": 12,
+   "built": 12,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-12-08 match nflverse 00-0005885"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 12,
+  "batchGames": 12,
+  "gameGames1999After": 12,
+  "auditRows1999": 12,
+  "auditAgreement": {
+   "sameDateAndTeams": 12,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:16640",
+  "name": "Neil O'Donnell",
+  "gamePosition": "QB",
+  "rank1990s": "QB #14",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 8,
+  "gsisId": "00-0012261",
+  "gapReconciliation": {
+   "coverageGap": 8,
+   "built": 8,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1966-07-03 match nflverse 00-0012261"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 8,
+  "batchGames": 8,
+  "gameGames1999After": 8,
+  "auditRows1999": 8,
+  "auditAgreement": {
+   "sameDateAndTeams": 8,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:3745",
+  "name": "Chris Chandler",
+  "gamePosition": "QB",
+  "rank1990s": "QB #15",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 12,
+  "gsisId": "00-0002876",
+  "gapReconciliation": {
+   "coverageGap": 12,
+   "built": 12,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-10-12 match nflverse 00-0002876"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 12,
+  "batchGames": 12,
+  "gameGames1999After": 12,
+  "auditRows1999": 12,
+  "auditAgreement": {
+   "sameDateAndTeams": 12,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:1684",
+  "name": "Steve Beuerlein",
+  "gamePosition": "QB",
+  "rank1990s": "QB #23",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0001218",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-03-07 match nflverse 00-0001218"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15511",
+  "name": "Scott Mitchell",
+  "gamePosition": "QB",
+  "rank1990s": "QB #24",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 2,
+  "gsisId": "00-0011434",
+  "gapReconciliation": {
+   "coverageGap": 2,
+   "built": 1,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-09-12",
+     "team": "BAL",
+     "opponent": "LA",
+     "gameId": "1999_01_BAL_STL",
+     "olderSourceHasStats": true,
+     "reason": "nflverse has this game on its schedule but no player stats for it; the game is withheld by the verified exclusion list"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-01-02 match nflverse 00-0011434"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 1,
+  "batchGames": 1,
+  "gameGames1999After": 1,
+  "auditRows1999": 2,
+  "auditAgreement": {
+   "sameDateAndTeams": 1,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15295",
+  "name": "Chris Miller",
+  "gamePosition": "QB",
+  "rank1990s": "QB #25",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 3,
+  "gsisId": "00-0011244",
+  "gapReconciliation": {
+   "coverageGap": 3,
+   "built": 3,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-08-09 match nflverse 00-0011244"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 3,
+  "batchGames": 3,
+  "gameGames1999After": 3,
+  "auditRows1999": 3,
+  "auditAgreement": {
+   "sameDateAndTeams": 3,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:12592",
+  "name": "Erik Kramer",
+  "gamePosition": "QB",
+  "rank1990s": "QB #26",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 6,
+  "gsisId": "00-0009451",
+  "gapReconciliation": {
+   "coverageGap": 6,
+   "built": 6,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1964-11-06 match nflverse 00-0009451"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 6,
+  "batchGames": 6,
+  "gameGames1999After": 6,
+  "auditRows1999": 6,
+  "auditAgreement": {
+   "sameDateAndTeams": 6,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:17316",
+  "name": "Rodney Peete",
+  "gamePosition": "QB",
+  "rank1990s": "QB #30",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 2,
+  "gsisId": "00-0012732",
+  "gapReconciliation": {
+   "coverageGap": 2,
+   "built": 2,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-09-19",
+     "team": "WAS",
+     "opponent": "NYG",
+     "gameId": "1999_02_WAS_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1966-03-16 match nflverse 00-0012732"
+  ],
+  "nflversePosition": "QB",
+  "nflverseRows1999": 2,
+  "batchGames": 2,
+  "gameGames1999After": 2,
+  "auditRows1999": 3,
+  "auditAgreement": {
+   "sameDateAndTeams": 2,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "00-0005092",
+  "name": "Marshall Faulk",
+  "gamePosition": "RB",
+  "rank1990s": "RB #5",
+  "gameGames1999Before": 15,
+  "missing1999GamesInCoverage": 1,
+  "gsisId": "00-0005092",
+  "gapReconciliation": {
+   "coverageGap": 1,
+   "built": 0,
+   "alreadyInGame": 15,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-09-12",
+     "team": "LA",
+     "opponent": "BAL",
+     "gameId": "1999_01_BAL_STL",
+     "olderSourceHasStats": true,
+     "reason": "nflverse has this game on its schedule but no player stats for it; the game is withheld by the verified exclusion list"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "no new games: its 1999 nflverse games are already in the game",
+  "identityEvidence": [
+   "game athlete id is the nflverse gsis_id"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 15,
+  "batchGames": 0,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 0,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:335",
+  "name": "Terry Allen",
+  "gamePosition": "RB",
+  "rank1990s": "RB #6",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0000232",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-02-21 match nflverse 00-0000232"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:23284",
+  "name": "Chris Warren",
+  "gamePosition": "RB",
+  "rank1990s": "RB #8",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0017209",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-12-24",
+     "team": "DAL",
+     "opponent": "NO",
+     "gameId": "1999_16_DAL_NO",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-01-24 match nflverse 00-0017209"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:9964",
+  "name": "Leroy Hoard",
+  "gamePosition": "RB",
+  "rank1990s": "RB #17",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0007520",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-05-15 match nflverse 00-0007520"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 15,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:12331",
+  "name": "Terry Kirby",
+  "gamePosition": "RB",
+  "rank1990s": "RB #18",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0009288",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-01-20 match nflverse 00-0009288"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:1540",
+  "name": "Edgar Bennett",
+  "gamePosition": "RB",
+  "rank1990s": "RB #19",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0001103",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 14,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-11-21",
+     "team": "CHI",
+     "opponent": "LAC",
+     "gameId": "1999_11_CHI_SD",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-19",
+     "team": "CHI",
+     "opponent": "DET",
+     "gameId": "1999_15_DET_CHI",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1969-02-15 match nflverse 00-0001103"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 14,
+  "batchGames": 14,
+  "gameGames1999After": 14,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 14,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:13230",
+  "name": "Dorsey Levens",
+  "gamePosition": "RB",
+  "rank1990s": "RB #20",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0009829",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 14,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-05-21 match nflverse 00-0009829"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 14,
+  "batchGames": 14,
+  "gameGames1999After": 14,
+  "auditRows1999": 14,
+  "auditAgreement": {
+   "sameDateAndTeams": 14,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:16098",
+  "name": "Adrian Murrell",
+  "gamePosition": "RB",
+  "rank1990s": "RB #22",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0011869",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-10-16 match nflverse 00-0011869"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15055",
+  "name": "Natrone Means",
+  "gamePosition": "RB",
+  "rank1990s": "RB #24",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 7,
+  "gsisId": "00-0011081",
+  "gapReconciliation": {
+   "coverageGap": 7,
+   "built": 7,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1972-04-26 match nflverse 00-0011081"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 7,
+  "batchGames": 7,
+  "gameGames1999After": 7,
+  "auditRows1999": 7,
+  "auditAgreement": {
+   "sameDateAndTeams": 7,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:20757",
+  "name": "Robert Smith",
+  "gamePosition": "RB",
+  "rank1990s": "RB #26",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 13,
+  "gsisId": "00-0015286",
+  "gapReconciliation": {
+   "coverageGap": 13,
+   "built": 13,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1972-03-04 match nflverse 00-0015286"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 13,
+  "batchGames": 13,
+  "gameGames1999After": 13,
+  "auditRows1999": 13,
+  "auditAgreement": {
+   "sameDateAndTeams": 13,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:397",
+  "name": "Kimble Anders",
+  "gamePosition": "RB",
+  "rank1990s": "RB #29",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 2,
+  "gsisId": "00-0000279",
+  "gapReconciliation": {
+   "coverageGap": 2,
+   "built": 2,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1966-09-10 match nflverse 00-0000279"
+  ],
+  "nflversePosition": "RB",
+  "nflverseRows1999": 2,
+  "batchGames": 2,
+  "gameGames1999After": 2,
+  "auditRows1999": 2,
+  "auditAgreement": {
+   "sameDateAndTeams": 2,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:18724",
+  "name": "Andre Rison",
+  "gamePosition": "WR",
+  "rank1990s": "WR #5",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0013770",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-03-18 match nflverse 00-0013770"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 15,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15729",
+  "name": "Rob Moore",
+  "gamePosition": "WR",
+  "rank1990s": "WR #6",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 13,
+  "gsisId": "00-0011601",
+  "gapReconciliation": {
+   "coverageGap": 13,
+   "built": 13,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-09-27",
+     "team": "ARI",
+     "opponent": "SF",
+     "gameId": "1999_03_SF_ARI",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-09-27 match nflverse 00-0011601"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 13,
+  "batchGames": 13,
+  "gameGames1999After": 13,
+  "auditRows1999": 14,
+  "auditAgreement": {
+   "sameDateAndTeams": 13,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:7411",
+  "name": "Irving Fryar",
+  "gamePosition": "WR",
+  "rank1990s": "WR #7",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0005616",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 14,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-11-07",
+     "team": "WAS",
+     "opponent": "BUF",
+     "gameId": "1999_09_BUF_WAS",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-05",
+     "team": "WAS",
+     "opponent": "DET",
+     "gameId": "1999_13_WAS_DET",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1962-09-28 match nflverse 00-0005616"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 14,
+  "batchGames": 14,
+  "gameGames1999After": 14,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 14,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:14280",
+  "name": "Terance Mathis",
+  "gamePosition": "WR",
+  "rank1990s": "WR #10",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0010539",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-06-07 match nflverse 00-0010539"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:14193",
+  "name": "Tony Martin",
+  "gamePosition": "WR",
+  "rank1990s": "WR #11",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0010477",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "2000-01-02",
+     "team": "MIA",
+     "opponent": "WAS",
+     "gameId": "1999_17_MIA_WAS",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-09-05 match nflverse 00-0010477"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:17577",
+  "name": "Carl Pickens",
+  "gamePosition": "WR",
+  "rank1990s": "WR #12",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0012953",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-03-23 match nflverse 00-0012953"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15168",
+  "name": "Eric Metcalf",
+  "gamePosition": "RB",
+  "rank1990s": "WR #15",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0011151",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-01-23 match nflverse 00-0011151"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:17986",
+  "name": "Ricky Proehl",
+  "gamePosition": "WR",
+  "rank1990s": "WR #18",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0013268",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 13,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-09-12",
+     "team": "LA",
+     "opponent": "BAL",
+     "gameId": "1999_01_BAL_STL",
+     "olderSourceHasStats": true,
+     "reason": "nflverse has this game on its schedule but no player stats for it; the game is withheld by the verified exclusion list"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-10-17",
+     "team": "LA",
+     "opponent": "ATL",
+     "gameId": "1999_06_STL_ATL",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-03-07 match nflverse 00-0013268"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 13,
+  "batchGames": 13,
+  "gameGames1999After": 13,
+  "auditRows1999": 15,
+  "auditAgreement": {
+   "sameDateAndTeams": 13,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:6177",
+  "name": "Quinn Early",
+  "gamePosition": "WR",
+  "rank1990s": "WR #20",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 9,
+  "gsisId": "00-0004705",
+  "gapReconciliation": {
+   "coverageGap": 9,
+   "built": 9,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-10-24",
+     "team": "NYJ",
+     "opponent": "LV",
+     "gameId": "1999_07_NYJ_OAK",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-07",
+     "team": "NYJ",
+     "opponent": "ARI",
+     "gameId": "1999_09_ARI_NYJ",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-21",
+     "team": "NYJ",
+     "opponent": "BUF",
+     "gameId": "1999_11_BUF_NYJ",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-28",
+     "team": "NYJ",
+     "opponent": "IND",
+     "gameId": "1999_12_NYJ_IND",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-05",
+     "team": "NYJ",
+     "opponent": "NYG",
+     "gameId": "1999_13_NYJ_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-19",
+     "team": "NYJ",
+     "opponent": "DAL",
+     "gameId": "1999_15_NYJ_DAL",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "2000-01-02",
+     "team": "NYJ",
+     "opponent": "SEA",
+     "gameId": "1999_17_SEA_NYJ",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-04-13 match nflverse 00-0004705"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 9,
+  "batchGames": 9,
+  "gameGames1999After": 9,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 9,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "00-0002099",
+  "name": "Isaac Bruce",
+  "gamePosition": "WR",
+  "rank1990s": "WR #21",
+  "gameGames1999Before": 15,
+  "missing1999GamesInCoverage": 1,
+  "gsisId": "00-0002099",
+  "gapReconciliation": {
+   "coverageGap": 1,
+   "built": 0,
+   "alreadyInGame": 15,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-09-12",
+     "team": "LA",
+     "opponent": "BAL",
+     "gameId": "1999_01_BAL_STL",
+     "olderSourceHasStats": true,
+     "reason": "nflverse has this game on its schedule but no player stats for it; the game is withheld by the verified exclusion list"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "no new games: its 1999 nflverse games are already in the game",
+  "identityEvidence": [
+   "game athlete id is the nflverse gsis_id"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 15,
+  "batchGames": 0,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 0,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:8219",
+  "name": "Jeff Graham",
+  "gamePosition": "WR",
+  "rank1990s": "WR #22",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0006210",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1969-02-14 match nflverse 00-0006210"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:18344",
+  "name": "Jake Reed",
+  "gamePosition": "WR",
+  "rank1990s": "WR #25",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0013512",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [
+    {
+     "date": "1999-12-26",
+     "team": "MIN",
+     "opponent": "NYG",
+     "gameId": "1999_16_MIN_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-09-28 match nflverse 00-0013512"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:14461",
+  "name": "Ed McCaffrey",
+  "gamePosition": "WR",
+  "rank1990s": "WR #29",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0010650",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-08-17 match nflverse 00-0010650"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 15,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:3292",
+  "name": "Chris Calloway",
+  "gamePosition": "WR",
+  "rank1990s": "WR #30",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 11,
+  "gsisId": "00-0002544",
+  "gapReconciliation": {
+   "coverageGap": 11,
+   "built": 11,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1968-03-29 match nflverse 00-0002544"
+  ],
+  "nflversePosition": "WR",
+  "nflverseRows1999": 11,
+  "batchGames": 11,
+  "gameGames1999After": 11,
+  "auditRows1999": 11,
+  "auditAgreement": {
+   "sameDateAndTeams": 11,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "00-0003142",
+  "name": "Ben Coates",
+  "gamePosition": "TE",
+  "rank1990s": "TE #2",
+  "gameGames1999Before": 15,
+  "missing1999GamesInCoverage": 1,
+  "gsisId": "00-0003142",
+  "gapReconciliation": {
+   "coverageGap": 1,
+   "built": 0,
+   "alreadyInGame": 15,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-12-05",
+     "team": "NE",
+     "opponent": "DAL",
+     "gameId": "1999_13_DAL_NE",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "no new games: its 1999 nflverse games are already in the game",
+  "identityEvidence": [
+   "game athlete id is the nflverse gsis_id"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 15,
+  "batchGames": 0,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 0,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "00-0006324",
+  "name": "Eric Green",
+  "gamePosition": "TE",
+  "rank1990s": "TE #3",
+  "gameGames1999Before": 8,
+  "missing1999GamesInCoverage": 2,
+  "gsisId": "00-0006324",
+  "gapReconciliation": {
+   "coverageGap": 2,
+   "built": 0,
+   "alreadyInGame": 8,
+   "notAvailableFromNflverse": 2,
+   "missingGames": [
+    {
+     "date": "1999-11-07",
+     "team": "NYJ",
+     "opponent": "ARI",
+     "gameId": "1999_09_ARI_NYJ",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-28",
+     "team": "NYJ",
+     "opponent": "IND",
+     "gameId": "1999_12_NYJ_IND",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "no new games: its 1999 nflverse games are already in the game",
+  "identityEvidence": [
+   "game athlete id is the nflverse gsis_id"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 8,
+  "batchGames": 0,
+  "gameGames1999After": 8,
+  "auditRows1999": 10,
+  "auditAgreement": {
+   "sameDateAndTeams": 0,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "00-0006949",
+  "name": "Jackie Harris",
+  "gamePosition": "TE",
+  "rank1990s": "TE #7",
+  "gameGames1999Before": 9,
+  "missing1999GamesInCoverage": 3,
+  "gsisId": "00-0006949",
+  "gapReconciliation": {
+   "coverageGap": 3,
+   "built": 0,
+   "alreadyInGame": 9,
+   "notAvailableFromNflverse": 3,
+   "missingGames": [
+    {
+     "date": "1999-09-26",
+     "team": "TEN",
+     "opponent": "JAX",
+     "gameId": "1999_03_TEN_JAX",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-19",
+     "team": "TEN",
+     "opponent": "ATL",
+     "gameId": "1999_15_ATL_TEN",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "2000-01-02",
+     "team": "TEN",
+     "opponent": "PIT",
+     "gameId": "1999_17_TEN_PIT",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "no new games: its 1999 nflverse games are already in the game",
+  "identityEvidence": [
+   "game athlete id is the nflverse gsis_id"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 9,
+  "batchGames": 0,
+  "gameGames1999After": 9,
+  "auditRows1999": 12,
+  "auditAgreement": {
+   "sameDateAndTeams": 0,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:14767",
+  "name": "Tony McGee",
+  "gamePosition": "TE",
+  "rank1990s": "TE #10",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0010859",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1971-04-21 match nflverse 00-0010859"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:5947",
+  "name": "Troy Drayton",
+  "gamePosition": "TE",
+  "rank1990s": "TE #11",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 14,
+  "gsisId": "00-0004524",
+  "gapReconciliation": {
+   "coverageGap": 14,
+   "built": 12,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 2,
+   "missingGames": [
+    {
+     "date": "1999-11-07",
+     "team": "MIA",
+     "opponent": "TEN",
+     "gameId": "1999_09_TEN_MIA",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-14",
+     "team": "MIA",
+     "opponent": "BUF",
+     "gameId": "1999_10_MIA_BUF",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-06-29 match nflverse 00-0004524"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 12,
+  "batchGames": 12,
+  "gameGames1999After": 12,
+  "auditRows1999": 14,
+  "auditAgreement": {
+   "sameDateAndTeams": 12,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:6014",
+  "name": "Rickey Dudley",
+  "gamePosition": "TE",
+  "rank1990s": "TE #13",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0004574",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1972-07-15 match nflverse 00-0004574"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:15506",
+  "name": "Pete Mitchell",
+  "gamePosition": "TE",
+  "rank1990s": "TE #15",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 15,
+  "gsisId": "00-0011425",
+  "gapReconciliation": {
+   "coverageGap": 15,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1971-10-09 match nflverse 00-0011425"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 15,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:7978",
+  "name": "Andrew Glover",
+  "gamePosition": "TE",
+  "rank1990s": "TE #16",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0006047",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 15,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-12-12",
+     "team": "MIN",
+     "opponent": "KC",
+     "gameId": "1999_14_MIN_KC",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-08-12 match nflverse 00-0006047"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 15,
+  "batchGames": 15,
+  "gameGames1999After": 15,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 15,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:3858",
+  "name": "Mark Chmura",
+  "gamePosition": "TE",
+  "rank1990s": "TE #17",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 2,
+  "gsisId": "00-0002958",
+  "gapReconciliation": {
+   "coverageGap": 2,
+   "built": 2,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1969-02-22 match nflverse 00-0002958"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 2,
+  "batchGames": 2,
+  "gameGames1999After": 2,
+  "auditRows1999": 2,
+  "auditAgreement": {
+   "sameDateAndTeams": 2,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:4831",
+  "name": "Howard Cross",
+  "gamePosition": "TE",
+  "rank1990s": "TE #19",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0003681",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 13,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 3,
+   "missingGames": [
+    {
+     "date": "1999-10-18",
+     "team": "NYG",
+     "opponent": "DAL",
+     "gameId": "1999_06_DAL_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-14",
+     "team": "NYG",
+     "opponent": "IND",
+     "gameId": "1999_10_IND_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-11-28",
+     "team": "NYG",
+     "opponent": "ARI",
+     "gameId": "1999_12_ARI_NYG",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1967-08-08 match nflverse 00-0003681"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 13,
+  "batchGames": 13,
+  "gameGames1999After": 13,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 13,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:20636",
+  "name": "Irv Smith",
+  "gamePosition": "TE",
+  "rank1990s": "TE #23",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 13,
+  "gsisId": "00-0015195",
+  "gapReconciliation": {
+   "coverageGap": 13,
+   "built": 12,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 1,
+   "missingGames": [
+    {
+     "date": "1999-10-31",
+     "team": "CLE",
+     "opponent": "NO",
+     "gameId": "1999_08_CLE_NO",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1971-10-13 match nflverse 00-0015195"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 12,
+  "batchGames": 12,
+  "gameGames1999After": 12,
+  "auditRows1999": 13,
+  "auditAgreement": {
+   "sameDateAndTeams": 12,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:23088",
+  "name": "Derrick Walker",
+  "gamePosition": "TE",
+  "rank1990s": "TE #25",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 11,
+  "gsisId": "00-0017027",
+  "gapReconciliation": {
+   "coverageGap": 11,
+   "built": 8,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 3,
+   "missingGames": [
+    {
+     "date": "1999-09-12",
+     "team": "LV",
+     "opponent": "GB",
+     "gameId": "1999_01_OAK_GB",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-09-26",
+     "team": "LV",
+     "opponent": "CHI",
+     "gameId": "1999_03_CHI_OAK",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-05",
+     "team": "LV",
+     "opponent": "SEA",
+     "gameId": "1999_13_SEA_OAK",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "needs reviewer identity confirmation",
+  "identityEvidence": [
+   "0 nflverse players share name and birth date",
+   "REVIEW: nflverse 00-0017027 has the same name and position but birth date 1967-06-22 vs 1967-06-23 (one day apart)"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 8,
+  "batchGames": 8,
+  "gameGames1999After": 8,
+  "auditRows1999": 11,
+  "auditAgreement": {
+   "sameDateAndTeams": 8,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:23679",
+  "name": "Ryan Wetnight",
+  "gamePosition": "TE",
+  "rank1990s": "TE #27",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0017480",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 16,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 0,
+   "missingGames": [],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1970-11-05 match nflverse 00-0017480"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 16,
+  "batchGames": 16,
+  "gameGames1999After": 16,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 16,
+   "notInAuditRows": 0
+  }
+ },
+ {
+  "athleteId": "historical:player:12244",
+  "name": "Brian Kinchen",
+  "gamePosition": "TE",
+  "rank1990s": "TE #29",
+  "gameGames1999Before": 0,
+  "missing1999GamesInCoverage": 16,
+  "gsisId": "00-0009237",
+  "gapReconciliation": {
+   "coverageGap": 16,
+   "built": 11,
+   "alreadyInGame": 0,
+   "notAvailableFromNflverse": 5,
+   "missingGames": [
+    {
+     "date": "1999-09-19",
+     "team": "CAR",
+     "opponent": "JAX",
+     "gameId": "1999_02_JAX_CAR",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-10-03",
+     "team": "CAR",
+     "opponent": "WAS",
+     "gameId": "1999_04_CAR_WAS",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-10-31",
+     "team": "CAR",
+     "opponent": "ATL",
+     "gameId": "1999_08_CAR_ATL",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "1999-12-18",
+     "team": "CAR",
+     "opponent": "SF",
+     "gameId": "1999_15_SF_CAR",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    },
+    {
+     "date": "2000-01-02",
+     "team": "CAR",
+     "opponent": "NO",
+     "gameId": "1999_17_NO_CAR",
+     "olderSourceHasStats": false,
+     "reason": "no nflverse stat row: the older source records an appearance with no offensive stats"
+    }
+   ],
+   "olderSourceAppearancesBeyondOfficialCount": [],
+   "unidentifiedMissing": 0
+  },
+  "status": "batch built",
+  "identityEvidence": [
+   "name and birth date 1965-08-06 match nflverse 00-0009237"
+  ],
+  "nflversePosition": "TE",
+  "nflverseRows1999": 11,
+  "batchGames": 11,
+  "gameGames1999After": 11,
+  "auditRows1999": 16,
+  "auditAgreement": {
+   "sameDateAndTeams": 11,
+   "notInAuditRows": 0
+  }
+ }
+]
