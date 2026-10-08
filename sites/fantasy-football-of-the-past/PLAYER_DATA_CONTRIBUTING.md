@@ -18,7 +18,7 @@ Read [scoring-mode-scaffold.md](docs/scoring-mode-scaffold.md) and [unified-draf
 - `lib/historical-data.ts`: compact record decoding, stable performance IDs and mode-specific pools.
 - `lib/scoring-rules.ts`: immutable saved scoring contracts.
 - `data/nflverse/`: modern athlete/record assets, kicker extension, licenses and source manifests.
-- `data/historical-mode/`: reviewed older athlete/record assets, source coverage and generated unified catalog. Their performance IDs use the `historical:` prefix.
+- `data/historical-mode/`: reviewed older athlete/record assets, source coverage and generated unified catalog. Their performance IDs use the `historical:` prefix; `scripts/summarize-historical-coverage.mjs` publishes their source provenance as `public/historical-coverage.json`.
 - `scripts/build-historical-mode-catalog.py`: rebuilds the unified catalog from accepted assets.
 
 The separate historical-import review collection and historical-preview profiles stay outside normal gameplay. Review samples are selected for a specific purpose and do not establish representative career coverage. `lib/historical-import.ts` has its own restricted schema and is not a general older-era adapter.

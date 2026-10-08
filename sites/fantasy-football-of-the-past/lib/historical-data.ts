@@ -32,19 +32,17 @@ for(const performance of PERFORMANCES)if(performance.seasonType==='REG'){
 const historicalDecodedPools=new Map<string,Performance[]>();
 const MAX_DECODED_CAREERS=24;
 const HISTORICAL_POOL_RULES:ScoringRules={...LEGACY_SCORING,mode:'historical'};
-// Source links come from the snapshot's recorded provenance (coverage.json sourceUrl: <repo>/tree/<revision>/<folder>).
-const historicalSourceTree=historicalSourceCoverage.sourceUrl;
-const historicalSourceRepo=historicalSourceTree.slice(0,historicalSourceTree.indexOf('/tree/'));
-const historicalSourceFolder=historicalSourceTree.replace('/tree/','/blob/');
+// "View source" links open the site's own provenance file (scripts/summarize-historical-coverage.mjs).
+const HISTORICAL_COVERAGE_URL='/historical-coverage.json';
 function decodeHistorical(row:HistoricalRow):Performance{
  const [athleteId,season,sourceWeek,gameId,date,teamAtTime,opponent,seasonType,fileIndex,sourceLine,...values]=row;
  const sourceFiles=historicalSourceCoverage.sourceFiles as unknown as ({path:string}|string)[];
  const sourceFile=typeof sourceFiles[fileIndex]==='string'?sourceFiles[fileIndex] as string:(sourceFiles[fileIndex] as {path:string}).path;
  const sourceRevision=historicalSourceCoverage.sourceRevision;
- const sourceUrl=`${historicalSourceRepo}/blob/${sourceRevision}/${sourceFile}#L${sourceLine}`;
+ const sourceUrl=`${HISTORICAL_COVERAGE_URL}#${sourceRevision}/${sourceFile.split('/').pop()}:L${sourceLine}`;
  const stats=Object.fromEntries((historicalSourceCoverage.statKeys as (keyof ScoringStats)[]).map((key,index)=>[key,values[index]])) as ScoringStats;
  const sourceOrdinal=typeof sourceWeek==='number'&&Number.isInteger(sourceWeek)&&sourceWeek>0?{sourceWeek,sourceGameOrdinal:sourceWeek}:{};
- return {id:`${HISTORICAL_PERFORMANCE_PREFIX}:${athleteId}:${season}:${gameId}`,athleteId,season,week:null,...sourceOrdinal,gameId,date,teamAtTime,opponent,seasonType,stats,fictional:false,completed:true,entityType:athleteFor(athleteId,HISTORICAL_POOL_RULES)?.position==='DEF'?'franchise-defense':'player',sourceUrl,sourceUrls:[sourceUrl,`${historicalSourceFolder}/VALIDATION_REPORT.md`],licenseReference:'Pinned source snapshot; owner-authorized private demo; upstream license not established',importedAt:historicalSourceCoverage.importedAt,historicalModeOnly:true,sourceRevision,sourceFile,sourceLine};
+ return {id:`${HISTORICAL_PERFORMANCE_PREFIX}:${athleteId}:${season}:${gameId}`,athleteId,season,week:null,...sourceOrdinal,gameId,date,teamAtTime,opponent,seasonType,stats,fictional:false,completed:true,entityType:athleteFor(athleteId,HISTORICAL_POOL_RULES)?.position==='DEF'?'franchise-defense':'player',sourceUrl,sourceUrls:[sourceUrl,HISTORICAL_COVERAGE_URL],licenseReference:'Pinned source snapshot; owner-authorized private demo; upstream license not established',importedAt:historicalSourceCoverage.importedAt,historicalModeOnly:true,sourceRevision,sourceFile,sourceLine};
 }
 /** Selection never mixes source-only records into a saved Strict contract. */
 export function performancePool(athleteId:string,rules:ScoringRules=LEGACY_SCORING):Performance[]{

@@ -1,0 +1,350 @@
+{
+  "description": "Historical game logs used for pre-1999 regular-season performances.",
+  "linkFormat": "#<sourceRevision>/<file>:L<sourceLine>",
+  "sourceRevision": "bbfc22cc51b0f0a80aff2c1d6d7f4d32b219d356",
+  "importedAt": "2026-10-07T20:39:16Z",
+  "publicationScope": "existing-owner-private-site",
+  "sourceUseDecision": "owner-authorized-private-demo; upstream-license-not-established",
+  "sourceQualityNote": "Provider claims and previously normalized base numbers; not independently verified complete career coverage or primary participation evidence.",
+  "weekSemantics": "source game ordinal; not verified NFL week; runtime Performance.week must be null",
+  "playerIdentityPolicy": "One source person ID, never one ID per position. Unique full name and position plus actual modern 1999 regular date/team/opponent record is required to merge with a modern athlete. Ambiguity is quarantined.",
+  "careerEligibility": "Runtime combines existing modern REG records with CSV records before 1999, then requires >=17 known active-category games; selectable years have at least one qualifying record. Generated source-only metadata does not grant career eligibility.",
+  "statKeys": [
+    "passingYards",
+    "passingTD",
+    "interceptions",
+    "rushingYards",
+    "rushingTD",
+    "receptions",
+    "receivingYards",
+    "receivingTD",
+    "fumblesLost",
+    "twoPoint",
+    "returnTD",
+    "sacks",
+    "defensiveInterceptions",
+    "fumbleRecoveries",
+    "defensiveTD",
+    "safeties",
+    "blockedKicks",
+    "pointsAllowed",
+    "fumbleRecoveryTD",
+    "fieldGoalsShort",
+    "fieldGoals40",
+    "fieldGoals50",
+    "fieldGoalsMissed",
+    "fieldGoalsBlocked",
+    "extraPointsMade",
+    "extraPointsMissed",
+    "extraPointsBlocked",
+    "fieldGoalsMade",
+    "fieldGoalsUnsuccessful",
+    "extraPointsUnsuccessful"
+  ],
+  "counts": {
+    "athletes": 967,
+    "performances": 113654
+  },
+  "files": [
+    {
+      "file": "qb_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/qb_gamelogs_1950s.csv",
+      "position": "QB",
+      "decade": 1950,
+      "rows": 1577,
+      "sizeBytes": 349248,
+      "gitBlobSHA1": "3983b0a83ccba37e098048489aba4b32dd24a174",
+      "sha256": "6f74bd40bb77ecfae03287eaa35b92c86c6079b47a74b2e74c0271fc42eccfb2"
+    },
+    {
+      "file": "qb_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/qb_gamelogs_1960s.csv",
+      "position": "QB",
+      "decade": 1960,
+      "rows": 3652,
+      "sizeBytes": 748681,
+      "gitBlobSHA1": "5403b365f3e1bf5d94fd6bccd589d8911434979c",
+      "sha256": "e66cb3df90169feea747ac3bacc9d9f8bdc31bfc1c71ec40d53f837cc6f5a6fa"
+    },
+    {
+      "file": "qb_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/qb_gamelogs_1970s.csv",
+      "position": "QB",
+      "decade": 1970,
+      "rows": 4730,
+      "sizeBytes": 949534,
+      "gitBlobSHA1": "9975b76a67a0ffc035607e378de8abd8884b1a2c",
+      "sha256": "a95affadb6258a8bf26c8922242477eee4dca0d5e2c5ff9de01c51e428906b3f"
+    },
+    {
+      "file": "qb_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/qb_gamelogs_1980s.csv",
+      "position": "QB",
+      "decade": 1980,
+      "rows": 5516,
+      "sizeBytes": 1082582,
+      "gitBlobSHA1": "dbe751b7aec29ddf6a53fab5a057e8f5c9d71afd",
+      "sha256": "9fd779f2727a47b7f030687972c5a98a8b108e93e0d1a8375d527077c34d0bfc"
+    },
+    {
+      "file": "qb_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/qb_gamelogs_1990s.csv",
+      "position": "QB",
+      "decade": 1990,
+      "rows": 5511,
+      "sizeBytes": 1097888,
+      "gitBlobSHA1": "c85bf62d20e6311a5ce4f49a11a5085e2d395ef4",
+      "sha256": "460abf3e1a51ba5e77bf83f9558986652012ab4c992f4f14ddff4ff1bbe896e2"
+    },
+    {
+      "file": "rb_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/rb_gamelogs_1950s.csv",
+      "position": "RB",
+      "decade": 1950,
+      "rows": 1753,
+      "sizeBytes": 369578,
+      "gitBlobSHA1": "d4adc2f4a20ef8a347c6cd7948762d5326a9a808",
+      "sha256": "85f87776c3c6d10fe0c84a362a4d3a3a14427d2c73076cedbf0760bec793f7c6"
+    },
+    {
+      "file": "rb_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/rb_gamelogs_1960s.csv",
+      "position": "RB",
+      "decade": 1960,
+      "rows": 6433,
+      "sizeBytes": 1245933,
+      "gitBlobSHA1": "11b2e8d81e2894293ac13521162cc696b3e58c52",
+      "sha256": "fac2ef919d731950ea51c87a07eb191853e6117254fc853a66b59e334ba86119"
+    },
+    {
+      "file": "rb_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/rb_gamelogs_1970s.csv",
+      "position": "RB",
+      "decade": 1970,
+      "rows": 9302,
+      "sizeBytes": 1772839,
+      "gitBlobSHA1": "28d56185c38edc9e66ed14c7d8438e757c23bdad",
+      "sha256": "02e0ce6423be124d669ebeb5e4c5c24658c3e376f0d34baaca0d0c3138309497"
+    },
+    {
+      "file": "rb_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/rb_gamelogs_1980s.csv",
+      "position": "RB",
+      "decade": 1980,
+      "rows": 8529,
+      "sizeBytes": 1627843,
+      "gitBlobSHA1": "579a14114c1cbbf8140dce0d802eede21795a9df",
+      "sha256": "9d036ae00e0db258b48812cd2ce961e766d04c215f2612c6ec21050ebf942b2d"
+    },
+    {
+      "file": "rb_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/rb_gamelogs_1990s.csv",
+      "position": "RB",
+      "decade": 1990,
+      "rows": 8166,
+      "sizeBytes": 1544976,
+      "gitBlobSHA1": "158ba616c93f3c8e5870a4b035db4c9f7af8111c",
+      "sha256": "60ae23b8f27d56de1e397f8129d36f0c67f0980443b1ba010e4b14672e5cb493"
+    },
+    {
+      "file": "wr_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/wr_gamelogs_1950s.csv",
+      "position": "WR",
+      "decade": 1950,
+      "rows": 2485,
+      "sizeBytes": 520005,
+      "gitBlobSHA1": "89436e173b4195fda87aabccd8c76364a6ea6613",
+      "sha256": "0d2c0c83f70eb0845e0927f4f80ad12097addb2dc1a27de5a8388c13840ff0d2"
+    },
+    {
+      "file": "wr_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/wr_gamelogs_1960s.csv",
+      "position": "WR",
+      "decade": 1960,
+      "rows": 6156,
+      "sizeBytes": 1194734,
+      "gitBlobSHA1": "488f75df40b2594dbd6285a6dcd59c6a45fac414",
+      "sha256": "9225086a22b482ccc415bd59b2d97ee0654b63c6c4780e3dc0e51715d20a68d2"
+    },
+    {
+      "file": "wr_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/wr_gamelogs_1970s.csv",
+      "position": "WR",
+      "decade": 1970,
+      "rows": 7870,
+      "sizeBytes": 1490117,
+      "gitBlobSHA1": "9e5f5ffb99af8e5545ec3cfc8736d5f34d46e6af",
+      "sha256": "887722ce2f9e66cf65de847e2fc0712b3ac2a60d72995c728ccd1b5ed84d4adf"
+    },
+    {
+      "file": "wr_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/wr_gamelogs_1980s.csv",
+      "position": "WR",
+      "decade": 1980,
+      "rows": 11139,
+      "sizeBytes": 2109188,
+      "gitBlobSHA1": "dc36a686c5b5174581a543bb2eb8b5b253fb0308",
+      "sha256": "0dcece924fa19a3e32d9b10d6d0787ce119e455af86d8199ae80c1fd45729bc6"
+    },
+    {
+      "file": "wr_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/wr_gamelogs_1990s.csv",
+      "position": "WR",
+      "decade": 1990,
+      "rows": 12549,
+      "sizeBytes": 2360505,
+      "gitBlobSHA1": "7327ae87b76e46966ee0cf1fad6dac8d4e9b4456",
+      "sha256": "d4a1a808a2f70495b4338b957b70cd0c7bd59f5d8c6a1e8649083805fd23e499"
+    },
+    {
+      "file": "te_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/te_gamelogs_1950s.csv",
+      "position": "TE",
+      "decade": 1950,
+      "rows": 0,
+      "sizeBytes": 358,
+      "gitBlobSHA1": "4ea813a436e4dd02764dda10382b0f653abf26da",
+      "sha256": "cee68552e22a76085bf77f18dd47ca9115a89704c368584014e5400f6c4a5e93"
+    },
+    {
+      "file": "te_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/te_gamelogs_1960s.csv",
+      "position": "TE",
+      "decade": 1960,
+      "rows": 1903,
+      "sizeBytes": 370926,
+      "gitBlobSHA1": "17d8f16e3bc8da8565e33714c087d255a6b702b6",
+      "sha256": "7c8d6fb4fdbd7e3a254f37e77a3747efd8d9171220a449b50b52cf13840c6cd6"
+    },
+    {
+      "file": "te_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/te_gamelogs_1970s.csv",
+      "position": "TE",
+      "decade": 1970,
+      "rows": 4349,
+      "sizeBytes": 819693,
+      "gitBlobSHA1": "521f6607f4535fd5f44ce7c3f44fee6d99bde083",
+      "sha256": "47825d61062cb67a51a8b5d5565a27b984677bcfde18c12c402da7f9a84c9f00"
+    },
+    {
+      "file": "te_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/te_gamelogs_1980s.csv",
+      "position": "TE",
+      "decade": 1980,
+      "rows": 5148,
+      "sizeBytes": 971131,
+      "gitBlobSHA1": "d9a1ec6ef3669e88f9d2af5616179087aeff4c8d",
+      "sha256": "5fabbf331f72dd51c6fbb54ba59d128e2a729b68648b9f4d5c3169f28154cdf6"
+    },
+    {
+      "file": "te_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/te_gamelogs_1990s.csv",
+      "position": "TE",
+      "decade": 1990,
+      "rows": 4310,
+      "sizeBytes": 804770,
+      "gitBlobSHA1": "3cb4ab47b15f9597347632bccb23f0a99489081f",
+      "sha256": "be265eb9a9e918cd725841c282c096b957d0d8d69bcc08b44f9dd78f11a9a1da"
+    },
+    {
+      "file": "k_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/k_gamelogs_1950s.csv",
+      "position": "K",
+      "decade": 1950,
+      "rows": 94,
+      "sizeBytes": 20968,
+      "gitBlobSHA1": "8d24dcf7edb4409abf114b1f78cca9b434e12978",
+      "sha256": "a87be2f14bad6bc52367dff0fac6057fa6c24badce93f38ad97fd24609d341fd"
+    },
+    {
+      "file": "k_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/k_gamelogs_1960s.csv",
+      "position": "K",
+      "decade": 1960,
+      "rows": 2373,
+      "sizeBytes": 462131,
+      "gitBlobSHA1": "3ce59478d46bf492fea2044866ecf57823f836b4",
+      "sha256": "2dc692215daa72bcac94781b5067054515a83a61b8412852b57e67f06934bf03"
+    },
+    {
+      "file": "k_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/k_gamelogs_1970s.csv",
+      "position": "K",
+      "decade": 1970,
+      "rows": 3735,
+      "sizeBytes": 727531,
+      "gitBlobSHA1": "a9007bd6188c16ad3efc3bdf6cae50104fd123b1",
+      "sha256": "22c7499f3020280375952f84a962b746d8797837d4ca80a5a0348a791ad5d040"
+    },
+    {
+      "file": "k_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/k_gamelogs_1980s.csv",
+      "position": "K",
+      "decade": 1980,
+      "rows": 4016,
+      "sizeBytes": 784452,
+      "gitBlobSHA1": "b25a74a2c190d359f2b23273fd54ee05d536097b",
+      "sha256": "dd7fc5bcca78fe0cb78e3cb1ab336fc0b48cec2b571727cb534dd65aef7df1d6"
+    },
+    {
+      "file": "k_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/k_gamelogs_1990s.csv",
+      "position": "K",
+      "decade": 1990,
+      "rows": 4630,
+      "sizeBytes": 881519,
+      "gitBlobSHA1": "bc020f6f12a6ff2fc7a98008a761913eaedc8f70",
+      "sha256": "353895ff46f3e910a9e8ea2a6b42305794eac513a86902e76b1307b0869eab22"
+    },
+    {
+      "file": "def_gamelogs_1950s.csv",
+      "path": "fantasy-legends/data/sheets/def_gamelogs_1950s.csv",
+      "position": "DEF",
+      "decade": 1950,
+      "rows": 1482,
+      "sizeBytes": 554369,
+      "gitBlobSHA1": "7d2a2ffb1bb66a76c8a450890ade6d3e8a78f175",
+      "sha256": "9c83fec81a5e51262f1ec62c22d47e3f586b60d3baa97207fa12cb6beb1d171c"
+    },
+    {
+      "file": "def_gamelogs_1960s.csv",
+      "path": "fantasy-legends/data/sheets/def_gamelogs_1960s.csv",
+      "position": "DEF",
+      "decade": 1960,
+      "rows": 3292,
+      "sizeBytes": 1078964,
+      "gitBlobSHA1": "75eaa66d90d91bad256605a4ef5d9dee3518d470",
+      "sha256": "513b8dfdb62f34840738a6e9aee949335c07042a0052a54f664a3b5c6aaa00e7"
+    },
+    {
+      "file": "def_gamelogs_1970s.csv",
+      "path": "fantasy-legends/data/sheets/def_gamelogs_1970s.csv",
+      "position": "DEF",
+      "decade": 1970,
+      "rows": 4012,
+      "sizeBytes": 1310977,
+      "gitBlobSHA1": "b7191d1872e8a4958dd0cdf2e3d9968fa8ea5c2f",
+      "sha256": "4f3404d76dab8b54264bf6ec1b063899a02b20bcf215ba497e58422d9106779e"
+    },
+    {
+      "file": "def_gamelogs_1980s.csv",
+      "path": "fantasy-legends/data/sheets/def_gamelogs_1980s.csv",
+      "position": "DEF",
+      "decade": 1980,
+      "rows": 4448,
+      "sizeBytes": 1408184,
+      "gitBlobSHA1": "f99e0d9b4bc63c7c7ff917f4f831c90e643ea3f4",
+      "sha256": "5558182f917f5ddeb02f8d10ba158afd240e9dd78cc214c2dbf49b523510bdfc"
+    },
+    {
+      "file": "def_gamelogs_1990s.csv",
+      "path": "fantasy-legends/data/sheets/def_gamelogs_1990s.csv",
+      "position": "DEF",
+      "decade": 1990,
+      "rows": 4876,
+      "sizeBytes": 1448726,
+      "gitBlobSHA1": "fad5fd0ceed938d53993062348d131349e23992e",
+      "sha256": "b2522fecbb46c399b57a454c38c1e57bb5b1aeeb8af0f7ec197024f88857b799"
+    }
+  ]
+}

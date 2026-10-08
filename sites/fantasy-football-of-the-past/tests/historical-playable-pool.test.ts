@@ -20,6 +20,8 @@ const historical=newScoring(1,true,'historical'),strict=newScoring(1,true,'stric
 const catalog=athletesFor(historical),modernIds=new Set(ATHLETES.map(a=>a.id));
 const older=catalog.filter(a=>!modernIds.has(a.id));
 const sourcePin='bbfc22cc51b0f0a80aff2c1d6d7f4d32b219d356';
+const publishedCoverage=JSON.parse(readFileSync(new URL('../public/historical-coverage.json',import.meta.url),'utf8')) as {sourceRevision:string;files:{file:string}[]};
+const publishedSourceFiles=new Set(publishedCoverage.files.map(file=>file.file));
 const offenseKeys=['passingYards','passingTD','interceptions','rushingYards','rushingTD','receptions','receivingYards','receivingTD','returnTD'] as const;
 
 function oldQuarterback(decade=1960){
@@ -59,7 +61,11 @@ test('every Historical career pool meets the 17-game floor with complete active 
    for(const field of required)assert.ok(typeof performance.stats[field]==='number'&&Number.isFinite(performance.stats[field]),`${performance.id}: ${field}`);
    for(const ppr of [0,.5,1] as const)assert.ok(Number.isFinite(score(performance.stats,athlete.position,newScoring(ppr,true,'historical'))));
    if(performance.id.startsWith('historical:')){
-    sourceRows++;assert.equal(performance.historicalModeOnly,true);assert.equal(performance.sourceRevision,sourcePin);assert.ok(performance.sourceUrl.includes(sourcePin));assert.equal(performance.week,null);assert.doesNotMatch(historicalDrawLabel(performance),/NFL Week \d/);
+    sourceRows++;assert.equal(performance.historicalModeOnly,true);assert.equal(performance.sourceRevision,sourcePin);assert.ok(performance.sourceUrl.includes(sourcePin));
+    // View-source links stay on the site's own provenance file and name a published source file.
+    assert.equal(performance.sourceUrl,`/historical-coverage.json#${sourcePin}/${performance.sourceFile!.split('/').pop()}:L${performance.sourceLine}`);
+    assert.ok(publishedSourceFiles.has(performance.sourceFile!.split('/').pop()!),performance.sourceUrl);
+    assert.ok(performance.sourceUrls.every(url=>url.startsWith('/historical-coverage.json')),performance.id);assert.equal(performance.week,null);assert.doesNotMatch(historicalDrawLabel(performance),/NFL Week \d/);
     if(performance.sourceGameOrdinal!==undefined)assert.ok(Number.isInteger(performance.sourceGameOrdinal)&&performance.sourceGameOrdinal>0);
     if(performance.sourceWeek!==undefined)assert.ok(Number.isInteger(performance.sourceWeek)&&performance.sourceWeek>0);
     if(performance.stats.fumbleRecoveryTD===null||performance.stats.safeties===null)unknownExcluded++;
@@ -139,4 +145,13 @@ test('a sixteen-team Historical league fields eleven-player rosters, free agents
  }
  assert.equal(season.status,'complete');assert.ok(season.champion);assert.equal(season.history.length,17);assert.ok(simulatedByes>0);assert.ok(olderDraws>=16);
  const complete=JSON.stringify(season);assert.throws(()=>seasonAction(season,'owner',{action:'rules',scoringMode:'strict'}),/fixed/);assert.equal(JSON.stringify(season),complete);
+});
+
+test('the published historical coverage file matches its generator and the pinned source', async()=>{
+ const {execFileSync}=await import('node:child_process');
+ const before=readFileSync(new URL('../public/historical-coverage.json',import.meta.url),'utf8');
+ execFileSync(process.execPath,[new URL('../scripts/summarize-historical-coverage.mjs',import.meta.url).pathname]);
+ assert.equal(readFileSync(new URL('../public/historical-coverage.json',import.meta.url),'utf8'),before);
+ assert.equal(publishedCoverage.sourceRevision,sourcePin);
+ assert.equal(publishedCoverage.files.length,30);
 });
