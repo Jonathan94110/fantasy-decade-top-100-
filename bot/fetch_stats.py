@@ -65,9 +65,13 @@ def join_unique(values):
 
 
 def player_key(df):
-    """Pro Football Reference id when known, so 1990s careers merge across sources."""
-    pfr = df["pfr_id"] if "pfr_id" in df.columns else pd.Series(None, index=df.index)
-    return pfr.where(pfr.notna(), df["player_id"])
+    """Pro Football Reference id when known, so 1990s careers merge across sources; else the
+    nflverse id the legacy table carries for players nflverse has without one; else the row's id."""
+    key = df["player_id"]
+    for col in ("gsis_id", "pfr_id"):
+        if col in df.columns:
+            key = df[col].where(df[col].notna(), key)
+    return key
 
 
 def seasons_from_games(games):

@@ -8,7 +8,17 @@ Ranks the top 100 **QBs, RBs, WRs, kickers and team defenses (D/ST)** of every N
 Data sources:
 
 - **1999 to now:** weekly stats from [nflverse](https://github.com/nflverse/nflverse-data) (free, CC-BY 4.0), covering players, kickers, team defense and schedules.
-- **Before 1999:** loaded by `bot/legacy.py`. The sources for this are still being chosen and checked, and until then the lists start at 1999.
+- **1920-1998:** the tables in `sources/`, built once by `bot/legacy_build/` from published scrapes of NFL.com and Pro Football Reference (Kaggle, Hugging Face, GitHub), FiveThirtyEight's game scores, and hand-checked lines from profootballarchives.com, statscrew.com, jt-sw.com and Wikipedia. Each build script runs its own checks against known records. The weekly run only reads these tables; it never re-downloads them.
+
+What older seasons are missing, also listed under the rankings on `index.html`:
+
+- Before 1999, players have season lines only (no game logs).
+- Before 1932 the NFL kept almost no official stats, so the 1920s lists are short and mostly based on touchdowns.
+- Team defense: sacks start in 1980 (official from 1982), interceptions and safeties in 1940, fumble recoveries in 1980, and blocked kicks in 1999. Missing stats count as 0, so defenses are best compared within a decade.
+- Fumbles lost start in 1994. Kicker field-goal distances start in 1991; earlier field goals score `fg_unknown_distance`. Kicking attempts start in 1938, so earlier misses are unknown.
+- AFL seasons (1960-69) are included. AAFC seasons (1946-49) are not, matching official NFL records.
+
+To rebuild the 1920-1998 tables (rarely needed): `python bot/legacy_build/offense.py`, `kickers.py` and `defense.py`. Each downloads its raw files into `.cache/legacy/` and rewrites its CSV in `sources/`.
 
 ## How ranking works
 

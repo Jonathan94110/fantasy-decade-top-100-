@@ -29,16 +29,29 @@ SOURCES = {
     "pre-1999": (
         "Published scrapes of NFL.com and Pro Football Reference (Kaggle: trevyoungquist, "
         "josephvm, kendallgillies; GitHub: fantasydatapros, allenjake440; Hugging Face: "
-        "michaelmallari) and FiveThirtyEight game scores (CC BY 4.0). See bot/legacy_build/."
+        "michaelmallari), FiveThirtyEight game scores (CC BY 4.0), and hand-checked lines from "
+        "profootballarchives.com, statscrew.com, jt-sw.com and Wikipedia. See bot/legacy_build/."
     ),
 }
+
+# The build scripts use Pro Football Reference team codes; show the ones that differ only in
+# spelling the way nflverse does, so a 1998-99 career reads "SF", not "SFO/SF".
+TEAM_CODES = {"GNB": "GB", "KAN": "KC", "NOR": "NO", "NWE": "NE", "SDG": "SD", "SFO": "SF", "TAM": "TB"}
+
+
+def _team_codes(series):
+    return series.map(lambda t: "/".join(TEAM_CODES.get(c, c) for c in t.split("/")) if isinstance(t, str) else t)
 
 
 def _read(path):
     if not path.exists():
         return pd.DataFrame()
-    df = pd.read_csv(path, dtype={"player_id": "string", "pfr_id": "string"})
-    return df[df["season"] <= LAST_SEASON].copy()
+    df = pd.read_csv(path, dtype={"player_id": "string", "pfr_id": "string", "gsis_id": "string"})
+    df = df[df["season"] <= LAST_SEASON].copy()
+    for col in ("team", "opponent"):
+        if col in df:
+            df[col] = _team_codes(df[col])
+    return df
 
 
 def load_player_seasons():
@@ -47,6 +60,11 @@ def load_player_seasons():
         df = _read(path)
         if df.empty:
             continue
+        if path == KICKER_CSV:
+            # Attempts weren't recorded before 1938 (empty cells): treat as no known misses
+            # rather than 0 attempts, which would score every make as a negative miss.
+            for made, att in (("fg_made", "fg_att"), ("xp_made", "xp_att")):
+                df[att] = pd.to_numeric(df[att], errors="coerce").fillna(df[made])
         for col in stats:
             df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0) if col in df else 0
         df["games"] = pd.to_numeric(df["games"], errors="coerce").fillna(0).astype(int)
