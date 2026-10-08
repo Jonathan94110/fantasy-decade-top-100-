@@ -33,23 +33,34 @@ def score_kicking(df):
 
 
 def points_allowed_fp(points):
+    if points != points:  # unknown score (NaN): no points-allowed bonus or penalty
+        return 0
     for limit, fp in SCORING["defense"]["points_allowed"]:
         if points <= limit:
             return fp
     return SCORING["defense"]["points_allowed"][-1][1]
 
 
-def score_defense_games(df):
-    """Score one row per team per game (points-allowed tiers are per game)."""
+def _defense_counting_fp(df):
     d = SCORING["defense"]
-    df["fp_points_allowed"] = df["points_allowed"].map(points_allowed_fp)
-    df["fp"] = (
+    return (
         df["sacks"] * d["sacks"]
         + df["interceptions"] * d["interceptions"]
         + df["fumble_recoveries"] * d["fumble_recoveries"]
         + (df["def_tds"] + df["st_tds"]) * d["touchdowns"]
         + df["safeties"] * d["safeties"]
         + df["blocked_kicks"] * d["blocked_kicks"]
-        + df["fp_points_allowed"]
-    ).round(2)
+    )
+
+
+def score_defense_games(df):
+    """Score one row per team per game (points-allowed tiers are per game)."""
+    df["fp_points_allowed"] = df["points_allowed"].map(points_allowed_fp)
+    df["fp"] = (_defense_counting_fp(df) + df["fp_points_allowed"]).round(2)
+    return df
+
+
+def score_defense_totals(df):
+    """Score team-season totals whose fp_points_allowed was summed from games."""
+    df["fp"] = (_defense_counting_fp(df) + df["fp_points_allowed"]).round(2)
     return df

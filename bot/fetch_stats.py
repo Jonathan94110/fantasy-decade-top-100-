@@ -41,7 +41,7 @@ from common import (
     records,
     write_json,
 )
-from scoring import OFFENSE_FP, SCORING, score_defense_games, score_kicking, score_offense
+from scoring import OFFENSE_FP, SCORING, score_defense_games, score_defense_totals, score_kicking, score_offense
 
 OUT_DIR = DATA_DIR / "top100"
 OFFENSE_POSITIONS = ["QB", "RB", "WR"]
@@ -149,14 +149,22 @@ def player_entries(ranked, lines, position):
 # --- defenses ----------------------------------------------------------------
 
 
-def rank_defenses(def_games, top):
+def rank_defenses(def_games, season_totals, top):
+    """Rank team-seasons. season_totals adds counting stats that older seasons
+    only have as season totals (their game rows carry points allowed only)."""
     reg = def_games[def_games["season_type"] == "REG"]
     seasons = reg.groupby(["team", "season"], as_index=False).agg(
         team_name=("team_name", "last"),
         games=("game_id", "nunique"),
         source=("source", "last"),
-        **{c: (c, "sum") for c in DEFENSE_STATS + ["fp_points_allowed", "fp"]},
+        **{c: (c, "sum") for c in DEFENSE_STATS + ["fp_points_allowed"]},
     )
+    if not season_totals.empty:
+        extra = season_totals.set_index(["team", "season"])[legacy.DEFENSE_SEASON_STATS].fillna(0)
+        seasons = seasons.set_index(["team", "season"])
+        seasons[legacy.DEFENSE_SEASON_STATS] = seasons[legacy.DEFENSE_SEASON_STATS].add(extra, fill_value=0).loc[seasons.index]
+        seasons = seasons.reset_index()
+    seasons = score_defense_totals(seasons)
     seasons["decade"] = seasons["season"].map(decade_of)
     seasons["id"] = seasons["team"] + "-" + seasons["season"].astype(str)
     seasons["fp_per_game"] = (seasons["fp"] / seasons["games"]).round(2)
@@ -244,7 +252,9 @@ def build(top, force):
         [nflverse.load_defense_games(nfl_seasons, current, force), legacy.load_defense_games()],
         ignore_index=True,
     )
-    def_games = score_defense_games(ensure_columns(def_games, DEFENSE_STATS))
+    def_games = ensure_columns(def_games, [c for c in DEFENSE_STATS if c != "points_allowed"])
+    def_games["points_allowed"] = pd.to_numeric(def_games["points_allowed"], errors="coerce")
+    def_games = score_defense_games(def_games)
 
     if OUT_DIR.exists():
         shutil.rmtree(OUT_DIR)
@@ -260,7 +270,7 @@ def build(top, force):
             lists[d][pos] = player_entries(r, lines, pos) if not r.empty else []
             logs[d][pos] = player_game_logs(player_games, r, pos)
 
-    def_ranked = rank_defenses(def_games, top)
+    def_ranked = rank_defenses(def_games, legacy.load_defense_seasons(), top)
     for d in decades:
         r = def_ranked[def_ranked["decade"] == d]
         lists[d]["DEF"] = records(r, DEF_COLS)
@@ -299,7 +309,7 @@ def build(top, force):
             "scoring": SCORING,
             "coverage_notes": [
                 f"{current} is in progress; the {decade_of(current)}s lists include games played so far.",
-                *legacy.COVERAGE_NOTES,
+                *legacy.coverage_notes(),
             ],
             "sources": {
                 "nflverse": "https://github.com/nflverse/nflverse-data (CC-BY 4.0), 1999-present",
