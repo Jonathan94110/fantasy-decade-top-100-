@@ -57,6 +57,13 @@
       "when": 1791417182198,
       "tag": "0007_preserve_v4_unscored_draft",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1791417242198,
+      "tag": "0008_rename_historical_performance_ids",
+      "breakpoints": true
     }
   ]
 }

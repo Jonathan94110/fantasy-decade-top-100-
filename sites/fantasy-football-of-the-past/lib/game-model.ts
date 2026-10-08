@@ -29,6 +29,11 @@ export const ATHLETES = [...athleteRows,...kickerAthletes] as Athlete[];
 /** Separate mode catalogs keep every saved Strict selection and its counts intact. */
 export const HISTORICAL_ATHLETES=historicalCatalogRows as Athlete[];
 export const HISTORICAL_MODE_COVERAGE=historicalModeCoverage;
+/** Performance ID sources. Historical game-log records: `historical:<athlete>:<season>:<game>`. */
+export const NFLVERSE_PERFORMANCE_PREFIX='nflverse';
+export const HISTORICAL_PERFORMANCE_PREFIX='historical';
+/** Complete source prefixes for one athlete, so identities containing colons cannot match another career. */
+export function performanceIdPrefixes(athleteId:string){return [`${NFLVERSE_PERFORMANCE_PREFIX}:${athleteId}:`,`${HISTORICAL_PERFORMANCE_PREFIX}:${athleteId}:`];}
 export const ALL_ATHLETES=[...ATHLETES,...HISTORICAL_ATHLETES.filter(row=>!ATHLETES.some(existing=>existing.id===row.id))];
 const historicalAthleteIndex=new Map(HISTORICAL_ATHLETES.map(athlete=>[athlete.id,athlete]));
 export function athletesFor(rules:ScoringRules=LEGACY_SCORING):Athlete[]{return rules.mode==='historical'?HISTORICAL_ATHLETES:ATHLETES;}

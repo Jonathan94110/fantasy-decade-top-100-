@@ -58,7 +58,7 @@ test('every Historical career pool meets the 17-game floor with complete active 
    const required=athlete.position==='DEF'?['pointsAllowed','returnTD'] as const:offenseKeys;
    for(const field of required)assert.ok(typeof performance.stats[field]==='number'&&Number.isFinite(performance.stats[field]),`${performance.id}: ${field}`);
    for(const ppr of [0,.5,1] as const)assert.ok(Number.isFinite(score(performance.stats,athlete.position,newScoring(ppr,true,'historical'))));
-   if(performance.id.startsWith('prime-rushmore:')){
+   if(performance.id.startsWith('historical:')){
     sourceRows++;assert.equal(performance.historicalModeOnly,true);assert.equal(performance.sourceRevision,sourcePin);assert.ok(performance.sourceUrl.includes(sourcePin));assert.equal(performance.week,null);assert.doesNotMatch(historicalDrawLabel(performance),/NFL Week \d/);
     if(performance.sourceGameOrdinal!==undefined)assert.ok(Number.isInteger(performance.sourceGameOrdinal)&&performance.sourceGameOrdinal>0);
     if(performance.sourceWeek!==undefined)assert.ok(Number.isInteger(performance.sourceWeek)&&performance.sourceWeek>0);
@@ -108,7 +108,7 @@ test('real older players survive solo drafting, saved season creation and starte
  assert.ok(draft.teams.find(team=>team.id===draft.humanTeamId)!.roster.includes(athlete.id));draft=demoDraftAction(JSON.parse(JSON.stringify(draft)),{action:'startSeason'});
  const human=draft.season!.teams.find(team=>team.id===draft.humanTeamId)!;draft=demoDraftAction(draft,{action:'lock',lineup:human.lineup,acceptBye:true});
  const round=draft.season!.history[0];assert.equal(round.scoring!.mode,'historical');const draws=[...Object.values(round.draws).flat(),...Object.values(round.benchDraws!).flat()];assert.equal(draws.length,22);
- const olderDraw=draws.find(draw=>draw.athleteId===athlete.id)!;assert.ok(olderDraw.performance.id?.startsWith('prime-rushmore:'));assert.equal(olderDraw.points,score(olderDraw.performance.stats!,athlete.position,round.scoring));
+ const olderDraw=draws.find(draw=>draw.athleteId===athlete.id)!;assert.ok(olderDraw.performance.id?.startsWith('historical:'));assert.equal(olderDraw.points,score(olderDraw.performance.stats!,athlete.position,round.scoring));
 });
 
 test('a sixteen-team Historical league fields eleven-player rosters, free agents, byes, bench draws and all seventeen weeks',()=>{
@@ -130,7 +130,7 @@ test('a sixteen-team Historical league fields eleven-player rosters, free agents
   for(const draw of draws){
    if(draw.simulatedBye){simulatedByes++;assert.equal(draw.points,0);assert.deepEqual(draw.performance,{});continue;}
    assert.ok(!('unavailable' in draw)||draw.unavailable===undefined);assert.ok(draw.performance.id);assert.equal(draw.points,score(draw.performance.stats!,athleteFor(draw.athleteId,historical)!.position,historical));
-   if(draw.performance.id!.startsWith('prime-rushmore:'))olderDraws++;
+   if(draw.performance.id!.startsWith('historical:'))olderDraws++;
   }
   assert.equal(season.used.length-before,draws.filter(draw=>!draw.simulatedBye).length);assert.equal(new Set(season.used).size,season.used.length);
   for(const match of round.matches){const events=fantasyReplay(round,match);assert.equal(replayScore(events,events.length,match.home),match.homeScore);assert.equal(replayScore(events,events.length,match.away),match.awayScore);assert.equal(match.homeScore,Math.round(round.draws[match.home].reduce((sum,draw)=>sum+draw.points,0)*100)/100);}

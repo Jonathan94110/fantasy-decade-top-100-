@@ -5,7 +5,7 @@ import {requiredGames,draftTeam,standings,currentPairs,seasonPhase} from './seas
 export {seasonLength,requiredGames,draftTeam,standings,currentPairs} from './season-view';
 import {ALL_ATHLETES,PERFORMANCES,athletesFor,athleteFor,performancePool,rosterPositions,FLEX_POSITIONS,lineupSlots,eligibleForSlot} from './historical-data';
 import {drawPerformance} from './game-engine';
-import {score} from './game-model';
+import {performanceIdPrefixes,score} from './game-model';
 import {seasonRosterSize,regularRoundOptions,TEAM_COUNTS,modernRegularWeeks,playoffCount,type Season,type SeasonTeam,type PublicSeason,type SeasonRound,type BenchDraw} from './season-model';
 
 export class SeasonRuleError extends Error {}
@@ -24,7 +24,7 @@ export function remainingGames(s:Season,id:string){
  const athlete=athleteFor(id,rules);if(!athlete)return 0;
  // The canonical ledger contains draws made under this fixed mode. Count complete
  // source prefixes so identities containing colons cannot consume another career.
- const prefixes=[`nflverse:${id}:`,`prime-rushmore:${id}:`];
+ const prefixes=performanceIdPrefixes(id);
  let consumed=0;for(const performanceId of used)if(prefixes.some(prefix=>performanceId.startsWith(prefix)))consumed++;
  return Math.max(0,athlete.gameCount-consumed);
 }

@@ -106,10 +106,10 @@ test('actual January 1994 source game exhausts its recorded 1993 season without 
  const pool=performancePool(athlete.id,rules);
  const january=pool.find(game=>game.gameId==='19940102-DAL-NYG');assert.ok(january);
  assert.equal(january.season,1993);assert.equal(january.date,'1994-01-02');
- assert.equal(january.id,`prime-rushmore:${athlete.id}:1993:19940102-DAL-NYG`);
+ assert.equal(january.id,`historical:${athlete.id}:1993:19940102-DAL-NYG`);
  assert.deepEqual(consumedPerformanceYears(athlete.id,[january.id]),[{year:1993}]);
  // Complete prefixes also preserve source identities containing colons.
- assert.deepEqual(consumedPerformanceYears('historical:player:fixture',['prime-rushmore:historical:player:fixture:1993:19940102-DAL-NYG']),[{year:1993}]);
+ assert.deepEqual(consumedPerformanceYears('historical:player:fixture',['historical:historical:player:fixture:1993:19940102-DAL-NYG']),[{year:1993}]);
  const before=JSON.stringify({athlete,pool});
  const used=pool.filter(game=>game.id!==january.id).map(game=>game.id);
  assert.deepEqual(poolAvailability(athlete,used,rules),{count:1,seasons:[1993]});

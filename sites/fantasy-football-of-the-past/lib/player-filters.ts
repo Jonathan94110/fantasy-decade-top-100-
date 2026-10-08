@@ -1,4 +1,4 @@
-import {athleteFor,type Athlete,type LineupSlot} from './game-model';
+import {athleteFor,performanceIdPrefixes,type Athlete,type LineupSlot} from './game-model';
 import type {ScoringRules} from './scoring-rules';
 
 export const PLAYER_ERAS=[1950,1960,1970,1980,1990,2000,2010,2020] as const;
@@ -7,7 +7,7 @@ export const PLAYER_BROWSE_NOTE='Era filters browse verified game years only. Ch
 
 /** Source identities can contain colons; remove a complete athlete prefix first. */
 export function consumedPerformanceYears(athleteId:string,used:readonly string[]){
- const prefixes=[`nflverse:${athleteId}:`,`prime-rushmore:${athleteId}:`];
+ const prefixes=performanceIdPrefixes(athleteId);
  return used.flatMap(id=>{
   const prefix=prefixes.find(prefix=>id.startsWith(prefix));if(!prefix)return [];
   // A January game belongs to the recorded season, which can precede its date.

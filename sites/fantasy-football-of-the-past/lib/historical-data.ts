@@ -2,7 +2,7 @@ import kickerRecordRows from '../data/nflverse/kicker-records.json';
 import recordRows from '../data/nflverse/records.json';
 import historicalRecordRows from '../data/historical-mode/records.json';
 import historicalSourceCoverage from '../data/historical-mode/coverage.json';
-import { DATA_COVERAGE as coverage, athleteFor, type Stats, type ScoringStats, type Performance, type StrictPerformance } from './game-model';
+import { DATA_COVERAGE as coverage, HISTORICAL_PERFORMANCE_PREFIX, athleteFor, type Stats, type ScoringStats, type Performance, type StrictPerformance } from './game-model';
 import {LEGACY_SCORING,type ScoringRules} from './scoring-rules';
 export * from './game-model';
 const STAT_KEYS:(keyof Stats)[] = ['passingYards','passingTD','interceptions','rushingYards','rushingTD','receptions','receivingYards','receivingTD','fumblesLost','twoPoint','returnTD','sacks','defensiveInterceptions','fumbleRecoveries','defensiveTD','safeties','blockedKicks','pointsAllowed','fumbleRecoveryTD'];
@@ -32,15 +32,19 @@ for(const performance of PERFORMANCES)if(performance.seasonType==='REG'){
 const historicalDecodedPools=new Map<string,Performance[]>();
 const MAX_DECODED_CAREERS=24;
 const HISTORICAL_POOL_RULES:ScoringRules={...LEGACY_SCORING,mode:'historical'};
+// Source links come from the snapshot's recorded provenance (coverage.json sourceUrl: <repo>/tree/<revision>/<folder>).
+const historicalSourceTree=historicalSourceCoverage.sourceUrl;
+const historicalSourceRepo=historicalSourceTree.slice(0,historicalSourceTree.indexOf('/tree/'));
+const historicalSourceFolder=historicalSourceTree.replace('/tree/','/blob/');
 function decodeHistorical(row:HistoricalRow):Performance{
  const [athleteId,season,sourceWeek,gameId,date,teamAtTime,opponent,seasonType,fileIndex,sourceLine,...values]=row;
  const sourceFiles=historicalSourceCoverage.sourceFiles as unknown as ({path:string}|string)[];
  const sourceFile=typeof sourceFiles[fileIndex]==='string'?sourceFiles[fileIndex] as string:(sourceFiles[fileIndex] as {path:string}).path;
  const sourceRevision=historicalSourceCoverage.sourceRevision;
- const sourceUrl=`https://github.com/Jonathan94110/prime-rushmore/blob/${sourceRevision}/${sourceFile}#L${sourceLine}`;
+ const sourceUrl=`${historicalSourceRepo}/blob/${sourceRevision}/${sourceFile}#L${sourceLine}`;
  const stats=Object.fromEntries((historicalSourceCoverage.statKeys as (keyof ScoringStats)[]).map((key,index)=>[key,values[index]])) as ScoringStats;
  const sourceOrdinal=typeof sourceWeek==='number'&&Number.isInteger(sourceWeek)&&sourceWeek>0?{sourceWeek,sourceGameOrdinal:sourceWeek}:{};
- return {id:`prime-rushmore:${athleteId}:${season}:${gameId}`,athleteId,season,week:null,...sourceOrdinal,gameId,date,teamAtTime,opponent,seasonType,stats,fictional:false,completed:true,entityType:athleteFor(athleteId,HISTORICAL_POOL_RULES)?.position==='DEF'?'franchise-defense':'player',sourceUrl,sourceUrls:[sourceUrl,`https://github.com/Jonathan94110/prime-rushmore/blob/${sourceRevision}/fantasy-legends/VALIDATION_REPORT.md`],licenseReference:'Pinned source snapshot; owner-authorized private demo; upstream license not established',importedAt:historicalSourceCoverage.importedAt,historicalModeOnly:true,sourceRevision,sourceFile,sourceLine};
+ return {id:`${HISTORICAL_PERFORMANCE_PREFIX}:${athleteId}:${season}:${gameId}`,athleteId,season,week:null,...sourceOrdinal,gameId,date,teamAtTime,opponent,seasonType,stats,fictional:false,completed:true,entityType:athleteFor(athleteId,HISTORICAL_POOL_RULES)?.position==='DEF'?'franchise-defense':'player',sourceUrl,sourceUrls:[sourceUrl,`${historicalSourceFolder}/VALIDATION_REPORT.md`],licenseReference:'Pinned source snapshot; owner-authorized private demo; upstream license not established',importedAt:historicalSourceCoverage.importedAt,historicalModeOnly:true,sourceRevision,sourceFile,sourceLine};
 }
 /** Selection never mixes source-only records into a saved Strict contract. */
 export function performancePool(athleteId:string,rules:ScoringRules=LEGACY_SCORING):Performance[]{

@@ -16,7 +16,7 @@ npm run build
 
 The copied `.openai/hosting.json` supplies a generic local `DB` binding. It contains no hosted Site project ID or private deployment configuration. Building creates local Worker configuration under ignored `dist/` and does not deploy anything.
 
-For a fresh local database, apply the eight migration SQL files in filename order. From this directory on macOS/Linux:
+For a fresh local database, apply the nine migration SQL files in filename order. From this directory on macOS/Linux:
 
 ```sh
 for migration in drizzle/[0-9]*.sql; do

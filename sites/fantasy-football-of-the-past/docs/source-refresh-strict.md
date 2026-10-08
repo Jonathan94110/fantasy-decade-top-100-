@@ -59,9 +59,10 @@ reuse permission.
 
 ## Reproducible evidence
 
-The snapshot and `strict-app-validator-audit.json` are retained outside the Site
-checkout under `research/prime-rushmore-bbfc22cc`. Source-backed regression fixtures
-retain both the old and refreshed pins. The local validator has no gameplay caller.
+The snapshot and `strict-app-validator-audit.json` were kept outside the Site
+checkout. The local CSV validator, its regression fixtures and the snapshot
+fetch/audit scripts have since been removed; they never had a gameplay caller, and
+the accepted gameplay assets are unchanged.
 
 Historical creation, production builds and publication remain held. No source
 sync, push, Site save, access change or deployment occurred in this phase. Existing
