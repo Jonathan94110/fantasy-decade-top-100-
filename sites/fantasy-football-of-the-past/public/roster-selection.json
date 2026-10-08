@@ -1,0 +1,4250 @@
+{
+  "title": "100 greats at each fantasy position",
+  "snapshotDate": "2026-10-02",
+  "catalogSize": 400,
+  "positions": {
+    "QB": 100,
+    "RB": 100,
+    "WR": 100,
+    "TE": 100
+  },
+  "orderedRanking": false,
+  "summary": "An editorial collection of 100 quarterbacks, 100 running backs, 100 wide receivers and 100 tight ends whose NFL/AFL/AAFC careers overlap 1950–2026. It is not an official NFL ranking or a claim that cross-era greatness has an objective score.",
+  "methodology": [
+    "Begin with all 115 verified inducted Hall of Fame players in these fantasy positions whose playing careers overlap the requested era: 30 QB, 38 RB, 37 WR and 10 TE. Class of 2026 induction status is included.",
+    "Retain the 185 established playable archive selections after review for sustained production, peak seasons and era/position coverage. Thirty-two overlap the Hall-of-Fame core, leaving 153 additional profiles. Retention is an editorial judgment, not a new honor or an objective rank.",
+    "Add 60 official-source historical supplements: all 49 eligible post-1950 skill-position names in the Hall of Fame’s published 2026 senior nominee pool, plus 11 selected historical tight ends. Nomination is explicitly distinguished from induction and is not presented as an award.",
+    "Add 49 editorial era/production complements: 24 QB, 12 RB, 5 WR and 8 TE. Their official NFL career tables verify identity, position and career scope. Selection gives earlier sustained careers and specialist roles space that a 1999-forward fantasy-points table would miss.",
+    "Fill the remaining 23 TE places using a reproducible modern-production composite: 70% percentile of cumulative recorded regular-season source PPR plus 30% percentile of the best recorded regular-season source PPR. Percentiles use positive-PPR TE identities in the eligible verified 1999–2026 snapshot. Tie order: cumulative PPR, then name. Jordan Matthews is excluded from this TE complement because his significant career production was at WR.",
+    "Display each position alphabetically, without ordinal ranks. The exact selected name list is frozen in selected-candidates.json; selectionGroup and selectionBasis preserve each player’s inclusion route."
+  ],
+  "limits": [
+    "Modern PPR totals are source-window totals, not full-career totals for players active before 1999. The composite is used only for the final TE complement, not as a universal cross-era greatness formula.",
+    "Current and recent stars are included through this dated snapshot; no future achievements are assumed. Statistical totals favor the source-covered modern era, and subjective historical complements mitigate but do not eliminate era bias.",
+    "Career endpoints describe the first and last source-supported playing season, not appearances in every intervening season. A few profiles retain explicitly unverified provider metadata windows; their careerVerified flag is false and club scope is disclosed.",
+    "Historical HB/FB map to RB, flanker/receiving end to WR. HOF/player evidence governs ambiguous historical roles. No modern TE is invented for the 1950s simply to fill a decade slot. Hester and Brian Mitchell retain the skill-position grouping used by the game and their return-specialist roles.",
+    "400 counts individual people only. Franchise defenses are a separate 32-entity pool and do not count toward any positional 100.",
+    "A catalog profile establishes identity and historical context only. No pre-1999 game-stat row, zero-stat appearance or fantasy performance is manufactured by this catalog."
+  ],
+  "coverage": {
+    "hallOfFamers": 115,
+    "linkedPlayableProfiles": 233,
+    "profileOnly": 167,
+    "existingPlayableIdentitiesPreserved": 185,
+    "officialCareerVerified": 388,
+    "providerMetadataWindow": 12,
+    "careersIntersecting1950To1980": 140,
+    "careerStartBefore1950": 22,
+    "pre1950Only": 0,
+    "eraIntersectionCounts": {
+      "1950": 54,
+      "1960": 75,
+      "1970": 89,
+      "1980": 94,
+      "1990": 104,
+      "2000": 139,
+      "2010": 162,
+      "2020": 103
+    }
+  },
+  "sources": [
+    {
+      "label": "Official Hall of Fame position index",
+      "url": "https://www.profootballhof.com/hall-of-famers/positions"
+    },
+    {
+      "label": "Official Hall of Fame induction year index",
+      "url": "https://www.profootballhof.com/hall-of-famers/years"
+    },
+    {
+      "label": "Official 2026 senior nominee pool",
+      "url": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026"
+    },
+    {
+      "label": "Official NFL player career tables",
+      "url": "https://www.nfl.com/players/",
+      "note": "Each profile carries its exact verified individual URL; no biographical prose copied."
+    },
+    {
+      "label": "nflverse player metadata",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv",
+      "note": "GSIS identity/position/metadata only. PFR-derived draft fields and links are not used."
+    },
+    {
+      "label": "nflverse player weekly stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/tag/stats_player",
+      "note": "Verified source window, known game exclusions and completed-game joins inherited from the published importer."
+    },
+    {
+      "label": "nflverse player-source documentation",
+      "url": "https://nflreadr.nflverse.com/reference/load_players.html"
+    }
+  ],
+  "identityGuards": [
+    "Explicit existing GSIS IDs preserve all185 original human identities.",
+    "Other links require position and actual career overlap; stable source ID preferred.",
+    "Historical Mark Clayton (1983–1993) and Stanley Morgan (1977–1990) do not link to modern namesakes.",
+    "Steve Smith is the2001–2016 Carolina/Baltimore WR; Zach Miller is the2007–2014 Oakland/Seattle TE.",
+    "Hall of Famer Kellen Winslow (1979–1987) is distinct from Kellen Winslow II (2004–2013)."
+  ],
+  "checksums": [
+    {
+      "file": "players.csv",
+      "bytes": 7295883,
+      "sha256": "e85b2736908bd6701b038d18d98025e2b31e6e9db7cebf6f21e71fb0c88f9ba1"
+    },
+    {
+      "file": "hof-catalog.json",
+      "bytes": 188599,
+      "sha256": "d713464b9466878242880398bcb019c4ba684a570e905bb819319882d4490cfa"
+    },
+    {
+      "file": "historic-candidates.json",
+      "bytes": 46073,
+      "sha256": "a443394d46bc2ea4a4138cceb3c987cbe5e9ba9bb4b8cf7b1df294ef1de0855f"
+    },
+    {
+      "file": "selected-candidates.json",
+      "bytes": 37851,
+      "sha256": "82d6210fa82c87cf77b7267e0b9a631ab843b5bb53b88c3990c65a81be980726"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 550144,
+      "sha256": "9a795779fd63458c60de20a0ab6265e44422913907b2d90a8a63302436b26ebf"
+    },
+    {
+      "file": "candidate-player-aggregates.json",
+      "bytes": 2542339,
+      "sha256": "27d9a4fd869c4baf12a8ede2a007c326099b79fbe927886f22ff895d7de0ecb0"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "00-0023459",
+      "name": "Aaron Rodgers",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/aaron-rodgers/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0023436",
+      "name": "Alex Smith",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/alex-smith/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029668",
+      "name": "Andrew Luck",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/andrew-luck/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027973",
+      "name": "Andy Dalton",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/andy-dalton/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-babe-parilli",
+      "name": "Babe Parilli",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/babe-parilli/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034855",
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/baker-mayfield/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "bart-starr",
+      "name": "Bart Starr",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1977.",
+      "sourceUrl": "https://www.profootballhof.com/players/bart-starr",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022924",
+      "name": "Ben Roethlisberger",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ben-roethlisberger/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-bert-jones",
+      "name": "Bert Jones",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/bert-jones/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "bobby-layne",
+      "name": "Bobby Layne",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1967.",
+      "sourceUrl": "https://www.profootballhof.com/players/bobby-layne",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-bob-griese",
+      "name": "Bob Griese",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1990.",
+      "sourceUrl": "https://www.profootballhof.com/players/bob-griese",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-bob-waterfield",
+      "name": "Bob Waterfield",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1965.",
+      "sourceUrl": "https://www.profootballhof.com/players/bob-waterfield",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-boomer-esiason",
+      "name": "Boomer Esiason",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/boomer-esiason/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-brad-johnson",
+      "name": "Brad Johnson",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/brad-johnson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "brett-favre",
+      "name": "Brett Favre",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2016.",
+      "sourceUrl": "https://www.profootballhof.com/players/brett-favre",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-brian-sipe",
+      "name": "Brian Sipe",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/brian-sipe/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027939",
+      "name": "Cam Newton",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/cam-newton/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021429",
+      "name": "Carson Palmer",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/carson-palmer/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-chad-pennington",
+      "name": "Chad Pennington",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/chad-pennington/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "charlie-conerly-1948",
+      "name": "Charlie Conerly",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/charlie-conerly/stats/career",
+        "https://www.giants.com/news/giants-legends-among-52-senior-players-to-advance-in-pro-football-hall-of-fame-voting"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-craig-morton",
+      "name": "Craig Morton",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/craig-morton/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033077",
+      "name": "Dak Prescott",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/dak-prescott/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-dan-fouts",
+      "name": "Dan Fouts",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1993.",
+      "sourceUrl": "https://www.profootballhof.com/players/dan-fouts",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "dan-marino",
+      "name": "Dan Marino",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2005.",
+      "sourceUrl": "https://www.profootballhof.com/players/dan-marino",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-daryle-lamonica",
+      "name": "Daryle Lamonica",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/daryle-lamonica/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0003739",
+      "name": "Daunte Culpepper",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/daunte-culpepper/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-dave-krieg",
+      "name": "Dave Krieg",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/dave-krieg/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031280",
+      "name": "Derek Carr",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/derek-carr/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "don-meredith-1960",
+      "name": "Don Meredith",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/don-meredith/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0011022",
+      "name": "Donovan McNabb",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/donovan-mcnabb/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "doug-williams-1978",
+      "name": "Doug Williams",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/doug-williams/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-drew-bledsoe",
+      "name": "Drew Bledsoe",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/drew-bledsoe/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-drew-brees",
+      "name": "Drew Brees",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2026.",
+      "sourceUrl": "https://www.profootballhof.com/players/drew-brees",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "earl-morrall-1956",
+      "name": "Earl Morrall",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/earl-morrall/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022803",
+      "name": "Eli Manning",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/eli-manning/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-frank-ryan",
+      "name": "Frank Ryan",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/frank-ryan/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-fran-tarkenton",
+      "name": "Fran Tarkenton",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1986.",
+      "sourceUrl": "https://www.profootballhof.com/players/fran-tarkenton",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-george-blanda",
+      "name": "George Blanda",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1981.",
+      "sourceUrl": "https://www.profootballhof.com/players/george-blanda",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jack-kemp-1957",
+      "name": "Jack Kemp",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/jack-kemp/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jake-delhomme",
+      "name": "Jake Delhomme",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jake-delhomme/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jake-plummer",
+      "name": "Jake Plummer",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jake-plummer/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036389",
+      "name": "Jalen Hurts",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jalen-hurts/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033106",
+      "name": "Jared Goff",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jared-goff/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024226",
+      "name": "Jay Cutler",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jay-cutler/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0005755",
+      "name": "Jeff Garcia",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jeff-garcia/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jim-everett",
+      "name": "Jim Everett",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jim-everett/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jim-hart",
+      "name": "Jim Hart",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jim-hart/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-jim-kelly",
+      "name": "Jim Kelly",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2002.",
+      "sourceUrl": "https://www.profootballhof.com/players/jim-kelly",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jim-plunkett-1971",
+      "name": "Jim Plunkett",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/jim-plunkett/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036442",
+      "name": "Joe Burrow",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/joe-burrow/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026158",
+      "name": "Joe Flacco",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/joe-flacco/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "joe-montana",
+      "name": "Joe Montana",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2000.",
+      "sourceUrl": "https://www.profootballhof.com/players/joe-montana",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "joe-namath",
+      "name": "Joe Namath",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1985.",
+      "sourceUrl": "https://www.profootballhof.com/players/joe-namath",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "john-elway",
+      "name": "John Elway",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2004.",
+      "sourceUrl": "https://www.profootballhof.com/players/john-elway",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "john-hadl-1962",
+      "name": "John Hadl",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/john-hadl/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "johnny-unitas",
+      "name": "Johnny Unitas",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1979.",
+      "sourceUrl": "https://www.profootballhof.com/players/johnny-unitas",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034857",
+      "name": "Josh Allen",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/josh-allen/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036355",
+      "name": "Justin Herbert",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/justin-herbert/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ken-anderson-1971",
+      "name": "Ken Anderson",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/ken-anderson-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "ken-stabler",
+      "name": "Ken Stabler",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2016.",
+      "sourceUrl": "https://www.profootballhof.com/players/ken-stabler",
+      "supportingURLs": [
+        "https://www.profootballhof.com/news/left-handed-qbs"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0003292",
+      "name": "Kerry Collins",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/kerry-collins/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029604",
+      "name": "Kirk Cousins",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/kirk-cousins/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-kurt-warner",
+      "name": "Kurt Warner",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2017.",
+      "sourceUrl": "https://www.profootballhof.com/players/kurt-warner",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0035228",
+      "name": "Kyler Murray",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/kyler-murray/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034796",
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/lamar-jackson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-len-dawson",
+      "name": "Len Dawson",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1987.",
+      "sourceUrl": "https://www.profootballhof.com/players/len-dawson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0007091",
+      "name": "Matt Hasselbeck",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/matt-hasselbeck/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026498",
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/matthew-stafford/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026143",
+      "name": "Matt Ryan",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/matt-ryan/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020245",
+      "name": "Mike Vick",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "norm-van-brocklin",
+      "name": "Norm Van Brocklin",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1971.",
+      "sourceUrl": "https://www.profootballhof.com/players/norm-van-brocklin",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "otto-graham",
+      "name": "Otto Graham",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1965.",
+      "sourceUrl": "https://www.profootballhof.com/players/otto-graham",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033873",
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/patrick-mahomes/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-peyton-manning",
+      "name": "Peyton Manning",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2021.",
+      "sourceUrl": "https://www.profootballhof.com/players/peyton-manning",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022942",
+      "name": "Philip Rivers",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "catalog-phil-simms",
+      "name": "Phil Simms",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/phil-simms/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-randall-cunningham",
+      "name": "Randall Cunningham",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/randall-cunningham/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-rich-gannon",
+      "name": "Rich Gannon",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/rich-gannon/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "roger-staubach",
+      "name": "Roger Staubach",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1985.",
+      "sourceUrl": "https://www.profootballhof.com/players/roger-staubach",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "roman-gabriel-1962",
+      "name": "Roman Gabriel",
+      "position": "QB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/roman-gabriel/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-ron-jaworski",
+      "name": "Ron Jaworski",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/ron-jaworski/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029263",
+      "name": "Russell Wilson",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0023682",
+      "name": "Ryan Fitzpatrick",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ryan-fitzpatrick/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029701",
+      "name": "Ryan Tannehill",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ryan-tannehill/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-sammy-baugh",
+      "name": "Sammy Baugh",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1963.",
+      "sourceUrl": "https://www.profootballhof.com/players/sammy-baugh",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-sid-luckman",
+      "name": "Sid Luckman",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1965.",
+      "sourceUrl": "https://www.profootballhof.com/players/sid-luckman",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-sonny-jurgensen",
+      "name": "Sonny Jurgensen",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1983.",
+      "sourceUrl": "https://www.profootballhof.com/players/sonny-jurgensen",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-steve-bartkowski",
+      "name": "Steve Bartkowski",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/steve-bartkowski/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-steve-grogan",
+      "name": "Steve Grogan",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/steve-grogan/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0011024",
+      "name": "Steve McNair",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/steve-mcnair/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "steve-young",
+      "name": "Steve Young",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2005.",
+      "sourceUrl": "https://www.profootballhof.com/players/steve-young",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "terry-bradshaw",
+      "name": "Terry Bradshaw",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1989.",
+      "sourceUrl": "https://www.profootballhof.com/players/terry-bradshaw",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-tobin-rote",
+      "name": "Tobin Rote",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/tobin-rote/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0019596",
+      "name": "Tom Brady",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/tom-brady/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021678",
+      "name": "Tony Romo",
+      "position": "QB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/tony-romo/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-trent-green",
+      "name": "Trent Green",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/trent-green/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "troy-aikman",
+      "name": "Troy Aikman",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2006.",
+      "sourceUrl": "https://www.profootballhof.com/players/troy-aikman",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-vinny-testaverde",
+      "name": "Vinny Testaverde",
+      "position": "QB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/vinny-testaverde/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-warren-moon",
+      "name": "Warren Moon",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2006.",
+      "sourceUrl": "https://www.profootballhof.com/players/warren-moon",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-ya-tittle",
+      "name": "Y.A. Tittle",
+      "position": "QB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1971.",
+      "sourceUrl": "https://www.profootballhof.com/players/ya-tittle",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033293",
+      "name": "Aaron Jones",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/aaron-jones/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0025394",
+      "name": "Adrian Peterson",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/adrian-peterson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0006305",
+      "name": "Ahman Green",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ahman-green/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "alan-ameche-1955",
+      "name": "Alan Ameche",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/alan-ameche/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033906",
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/alvin-kamara/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-arian-foster",
+      "name": "Arian Foster",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/arian-foster/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033699",
+      "name": "Austin Ekeler",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/austin-ekeler/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "barry-sanders",
+      "name": "Barry Sanders",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2004.",
+      "sourceUrl": "https://www.profootballhof.com/players/barry-sanders",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0038542",
+      "name": "Bijan Robinson",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/bijan-robinson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-bill-dudley",
+      "name": "Bill Dudley",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1966.",
+      "sourceUrl": "https://www.profootballhof.com/players/bill-dudley",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "billy-sims-1980",
+      "name": "Billy Sims",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/billy-sims/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-brian-mitchell",
+      "name": "Brian Mitchell",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/brian-mitchell-2/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021216",
+      "name": "Brian Westbrook",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/brian-westbrook/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-charley-trippi",
+      "name": "Charley Trippi",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1968.",
+      "sourceUrl": "https://www.profootballhof.com/players/charley-trippi",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026164",
+      "name": "Chris Johnson",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/chris-johnson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033280",
+      "name": "Christian McCaffrey",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/christian-mccaffrey/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "chuck-foreman-1973",
+      "name": "Chuck Foreman",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/chuck-foreman/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-chuck-muncie",
+      "name": "Chuck Muncie",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/chuck-muncie/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021179",
+      "name": "Clinton Portis",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/clinton-portis/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0004304",
+      "name": "Corey Dillon",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/corey-dillon/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-curtis-martin",
+      "name": "Curtis Martin",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2012.",
+      "sourceUrl": "https://www.profootballhof.com/players/curtis-martin",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-curt-warner",
+      "name": "Curt Warner",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/curt-warner/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0023564",
+      "name": "Darren Sproles",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/darren-sproles/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024242",
+      "name": "DeAngelo Williams",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/deangelo-williams/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0032764",
+      "name": "Derrick Henry",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/derrick-henry/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-doak-walker",
+      "name": "Doak Walker",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1986.",
+      "sourceUrl": "https://www.profootballhof.com/players/doak-walker",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "don-perkins-1961",
+      "name": "Don Perkins",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/don-perkins/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-earl-campbell",
+      "name": "Earl Campbell",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1991.",
+      "sourceUrl": "https://www.profootballhof.com/players/earl-campbell",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "earnest-byner-1984",
+      "name": "Earnest Byner",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/earnest-byner/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-eddie-george",
+      "name": "Eddie George",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/eddie-george/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-edgerrin-james",
+      "name": "Edgerrin James",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2020.",
+      "sourceUrl": "https://www.profootballhof.com/players/edgerrin-james",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "emmitt-smith",
+      "name": "Emmitt Smith",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2010.",
+      "sourceUrl": "https://www.profootballhof.com/players/emmitt-smith",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "eric-dickerson",
+      "name": "Eric Dickerson",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1999.",
+      "sourceUrl": "https://www.profootballhof.com/players/eric-dickerson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033045",
+      "name": "Ezekiel Elliott",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ezekiel-elliott/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-floyd-little",
+      "name": "Floyd Little",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2010.",
+      "sourceUrl": "https://www.profootballhof.com/players/floyd-little",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "franco-harris",
+      "name": "Franco Harris",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1990.",
+      "sourceUrl": "https://www.profootballhof.com/players/franco-harris",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-frank-gifford",
+      "name": "Frank Gifford",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1977.",
+      "sourceUrl": "https://www.profootballhof.com/players/frank-gifford",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0023500",
+      "name": "Frank Gore",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/frank-gore/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0016098",
+      "name": "Fred Taylor",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/fred-taylor/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-freeman-mcneil",
+      "name": "Freeman McNeil",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/freeman-mcneil/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "gale-sayers",
+      "name": "Gale Sayers",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1977.",
+      "sourceUrl": "https://www.profootballhof.com/players/gale-sayers",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-george-mcafee",
+      "name": "George McAfee",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1966.",
+      "sourceUrl": "https://www.profootballhof.com/players/george-mcafee",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-george-rogers",
+      "name": "George Rogers",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/george-rogers/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "herschel-walker-1986",
+      "name": "Herschel Walker",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/herschel-walker/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-hugh-mcelhenny",
+      "name": "Hugh McElhenny",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1970.",
+      "sourceUrl": "https://www.profootballhof.com/players/hugh-mcelhenny",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026213",
+      "name": "Jamaal Charles",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jamaal-charles/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0019693",
+      "name": "Jamal Lewis",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jamal-lewis/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-james-brooks",
+      "name": "James Brooks",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/james-brooks/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-jerome-bettis",
+      "name": "Jerome Bettis",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2015.",
+      "sourceUrl": "https://www.profootballhof.com/players/jerome-bettis",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jim-brown",
+      "name": "Jim Brown",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1971.",
+      "sourceUrl": "https://www.profootballhof.com/players/jim-brown",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-jim-taylor",
+      "name": "Jim Taylor",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1976.",
+      "sourceUrl": "https://www.profootballhof.com/players/jim-taylor",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033897",
+      "name": "Joe Mixon",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "joe-perry",
+      "name": "Joe Perry",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1969.",
+      "sourceUrl": "https://www.profootballhof.com/players/joe-perry",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "john-david-crow-1958",
+      "name": "John David Crow",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/john-david-crow/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-john-henry-johnson",
+      "name": "John Henry Johnson",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1987.",
+      "sourceUrl": "https://www.profootballhof.com/players/john-henry-johnson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-john-riggins",
+      "name": "John Riggins",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1992.",
+      "sourceUrl": "https://www.profootballhof.com/players/john-riggins",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036223",
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jonathan-taylor/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0035700",
+      "name": "Josh Jacobs",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/josh-jacobs/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-ladainian-tomlinson",
+      "name": "LaDainian Tomlinson",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2017.",
+      "sourceUrl": "https://www.profootballhof.com/players/ladainian-tomlinson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "larry-brown-1969",
+      "name": "Larry Brown",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/larry-brown-7/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-larry-centers",
+      "name": "Larry Centers",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/larry-centers/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-larry-csonka",
+      "name": "Larry Csonka",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1987.",
+      "sourceUrl": "https://www.profootballhof.com/players/larry-csonka",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "lenny-moore",
+      "name": "Lenny Moore",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1975.",
+      "sourceUrl": "https://www.profootballhof.com/players/lenny-moore",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-leroy-kelly",
+      "name": "Leroy Kelly",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1994.",
+      "sourceUrl": "https://www.profootballhof.com/players/leroy-kelly",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027029",
+      "name": "LeSean McCoy",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/lesean-mccoy/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030496",
+      "name": "Le'Veon Bell",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/le-veon-bell/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "marcus-allen",
+      "name": "Marcus Allen",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2003.",
+      "sourceUrl": "https://www.profootballhof.com/players/marcus-allen",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "marion-motley",
+      "name": "Marion Motley",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1968.",
+      "sourceUrl": "https://www.profootballhof.com/players/marion-motley",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027966",
+      "name": "Mark Ingram",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/mark-ingram/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-marshall-faulk",
+      "name": "Marshall Faulk",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2011.",
+      "sourceUrl": "https://www.profootballhof.com/players/marshall-faulk",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0025399",
+      "name": "Marshawn Lynch",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/marshawn-lynch/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026184",
+      "name": "Matt Forte",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/matt-forte/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024275",
+      "name": "Maurice Jones-Drew",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/maurice-jones-drew/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "mercury-morris-1969",
+      "name": "Mercury Morris",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/mercury-morris/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-mike-alstott",
+      "name": "Mike Alstott",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/mike-alstott/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034791",
+      "name": "Nick Chubb",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "oj-simpson",
+      "name": "O.J. Simpson",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1985.",
+      "sourceUrl": "https://www.profootballhof.com/players/oj-simpson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ollie-matson",
+      "name": "Ollie Matson",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1972.",
+      "sourceUrl": "https://www.profootballhof.com/players/ollie-matson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ottis-anderson-1979",
+      "name": "Ottis Anderson",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/ottis-anderson/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-paul-hornung",
+      "name": "Paul Hornung",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1986.",
+      "sourceUrl": "https://www.profootballhof.com/players/paul-hornung",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0007661",
+      "name": "Priest Holmes",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/priest-holmes/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026195",
+      "name": "Ray Rice",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ray-rice/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024217",
+      "name": "Reggie Bush",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/reggie-bush/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-ricky-watters",
+      "name": "Ricky Watters",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/ricky-watters/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0017915",
+      "name": "Ricky Williams",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ricky-williams/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-roger-craig",
+      "name": "Roger Craig",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2026.",
+      "sourceUrl": "https://www.profootballhof.com/players/roger-craig",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034844",
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/saquon-barkley/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0019647",
+      "name": "Shaun Alexander",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/shaun-alexander/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022736",
+      "name": "Steven Jackson",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/steven-jackson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-steve-van-buren",
+      "name": "Steve Van Buren",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1965.",
+      "sourceUrl": "https://www.profootballhof.com/players/steve-van-buren",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "paul-younger-1949",
+      "name": "Tank Younger",
+      "position": "RB",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/tank-younger/stats/career",
+        "https://www.nfl.com/photos/firsts-by-african-americans-in-the-nfl-09000d5d826ca97b"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-terrell-davis",
+      "name": "Terrell Davis",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2017.",
+      "sourceUrl": "https://www.profootballhof.com/players/terrell-davis",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0019641",
+      "name": "Thomas Jones",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/thomas-jones/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "thurman-thomas",
+      "name": "Thurman Thomas",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2007.",
+      "sourceUrl": "https://www.profootballhof.com/players/thurman-thomas",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0000745",
+      "name": "Tiki Barber",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/tiki-barber/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-tony-canadeo",
+      "name": "Tony Canadeo",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1974.",
+      "sourceUrl": "https://www.profootballhof.com/players/tony-canadeo",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-tony-dorsett",
+      "name": "Tony Dorsett",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1994.",
+      "sourceUrl": "https://www.profootballhof.com/players/tony-dorsett",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "walter-payton",
+      "name": "Walter Payton",
+      "position": "RB",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1993.",
+      "sourceUrl": "https://www.profootballhof.com/players/walter-payton",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0004640",
+      "name": "Warrick Dunn",
+      "position": "RB",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/warrick-dunn/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-william-andrews",
+      "name": "William Andrews",
+      "position": "RB",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/william-andrews/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030035",
+      "name": "Adam Thielen",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0035676",
+      "name": "A.J. Brown",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/a-j-brown/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027942",
+      "name": "A.J. Green",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/a-j-green/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031544",
+      "name": "Amari Cooper",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "hof-andre-johnson",
+      "name": "Andre Johnson",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2024.",
+      "sourceUrl": "https://www.profootballhof.com/players/andre-johnson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-andre-reed",
+      "name": "Andre Reed",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2014.",
+      "sourceUrl": "https://www.profootballhof.com/players/andre-reed",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022084",
+      "name": "Anquan Boldin",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/anquan-boldin/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-anthony-carter",
+      "name": "Anthony Carter",
+      "position": "WR",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/anthony-carter/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027793",
+      "name": "Antonio Brown",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/antonio-brown/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-art-monk",
+      "name": "Art Monk",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2008.",
+      "sourceUrl": "https://www.profootballhof.com/players/art-monk",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "art-powell-1959",
+      "name": "Art Powell",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/art-powell/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "billy-howton-1952",
+      "name": "Billy Howton",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/billy-howton/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "billy-johnson-1974",
+      "name": "Billy \"White Shoes\" Johnson",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/billy-johnson/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "billy-wilson-1951",
+      "name": "Billy Wilson",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/billy-wilson/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-bobby-mitchell",
+      "name": "Bobby Mitchell",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1983.",
+      "sourceUrl": "https://www.profootballhof.com/players/bobby-mitchell",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "bobby-walston-1951",
+      "name": "Bobby Walston",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/bobby-walston/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-bob-hayes",
+      "name": "Bob Hayes",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2009.",
+      "sourceUrl": "https://www.profootballhof.com/players/bob-hayes",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "boyd-dowler-1959",
+      "name": "Boyd Dowler",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/boyd-dowler/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031236",
+      "name": "Brandin Cooks",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/brandin-cooks/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024334",
+      "name": "Brandon Marshall",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/brandon-marshall/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-calvin-johnson",
+      "name": "Calvin Johnson",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2021.",
+      "sourceUrl": "https://www.profootballhof.com/players/calvin-johnson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "carroll-dale-1960",
+      "name": "Carroll Dale",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/carroll-dale/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036358",
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ceedee-lamb/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020397",
+      "name": "Chad Johnson",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/chad-johnson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "charley-hennigan-1960",
+      "name": "Charley Hennigan",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/charley-hennigan/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-charley-taylor",
+      "name": "Charley Taylor",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1984.",
+      "sourceUrl": "https://www.profootballhof.com/players/charley-taylor",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-charlie-joiner",
+      "name": "Charlie Joiner",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1996.",
+      "sourceUrl": "https://www.profootballhof.com/players/charlie-joiner",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-cliff-branch",
+      "name": "Cliff Branch",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2022.",
+      "sourceUrl": "https://www.profootballhof.com/players/cliff-branch",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033908",
+      "name": "Cooper Kupp",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/cooper-kupp/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-cris-carter",
+      "name": "Cris Carter",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2013.",
+      "sourceUrl": "https://www.profootballhof.com/players/cris-carter",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-dante-lavelli",
+      "name": "Dante Lavelli",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1975.",
+      "sourceUrl": "https://www.profootballhof.com/players/dante-lavelli",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031381",
+      "name": "Davante Adams",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/davante-adams/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030564",
+      "name": "DeAndre Hopkins",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "del-shofner-1957",
+      "name": "Del Shofner",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/del-shofner/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027874",
+      "name": "Demaryius Thomas",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/demaryius-thomas/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0010500",
+      "name": "Derrick Mason",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/derrick-mason/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026189",
+      "name": "DeSean Jackson",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/desean-jackson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-devin-hester",
+      "name": "Devin Hester",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2024.",
+      "sourceUrl": "https://www.profootballhof.com/players/devin-hester",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0004541",
+      "name": "Donald Driver",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/donald-driver/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-don-maynard",
+      "name": "Don Maynard",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1987.",
+      "sourceUrl": "https://www.profootballhof.com/players/don-maynard",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "drew-pearson",
+      "name": "Drew Pearson",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2021.",
+      "sourceUrl": "https://www.profootballhof.com/players/drew-pearson",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "elroy-hirsch",
+      "name": "Elroy Hirsch",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1968.",
+      "sourceUrl": "https://www.profootballhof.com/players/elroy-crazylegs-hirsch",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027685",
+      "name": "Emmanuel Sanders",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/emmanuel-sanders/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "eric-martin-1985",
+      "name": "Eric Martin",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/eric-martin-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-fred-biletnikoff",
+      "name": "Fred Biletnikoff",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1988.",
+      "sourceUrl": "https://www.profootballhof.com/players/fred-biletnikoff",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "gary-collins-1962",
+      "name": "Gary Collins",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/gary-collins/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-harold-carmichael",
+      "name": "Harold Carmichael",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2020.",
+      "sourceUrl": "https://www.profootballhof.com/players/harold-carmichael",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "harold-jackson-1968",
+      "name": "Harold Jackson",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/harold-jackson/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "henry-ellard-1983",
+      "name": "Henry Ellard",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/henry-ellard/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-herman-moore",
+      "name": "Herman Moore",
+      "position": "WR",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/herman-moore/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0017162",
+      "name": "Hines Ward",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/hines-ward/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "homer-jones-1964",
+      "name": "Homer Jones",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/homer-jones/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-isaac-bruce",
+      "name": "Isaac Bruce",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2020.",
+      "sourceUrl": "https://www.profootballhof.com/players/isaac-bruce",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "isaac-curtis-1973",
+      "name": "Isaac Curtis",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/isaac-curtis/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036900",
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/ja-marr-chase/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-james-lofton",
+      "name": "James Lofton",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2003.",
+      "sourceUrl": "https://www.profootballhof.com/players/james-lofton",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jerry-rice",
+      "name": "Jerry Rice",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2010.",
+      "sourceUrl": "https://www.profootballhof.com/players/jerry-rice",
+      "supportingURLs": [
+        "https://media.denverbroncos.com/wp-content/uploads/2018/08/Denver2006.pdf"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jimmy-smith",
+      "name": "Jimmy Smith",
+      "position": "WR",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jimmy-smith/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-john-stallworth",
+      "name": "John Stallworth",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2002.",
+      "sourceUrl": "https://www.profootballhof.com/players/john-stallworth",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026176",
+      "name": "Jordy Nelson",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jordy-nelson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027944",
+      "name": "Julio Jones",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/julio-jones/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036322",
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/justin-jefferson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030279",
+      "name": "Keenan Allen",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/keenan-allen/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "lance-alworth",
+      "name": "Lance Alworth",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1978.",
+      "sourceUrl": "https://www.profootballhof.com/players/lance-alworth",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-larry-fitzgerald",
+      "name": "Larry Fitzgerald",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2026.",
+      "sourceUrl": "https://www.profootballhof.com/players/larry-fitzgerald",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "lionel-taylor-1959",
+      "name": "Lionel Taylor",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/lionel-taylor/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-lynn-swann",
+      "name": "Lynn Swann",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2001.",
+      "sourceUrl": "https://www.profootballhof.com/players/lynn-swann",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-mac-speedie",
+      "name": "Mac Speedie",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2020.",
+      "sourceUrl": "https://www.profootballhof.com/players/mac-speedie",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "mark-clayton-1983",
+      "name": "Mark Clayton",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/mark-clayton-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "mark-duper-1982",
+      "name": "Mark Duper",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/mark-duper/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024466",
+      "name": "Marques Colston",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/marques-colston/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-marvin-harrison",
+      "name": "Marvin Harrison",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2016.",
+      "sourceUrl": "https://www.profootballhof.com/players/marvin-harrison",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "michael-irvin",
+      "name": "Michael Irvin",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2007.",
+      "sourceUrl": "https://www.profootballhof.com/players/michael-irvin",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031408",
+      "name": "Mike Evans",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/mike-evans/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0011795",
+      "name": "Muhsin Muhammad",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/muhsin-muhammad/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "otis-taylor-1965",
+      "name": "Otis Taylor",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/otis-taylor/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "paul-warfield",
+      "name": "Paul Warfield",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1983.",
+      "sourceUrl": "https://www.profootballhof.com/players/paul-warfield",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-pete-pihos",
+      "name": "Pete Pihos",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1970.",
+      "sourceUrl": "https://www.profootballhof.com/players/pete-pihos",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-randy-moss",
+      "name": "Randy Moss",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2018.",
+      "sourceUrl": "https://www.profootballhof.com/players/randy-moss",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-raymond-berry",
+      "name": "Raymond Berry",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1973.",
+      "sourceUrl": "https://www.profootballhof.com/players/raymond-berry",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020498",
+      "name": "Reggie Wayne",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/reggie-wayne/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "rick-upchurch-1975",
+      "name": "Rick Upchurch",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/rick-upchurch/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0023462",
+      "name": "Roddy White",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/roddy-white/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-rod-smith",
+      "name": "Rod Smith",
+      "position": "WR",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/rod-smith-2/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-roy-green",
+      "name": "Roy Green",
+      "position": "WR",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/roy-green/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020494",
+      "name": "Santana Moss",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/santana-moss/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "stanley-morgan-1977",
+      "name": "Stanley Morgan",
+      "position": "WR",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/stanley-morgan-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031588",
+      "name": "Stefon Diggs",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/stefon-diggs/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-sterling-sharpe",
+      "name": "Sterling Sharpe",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2025.",
+      "sourceUrl": "https://www.profootballhof.com/players/sterling-sharpe",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "steve-largent",
+      "name": "Steve Largent",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1995.",
+      "sourceUrl": "https://www.profootballhof.com/players/steve-largent",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020337",
+      "name": "Steve Smith",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/steve-smith/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-terrell-owens",
+      "name": "Terrell Owens",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2018.",
+      "sourceUrl": "https://www.profootballhof.com/players/terrell-owens",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-tim-brown",
+      "name": "Tim Brown",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2015.",
+      "sourceUrl": "https://www.profootballhof.com/players/tim-brown",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "tom-fears",
+      "name": "Tom Fears",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1970.",
+      "sourceUrl": "https://www.profootballhof.com/players/tom-fears",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-tommy-mcdonald",
+      "name": "Tommy McDonald",
+      "position": "WR",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1998.",
+      "sourceUrl": "https://www.profootballhof.com/players/tommy-mcdonald",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0007681",
+      "name": "Torry Holt",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/torry-holt/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029608",
+      "name": "T.Y. Hilton",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/t-y-hilton/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0032211",
+      "name": "Tyler Lockett",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0033040",
+      "name": "Tyreek Hill",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0022427",
+      "name": "Wes Welker",
+      "position": "WR",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/wes-welker/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020285",
+      "name": "Alge Crumpler",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/alge-crumpler/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-antonio-gates",
+      "name": "Antonio Gates",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2025.",
+      "sourceUrl": "https://www.profootballhof.com/players/antonio-gates",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0032392",
+      "name": "Austin Hooper",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/austin-hooper/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ben-coates-1991",
+      "name": "Ben Coates",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/ben-coates/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022943",
+      "name": "Benjamin Watson",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/benjamin-watson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-billy-joe-dupree",
+      "name": "Billy Joe Dupree",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/billy-joe-dupree/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "bob-trumpy-1968",
+      "name": "Bob Trumpy",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Four-time AFL/NFL all-star selection",
+      "sourceUrl": "https://www.bengals.com/team/ring-of-honor/bobtrumpy",
+      "supportingURLs": [
+        "https://www.nfl.com/players/bob-trumpy/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026996",
+      "name": "Brandon Pettigrew",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/brandon-pettigrew/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0025549",
+      "name": "Brent Celek",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/brent-celek/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "brent-jones-1987",
+      "name": "Brent Jones",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/brent-jones/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0039338",
+      "name": "Brock Bowers",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/brock-bowers/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031273",
+      "name": "Cameron Brate",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/cameron-brate/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0028112",
+      "name": "Charles Clay",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/charles-clay/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-charlie-sanders",
+      "name": "Charlie Sanders",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2007.",
+      "sourceUrl": "https://www.profootballhof.com/players/charlie-sanders",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022738",
+      "name": "Chris Cooley",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/chris-cooley/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0029697",
+      "name": "Coby Fleener",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/coby-fleener/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036290",
+      "name": "Cole Kmet",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/cole-kmet/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022165",
+      "name": "Dallas Clark",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/dallas-clark/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034351",
+      "name": "Dallas Goedert",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/dallas-goedert/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034383",
+      "name": "Dalton Schultz",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/dalton-schultz/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031610",
+      "name": "Darren Waller",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/darren-waller/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-dave-casper",
+      "name": "Dave Casper",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2002.",
+      "sourceUrl": "https://www.profootballhof.com/players/dave-casper",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033885",
+      "name": "David Njoku",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/david-njoku/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0035689",
+      "name": "Dawson Knox",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/dawson-knox/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024389",
+      "name": "Delanie Walker",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/delanie-walker/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0003035",
+      "name": "Desmond Clark",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/desmond-clark/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026170",
+      "name": "Dustin Keller",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/dustin-keller/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0031387",
+      "name": "Eric Ebron",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/eric-ebron/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-eric-green",
+      "name": "Eric Green",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/eric-green-2/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033881",
+      "name": "Evan Engram",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/evan-engram/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ferrell-edmunds-1988",
+      "name": "Ferrell Edmunds",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Two-time Pro Bowl selection",
+      "sourceUrl": "https://www.miamidolphins.com/news/ac-in-the-am-filling-some-important-needs",
+      "supportingURLs": [
+        "https://www.nfl.com/players/ferrell-edmunds/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "frank-wycheck-1993",
+      "name": "Frank Wycheck",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Titans Ring of Honor; three-time Pro Bowl selection",
+      "sourceUrl": "https://www.tennesseetitans.com/news/history-frank-wycheck",
+      "supportingURLs": [
+        "https://www.nfl.com/players/frank-wycheck/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "fred-arbanas-1962",
+      "name": "Fred Arbanas",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/fred-arbanas/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0008749",
+      "name": "Freddie Jones",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/freddie-jones/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033288",
+      "name": "George Kittle",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/george-kittle/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0025418",
+      "name": "Greg Olsen",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/greg-olsen/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0023465",
+      "name": "Heath Miller",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/heath-miller/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033090",
+      "name": "Hunter Henry",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/hunter-henry/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030181",
+      "name": "Jack Doyle",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/jack-doyle/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jackie-harris",
+      "name": "Jackie Harris",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jackie-harris/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-jackie-smith",
+      "name": "Jackie Smith",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1994.",
+      "sourceUrl": "https://www.profootballhof.com/players/jackie-smith",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0038041",
+      "name": "Jake Ferguson",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/jake-ferguson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027061",
+      "name": "Jared Cook",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jared-cook/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022127",
+      "name": "Jason Witten",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jason-witten/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jay-novacek-1985",
+      "name": "Jay Novacek",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/jay-novacek/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021148",
+      "name": "Jeremy Shockey",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jeremy-shockey/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027873",
+      "name": "Jermaine Gresham",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jermaine-gresham/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026231",
+      "name": "Jermichael Finley",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/jermichael-finley/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "jerry-smith-1965",
+      "name": "Jerry Smith",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Two-time Pro Bowl selection",
+      "sourceUrl": "https://www.commanders.com/team-history/pro-bowl",
+      "supportingURLs": [
+        "https://www.nfl.com/players/jerry-smith/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "jimmie-giles-1977",
+      "name": "Jimmie Giles",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/jimmie-giles/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-jim-mitchell",
+      "name": "Jim Mitchell",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/jim-mitchell-2/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027696",
+      "name": "Jimmy Graham",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jimmy-graham/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-john-mackey",
+      "name": "John Mackey",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1992.",
+      "sourceUrl": "https://www.profootballhof.com/players/john-mackey",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033858",
+      "name": "Jonnu Smith",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/jonnu-smith/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030472",
+      "name": "Jordan Reed",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/jordan-reed/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0028067",
+      "name": "Julius Thomas",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/julius-thomas/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036040",
+      "name": "Juwan Johnson",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/juwan-johnson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "keith-jackson-1988",
+      "name": "Keith Jackson",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/keith-jackson-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "kellen-winslow",
+      "name": "Kellen Winslow",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1995.",
+      "sourceUrl": "https://www.profootballhof.com/players/kellen-winslow",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022922",
+      "name": "Kellen Winslow II",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/kellen-winslow/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "ken-dilger-1995",
+      "name": "Ken Dilger",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2001 Pro Bowl selection",
+      "sourceUrl": "https://www.colts.com/news/indianapolis-colts-all-35-season-team-second-team",
+      "supportingURLs": [
+        "https://www.nfl.com/players/ken-dilger/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036970",
+      "name": "Kyle Pitts",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/kyle-pitts/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027981",
+      "name": "Kyle Rudolph",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/kyle-rudolph/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024243",
+      "name": "Marcedes Lewis",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0013080",
+      "name": "Marcus Pollard",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/marcus-pollard/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034753",
+      "name": "Mark Andrews",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/mark-andrews/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "mark-bavaro-1985",
+      "name": "Mark Bavaro",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Giants Ring of Honor; two-time Pro Bowl selection",
+      "sourceUrl": "https://www.giants.com/news/mark-bavaro",
+      "supportingURLs": [
+        "https://www.nfl.com/players/mark-bavaro/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0026201",
+      "name": "Martellus Bennett",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/martellus-bennett/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "mike-ditka",
+      "name": "Mike Ditka",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1988.",
+      "sourceUrl": "https://www.profootballhof.com/players/mike-ditka",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0034829",
+      "name": "Mike Gesicki",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/mike-gesicki/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0035644",
+      "name": "Noah Fant",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/noah-fant/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024313",
+      "name": "Owen Daniels",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/owen-daniels/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-ozzie-newsome",
+      "name": "Ozzie Newsome",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 1999.",
+      "sourceUrl": "https://www.profootballhof.com/players/ozzie-newsome",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0036894",
+      "name": "Pat Freiermuth",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/pat-freiermuth/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "paul-coffman-1978",
+      "name": "Paul Coffman",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Packers Hall of Fame; three-time Pro Bowl selection",
+      "sourceUrl": "https://www.packers.com/history/hof/paul-coffman",
+      "supportingURLs": [
+        "https://www.nfl.com/players/paul-coffman/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "pete-metzelaars-1982",
+      "name": "Pete Metzelaars",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Bills 50th Anniversary All-Time Team",
+      "sourceUrl": "https://www.buffalobills.com/news/countdown-to-kickoff-chargers-at-bills-13812361",
+      "supportingURLs": [
+        "https://www.nfl.com/players/pete-metzelaars/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0021236",
+      "name": "Randy McMichael",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/randy-mcmichael/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-raymond-chester",
+      "name": "Raymond Chester",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/raymond-chester/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "rich-caster-1970",
+      "name": "Rich Caster",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Three-time Pro Bowl selection",
+      "sourceUrl": "https://www.newyorkjets.com/news/where-are-they-now-rich-caster",
+      "supportingURLs": [
+        "https://www.nfl.com/players/rich-caster/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "riley-odoms-1972",
+      "name": "Riley Odoms",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Broncos Ring of Fame; four-time Pro Bowl selection",
+      "sourceUrl": "https://www.denverbroncos.com/team/tradition/ring-of-fame/riley-odoms",
+      "supportingURLs": [
+        "https://www.nfl.com/players/riley-odoms/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0027656",
+      "name": "Rob Gronkowski",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/rob-gronkowski/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-ron-kramer",
+      "name": "Ron Kramer",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/ron-kramer/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "russ-francis-1975",
+      "name": "Russ Francis",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "Three-time Pro Bowl selection",
+      "sourceUrl": "https://www.patriots.com/news/former-patriots-tight-end-russ-francis-has-passed-away",
+      "supportingURLs": [
+        "https://www.nfl.com/players/russ-francis/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0039065",
+      "name": "Sam LaPorta",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/sam-laporta/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "shannon-sharpe",
+      "name": "Shannon Sharpe",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2011.",
+      "sourceUrl": "https://www.profootballhof.com/players/shannon-sharpe",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "steve-jordan-1982",
+      "name": "Steve Jordan",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/steve-jordan-2/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033357",
+      "name": "Taysom Hill",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/tag/players",
+      "supportingURLs": [],
+      "careerVerified": false
+    },
+    {
+      "id": "00-0035229",
+      "name": "T.J. Hockenson",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/t-j-hockenson/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "todd-christensen-1979",
+      "name": "Todd Christensen",
+      "position": "TE",
+      "selectionGroup": "historical-supplement",
+      "selectionBasis": "2026 HOF senior nominee (not inducted)",
+      "sourceUrl": "https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026",
+      "supportingURLs": [
+        "https://www.nfl.com/players/todd-christensen/stats/career"
+      ],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0020516",
+      "name": "Todd Heap",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/todd-heap/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "hof-tony-gonzalez",
+      "name": "Tony Gonzalez",
+      "position": "TE",
+      "selectionGroup": "hof",
+      "selectionBasis": "Enshrined in the Pro Football Hall of Fame, Class of 2019.",
+      "sourceUrl": "https://www.profootballhof.com/players/tony-gonzalez",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030506",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/travis-kelce/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0037744",
+      "name": "Trey McBride",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/trey-mcbride/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030549",
+      "name": "Tyler Eifert",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/tyler-eifert/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0033110",
+      "name": "Tyler Higbee",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/tyler-higbee/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0024221",
+      "name": "Vernon Davis",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/vernon-davis/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0022054",
+      "name": "Visanthe Shiancoe",
+      "position": "TE",
+      "selectionGroup": "modern-complement",
+      "selectionBasis": "Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position",
+      "sourceUrl": "https://www.nfl.com/players/visanthe-shiancoe/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-wesley-walls",
+      "name": "Wesley Walls",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/wesley-walls/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "00-0030061",
+      "name": "Zach Ertz",
+      "position": "TE",
+      "selectionGroup": "existing",
+      "selectionBasis": "Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection",
+      "sourceUrl": "https://www.nfl.com/players/zach-ertz/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    },
+    {
+      "id": "catalog-zach-miller",
+      "name": "Zach Miller",
+      "position": "TE",
+      "selectionGroup": "extra",
+      "selectionBasis": "Historical editorial complement: sustained positional production and era coverage",
+      "sourceUrl": "https://www.nfl.com/players/zach-miller-2/stats/career",
+      "supportingURLs": [],
+      "careerVerified": true
+    }
+  ]
+}

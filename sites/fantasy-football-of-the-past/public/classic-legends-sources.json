@@ -1,0 +1,8355 @@
+{
+  "verifiedAt": "2026-10-04",
+  "classicWindow": {
+    "first": 1960,
+    "last": 2010,
+    "inclusive": true
+  },
+  "source": "https://www.profootballhof.com/players",
+  "classicCompetitionEnabled": false,
+  "newGamesImported": 0,
+  "explanation": "Verified identities, roles and career eligibility. Existing game coverage is separate from eligibility; this catalog does not enable a Classic league or new kicker scoring.",
+  "totalProfiles": 105,
+  "hallOfFameProfiles": 103,
+  "hallOfFameByPrimaryPosition": {
+    "QB": 26,
+    "RB": 31,
+    "WR": 32,
+    "TE": 10,
+    "K": 4
+  },
+  "existingProfileMatches": 101,
+  "newProfiles": 4,
+  "existingClassicGameRecords": 3406,
+  "records": [
+    {
+      "id": "hof:bart-starr",
+      "name": "Bart Starr",
+      "aliases": [
+        "Bryan Bartlett Starr"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ],
+      "existingProfileId": "bart-starr",
+      "hallOfFameYear": 1977,
+      "hallOfFameSource": "https://www.profootballhof.com/players/bart-starr",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/bart-starr",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2441"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ]
+    },
+    {
+      "id": "hof:bob-griese",
+      "name": "Bob Griese",
+      "aliases": [
+        "Robert Allen Griese"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "classicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "existingProfileId": "hof-bob-griese",
+      "hallOfFameYear": 1990,
+      "hallOfFameSource": "https://www.profootballhof.com/players/bob-griese",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/bob-griese",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2249"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980
+      ]
+    },
+    {
+      "id": "hof:bobby-layne",
+      "name": "Bobby Layne",
+      "aliases": [
+        "Robert Lawrence Layne"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1948,
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962
+      ],
+      "existingProfileId": "bobby-layne",
+      "hallOfFameYear": 1967,
+      "hallOfFameSource": "https://www.profootballhof.com/players/bobby-layne",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/bobby-layne",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2318"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962
+      ]
+    },
+    {
+      "id": "hof:brett-favre",
+      "name": "Brett Favre",
+      "aliases": [
+        "Brett Lorenzo Favre"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "classicSeasons": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "brett-favre",
+      "playableId": "00-0005106",
+      "hallOfFameYear": 2016,
+      "hallOfFameSource": "https://www.profootballhof.com/players/brett-favre",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/brett-favre",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2224",
+        "gsisId": "00-0005106"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 198,
+      "missingClassicSeasons": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:dan-fouts",
+      "name": "Dan Fouts",
+      "aliases": [
+        "Daniel Francis Fouts"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "classicSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "existingProfileId": "hof-dan-fouts",
+      "hallOfFameYear": 1993,
+      "hallOfFameSource": "https://www.profootballhof.com/players/dan-fouts",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/dan-fouts",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2231"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ]
+    },
+    {
+      "id": "hof:dan-marino",
+      "name": "Dan Marino",
+      "aliases": [
+        "Daniel Constantine Marino Jr."
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "classicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "existingProfileId": "dan-marino",
+      "playableId": "00-0010379",
+      "hallOfFameYear": 2005,
+      "hallOfFameSource": "https://www.profootballhof.com/players/dan-marino",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/dan-marino",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2340",
+        "gsisId": "00-0010379"
+      },
+      "loadedClassicSeasons": [
+        1999
+      ],
+      "loadedClassicGameCount": 13,
+      "missingClassicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:drew-brees",
+      "name": "Drew Brees",
+      "aliases": [],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterback"
+      ],
+      "careerSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "classicSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-drew-brees",
+      "playableId": "00-0020531",
+      "hallOfFameYear": 2026,
+      "hallOfFameSource": "https://www.profootballhof.com/players/drew-brees",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/drew-brees",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2891",
+        "gsisId": "00-0020531"
+      },
+      "loadedClassicSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 145,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:fran-tarkenton",
+      "name": "Fran Tarkenton",
+      "aliases": [
+        "Francis Asbury Tarkenton"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "classicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "existingProfileId": "hof-fran-tarkenton",
+      "hallOfFameYear": 1986,
+      "hallOfFameSource": "https://www.profootballhof.com/players/fran-tarkenton",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/fran-tarkenton",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2452"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ]
+    },
+    {
+      "id": "hof:george-blanda",
+      "name": "George Blanda",
+      "aliases": [
+        "George Frederick Blanda"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB",
+        "K"
+      ],
+      "officialPositions": [
+        "Quarterback-Kicker",
+        "Placekickers",
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "existingProfileId": "hof-george-blanda",
+      "hallOfFameYear": 1981,
+      "hallOfFameSource": "https://www.profootballhof.com/players/george-blanda",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/george-blanda",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "scopeNote": "One quarterback identity with a verified kicking role. The K filter is for discovery; kicking statistics and scoring are not supported.",
+      "providerIds": {
+        "proFootballHofPlayerId": "2157"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ]
+    },
+    {
+      "id": "hof:jim-kelly",
+      "name": "Jim Kelly",
+      "aliases": [
+        "James Edward Kelly"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "classicSeasons": [
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "existingProfileId": "hof-jim-kelly",
+      "hallOfFameYear": 2002,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jim-kelly",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jim-kelly",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2299"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ]
+    },
+    {
+      "id": "hof:joe-montana",
+      "name": "Joe Montana",
+      "aliases": [
+        "Joseph Clifford Montana"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1992,
+        1993,
+        1994
+      ],
+      "classicSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1992,
+        1993,
+        1994
+      ],
+      "existingProfileId": "joe-montana",
+      "hallOfFameYear": 2000,
+      "hallOfFameSource": "https://www.profootballhof.com/players/joe-montana",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/joe-montana",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2359"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1992,
+        1993,
+        1994
+      ]
+    },
+    {
+      "id": "hof:joe-namath",
+      "name": "Joe Namath",
+      "aliases": [
+        "Joseph William Namath"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ],
+      "classicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ],
+      "existingProfileId": "joe-namath",
+      "hallOfFameYear": 1985,
+      "hallOfFameSource": "https://www.profootballhof.com/players/joe-namath",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/joe-namath",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2368"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ]
+    },
+    {
+      "id": "hof:john-elway",
+      "name": "John Elway",
+      "aliases": [
+        "John Albert Elway"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ],
+      "classicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ],
+      "existingProfileId": "john-elway",
+      "hallOfFameYear": 2004,
+      "hallOfFameSource": "https://www.profootballhof.com/players/john-elway",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/john-elway",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2220"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:johnny-unitas",
+      "name": "Johnny Unitas",
+      "aliases": [
+        "John Constantine Unitas"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "existingProfileId": "johnny-unitas",
+      "hallOfFameYear": 1979,
+      "hallOfFameSource": "https://www.profootballhof.com/players/johnny-unitas",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/johnny-unitas",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2469"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ]
+    },
+    {
+      "id": "hof:ken-stabler",
+      "name": "Ken Stabler",
+      "aliases": [
+        "Kenneth Michael Stabler"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "classicSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "existingProfileId": "ken-stabler",
+      "hallOfFameYear": 2016,
+      "hallOfFameSource": "https://www.profootballhof.com/players/ken-stabler",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/ken-stabler",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2438"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ]
+    },
+    {
+      "id": "hof:kurt-warner",
+      "name": "Kurt Warner",
+      "aliases": [
+        "Kurtis Eugene Warner"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "classicSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "existingProfileId": "hof-kurt-warner",
+      "playableId": "00-0017200",
+      "hallOfFameYear": 2017,
+      "hallOfFameSource": "https://www.profootballhof.com/players/kurt-warner",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/kurt-warner",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/pfhof/media/pfhof/news/2024-hall-of-fame-media-guide.pdf",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2478",
+        "gsisId": "00-0017200"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "loadedClassicGameCount": 135,
+      "missingClassicSeasons": [
+        1998
+      ]
+    },
+    {
+      "id": "hof:len-dawson",
+      "name": "Len Dawson",
+      "aliases": [
+        "Leonard Ray Dawson"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "existingProfileId": "hof-len-dawson",
+      "hallOfFameYear": 1987,
+      "hallOfFameSource": "https://www.profootballhof.com/players/len-dawson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/len-dawson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2201"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ]
+    },
+    {
+      "id": "hof:norm-van-brocklin",
+      "name": "Norm Van Brocklin",
+      "aliases": [
+        "Norman Mack Van Brocklin"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960
+      ],
+      "classicSeasons": [
+        1960
+      ],
+      "existingProfileId": "norm-van-brocklin",
+      "hallOfFameYear": 1971,
+      "hallOfFameSource": "https://www.profootballhof.com/players/norm-van-brocklin",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/norm-van-brocklin",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2472"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960
+      ]
+    },
+    {
+      "id": "hof:peyton-manning",
+      "name": "Peyton Manning",
+      "aliases": [
+        "Peyton Williams Manning"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "classicSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-peyton-manning",
+      "playableId": "00-0010346",
+      "hallOfFameYear": 2021,
+      "hallOfFameSource": "https://www.profootballhof.com/players/peyton-manning",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/peyton-manning",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.denverbroncos.com/news/it-wasn-t-just-thank-you-peyton-it-was-thank-you-from-peyton-16903827",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2336",
+        "gsisId": "00-0010346"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 210,
+      "missingClassicSeasons": [
+        1998
+      ]
+    },
+    {
+      "id": "hof:roger-staubach",
+      "name": "Roger Staubach",
+      "aliases": [
+        "Roger Thomas Staubach"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "classicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "existingProfileId": "roger-staubach",
+      "hallOfFameYear": 1985,
+      "hallOfFameSource": "https://www.profootballhof.com/players/roger-staubach",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/roger-staubach",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2442"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ]
+    },
+    {
+      "id": "hof:sonny-jurgensen",
+      "name": "Sonny Jurgensen",
+      "aliases": [
+        "Christian Adolph Jurgensen, III"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974
+      ],
+      "existingProfileId": "hof-sonny-jurgensen",
+      "hallOfFameYear": 1983,
+      "hallOfFameSource": "https://www.profootballhof.com/players/sonny-jurgensen",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/sonny-jurgensen",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2297"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974
+      ]
+    },
+    {
+      "id": "hof:steve-young",
+      "name": "Steve Young",
+      "aliases": [
+        "Jon Steven Young"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "classicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "existingProfileId": "steve-young",
+      "playableId": "00-0018441",
+      "hallOfFameYear": 2005,
+      "hallOfFameSource": "https://www.profootballhof.com/players/steve-young",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/steve-young",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2499",
+        "gsisId": "00-0018441"
+      },
+      "loadedClassicSeasons": [
+        1999
+      ],
+      "loadedClassicGameCount": 3,
+      "missingClassicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:terry-bradshaw",
+      "name": "Terry Bradshaw",
+      "aliases": [
+        "Terry Paxton Bradshaw"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "classicSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "existingProfileId": "terry-bradshaw",
+      "hallOfFameYear": 1989,
+      "hallOfFameSource": "https://www.profootballhof.com/players/terry-bradshaw",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/terry-bradshaw",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2161"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ]
+    },
+    {
+      "id": "hof:troy-aikman",
+      "name": "Troy Aikman",
+      "aliases": [
+        "Troy Kenneth Aikman"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterback"
+      ],
+      "careerSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "classicSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "existingProfileId": "troy-aikman",
+      "playableId": "00-0000104",
+      "hallOfFameYear": 2006,
+      "hallOfFameSource": "https://www.profootballhof.com/players/troy-aikman",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/troy-aikman",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2135",
+        "gsisId": "00-0000104"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000
+      ],
+      "loadedClassicGameCount": 26,
+      "missingClassicSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:warren-moon",
+      "name": "Warren Moon",
+      "aliases": [
+        "Harold Warren Moon"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "classicSeasons": [
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "existingProfileId": "hof-warren-moon",
+      "playableId": "00-0011524",
+      "hallOfFameYear": 2006,
+      "hallOfFameSource": "https://www.profootballhof.com/players/warren-moon",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/warren-moon",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2360",
+        "gsisId": "00-0011524"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000
+      ],
+      "loadedClassicGameCount": 3,
+      "missingClassicSeasons": [
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:ya-tittle",
+      "name": "Y.A. Tittle",
+      "aliases": [
+        "Yelberton Abraham Tittle"
+      ],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "Quarterbacks"
+      ],
+      "careerSeasons": [
+        1948,
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ],
+      "existingProfileId": "hof-ya-tittle",
+      "hallOfFameYear": 1971,
+      "hallOfFameSource": "https://www.profootballhof.com/players/ya-tittle",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/ya-tittle",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.profootballhof.com/hall-of-famers/positions",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2463"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ]
+    },
+    {
+      "id": "hof:barry-sanders",
+      "name": "Barry Sanders",
+      "aliases": [],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ],
+      "classicSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ],
+      "existingProfileId": "barry-sanders",
+      "hallOfFameYear": 2004,
+      "hallOfFameSource": "https://www.profootballhof.com/players/barry-sanders",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/barry-sanders",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2412"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:curtis-martin",
+      "name": "Curtis Martin",
+      "aliases": [
+        "Curtis James Martin, Jr."
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "classicSeasons": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "existingProfileId": "hof-curtis-martin",
+      "playableId": "00-0010442",
+      "hallOfFameYear": 2012,
+      "hallOfFameSource": "https://www.profootballhof.com/players/curtis-martin",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/curtis-martin",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2342",
+        "gsisId": "00-0010442"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "loadedClassicGameCount": 112,
+      "missingClassicSeasons": [
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:earl-campbell",
+      "name": "Earl Campbell",
+      "aliases": [
+        "Earl Christian Campbell",
+        "Tyler Rose"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "classicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "existingProfileId": "hof-earl-campbell",
+      "hallOfFameYear": 1991,
+      "hallOfFameSource": "https://www.profootballhof.com/players/earl-campbell",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/earl-campbell",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2176"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ]
+    },
+    {
+      "id": "hof:edgerrin-james",
+      "name": "Edgerrin James",
+      "aliases": [
+        "Edgerrin Tyree James"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back"
+      ],
+      "careerSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "classicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "existingProfileId": "hof-edgerrin-james",
+      "playableId": "00-0008241",
+      "hallOfFameYear": 2020,
+      "hallOfFameSource": "https://www.profootballhof.com/players/edgerrin-james",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/edgerrin-james",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2286",
+        "gsisId": "00-0008241"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "loadedClassicGameCount": 160,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:emmitt-smith",
+      "name": "Emmitt Smith",
+      "aliases": [
+        "Emmitt James Smith, III"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "classicSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "existingProfileId": "emmitt-smith",
+      "playableId": "00-0015165",
+      "hallOfFameYear": 2010,
+      "hallOfFameSource": "https://www.profootballhof.com/players/emmitt-smith",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/emmitt-smith",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2433",
+        "gsisId": "00-0015165"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "loadedClassicGameCount": 87,
+      "missingClassicSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:eric-dickerson",
+      "name": "Eric Dickerson",
+      "aliases": [
+        "Eric Demetric Dickerson"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "classicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "existingProfileId": "eric-dickerson",
+      "hallOfFameYear": 1999,
+      "hallOfFameSource": "https://www.profootballhof.com/players/eric-dickerson",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/eric-dickerson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2206"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ]
+    },
+    {
+      "id": "hof:floyd-little",
+      "name": "Floyd Little",
+      "aliases": [
+        "Floyd Douglas Little",
+        "The Franchise"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "classicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "existingProfileId": "hof-floyd-little",
+      "hallOfFameYear": 2010,
+      "hallOfFameSource": "https://www.profootballhof.com/players/floyd-little",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/floyd-little",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2324"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ]
+    },
+    {
+      "id": "hof:franco-harris",
+      "name": "Franco Harris",
+      "aliases": [],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "classicSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "existingProfileId": "franco-harris",
+      "hallOfFameYear": 1990,
+      "hallOfFameSource": "https://www.profootballhof.com/players/franco-harris",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/franco-harris",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2261"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ]
+    },
+    {
+      "id": "hof:frank-gifford",
+      "name": "Frank Gifford",
+      "aliases": [
+        "Frank Newton Gifford"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB",
+        "WR"
+      ],
+      "officialPositions": [
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1962,
+        1963,
+        1964
+      ],
+      "classicSeasons": [
+        1960,
+        1962,
+        1963,
+        1964
+      ],
+      "existingProfileId": "hof-frank-gifford",
+      "hallOfFameYear": 1977,
+      "hallOfFameSource": "https://www.profootballhof.com/players/frank-gifford",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/frank-gifford",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2236"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1962,
+        1963,
+        1964
+      ]
+    },
+    {
+      "id": "hof:gale-sayers",
+      "name": "Gale Sayers",
+      "aliases": [
+        "Gale Eugene Sayers",
+        "Kansas Comet"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Halfback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ],
+      "classicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ],
+      "existingProfileId": "gale-sayers",
+      "hallOfFameYear": 1977,
+      "hallOfFameSource": "https://www.profootballhof.com/players/gale-sayers",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/gale-sayers",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2416"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971
+      ]
+    },
+    {
+      "id": "hof:hugh-mcelhenny",
+      "name": "Hugh McElhenny",
+      "aliases": [
+        "Hugh Edward McElhenny Jr.",
+        "The King"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Halfback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ],
+      "existingProfileId": "hof-hugh-mcelhenny",
+      "hallOfFameYear": 1970,
+      "hallOfFameSource": "https://www.profootballhof.com/players/hugh-mcelhenny",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/hugh-mcelhenny",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2351"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964
+      ]
+    },
+    {
+      "id": "hof:jerome-bettis",
+      "name": "Jerome Bettis",
+      "aliases": [
+        "Jerome Abram Bettis",
+        "The Bus"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "classicSeasons": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "existingProfileId": "hof-jerome-bettis",
+      "playableId": "00-0001215",
+      "hallOfFameYear": 2015,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jerome-bettis",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jerome-bettis",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2154",
+        "gsisId": "00-0001215"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "loadedClassicGameCount": 104,
+      "missingClassicSeasons": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:jim-brown",
+      "name": "Jim Brown",
+      "aliases": [
+        "James Nathaniel Brown"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Fullback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965
+      ],
+      "existingProfileId": "jim-brown",
+      "hallOfFameYear": 1971,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jim-brown",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jim-brown",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2166"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965
+      ]
+    },
+    {
+      "id": "hof:jim-taylor",
+      "name": "Jim Taylor",
+      "aliases": [
+        "James Charles Taylor"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Fullback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "existingProfileId": "hof-jim-taylor",
+      "hallOfFameYear": 1976,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jim-taylor",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jim-taylor",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2455"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ]
+    },
+    {
+      "id": "hof:joe-perry",
+      "name": "Joe Perry",
+      "aliases": [
+        "Fletcher Joseph Perry",
+        "The Jet"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Fullback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1948,
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963
+      ],
+      "existingProfileId": "joe-perry",
+      "hallOfFameYear": 1969,
+      "hallOfFameSource": "https://www.profootballhof.com/players/joe-perry",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/joe-perry",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2388"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963
+      ]
+    },
+    {
+      "id": "hof:john-henry-johnson",
+      "name": "John Henry Johnson",
+      "aliases": [],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Fullback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ],
+      "existingProfileId": "hof-john-henry-johnson",
+      "hallOfFameYear": 1987,
+      "hallOfFameSource": "https://www.profootballhof.com/players/john-henry-johnson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/john-henry-johnson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2290"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ]
+    },
+    {
+      "id": "hof:john-riggins",
+      "name": "John Riggins",
+      "aliases": [
+        "Robert John Riggins"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "classicSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "existingProfileId": "hof-john-riggins",
+      "hallOfFameYear": 1992,
+      "hallOfFameSource": "https://www.profootballhof.com/players/john-riggins",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/john-riggins",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2401"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ]
+    },
+    {
+      "id": "hof:ladainian-tomlinson",
+      "name": "LaDainian Tomlinson",
+      "aliases": [
+        "L.T."
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "classicSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-ladainian-tomlinson",
+      "playableId": "00-0020536",
+      "hallOfFameYear": 2017,
+      "hallOfFameSource": "https://www.profootballhof.com/players/ladainian-tomlinson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/ladainian-tomlinson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2464",
+        "gsisId": "00-0020536"
+      },
+      "loadedClassicSeasons": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 166,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:larry-csonka",
+      "name": "Larry Csonka",
+      "aliases": [
+        "Lawrence Richard Csonka"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Fullback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "classicSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "existingProfileId": "hof-larry-csonka",
+      "hallOfFameYear": 1987,
+      "hallOfFameSource": "https://www.profootballhof.com/players/larry-csonka",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/larry-csonka",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2194"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977,
+        1978,
+        1979
+      ]
+    },
+    {
+      "id": "hof:lenny-moore",
+      "name": "Lenny Moore",
+      "aliases": [
+        "Leonard Edward Moore"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB",
+        "WR"
+      ],
+      "officialPositions": [
+        "Flanker-Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "existingProfileId": "lenny-moore",
+      "hallOfFameYear": 1975,
+      "hallOfFameSource": "https://www.profootballhof.com/players/lenny-moore",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/lenny-moore",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2361"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ]
+    },
+    {
+      "id": "hof:leroy-kelly",
+      "name": "Leroy Kelly",
+      "aliases": [],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "classicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "existingProfileId": "hof-leroy-kelly",
+      "hallOfFameYear": 1994,
+      "hallOfFameSource": "https://www.profootballhof.com/players/leroy-kelly",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/leroy-kelly",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2300"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ]
+    },
+    {
+      "id": "hof:marcus-allen",
+      "name": "Marcus Allen",
+      "aliases": [
+        "Marcus LeMarr Allen"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "classicSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "existingProfileId": "marcus-allen",
+      "hallOfFameYear": 2003,
+      "hallOfFameSource": "https://www.profootballhof.com/players/marcus-allen",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/marcus-allen",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2138"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997
+      ]
+    },
+    {
+      "id": "hof:marshall-faulk",
+      "name": "Marshall Faulk",
+      "aliases": [
+        "Marshall William Faulk"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "classicSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "existingProfileId": "hof-marshall-faulk",
+      "playableId": "00-0005092",
+      "hallOfFameYear": 2011,
+      "hallOfFameSource": "https://www.profootballhof.com/players/marshall-faulk",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/marshall-faulk",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2223",
+        "gsisId": "00-0005092"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "loadedClassicGameCount": 107,
+      "missingClassicSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:oj-simpson",
+      "name": "O.J. Simpson",
+      "aliases": [
+        "Orenthal James Simpson",
+        "Juice"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "classicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ],
+      "existingProfileId": "oj-simpson",
+      "hallOfFameYear": 1985,
+      "hallOfFameSource": "https://www.profootballhof.com/players/oj-simpson",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/oj-simpson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2428"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979
+      ]
+    },
+    {
+      "id": "hof:ollie-matson",
+      "name": "Ollie Matson",
+      "aliases": [
+        "Ollie Genoa Matson"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Halfback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1952,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ],
+      "existingProfileId": "ollie-matson",
+      "hallOfFameYear": 1972,
+      "hallOfFameSource": "https://www.profootballhof.com/players/ollie-matson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/ollie-matson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2343"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966
+      ]
+    },
+    {
+      "id": "hof:paul-hornung",
+      "name": "Paul Hornung",
+      "aliases": [
+        "Paul Vernon Hornung",
+        "The Golden Boy"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Halfback",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1964,
+        1965,
+        1966
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1964,
+        1965,
+        1966
+      ],
+      "existingProfileId": "hof-paul-hornung",
+      "hallOfFameYear": 1986,
+      "hallOfFameSource": "https://www.profootballhof.com/players/paul-hornung",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/paul-hornung",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2275"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1964,
+        1965,
+        1966
+      ]
+    },
+    {
+      "id": "hof:roger-craig",
+      "name": "Roger Craig",
+      "aliases": [],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running back"
+      ],
+      "careerSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "classicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "existingProfileId": "hof-roger-craig",
+      "hallOfFameYear": 2026,
+      "hallOfFameSource": "https://www.profootballhof.com/players/roger-craig",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/roger-craig",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2192"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ]
+    },
+    {
+      "id": "hof:terrell-davis",
+      "name": "Terrell Davis",
+      "aliases": [
+        "T.D."
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001
+      ],
+      "classicSeasons": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001
+      ],
+      "existingProfileId": "hof-terrell-davis",
+      "playableId": "00-0004054",
+      "hallOfFameYear": 2017,
+      "hallOfFameSource": "https://www.profootballhof.com/players/terrell-davis",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/terrell-davis",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2197",
+        "gsisId": "00-0004054"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001
+      ],
+      "loadedClassicGameCount": 17,
+      "missingClassicSeasons": [
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:thurman-thomas",
+      "name": "Thurman Thomas",
+      "aliases": [
+        "Thurman Lee Thomas"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "classicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "existingProfileId": "thurman-thomas",
+      "playableId": "00-0016331",
+      "hallOfFameYear": 2007,
+      "hallOfFameSource": "https://www.profootballhof.com/players/thurman-thomas",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/thurman-thomas",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2459",
+        "gsisId": "00-0016331"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000
+      ],
+      "loadedClassicGameCount": 13,
+      "missingClassicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:tony-dorsett",
+      "name": "Tony Dorsett",
+      "aliases": [
+        "Anthony Drew Dorsett, Sr."
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988
+      ],
+      "classicSeasons": [
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988
+      ],
+      "existingProfileId": "hof-tony-dorsett",
+      "hallOfFameYear": 1994,
+      "hallOfFameSource": "https://www.profootballhof.com/players/tony-dorsett",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/tony-dorsett",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2212"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988
+      ]
+    },
+    {
+      "id": "hof:walter-payton",
+      "name": "Walter Payton",
+      "aliases": [
+        "Walter Jerry Payton"
+      ],
+      "position": "RB",
+      "eligiblePositions": [
+        "RB"
+      ],
+      "officialPositions": [
+        "Running Back",
+        "Halfbacks-Fullbacks"
+      ],
+      "careerSeasons": [
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "classicSeasons": [
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "existingProfileId": "walter-payton",
+      "hallOfFameYear": 1993,
+      "hallOfFameSource": "https://www.profootballhof.com/players/walter-payton",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+      "nfl100Position": "RB",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/walter-payton",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-running-backs-revealed-0ap3000001079486",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2386"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ]
+    },
+    {
+      "id": "hof:andre-johnson",
+      "name": "Andre Johnson",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide receiver"
+      ],
+      "careerSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "classicSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-andre-johnson",
+      "playableId": "00-0022044",
+      "hallOfFameYear": 2024,
+      "hallOfFameSource": "https://www.profootballhof.com/players/andre-johnson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/andre-johnson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2883",
+        "gsisId": "00-0022044"
+      },
+      "loadedClassicSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 114,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:andre-reed",
+      "name": "Andre Reed",
+      "aliases": [
+        "Andre Darnell Reed",
+        "YAC"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "classicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000
+      ],
+      "existingProfileId": "hof-andre-reed",
+      "playableId": "00-0013499",
+      "hallOfFameYear": 2014,
+      "hallOfFameSource": "https://www.profootballhof.com/players/andre-reed",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/andre-reed",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2395",
+        "gsisId": "00-0013499"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000
+      ],
+      "loadedClassicGameCount": 25,
+      "missingClassicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:art-monk",
+      "name": "Art Monk",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "classicSeasons": [
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "existingProfileId": "hof-art-monk",
+      "hallOfFameYear": 2008,
+      "hallOfFameSource": "https://www.profootballhof.com/players/art-monk",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/art-monk",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2358"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ]
+    },
+    {
+      "id": "hof:bob-hayes",
+      "name": "Bob Hayes",
+      "aliases": [
+        "Bullet Bob",
+        "World’s Fastest Human"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "classicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ],
+      "existingProfileId": "hof-bob-hayes",
+      "hallOfFameYear": 2009,
+      "hallOfFameSource": "https://www.profootballhof.com/players/bob-hayes",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/bob-hayes",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2263"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975
+      ]
+    },
+    {
+      "id": "hof:bobby-mitchell",
+      "name": "Bobby Mitchell",
+      "aliases": [
+        "Robert Cornelius Mitchell"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR",
+        "RB"
+      ],
+      "officialPositions": [
+        "Wide Receiver-Halfback",
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ],
+      "existingProfileId": "hof-bobby-mitchell",
+      "hallOfFameYear": 1983,
+      "hallOfFameSource": "https://www.profootballhof.com/players/bobby-mitchell",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/bobby-mitchell",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2355"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ]
+    },
+    {
+      "id": "hof:calvin-johnson",
+      "name": "Calvin Johnson",
+      "aliases": [
+        "Calvin Johnson Jr.",
+        "Megatron"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "classicSeasons": [
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-calvin-johnson",
+      "playableId": "00-0025389",
+      "hallOfFameYear": 2021,
+      "hallOfFameSource": "https://www.profootballhof.com/players/calvin-johnson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/calvin-johnson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2287",
+        "gsisId": "00-0025389"
+      },
+      "loadedClassicSeasons": [
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 60,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:charley-taylor",
+      "name": "Charley Taylor",
+      "aliases": [
+        "Charles Robert Taylor"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR",
+        "RB"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1977
+      ],
+      "classicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1977
+      ],
+      "existingProfileId": "hof-charley-taylor",
+      "hallOfFameYear": 1984,
+      "hallOfFameSource": "https://www.profootballhof.com/players/charley-taylor",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/charley-taylor",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2453"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1977
+      ]
+    },
+    {
+      "id": "hof:charlie-joiner",
+      "name": "Charlie Joiner",
+      "aliases": [
+        "Charles Joiner Jr."
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986
+      ],
+      "classicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986
+      ],
+      "existingProfileId": "hof-charlie-joiner",
+      "hallOfFameYear": 1996,
+      "hallOfFameSource": "https://www.profootballhof.com/players/charlie-joiner",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/charlie-joiner",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2291"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986
+      ]
+    },
+    {
+      "id": "hof:cliff-branch",
+      "name": "Cliff Branch",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "classicSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "existingProfileId": "hof-cliff-branch",
+      "hallOfFameYear": 2022,
+      "hallOfFameSource": "https://www.profootballhof.com/players/cliff-branch",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/cliff-branch",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2863"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ]
+    },
+    {
+      "id": "hof:cris-carter",
+      "name": "Cris Carter",
+      "aliases": [
+        "Christopher Darin Carter"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "classicSeasons": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "existingProfileId": "hof-cris-carter",
+      "playableId": "00-0002721",
+      "hallOfFameYear": 2013,
+      "hallOfFameSource": "https://www.profootballhof.com/players/cris-carter",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/cris-carter",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2181",
+        "gsisId": "00-0002721"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "loadedClassicGameCount": 56,
+      "missingClassicSeasons": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:devin-hester",
+      "name": "Devin Hester",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Punt returner",
+        "Kick returner",
+        "Wide receiver"
+      ],
+      "careerSeasons": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "classicSeasons": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-devin-hester",
+      "playableId": "00-0024272",
+      "hallOfFameYear": 2024,
+      "hallOfFameSource": "https://www.profootballhof.com/players/devin-hester",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+      "nfl100Position": "RS",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/devin-hester",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+          "label": "NFL 100 All-Time Team · return specialist"
+        }
+      ],
+      "scopeNote": "Included for wide-receiver and return history. NFL 100 recognition is as a return specialist. Individual defense is outside this catalog.",
+      "providerIds": {
+        "proFootballHofPlayerId": "2882",
+        "gsisId": "00-0024272"
+      },
+      "loadedClassicSeasons": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 81,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:don-maynard",
+      "name": "Don Maynard",
+      "aliases": [
+        "Donald Rogers Maynard",
+        "Country Don"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1958,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "existingProfileId": "hof-don-maynard",
+      "hallOfFameYear": 1987,
+      "hallOfFameSource": "https://www.profootballhof.com/players/don-maynard",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/don-maynard",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2346"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973
+      ]
+    },
+    {
+      "id": "hof:drew-pearson",
+      "name": "Drew Pearson",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "classicSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "existingProfileId": "drew-pearson",
+      "hallOfFameYear": 2021,
+      "hallOfFameSource": "https://www.profootballhof.com/players/drew-pearson",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/drew-pearson",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2387"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ]
+    },
+    {
+      "id": "hof:fred-biletnikoff",
+      "name": "Fred Biletnikoff",
+      "aliases": [
+        "Frederick S. Biletnikoff"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "classicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "existingProfileId": "hof-fred-biletnikoff",
+      "hallOfFameYear": 1988,
+      "hallOfFameSource": "https://www.profootballhof.com/players/fred-biletnikoff",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/fred-biletnikoff",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2156"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ]
+    },
+    {
+      "id": "hof:harold-carmichael",
+      "name": "Harold Carmichael",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "classicSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "existingProfileId": "hof-harold-carmichael",
+      "hallOfFameYear": 2020,
+      "hallOfFameSource": "https://www.profootballhof.com/players/harold-carmichael",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/harold-carmichael",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2178"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ]
+    },
+    {
+      "id": "hof:isaac-bruce",
+      "name": "Isaac Bruce",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "classicSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "existingProfileId": "hof-isaac-bruce",
+      "playableId": "00-0002099",
+      "hallOfFameYear": 2020,
+      "hallOfFameSource": "https://www.profootballhof.com/players/isaac-bruce",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/isaac-bruce",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2171",
+        "gsisId": "00-0002099"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "loadedClassicGameCount": 166,
+      "missingClassicSeasons": [
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:james-lofton",
+      "name": "James Lofton",
+      "aliases": [
+        "James David Lofton"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "classicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "existingProfileId": "hof-james-lofton",
+      "hallOfFameYear": 2003,
+      "hallOfFameSource": "https://www.profootballhof.com/players/james-lofton",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/james-lofton",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2326"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ]
+    },
+    {
+      "id": "hof:jerry-rice",
+      "name": "Jerry Rice",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "classicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "existingProfileId": "jerry-rice",
+      "playableId": "00-0013639",
+      "hallOfFameYear": 2010,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jerry-rice",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jerry-rice",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2399",
+        "gsisId": "00-0013639"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "loadedClassicGameCount": 97,
+      "missingClassicSeasons": [
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:john-stallworth",
+      "name": "John Stallworth",
+      "aliases": [
+        "Johnny Lee Stallworth"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "classicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "existingProfileId": "hof-john-stallworth",
+      "hallOfFameYear": 2002,
+      "hallOfFameSource": "https://www.profootballhof.com/players/john-stallworth",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/john-stallworth",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2439"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ]
+    },
+    {
+      "id": "hof:lance-alworth",
+      "name": "Lance Alworth",
+      "aliases": [
+        "Lance Dwight Alworth",
+        "Bambi"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Flanker",
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "classicSeasons": [
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "existingProfileId": "lance-alworth",
+      "hallOfFameYear": 1978,
+      "hallOfFameSource": "https://www.profootballhof.com/players/lance-alworth",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/lance-alworth",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2139"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "id": "hof:larry-fitzgerald",
+      "name": "Larry Fitzgerald",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide receiver"
+      ],
+      "careerSeasons": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "classicSeasons": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-larry-fitzgerald",
+      "playableId": "00-0022921",
+      "hallOfFameYear": 2026,
+      "hallOfFameSource": "https://www.profootballhof.com/players/larry-fitzgerald",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/larry-fitzgerald",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2892",
+        "gsisId": "00-0022921"
+      },
+      "loadedClassicSeasons": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 114,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:lynn-swann",
+      "name": "Lynn Swann",
+      "aliases": [
+        "Lynn Curtis Swann"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982
+      ],
+      "classicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982
+      ],
+      "existingProfileId": "hof-lynn-swann",
+      "hallOfFameYear": 2001,
+      "hallOfFameSource": "https://www.profootballhof.com/players/lynn-swann",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/lynn-swann",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2450"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982
+      ]
+    },
+    {
+      "id": "hof:marvin-harrison",
+      "name": "Marvin Harrison",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
+      "classicSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
+      "existingProfileId": "hof-marvin-harrison",
+      "playableId": "00-0007024",
+      "hallOfFameYear": 2016,
+      "hallOfFameSource": "https://www.profootballhof.com/players/marvin-harrison",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/marvin-harrison",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2262",
+        "gsisId": "00-0007024"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
+      "loadedClassicGameCount": 160,
+      "missingClassicSeasons": [
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:michael-irvin",
+      "name": "Michael Irvin",
+      "aliases": [
+        "Michael Jerome Irvin"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide receiver"
+      ],
+      "careerSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "classicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "existingProfileId": "michael-irvin",
+      "playableId": "00-0008044",
+      "hallOfFameYear": 2007,
+      "hallOfFameSource": "https://www.profootballhof.com/players/michael-irvin",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/michael-irvin",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2283",
+        "gsisId": "00-0008044"
+      },
+      "loadedClassicSeasons": [
+        1999
+      ],
+      "loadedClassicGameCount": 4,
+      "missingClassicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:paul-warfield",
+      "name": "Paul Warfield",
+      "aliases": [
+        "Paul Dryden Warfield"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977
+      ],
+      "classicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977
+      ],
+      "existingProfileId": "paul-warfield",
+      "hallOfFameYear": 1983,
+      "hallOfFameSource": "https://www.profootballhof.com/players/paul-warfield",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/paul-warfield",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2477"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1976,
+        1977
+      ]
+    },
+    {
+      "id": "hof:randy-moss",
+      "name": "Randy Moss",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2012
+      ],
+      "classicSeasons": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-randy-moss",
+      "playableId": "00-0011754",
+      "hallOfFameYear": 2018,
+      "hallOfFameSource": "https://www.profootballhof.com/players/randy-moss",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/randy-moss",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2362",
+        "gsisId": "00-0011754"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 189,
+      "missingClassicSeasons": [
+        1998
+      ]
+    },
+    {
+      "id": "hof:raymond-berry",
+      "name": "Raymond Berry",
+      "aliases": [
+        "Raymond Emmett Berry"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Pre-Modern Era: Ends",
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "existingProfileId": "hof-raymond-berry",
+      "hallOfFameYear": 1973,
+      "hallOfFameSource": "https://www.profootballhof.com/players/raymond-berry",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/raymond-berry",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2152"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ]
+    },
+    {
+      "id": "hof:sterling-sharpe",
+      "name": "Sterling Sharpe",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide receiver"
+      ],
+      "careerSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994
+      ],
+      "classicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994
+      ],
+      "existingProfileId": "hof-sterling-sharpe",
+      "hallOfFameYear": 2025,
+      "hallOfFameSource": "https://www.profootballhof.com/players/sterling-sharpe",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/sterling-sharpe",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2890"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994
+      ]
+    },
+    {
+      "id": "hof:steve-largent",
+      "name": "Steve Largent",
+      "aliases": [
+        "Stephen Michael Largent"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989
+      ],
+      "classicSeasons": [
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989
+      ],
+      "existingProfileId": "steve-largent",
+      "hallOfFameYear": 1995,
+      "hallOfFameSource": "https://www.profootballhof.com/players/steve-largent",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+      "nfl100Position": "WR",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/steve-largent",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-wide-receivers-announced-0ap3000001089888",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2313"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989
+      ]
+    },
+    {
+      "id": "hof:terrell-owens",
+      "name": "Terrell Owens",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "classicSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-terrell-owens",
+      "playableId": "00-0012478",
+      "hallOfFameYear": 2018,
+      "hallOfFameSource": "https://www.profootballhof.com/players/terrell-owens",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/terrell-owens",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2380",
+        "gsisId": "00-0012478"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 176,
+      "missingClassicSeasons": [
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:tim-brown",
+      "name": "Tim Brown",
+      "aliases": [],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receiver/Kick Returner/Punt Returner",
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "classicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "existingProfileId": "hof-tim-brown",
+      "playableId": "00-0002058",
+      "hallOfFameYear": 2015,
+      "hallOfFameSource": "https://www.profootballhof.com/players/tim-brown",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/tim-brown",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2169",
+        "gsisId": "00-0002058"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "loadedClassicGameCount": 97,
+      "missingClassicSeasons": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:tommy-mcdonald",
+      "name": "Tommy McDonald",
+      "aliases": [
+        "Thomas Franklin McDonald"
+      ],
+      "position": "WR",
+      "eligiblePositions": [
+        "WR"
+      ],
+      "officialPositions": [
+        "Wide Receivers"
+      ],
+      "careerSeasons": [
+        1957,
+        1958,
+        1959,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ],
+      "classicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ],
+      "existingProfileId": "hof-tommy-mcdonald",
+      "hallOfFameYear": 1998,
+      "hallOfFameSource": "https://www.profootballhof.com/players/tommy-mcdonald",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/tommy-mcdonald",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2350"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968
+      ]
+    },
+    {
+      "id": "hof:antonio-gates",
+      "name": "Antonio Gates",
+      "aliases": [
+        "Antonio Ethan Gates Jr."
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight end"
+      ],
+      "careerSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "classicSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-antonio-gates",
+      "playableId": "00-0021547",
+      "hallOfFameYear": 2025,
+      "hallOfFameSource": "https://www.profootballhof.com/players/antonio-gates",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/antonio-gates",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2889",
+        "gsisId": "00-0021547"
+      },
+      "loadedClassicSeasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 125,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "hof:charlie-sanders",
+      "name": "Charlie Sanders",
+      "aliases": [
+        "Charles Alvin Sanders"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ],
+      "classicSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ],
+      "existingProfileId": "hof-charlie-sanders",
+      "hallOfFameYear": 2007,
+      "hallOfFameSource": "https://www.profootballhof.com/players/charlie-sanders",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/charlie-sanders",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2413"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977
+      ]
+    },
+    {
+      "id": "hof:dave-casper",
+      "name": "Dave Casper",
+      "aliases": [
+        "David John Casper",
+        "The Ghost"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "classicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ],
+      "existingProfileId": "hof-dave-casper",
+      "hallOfFameYear": 2002,
+      "hallOfFameSource": "https://www.profootballhof.com/players/dave-casper",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/dave-casper",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2182"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984
+      ]
+    },
+    {
+      "id": "hof:jackie-smith",
+      "name": "Jackie Smith",
+      "aliases": [
+        "Jackie Larue Smith"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "classicSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ],
+      "existingProfileId": "hof-jackie-smith",
+      "hallOfFameYear": 1994,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jackie-smith",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jackie-smith",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2434"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978
+      ]
+    },
+    {
+      "id": "hof:john-mackey",
+      "name": "John Mackey",
+      "aliases": [],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "classicSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "existingProfileId": "hof-john-mackey",
+      "hallOfFameYear": 1992,
+      "hallOfFameSource": "https://www.profootballhof.com/players/john-mackey",
+      "nfl100Source": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+      "nfl100Position": "TE",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/john-mackey",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2334"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "id": "hof:kellen-winslow",
+      "name": "Kellen Winslow",
+      "aliases": [
+        "Kellen Boswell Winslow"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "classicSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "existingProfileId": "kellen-winslow",
+      "hallOfFameYear": 1995,
+      "hallOfFameSource": "https://www.profootballhof.com/players/kellen-winslow",
+      "nfl100Source": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+      "nfl100Position": "TE",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/kellen-winslow",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2490"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ]
+    },
+    {
+      "id": "hof:mike-ditka",
+      "name": "Mike Ditka",
+      "aliases": [
+        "Michael Keller Ditka"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "classicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ],
+      "existingProfileId": "mike-ditka",
+      "hallOfFameYear": 1988,
+      "hallOfFameSource": "https://www.profootballhof.com/players/mike-ditka",
+      "nfl100Source": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+      "nfl100Position": "TE",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/mike-ditka",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2209"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972
+      ]
+    },
+    {
+      "id": "hof:ozzie-newsome",
+      "name": "Ozzie Newsome",
+      "aliases": [
+        "Ozzie Newsome, Jr.",
+        "Wizard of Oz"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "classicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "existingProfileId": "hof-ozzie-newsome",
+      "hallOfFameYear": 1999,
+      "hallOfFameSource": "https://www.profootballhof.com/players/ozzie-newsome",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/ozzie-newsome",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2371"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990
+      ]
+    },
+    {
+      "id": "hof:shannon-sharpe",
+      "name": "Shannon Sharpe",
+      "aliases": [],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "classicSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "existingProfileId": "shannon-sharpe",
+      "playableId": "00-0014722",
+      "hallOfFameYear": 2011,
+      "hallOfFameSource": "https://www.profootballhof.com/players/shannon-sharpe",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/shannon-sharpe",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2422",
+        "gsisId": "00-0014722"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "loadedClassicGameCount": 71,
+      "missingClassicSeasons": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:tony-gonzalez",
+      "name": "Tony Gonzalez",
+      "aliases": [
+        "Anthony David Gonzalez"
+      ],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "Tight Ends"
+      ],
+      "careerSeasons": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013
+      ],
+      "classicSeasons": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "hof-tony-gonzalez",
+      "playableId": "00-0006101",
+      "hallOfFameYear": 2019,
+      "hallOfFameSource": "https://www.profootballhof.com/players/tony-gonzalez",
+      "nfl100Source": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+      "nfl100Position": "TE",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/tony-gonzalez",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2239",
+        "gsisId": "00-0006101"
+      },
+      "loadedClassicSeasons": [
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 191,
+      "missingClassicSeasons": [
+        1997,
+        1998
+      ]
+    },
+    {
+      "id": "hof:adam-vinatieri",
+      "name": "Adam Vinatieri",
+      "aliases": [
+        "Adam Matthew Vinatieri"
+      ],
+      "position": "K",
+      "eligiblePositions": [
+        "K"
+      ],
+      "officialPositions": [
+        "kicker"
+      ],
+      "careerSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "classicSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "hallOfFameYear": 2026,
+      "hallOfFameSource": "https://www.profootballhof.com/players/adam-vinatieri",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+      "nfl100Position": "K",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/adam-vinatieri",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://static.clubs.nfl.com/image/upload/colts/y9eemwmqmg4cuynq8ym5.pdf",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {},
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    {
+      "id": "hof:jan-stenerud",
+      "name": "Jan Stenerud",
+      "aliases": [],
+      "position": "K",
+      "eligiblePositions": [
+        "K"
+      ],
+      "officialPositions": [
+        "Placekickers"
+      ],
+      "careerSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "classicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ],
+      "hallOfFameYear": 1991,
+      "hallOfFameSource": "https://www.profootballhof.com/players/jan-stenerud",
+      "nfl100Source": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+      "nfl100Position": "K",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/jan-stenerud",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        },
+        {
+          "url": "https://amp.nfl.com/news/nfl-100-all-time-team-defensive-backs-special-teams-revealed-0ap3000001084675",
+          "label": "NFL 100 All-Time Team"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2444"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985
+      ]
+    },
+    {
+      "id": "hof:lou-groza",
+      "name": "Lou Groza",
+      "aliases": [
+        "Louis Roy Groza",
+        "The Toe"
+      ],
+      "position": "K",
+      "eligiblePositions": [
+        "K"
+      ],
+      "officialPositions": [
+        "Offensive Tackle-Placekicker",
+        "Placekickers",
+        "Offensive Linemen"
+      ],
+      "careerSeasons": [
+        1946,
+        1947,
+        1948,
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1959,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "classicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "hallOfFameYear": 1974,
+      "hallOfFameSource": "https://www.profootballhof.com/players/lou-groza",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/lou-groza",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "scopeNote": "Included solely as a placekicker for 1961–1967. His offensive-tackle role is outside this catalog.",
+      "providerIds": {
+        "proFootballHofPlayerId": "2251"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ]
+    },
+    {
+      "id": "hof:morten-andersen",
+      "name": "Morten Andersen",
+      "aliases": [],
+      "position": "K",
+      "eligiblePositions": [
+        "K"
+      ],
+      "officialPositions": [
+        "Placekickers"
+      ],
+      "careerSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2006,
+        2007
+      ],
+      "classicSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2006,
+        2007
+      ],
+      "hallOfFameYear": 2017,
+      "hallOfFameSource": "https://www.profootballhof.com/players/morten-andersen",
+      "sources": [
+        {
+          "url": "https://www.profootballhof.com/players/morten-andersen",
+          "label": "Official Hall of Fame profile"
+        },
+        {
+          "url": "https://www.profootballhof.com/players",
+          "label": "Pro Football Hall of Fame evidence"
+        }
+      ],
+      "providerIds": {
+        "proFootballHofPlayerId": "2140"
+      },
+      "loadedClassicSeasons": [],
+      "loadedClassicGameCount": 0,
+      "missingClassicSeasons": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2006,
+        2007
+      ]
+    },
+    {
+      "id": "nfl100:tombrady",
+      "name": "Tom Brady",
+      "aliases": [],
+      "position": "QB",
+      "eligiblePositions": [
+        "QB"
+      ],
+      "officialPositions": [
+        "QB"
+      ],
+      "careerSeasons": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "classicSeasons": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "existingProfileId": "00-0019596",
+      "playableId": "00-0019596",
+      "nfl100Source": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+      "nfl100Position": "QB",
+      "sources": [
+        {
+          "url": "https://www.nfl.com/news/nfl-100-all-time-team-quarterbacks-announced-0ap3000001091949",
+          "label": "NFL 100 All-Time Team"
+        },
+        {
+          "url": "https://www.nfl.com/news/tom-brady-retirement-23-seasons-in-nfl-buccaneers-patriots",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://www.nfl.com/100/all-time-team/roster.html",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://static.www.nfl.com/league/apps/league-site/media-guides/2024/2024-Record-and-Fact-Book.pdf",
+          "label": "Official NFL career evidence"
+        }
+      ],
+      "providerIds": {
+        "gsisId": "00-0019596"
+      },
+      "loadedClassicSeasons": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "loadedClassicGameCount": 164,
+      "missingClassicSeasons": []
+    },
+    {
+      "id": "nfl100:robgronkowski",
+      "name": "Rob Gronkowski",
+      "aliases": [],
+      "position": "TE",
+      "eligiblePositions": [
+        "TE"
+      ],
+      "officialPositions": [
+        "TE"
+      ],
+      "careerSeasons": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2020,
+        2021
+      ],
+      "classicSeasons": [
+        2010
+      ],
+      "existingProfileId": "00-0027656",
+      "playableId": "00-0027656",
+      "nfl100Source": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+      "nfl100Position": "TE",
+      "sources": [
+        {
+          "url": "https://www.nfl.com/_amp/nfl-s-all-time-team-tight-ends-offensive-linemen-revealed-0ap3000001087422",
+          "label": "NFL 100 All-Time Team"
+        },
+        {
+          "url": "https://www.nfl.com/news/pro-football-hall-of-fame-class-of-2027-candidates-adrian-peterson-rob-gronkowski-lead-way",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://www.nfl.com/100/all-time-team/roster.html",
+          "label": "Official NFL career evidence"
+        },
+        {
+          "url": "https://www.buccaneers.com/news/bucs-tight-end-rob-gronkowski-announces-retirement-11-seasons",
+          "label": "Official NFL career evidence"
+        }
+      ],
+      "providerIds": {
+        "gsisId": "00-0027656"
+      },
+      "loadedClassicSeasons": [
+        2010
+      ],
+      "loadedClassicGameCount": 17,
+      "missingClassicSeasons": []
+    }
+  ]
+}

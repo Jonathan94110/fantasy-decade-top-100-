@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "checks": [
+    "literal prior performance row bytes identical",
+    "all prior athlete metadata objects identical",
+    "all 32 D/ST metadata objects and all D/ST row bytes identical",
+    "exactly 100 catalog profiles in each current fantasy position",
+    "no unapproved player additions",
+    "all coverage counts and per-athlete loaded seasons reconcile",
+    "no games before 1999 or excluded games",
+    "completed source date cutoff remains September 28, 2026",
+    "unique entity-game IDs and finite scoring inputs",
+    "exactly two D/ST rows per included game",
+    "all mappings point to verified archived identities",
+    "literal bytes of all 365 retained athlete metadata objects identical",
+    "exactly approved 30 new GSIS IDs; no additional selections",
+    "unchanged literal original catalog mapping and original catalog checksum",
+    "all source files exactly match prior frozen snapshot",
+    "all exported skill-player rows independently match raw source scoring fields",
+    "all app PPR totals reconcile with documented source differences",
+    "no new Hall of Fame badges or modifications to the badge map",
+    "all selected source names, positions, row counts and archive windows match"
+  ],
+  "counts": {
+    "priorAthletes": 365,
+    "athletes": 395,
+    "priorPerformances": 56881,
+    "performances": 60166,
+    "addedPerformances": 3285,
+    "playablePlayers": 363,
+    "catalogProfiles": 400,
+    "linkedCatalogProfiles": 233,
+    "profileOnlyCatalogProfiles": 167,
+    "defenseRows": 14608,
+    "games": 7304,
+    "excludedGames": 20,
+    "addedPlayers": 30,
+    "playerPerformances": 45558,
+    "independentlyReconciledPlayerRows": 45558,
+    "scoringAdjustments": 143
+  },
+  "baselineSha256": {
+    "athletes.json": "9462d5edd864fd6caaa6769994f30aa3e3a8e5c797dd9977f33af95490319c11",
+    "records.json": "9e32697e16514358ebf32bb88afb3d4a9eed333d1d1d81d45a2a1256329a49c6",
+    "coverage.json": "cd51268c59e66ed060da3d3d3f8151e63945763740594506454266421c5ca9ca",
+    "manifest.json": "c2278e245b8632c8a1d39217cb3d9b75d899547b0a907cf77fa68cc6faf7ee13"
+  },
+  "outputSha256": {
+    "athletes.json": "ab510b57d3557a5517193f6aa93f841a93eac38cf89135578259e8cf00206a64",
+    "records.json": "becab5c0b092a76925cd2f75244764b2df570365ad3ba9a9d5704cd8ce754419",
+    "coverage.json": "9e89f6e2f716d91f4a3177430fff9a62d64670235ef946912336d29b5680d659",
+    "manifest.json": "276dbeb09fbe8463bccc00af9d76f697ec7558f77dce1837b35ba4fc322f53cb",
+    "catalog-playable-map.json": "d23bb4d83ca05f02df6fa710cad61f919475d268dd251813bc1238c0bc32cd12",
+    "verified-player-addition.json": "1d7c66ed93d1c8b156c6cc64aee67cd90fe6c727c0f646b957c93dbab3dfcd06"
+  },
+  "oldAthleteMetadataObjectBytesIdentical": true,
+  "catalogSha256": "9a795779fd63458c60de20a0ab6265e44422913907b2d90a8a63302436b26ebf",
+  "selectionSha256": "1d7c66ed93d1c8b156c6cc64aee67cd90fe6c727c0f646b957c93dbab3dfcd06"
+}

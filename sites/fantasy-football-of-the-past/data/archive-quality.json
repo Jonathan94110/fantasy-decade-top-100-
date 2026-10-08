@@ -1,0 +1,38 @@
+{
+  "excludedGameCount": 20,
+  "excludedGameIds": [
+    "1999_01_BAL_STL",
+    "2000_03_SD_KC",
+    "2000_06_BUF_MIA",
+    "2001_01_PIT_JAX",
+    "2001_02_TEN_JAX",
+    "2001_03_CLE_JAX",
+    "2001_06_BUF_JAX",
+    "2001_09_CIN_JAX",
+    "2001_11_BAL_JAX",
+    "2001_12_GB_JAX",
+    "2001_16_KC_JAX",
+    "2002_01_IND_JAX",
+    "2002_04_NYJ_JAX",
+    "2002_05_PHI_JAX",
+    "2002_08_HOU_JAX",
+    "2002_10_WAS_JAX",
+    "2002_13_PIT_JAX",
+    "2002_14_CLE_JAX",
+    "2002_16_TEN_JAX",
+    "2011_13_DET_NO"
+  ],
+  "earlySeasonWarning": "1999–2000 source data are no longer maintained by nflfastR; known invalid games are excluded.",
+  "maintenanceSource": "https://nflfastr.com/news/index.html",
+  "knownSourceIssues": [
+    "https://github.com/nflverse/nflverse-pbp/issues/99",
+    "https://github.com/nflverse/nflverse-pbp/issues/92",
+    "https://github.com/nflverse/nflverse-data/issues/98"
+  ],
+  "rosterSelection": "All previously published athletes, unchanged 400-profile catalog links, original 100-player addition, and a separate fixed 30-GSIS-ID addition. No automatic ranking or name-based identity merges.",
+  "franchiseAliasMap": {
+    "OAK": "LV",
+    "SD": "LAC",
+    "STL": "LA"
+  }
+}

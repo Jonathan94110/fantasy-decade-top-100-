@@ -1,0 +1,243 @@
+/* Season desks share the broadcast palette while keeping native game controls. */
+.broadcast-season-workspace,.broadcast-online-app .league-main,.broadcast-depth-chart{color:var(--broadcast-text,#eef4f7);font-size:16px;line-height:1.6}
+.broadcast-season-workspace{display:grid;gap:20px;min-width:0}
+.broadcast-season-workspace .league-panel,.broadcast-online-app .league-panel,.broadcast-depth-chart{background:var(--broadcast-panel,#102431);border:1px solid var(--broadcast-line,#28414f);border-radius:14px;color:var(--broadcast-text,#eef4f7);box-shadow:0 12px 30px #00000012}
+.broadcast-season-workspace .league-panel,.broadcast-online-app .league-panel{padding:24px}
+.broadcast-season-workspace .league-panel h2,.broadcast-online-app .league-panel h2,.broadcast-depth-chart h2{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:32px;line-height:1.12;letter-spacing:.015em;font-weight:400;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace h3,.broadcast-online-app .league-panel h3,.broadcast-depth-chart h3{color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .league-panel p,.broadcast-online-app .league-panel p,.broadcast-depth-chart p{color:var(--broadcast-muted,#9fb1bd);font-size:16px;line-height:1.65}
+.broadcast-season-workspace .sports-kicker,.broadcast-season-workspace .eyebrow,.broadcast-online-app .sports-kicker,.broadcast-depth-chart .sports-kicker{font-size:12px;letter-spacing:.13em;font-weight:750;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .primary-button,.broadcast-season-workspace .secondary-button,.broadcast-online-app .primary-button,.broadcast-online-app .secondary-button{min-height:44px;padding:11px 18px;border-radius:7px;font-size:16px;line-height:1.35;font-weight:700;text-decoration:none;justify-content:center}
+.broadcast-season-workspace .primary-button,.broadcast-online-app .primary-button{background:var(--broadcast-gold,#ffc45b);color:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .secondary-button,.broadcast-online-app .secondary-button{background:var(--broadcast-panel-alt,#142c3a);border:1px solid #486071;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace button:disabled,.broadcast-online-app button:disabled{opacity:.46;cursor:not-allowed}
+.broadcast-season-workspace .league-panel label,.broadcast-online-app .league-panel label,.broadcast-depth-chart label{color:var(--broadcast-text,#eef4f7);font-size:16px;font-weight:650}
+.broadcast-season-workspace .league-panel input:not([type=checkbox]):not([type=radio]),.broadcast-season-workspace .league-panel select,.broadcast-online-app .league-panel input:not([type=checkbox]):not([type=radio]),.broadcast-online-app .league-panel select,.broadcast-depth-chart input,.broadcast-depth-chart select{min-height:46px;border:1px solid #486071;border-radius:7px;background:var(--broadcast-bg,#091620);color:var(--broadcast-text,#eef4f7);font-size:16px;line-height:1.4;padding:11px 12px;box-shadow:none}
+.broadcast-season-workspace option,.broadcast-online-app option,.broadcast-depth-chart option{background:var(--broadcast-bg,#091620);color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace input::placeholder,.broadcast-online-app input::placeholder,.broadcast-depth-chart input::placeholder{color:var(--broadcast-muted,#9fb1bd);opacity:.8}
+.broadcast-season-workspace :is(button,a,input,select,summary):focus-visible,.broadcast-online-app .league-main :is(button,a,input,select,summary):focus-visible,.broadcast-depth-chart :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--broadcast-green,#52d99d);outline-offset:4px}
+.broadcast-season-workspace :is(#season-lineup-setup,#season-league-overview,#season-final-results):focus-visible{outline:3px solid var(--broadcast-green,#52d99d);outline-offset:5px}
+.broadcast-season-workspace .league-workspace-toolbar{margin:0;padding:0 0 4px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;color:var(--broadcast-muted,#9fb1bd);font-size:14px}
+.broadcast-season-workspace .league-workspace-toolbar>span{display:inline-flex;align-items:center;gap:8px;font-size:14px}
+.broadcast-season-workspace .league-workspace-toolbar .league-status{margin-left:auto;border:1px solid var(--broadcast-line,#28414f);border-radius:4px;padding:6px 10px;color:var(--broadcast-gold,#ffc45b);font-weight:650}
+.broadcast-season-workspace .league-workspace-toolbar>.secondary-button{font-size:14px;min-height:40px;padding:9px 13px}
+.season-contract-strip{border:1px solid var(--broadcast-line,#28414f);border-radius:8px;background:var(--broadcast-panel,#102431);overflow:hidden;margin:0}
+.season-contract-strip>summary{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;cursor:pointer;color:var(--broadcast-muted,#9fb1bd);font-size:14px;line-height:1.5}
+.season-contract-strip>summary>b{margin-left:auto;color:var(--broadcast-text,#eef4f7);font-weight:650}
+.season-contract-strip>.scoring-contract-summary{padding:4px 16px 14px;border-top:1px solid var(--broadcast-line,#28414f)}
+.season-contract-strip .season-pool-note{margin:10px 0 0;font-size:14px}
+.broadcast-season-workspace .season-game-center{margin:0;border:1px solid var(--broadcast-line,#28414f);border-radius:14px;background:var(--broadcast-panel,#102431);overflow:hidden;padding:0}
+.broadcast-season-workspace .season-game-center:empty{display:none}
+.season-week-hub-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid var(--broadcast-line,#28414f);background:var(--broadcast-panel-alt,#142c3a);font-size:12px;font-weight:700;letter-spacing:.07em;color:var(--broadcast-muted,#9fb1bd);text-transform:uppercase}
+.season-week-hub-meta>span{display:inline-flex;gap:8px;align-items:center}
+.season-week-hub-meta>span:last-child{color:var(--broadcast-gold,#ffc45b)}
+.season-signal{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--broadcast-green,#52d99d);box-shadow:0 0 0 4px #52d99d12}
+.season-week-hub{display:grid;grid-template-columns:94px minmax(0,1fr);gap:24px;padding:24px}
+.season-week-ticket{align-self:start;text-align:center;border:1px solid var(--broadcast-line,#28414f);border-top:3px solid var(--broadcast-gold,#ffc45b);background:var(--broadcast-bg,#091620);padding:12px 6px;border-radius:4px;display:grid;gap:3px}
+.season-week-ticket>span,.season-week-ticket>small{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--broadcast-muted,#9fb1bd)}
+.season-week-ticket>strong{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:60px;font-weight:400;line-height:1.1;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .game-center-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;margin:0;padding:0;background:none;align-items:center;border:0}
+.broadcast-season-workspace .game-center-heading h2{font-size:clamp(28px,3vw,38px);margin:7px 0 10px;max-width:700px;text-wrap:balance}
+.broadcast-season-workspace .game-center-heading p{font-size:16px;line-height:1.6;max-width:68ch;margin:0}
+.broadcast-season-workspace .season-hub-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:178px;margin:0}
+.broadcast-season-workspace .season-hub-actions .secondary-button{font-size:14px;padding:10px 14px}
+.broadcast-season-workspace .season-hub-actions .season-next-action{background:var(--broadcast-gold,#ffc45b);border-color:var(--broadcast-gold,#ffc45b);color:var(--broadcast-bg,#091620)}
+.broadcast-season-workspace .season-hub-actions .play-game-button{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:22px;font-weight:400;min-height:50px;letter-spacing:.03em;background:var(--broadcast-gold,#ffc45b)!important;color:var(--broadcast-bg,#091620)!important;box-shadow:none}
+.broadcast-season-workspace .season-hub-actions .play-game-button:disabled{background:var(--broadcast-panel-alt,#142c3a)!important;border-color:var(--broadcast-line,#28414f);color:var(--broadcast-muted,#9fb1bd)!important;opacity:.65}
+.season-week-steps{display:flex;flex-wrap:wrap;gap:20px;margin:20px 0 0;padding:0;list-style:none}
+.season-week-steps li{display:flex;align-items:center;gap:8px;color:var(--broadcast-muted,#9fb1bd)}
+.season-week-steps li>span{width:24px;height:24px;border:1px solid #486071;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;flex-shrink:0}
+.season-week-steps b{display:block;font-size:13px;font-weight:700;line-height:1.4}
+.season-week-steps small{display:block;font-size:12px;line-height:1.4;color:var(--broadcast-muted,#9fb1bd)}
+.season-week-steps .is-complete>span{background:#173c30;border-color:#285947;color:var(--broadcast-green,#52d99d)}
+.season-week-steps .is-current>span{border-color:var(--broadcast-gold,#ffc45b);color:var(--broadcast-gold,#ffc45b)}
+.season-week-steps .is-current b{color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-hub-help{margin:0;padding:0 24px 18px 142px;font-size:14px}
+.season-readiness-desk{border-top:1px solid var(--broadcast-line,#28414f);background:var(--broadcast-bg,#091620)}
+.season-readiness-desk>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 20px;font-size:14px;color:var(--broadcast-muted,#9fb1bd);cursor:pointer}
+.season-readiness-desk>summary>span{display:inline-flex;align-items:center;gap:8px}
+.season-readiness-desk>summary>b{font-variant-numeric:tabular-nums;color:var(--broadcast-text,#eef4f7);font-size:14px}
+.broadcast-season-workspace .season-readiness{padding:0 20px 16px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.broadcast-season-workspace .league-member-list>div{background:var(--broadcast-panel-alt,#142c3a);border:1px solid var(--broadcast-line,#28414f);color:var(--broadcast-text,#eef4f7);font-size:15px;border-radius:7px;padding:13px}
+.broadcast-season-workspace .league-member-list>div>span{color:var(--broadcast-muted,#9fb1bd);font-size:13px}
+.broadcast-season-workspace .season-tabs{min-width:0}
+.broadcast-season-workspace .season-tabs-list[data-slot=tabs-list]{display:flex;width:100%;max-width:none;height:auto;justify-content:flex-start;gap:4px;background:var(--broadcast-bg,#091620)!important;border:1px solid var(--broadcast-line,#28414f);padding:5px;border-radius:9px!important;overflow-x:auto;scrollbar-width:thin;margin-bottom:20px}
+.broadcast-season-workspace .season-tabs-list [data-slot=tabs-trigger]{padding:11px 18px;min-height:44px;border-radius:5px!important;background:transparent;color:var(--broadcast-muted,#9fb1bd)!important;font-size:15px;font-weight:650;flex-shrink:0;box-shadow:none}
+.broadcast-season-workspace .season-tabs-list [data-state=active]{background:var(--broadcast-gold,#ffc45b)!important;color:var(--broadcast-bg,#091620)!important}
+.broadcast-season-workspace .season-round-banner{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 24px;background:var(--broadcast-panel-alt,#142c3a);border:1px solid var(--broadcast-line,#28414f);border-left:3px solid var(--broadcast-gold,#ffc45b);border-radius:10px;margin:0 0 20px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-round-banner h2{font-size:27px;margin:5px 0 8px}
+.broadcast-season-workspace .season-round-banner p{font-size:15px;max-width:70ch;margin:0}
+.broadcast-season-workspace .season-round-banner .season-button-row{flex-shrink:0;max-width:330px;gap:8px}
+.broadcast-season-workspace .season-round-banner .season-button-row button{font-size:14px}
+.broadcast-season-workspace .season-columns{gap:20px;margin:0}
+.broadcast-season-workspace .season-panel-heading{align-items:center;gap:16px;margin-bottom:20px}
+.broadcast-season-workspace .season-panel-heading h2{margin:5px 0 0}
+.season-table-count{font-size:13px;font-weight:650;letter-spacing:.02em;color:var(--broadcast-muted,#9fb1bd);border:1px solid var(--broadcast-line,#28414f);border-radius:4px;padding:5px 9px;white-space:nowrap}
+.broadcast-season-workspace .season-table-scroll{margin:16px -24px 0;width:calc(100% + 48px);overflow-x:auto}
+.broadcast-season-workspace .season-table{min-width:480px;font-size:16px;border-collapse:collapse}
+.broadcast-season-workspace .season-table th,.broadcast-season-workspace .season-table td{padding:14px 12px;border-bottom:1px solid var(--broadcast-line,#28414f);color:var(--broadcast-text,#eef4f7);font-size:15px}
+.broadcast-season-workspace .season-table th:first-child{padding-left:24px}
+.broadcast-season-workspace .season-table thead th{color:var(--broadcast-muted,#9fb1bd);background:var(--broadcast-bg,#091620);font-size:11px;text-transform:uppercase;letter-spacing:.09em}
+.broadcast-season-workspace .season-table td{font-variant-numeric:tabular-nums}
+.broadcast-season-workspace .season-table tbody th{background:transparent}
+.broadcast-season-workspace .season-my-standing{background:#173b332e}
+.broadcast-season-workspace .season-my-standing th{color:var(--broadcast-green,#52d99d);border-left:3px solid var(--broadcast-green,#52d99d)}
+.broadcast-season-workspace .season-schedule{margin-top:18px;display:grid;gap:0}
+.broadcast-season-workspace .season-schedule>div{padding:12px 0;border-bottom:1px solid var(--broadcast-line,#28414f);border-left:0;background:transparent;font-size:15px;gap:12px;grid-template-columns:68px minmax(0,1fr) 68px}
+.broadcast-season-workspace .season-schedule>div>span{font-size:13px;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-schedule>div>b{font-size:15px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .playoff-schedule{margin-top:16px;border-top:2px solid var(--broadcast-line,#28414f);padding-top:6px}
+.broadcast-season-workspace .season-pool-note{font-size:14px;line-height:1.65;color:var(--broadcast-muted,#9fb1bd);margin-top:14px}
+.broadcast-season-workspace .season-activity{margin-top:20px}
+.broadcast-season-workspace .season-activity p{border-bottom:1px solid var(--broadcast-line,#28414f);padding:11px 0;font-size:15px;margin:0}
+.broadcast-season-workspace .season-activity p:last-child{border:0}
+.broadcast-season-workspace .season-lineup-layout{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:start}
+.broadcast-season-workspace .season-starters{display:grid;gap:10px;margin:20px 0}
+.broadcast-season-workspace .season-starters .season-lineup-card{display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px 14px;background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);padding:13px;border-radius:8px;align-items:center}
+.broadcast-season-workspace .season-lineup-card .season-starter-slot{grid-column:1;grid-row:1 / span 2;align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-right:1px solid var(--broadcast-line,#28414f);font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:25px;letter-spacing:.02em;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-starter-slot small{font-family:Arial,sans-serif;font-size:9px;font-weight:400;text-align:center;color:var(--broadcast-muted,#9fb1bd)}
+.season-lineup-identity{grid-column:2;min-width:0;display:grid;gap:2px}
+.season-lineup-identity strong{font-size:17px;line-height:1.35;color:var(--broadcast-text,#eef4f7);font-weight:750}
+.season-lineup-identity small{font-size:13px;color:var(--broadcast-muted,#9fb1bd);font-weight:400}
+.broadcast-season-workspace .season-lineup-card select{grid-column:2;min-width:0;width:100%;font-weight:500;font-size:14px;min-height:42px;padding:9px 10px;background:var(--broadcast-panel-alt,#142c3a);border-color:#486071;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-lineup-card .starter-availability.availability-current{border-color:#d18780;background:#442728;color:#ffe0dd}
+.broadcast-season-workspace .season-lineup-card .starter-availability.availability-next{border-color:#aa884b;background:#3c3324;color:#ffe0a5}
+.broadcast-season-workspace .season-lineup-card .starter-availability.availability-ready{background:var(--broadcast-panel-alt,#142c3a);color:var(--broadcast-text,#eef4f7);border-color:#486071}
+.broadcast-season-workspace .season-roster-list{max-height:none;overflow:visible;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:20px}
+.season-roster-unit>h3{font-size:13px;text-transform:uppercase;letter-spacing:.1em;display:flex;justify-content:space-between;align-items:center;margin:0 0 12px;font-weight:750;color:var(--broadcast-muted,#9fb1bd)}
+.season-roster-unit>h3>span{font-variant-numeric:tabular-nums;color:var(--broadcast-gold,#ffc45b);font-size:15px}
+.broadcast-season-workspace .season-roster-unit>p{font-size:14px;margin:0 0 12px}
+.season-bench-unit{border-top:2px solid var(--broadcast-line,#28414f);padding-top:18px}
+.broadcast-season-workspace .season-roster-card{border:1px solid var(--broadcast-line,#28414f);border-radius:8px;padding:12px;margin:0 0 8px;background:var(--broadcast-bg,#091620);display:flex;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+.broadcast-season-workspace .season-roster-card .player-mark{width:36px;height:42px;border-radius:5px;font-size:15px;flex-shrink:0;background:var(--broadcast-panel-alt,#142c3a)!important;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-roster-card .season-player-info{flex:1;min-width:0}
+.broadcast-season-workspace .season-roster-card .season-player-info>b{font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;line-height:1.4}
+.broadcast-season-workspace .season-roster-card .season-player-info>span{font-size:12px;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-roster-card .player-details-button{font-size:13px;min-height:44px;padding:8px 0;color:var(--broadcast-gold,#ffc45b);margin:0;align-self:center;background:transparent;border:0;width:auto;border-radius:0}
+.broadcast-season-workspace .roster-availability{padding:12px 14px;background:var(--broadcast-bg,#091620);border-left:3px solid var(--broadcast-green,#52d99d);border-radius:4px;font-size:14px;margin:14px 0}
+.broadcast-season-workspace .roster-availability b{color:var(--broadcast-text,#eef4f7);font-weight:650}
+.broadcast-season-workspace .archive-badge{background:var(--broadcast-panel-alt,#142c3a);border:1px solid var(--broadcast-line,#28414f);color:var(--broadcast-muted,#9fb1bd);font-size:12px;padding:6px 9px;border-radius:4px}
+.broadcast-season-workspace .archive-badge.playable{background:#173c30;border-color:#285947;color:var(--broadcast-green,#52d99d)}
+.broadcast-season-workspace .availability-pill{font-size:12px;font-weight:650;line-height:1.4;padding:4px 7px}
+.broadcast-season-workspace .availability-ready,.broadcast-season-workspace .free-agent-availability.availability-ready,.broadcast-depth-chart .availability-ready{background:#173c30!important;border-color:#285947;color:#8ee7b6!important}
+.broadcast-season-workspace .availability-next,.broadcast-season-workspace .free-agent-availability.availability-next,.broadcast-depth-chart .availability-next{background:#453824!important;border-color:#aa884b;color:#ffe0a5!important}
+.broadcast-season-workspace .availability-current,.broadcast-season-workspace .free-agent-availability.availability-current,.broadcast-depth-chart .availability-current{background:#442728!important;border-color:#d18780;color:#ffd0cb!important}
+.broadcast-season-workspace .free-agent-availability{margin:5px 0;padding:5px 8px;border-radius:4px;max-width:100%}
+.broadcast-season-workspace .free-agent-availability strong{font-size:12px}
+.broadcast-season-workspace .free-agent-availability small,.broadcast-season-workspace .simulated-bye{font-size:12px;color:var(--broadcast-muted,#9fb1bd)!important}
+.broadcast-season-workspace .bye-warning{background:#442728;border:1px solid #a26963;border-left:3px solid #ec9990;border-radius:8px;padding:16px}
+.broadcast-season-workspace .bye-warning p,.broadcast-season-workspace .bye-warning b{color:#ffe0dd!important;font-size:15px}
+.broadcast-season-workspace .season-no-match{background:var(--broadcast-panel-alt,#142c3a);border-color:var(--broadcast-line,#28414f);padding:16px}
+.broadcast-season-workspace .season-no-match p{color:var(--broadcast-text,#eef4f7);font-size:15px}
+.broadcast-season-workspace .season-other-rosters{margin-top:20px}
+.broadcast-season-workspace .season-team-rosters{gap:14px}
+.broadcast-season-workspace .season-team-rosters>details{background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);border-radius:8px;padding:16px}
+.broadcast-season-workspace .season-team-rosters summary{font-size:16px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-team-rosters>details p{font-size:14px}
+.broadcast-season-workspace .season-team-rosters>details b{color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-round-results{margin-bottom:20px;border-top:3px solid var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-round-results>.sports-kicker{display:block;margin-bottom:10px}
+.broadcast-season-workspace .season-round-results .season-panel-heading{margin-bottom:12px}
+.broadcast-season-workspace .season-round-results>.primary-button{margin:16px 0}
+.broadcast-season-workspace .season-round-results>details>summary,.broadcast-season-workspace .season-result-details>summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:16px;color:var(--broadcast-text,#eef4f7);font-weight:650}
+.broadcast-season-workspace .receipt-locked{background:var(--broadcast-bg,#091620);border:1px dashed #486071;padding:18px;border-radius:8px;margin-top:14px}
+.broadcast-season-workspace .receipt-locked p{margin:0;font-size:15px}
+.broadcast-season-workspace .season-match-results>div{background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);padding:20px;border-radius:8px;color:var(--broadcast-muted,#9fb1bd);margin-top:12px}
+.broadcast-season-workspace .season-match-results b{font-size:16px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-match-results>div>span{color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-match-results strong{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-weight:400;font-size:34px;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-result-details .draw-card{background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);border-radius:8px;padding:16px;margin:12px 0}
+.broadcast-season-workspace .season-result-details .draw-top{align-items:flex-start;gap:14px}
+.broadcast-season-workspace .season-result-details .draw-top h4{font-size:17px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-result-details .draw-top span,.broadcast-season-workspace .season-result-details .draw-details{font-size:14px;color:var(--broadcast-muted,#9fb1bd);line-height:1.6}
+.broadcast-season-workspace .season-result-details .draw-top strong{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);color:var(--broadcast-gold,#ffc45b);font-size:30px;font-weight:400}
+.broadcast-season-workspace .season-result-details .source-link{color:var(--broadcast-green,#52d99d);text-decoration:underline}
+.broadcast-season-workspace .season-result-details .game-badge{background:var(--broadcast-panel-alt,#142c3a);color:var(--broadcast-text,#eef4f7);font-size:13px;border-color:var(--broadcast-line,#28414f)}
+.broadcast-season-workspace .season-result-details .score-receipt{color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-result-details .score-receipt>summary{color:var(--broadcast-green,#52d99d);font-size:14px;min-height:44px;padding:10px 0}
+.broadcast-season-workspace .season-result-details .score-receipt dl{background:var(--broadcast-panel,#102431);border-color:var(--broadcast-line,#28414f);padding:12px;font-size:14px}
+.broadcast-season-workspace .season-result-details .score-receipt small{font-size:12px;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-result-details .consumed{color:var(--broadcast-green,#52d99d);font-size:11px;letter-spacing:.04em}
+.broadcast-season-workspace .season-how-to{background:var(--broadcast-panel,#102431);border:1px solid var(--broadcast-line,#28414f);border-radius:8px;margin:0}
+.broadcast-season-workspace .season-how-to summary{font-size:16px;color:var(--broadcast-text,#eef4f7);padding:16px}
+.broadcast-season-workspace .season-how-to p{font-size:15px;padding:0 16px;margin-bottom:16px}
+.broadcast-season-workspace .selection-notes{background:var(--broadcast-panel,#102431);border-color:var(--broadcast-line,#28414f);color:var(--broadcast-muted,#9fb1bd);border-radius:8px}
+.broadcast-season-workspace .season-offers article>span,.broadcast-season-workspace .season-offers article small{color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-invite,.broadcast-season-workspace .league-invite,.broadcast-season-workspace .season-rules-note{background:var(--broadcast-panel-alt,#142c3a);border-color:var(--broadcast-line,#28414f);color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .league-invite strong{color:var(--broadcast-gold,#ffc45b);font-size:24px}
+.broadcast-season-workspace .league-invite>span{color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-rules-note p{font-size:15px}
+.broadcast-season-workspace .commissioner-controls{padding:18px 22px;margin:0;border:1px solid var(--broadcast-line,#28414f);border-radius:9px;background:var(--broadcast-panel,#102431);color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .commissioner-controls>summary{font-size:16px;min-height:30px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .commissioner-controls p,.broadcast-season-workspace .commissioner-controls small{color:var(--broadcast-muted,#9fb1bd);line-height:1.65;font-size:14px}
+.broadcast-season-workspace .commissioner-controls label{color:var(--broadcast-text,#eef4f7);font-size:15px}
+.broadcast-season-workspace .commissioner-controls select{min-height:46px;background:var(--broadcast-bg,#091620);color:var(--broadcast-text,#eef4f7);border-color:#486071;border-radius:7px;font-size:16px}
+.broadcast-season-workspace .manager-list>div{background:var(--broadcast-bg,#091620);border-color:var(--broadcast-line,#28414f);border-radius:7px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .manager-invite{background:var(--broadcast-panel-alt,#142c3a);border-left-color:var(--broadcast-green,#52d99d);border-radius:4px}
+.broadcast-season-workspace .manager-invite code{color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .online-draft-start{border-top-color:var(--broadcast-line,#28414f)}
+.broadcast-season-workspace .season-pool .season-player-row{background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);border-radius:8px;margin-bottom:8px;padding:15px;gap:12px}
+.broadcast-season-workspace .season-pool .season-player-info>b{font-size:17px;color:var(--broadcast-text,#eef4f7)}
+.broadcast-season-workspace .season-pool .season-player-info>span{font-size:14px;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-season-workspace .season-pool .player-details-button{font-size:14px;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-season-workspace .season-pool .season-explainer{font-size:15px;background:var(--broadcast-panel-alt,#142c3a);border-color:var(--broadcast-line,#28414f)}
+.broadcast-online-app .broadcast-clubhouse-heading{display:grid;grid-template-columns:minmax(0,1fr) 158px;align-items:center;gap:32px;border-bottom:1px solid var(--broadcast-line,#28414f);padding:8px 0 30px;margin-bottom:24px}
+.broadcast-online-app .broadcast-clubhouse-heading h1{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:clamp(42px,6vw,70px);line-height:1.02;font-weight:400;letter-spacing:.012em;color:var(--broadcast-text,#eef4f7);margin:12px 0 16px}
+.broadcast-online-app .broadcast-clubhouse-heading p{max-width:58ch;color:var(--broadcast-muted,#9fb1bd);font-size:17px;line-height:1.6}
+.broadcast-online-app .broadcast-clubhouse-heading .eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;color:var(--broadcast-gold,#ffc45b)}
+.clubhouse-season-pass{border:1px solid var(--broadcast-line,#28414f);border-top:3px solid var(--broadcast-gold,#ffc45b);padding:17px 8px;text-align:center;background:var(--broadcast-panel,#102431);transform:rotate(2deg);border-radius:4px}
+.clubhouse-season-pass span{display:block;font-size:10px;font-weight:750;letter-spacing:.11em;color:var(--broadcast-muted,#9fb1bd)}
+.clubhouse-season-pass strong{display:block;font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:72px;font-weight:400;line-height:1.2;color:var(--broadcast-gold,#ffc45b)}
+.broadcast-online-app .demo-entry{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 24px;border-left:3px solid var(--broadcast-green,#52d99d);margin:0 0 24px;background:var(--broadcast-panel-alt,#142c3a)}
+.broadcast-online-app .demo-entry h2{font-size:25px;margin:5px 0 8px}
+.broadcast-online-app .demo-entry p{font-size:15px;margin:0;max-width:65ch}
+.broadcast-online-app .demo-entry>.primary-button{background:var(--broadcast-panel,#102431);color:var(--broadcast-green,#52d99d);border-color:#285947;white-space:nowrap}
+.broadcast-online-app .league-entry-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:24px;margin:0;align-items:start}
+.broadcast-online-app .league-create-panel{border-top:3px solid var(--broadcast-gold,#ffc45b)}
+.broadcast-online-app .league-join-panel{border-top:3px solid var(--broadcast-green,#52d99d)}
+.league-desk-heading{display:flex;align-items:flex-start;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--broadcast-line,#28414f);margin-bottom:22px}
+.league-desk-number{font-family:var(--sport-display,Impact,'Arial Narrow',sans-serif);font-size:46px;color:#486071;line-height:1;font-weight:400}
+.broadcast-online-app .league-desk-heading h2{margin:5px 0 10px;font-size:34px}
+.broadcast-online-app .league-desk-heading p{font-size:15px;margin:0}
+.broadcast-online-app .league-panel form{display:grid;gap:18px}
+.broadcast-online-app .league-panel form label{display:grid;gap:8px;font-size:15px;line-height:1.4}
+.broadcast-online-app .league-panel form p{font-size:14px;margin:0;line-height:1.7}
+.broadcast-online-app .league-panel form .league-form-row{gap:14px}
+.broadcast-online-app .league-panel form .scoring-contract-summary{border:1px solid var(--broadcast-line,#28414f);border-left:3px solid var(--broadcast-gold,#ffc45b);background:var(--broadcast-bg,#091620);padding:13px;border-radius:6px}
+.broadcast-online-app .league-panel form .scoring-contract-summary p{font-size:13px;line-height:1.7}
+.broadcast-online-app .league-panel form>.primary-button{width:100%;margin-top:2px;min-height:50px;font-size:17px}
+.broadcast-online-app .league-join-panel form>.primary-button{background:var(--broadcast-green,#52d99d);border-color:var(--broadcast-green,#52d99d)}
+.broadcast-online-app .league-list{margin:0 0 24px}
+.broadcast-online-app .league-list h2{font-size:28px;margin:0 0 18px}
+.broadcast-online-app .league-list>button{display:flex;justify-content:space-between;gap:20px;width:100%;background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);border-left:3px solid var(--broadcast-green,#52d99d);padding:16px;border-radius:7px;margin-top:10px;text-align:left;color:var(--broadcast-text,#eef4f7)}
+.broadcast-online-app .league-list>button b{font-size:18px;display:block;color:var(--broadcast-text,#eef4f7)}
+.broadcast-online-app .league-list>button span{font-size:14px;color:var(--broadcast-muted,#9fb1bd);display:block;margin-top:4px}
+.broadcast-online-app .league-list>button>span{align-self:center;margin:0;color:var(--broadcast-gold,#ffc45b);font-weight:700;white-space:nowrap}
+.broadcast-depth-chart{padding:24px;border-radius:14px}
+.broadcast-depth-chart .depth-heading{border-left:3px solid var(--broadcast-gold,#ffc45b);padding-left:18px;margin-bottom:20px}
+.broadcast-depth-chart .depth-heading h2{font-size:38px;margin:7px 0 10px}
+.broadcast-depth-chart .depth-heading p,.broadcast-depth-chart .depth-explainer{font-size:15px;line-height:1.65;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-depth-chart .depth-explainer{margin:16px 0}
+.broadcast-depth-chart .depth-filters{padding:16px;background:var(--broadcast-bg,#091620);border:1px solid var(--broadcast-line,#28414f);border-radius:8px;gap:16px}
+.broadcast-depth-chart .depth-result-count{font-size:14px;color:var(--broadcast-gold,#ffc45b);font-weight:650;margin:18px 0}
+.broadcast-depth-chart .depth-table-scroll{border:1px solid var(--broadcast-line,#28414f);border-radius:8px;background:var(--broadcast-bg,#091620);overflow-x:auto}
+.broadcast-depth-chart .depth-table{min-width:820px;font-size:15px;border-collapse:collapse}
+.broadcast-depth-chart .depth-table caption{font-size:13px;color:var(--broadcast-muted,#9fb1bd);padding:12px;text-align:left;background:var(--broadcast-panel-alt,#142c3a)}
+.broadcast-depth-chart .depth-table th,.broadcast-depth-chart .depth-table td{padding:15px 12px;color:var(--broadcast-text,#eef4f7);border-bottom:1px solid var(--broadcast-line,#28414f);font-size:15px}
+.broadcast-depth-chart .depth-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--broadcast-muted,#9fb1bd);background:var(--broadcast-panel,#102431)}
+.broadcast-depth-chart .depth-table td>small{display:block;font-size:12px;line-height:1.6;color:var(--broadcast-muted,#9fb1bd);margin-top:4px}
+.broadcast-depth-chart .depth-table b{color:var(--broadcast-text,#eef4f7)}
+.broadcast-depth-chart .depth-table tbody tr{background:var(--broadcast-bg,#091620)}
+.broadcast-depth-chart .depth-table tbody tr:nth-child(even){background:#0d202c}
+.broadcast-depth-chart .depth-number,.broadcast-depth-chart .depth-rank{font-variant-numeric:tabular-nums;font-weight:650}
+.broadcast-depth-chart .depth-rank{color:var(--broadcast-gold,#ffc45b);font-size:17px}
+.broadcast-depth-chart .depth-table tbody tr.depth-my-player{background:#12332c}
+.broadcast-depth-chart .depth-my-player th{border-left:3px solid var(--broadcast-green,#52d99d)}
+.broadcast-depth-chart .depth-pool-warning{color:#ffe0a5!important}
+.broadcast-depth-chart .preview-pagination{margin:18px 0 0;font-size:14px;color:var(--broadcast-muted,#9fb1bd)}
+.broadcast-depth-chart .preview-pagination>span{color:var(--broadcast-muted,#9fb1bd)}
+@media(max-width:1100px){.broadcast-season-workspace .game-center-heading{grid-template-columns:minmax(0,1fr)}.broadcast-season-workspace .season-hub-actions{flex-direction:row;flex-wrap:wrap;min-width:0;justify-content:flex-start}.broadcast-season-workspace .season-hub-actions>button{flex:1 1 150px}.season-week-steps{gap:16px}.broadcast-season-workspace .season-round-banner{align-items:flex-start;flex-direction:column}.broadcast-season-workspace .season-round-banner .season-button-row{max-width:none}}
+@media(max-width:800px){.broadcast-season-workspace .season-columns,.broadcast-season-workspace .season-lineup-layout{grid-template-columns:minmax(0,1fr)}.broadcast-online-app .league-entry-grid{grid-template-columns:minmax(0,1fr)}.broadcast-season-workspace .season-roster-unit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.season-roster-unit>h3,.season-roster-unit>p{grid-column:1 / -1}.broadcast-season-workspace .season-roster-card{margin:0}.broadcast-depth-chart{padding:20px}.broadcast-online-app .demo-entry{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.broadcast-season-workspace{gap:16px}.broadcast-season-workspace .league-panel,.broadcast-online-app .league-panel{padding:18px}.broadcast-season-workspace .league-workspace-toolbar{gap:10px}.broadcast-season-workspace .league-workspace-toolbar>.league-status{width:100%;margin-left:0;justify-content:center}.season-contract-strip>summary{padding:11px 13px;gap:7px;font-size:12px}.season-contract-strip>summary>b{margin-left:0;font-size:12px}.season-week-hub-meta{padding:11px 14px;font-size:10px;align-items:flex-start}.season-week-hub-meta>span{max-width:60%}.season-week-hub{grid-template-columns:64px minmax(0,1fr);gap:14px;padding:18px 14px}.season-week-ticket{padding:9px 3px}.season-week-ticket>strong{font-size:46px}.season-week-ticket>span,.season-week-ticket>small{font-size:9px}.broadcast-season-workspace .game-center-heading{gap:18px}.broadcast-season-workspace .game-center-heading h2{font-size:28px;overflow-wrap:anywhere}.broadcast-season-workspace .game-center-heading .sports-kicker{font-size:10px}.broadcast-season-workspace .game-center-heading p{font-size:15px}.season-week-steps{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:16px}.season-week-steps small{display:none}.season-week-steps b{font-size:13px}.broadcast-season-workspace .season-hub-actions{gap:7px}.broadcast-season-workspace .season-hub-actions>button{flex-basis:100%;min-width:0;font-size:14px;min-height:44px}.broadcast-season-workspace .season-hub-help{padding:0 14px 16px;font-size:13px}.season-readiness-desk>summary{padding:12px 14px;font-size:12px}.season-readiness-desk>summary>b{font-size:12px}.broadcast-season-workspace .season-readiness{grid-template-columns:minmax(0,1fr);padding:0 14px 14px}.broadcast-season-workspace .season-tabs-list [data-slot=tabs-trigger]{font-size:14px;padding:10px 13px}.broadcast-season-workspace .season-round-banner{padding:18px;gap:16px}.broadcast-season-workspace .season-round-banner h2{font-size:25px}.broadcast-season-workspace .season-round-banner p{font-size:15px}.broadcast-season-workspace .season-panel-heading{gap:10px}.broadcast-season-workspace .season-panel-heading h2{font-size:29px}.broadcast-season-workspace .season-table-scroll{margin-left:-18px;margin-right:-18px;width:calc(100% + 36px)}.broadcast-season-workspace .season-table th:first-child{padding-left:18px}.broadcast-season-workspace .season-starters .season-lineup-card{grid-template-columns:44px minmax(0,1fr);gap:8px 11px;padding:12px}.broadcast-season-workspace .season-starter-slot{font-size:22px}.season-lineup-identity strong{font-size:16px}.broadcast-season-workspace .season-lineup-card select{font-size:16px;padding:9px 7px}.broadcast-season-workspace .season-roster-unit{grid-template-columns:minmax(0,1fr)}.broadcast-season-workspace .season-roster-card .season-player-info{flex-basis:auto}.broadcast-season-workspace .season-roster-card .player-details-button{margin-left:0;font-size:13px}.broadcast-season-workspace .season-team-rosters{grid-template-columns:minmax(0,1fr)}.broadcast-online-app .broadcast-clubhouse-heading{grid-template-columns:minmax(0,1fr) 84px;gap:14px;padding-bottom:24px}.broadcast-online-app .broadcast-clubhouse-heading h1{font-size:42px;margin:10px 0 12px}.broadcast-online-app .broadcast-clubhouse-heading p{font-size:16px}.broadcast-online-app .broadcast-clubhouse-heading .eyebrow{font-size:10px;letter-spacing:.07em}.clubhouse-season-pass{padding:12px 4px}.clubhouse-season-pass strong{font-size:50px}.clubhouse-season-pass span{font-size:8px;letter-spacing:.04em}.broadcast-online-app .demo-entry{padding:18px}.broadcast-online-app .demo-entry>.primary-button{width:100%}.league-desk-heading{gap:12px}.league-desk-number{font-size:40px}.broadcast-online-app .league-desk-heading h2{font-size:30px}.broadcast-online-app .league-panel form .league-form-row{grid-template-columns:minmax(0,1fr)}.broadcast-online-app .league-list>button{gap:14px;padding:14px;align-items:flex-start}.broadcast-online-app .league-list>button>span{font-size:12px;white-space:normal;text-align:right}.broadcast-depth-chart{padding:18px}.broadcast-depth-chart .depth-heading{padding-left:14px}.broadcast-depth-chart .depth-heading h2{font-size:32px}.broadcast-depth-chart .depth-filters{grid-template-columns:minmax(0,1fr);padding:14px}.broadcast-depth-chart .depth-table th,.broadcast-depth-chart .depth-table td{padding:14px 10px}}
+@media(prefers-reduced-motion:reduce){.broadcast-season-workspace *,.broadcast-online-app .league-main *,.broadcast-depth-chart *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+html[data-reduce-motion=true] .broadcast-season-workspace *,html[data-reduce-motion=true] .broadcast-online-app .league-main *,html[data-reduce-motion=true] .broadcast-depth-chart *{scroll-behavior:auto!important;animation:none!important;transition:none!important}

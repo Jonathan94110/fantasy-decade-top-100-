@@ -1,0 +1,1901 @@
+[
+  {
+    "reviewOnly": true,
+    "id": "kaggle:8228:1950_D19501001_NYG_CLE",
+    "athleteId": "kaggle-8228",
+    "season": 1950,
+    "week": 3,
+    "sourceWeek": 3,
+    "gameId": "1950_D19501001_NYG_CLE",
+    "date": "1950-10-01",
+    "teamAtTime": "CLE",
+    "opponent": "NYG",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 127,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 26,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.clevelandbrowns.com/schedule/1950/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "8228",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.clevelandbrowns.com/schedule/1950/",
+          "completed": true,
+          "date": "1950-10-01",
+          "team": "CLE",
+          "opponent": "NYG",
+          "finalScore": [
+            0,
+            6
+          ],
+          "week": 3,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.clevelandbrowns.com/schedule/1950/",
+          "completed": true,
+          "date": "1950-10-01",
+          "team": "CLE",
+          "opponent": "NYG",
+          "finalScore": [
+            0,
+            6
+          ],
+          "week": 3,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:13019:1952_D19521012_SFO_DET",
+    "athleteId": "kaggle-13019",
+    "season": 1952,
+    "week": 3,
+    "sourceWeek": 3,
+    "gameId": "1952_D19521012_SFO_DET",
+    "date": "1952-10-12",
+    "teamAtTime": "DET",
+    "opponent": "SFO",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 43,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 22,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.detroitlions.com/schedule/1952/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "13019",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.detroitlions.com/schedule/1952/",
+          "completed": true,
+          "date": "1952-10-12",
+          "team": "DET",
+          "opponent": "SFO",
+          "finalScore": [
+            0,
+            28
+          ],
+          "week": 3,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.detroitlions.com/schedule/1952/",
+          "completed": true,
+          "date": "1952-10-12",
+          "team": "DET",
+          "opponent": "SFO",
+          "finalScore": [
+            0,
+            28
+          ],
+          "week": 3,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:13019:1961_D19611217_PIT_STL",
+    "athleteId": "kaggle-13019",
+    "season": 1961,
+    "week": 15,
+    "sourceWeek": 14,
+    "gameId": "1961_D19611217_PIT_STL",
+    "date": "1961-12-17",
+    "teamAtTime": "PIT",
+    "opponent": "STL",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 139,
+      "passingTD": 0,
+      "interceptions": 2,
+      "rushingYards": 1,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.steelers.com/schedule/1961/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "13019",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.steelers.com/schedule/1961/",
+          "completed": true,
+          "date": "1961-12-17",
+          "team": "PIT",
+          "opponent": "STL",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 15,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.steelers.com/schedule/1961/",
+          "completed": true,
+          "date": "1961-12-17",
+          "team": "PIT",
+          "opponent": "STL",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 15,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22801:1958_D19581214_PHI_WAS",
+    "athleteId": "kaggle-22801",
+    "season": 1958,
+    "week": 12,
+    "sourceWeek": 12,
+    "gameId": "1958_D19581214_PHI_WAS",
+    "date": "1958-12-14",
+    "teamAtTime": "PHI",
+    "opponent": "WAS",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 33,
+      "passingTD": 0,
+      "interceptions": 2,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1958/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22801",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-12-14",
+          "team": "PHI",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 12,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-12-14",
+          "team": "PHI",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 12,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22801:1959_D19591129_PHI_PIT",
+    "athleteId": "kaggle-22801",
+    "season": 1959,
+    "week": 10,
+    "sourceWeek": 10,
+    "gameId": "1959_D19591129_PHI_PIT",
+    "date": "1959-11-29",
+    "teamAtTime": "PHI",
+    "opponent": "PIT",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 196,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 1,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1959/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22801",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1959/",
+          "completed": true,
+          "date": "1959-11-29",
+          "team": "PHI",
+          "opponent": "PIT",
+          "finalScore": [
+            0,
+            31
+          ],
+          "week": 10,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1959/",
+          "completed": true,
+          "date": "1959-11-29",
+          "team": "PHI",
+          "opponent": "PIT",
+          "finalScore": [
+            0,
+            31
+          ],
+          "week": 10,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22343:1950_D19500924_CLE_BAL",
+    "athleteId": "kaggle-22343",
+    "season": 1950,
+    "week": 2,
+    "sourceWeek": 2,
+    "gameId": "1950_D19500924_CLE_BAL",
+    "date": "1950-09-24",
+    "teamAtTime": "BAL",
+    "opponent": "CLE",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 65,
+      "passingTD": 0,
+      "interceptions": 2,
+      "rushingYards": 2,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.clevelandbrowns.com/schedule/1950/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22343",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.clevelandbrowns.com/schedule/1950/",
+          "completed": true,
+          "date": "1950-09-24",
+          "team": "BAL",
+          "opponent": "CLE",
+          "finalScore": [
+            0,
+            31
+          ],
+          "week": 2,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.clevelandbrowns.com/schedule/1950/",
+          "completed": true,
+          "date": "1950-09-24",
+          "team": "BAL",
+          "opponent": "CLE",
+          "finalScore": [
+            0,
+            31
+          ],
+          "week": 2,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": "baltimore-colts-1950"
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22343:1955_D19551113_SFO_WAS",
+    "athleteId": "kaggle-22343",
+    "season": 1955,
+    "week": 8,
+    "sourceWeek": 8,
+    "gameId": "1955_D19551113_SFO_WAS",
+    "date": "1955-11-13",
+    "teamAtTime": "SFO",
+    "opponent": "WAS",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 203,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.49ers.com/schedule/1955/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22343",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.49ers.com/schedule/1955/",
+          "completed": true,
+          "date": "1955-11-13",
+          "team": "SFO",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            7
+          ],
+          "week": 8,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.49ers.com/schedule/1955/",
+          "completed": true,
+          "date": "1955-11-13",
+          "team": "SFO",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            7
+          ],
+          "week": 8,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22343:1960_D19601210_GNB_SFO",
+    "athleteId": "kaggle-22343",
+    "season": 1960,
+    "week": 14,
+    "sourceWeek": 11,
+    "gameId": "1960_D19601210_GNB_SFO",
+    "date": "1960-12-10",
+    "teamAtTime": "SFO",
+    "opponent": "GNB",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": -7,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.49ers.com/schedule/1960/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22343",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.49ers.com/schedule/1960/",
+          "completed": true,
+          "date": "1960-12-10",
+          "team": "SFO",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 14,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.49ers.com/schedule/1960/",
+          "completed": true,
+          "date": "1960-12-10",
+          "team": "SFO",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 14,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22343:1961_D19611231_NYG_GNB",
+    "athleteId": "kaggle-22343",
+    "season": 1961,
+    "week": null,
+    "sourceWeek": 15,
+    "gameId": "1961_D19611231_NYG_GNB",
+    "date": "1961-12-31",
+    "teamAtTime": "NYG",
+    "opponent": "GNB",
+    "seasonType": "POST",
+    "stats": {
+      "passingYards": 65,
+      "passingTD": 0,
+      "interceptions": 4,
+      "rushingYards": -4,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.giants.com/schedule/1961/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22343",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.giants.com/schedule/1961/",
+          "completed": true,
+          "date": "1961-12-31",
+          "team": "NYG",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            37
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.giants.com/schedule/1961/",
+          "completed": true,
+          "date": "1961-12-31",
+          "team": "NYG",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            37
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    },
+    "roundLabel": "Postseason"
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1962_D19621125_CHI_BAL",
+    "athleteId": "kaggle-22749",
+    "season": 1962,
+    "week": 12,
+    "sourceWeek": 11,
+    "gameId": "1962_D19621125_CHI_BAL",
+    "date": "1962-11-25",
+    "teamAtTime": "BAL",
+    "opponent": "CHI",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 91,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 18,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1962/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1962/",
+          "completed": true,
+          "date": "1962-11-25",
+          "team": "BAL",
+          "opponent": "CHI",
+          "finalScore": [
+            0,
+            57
+          ],
+          "week": 12,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1962/",
+          "completed": true,
+          "date": "1962-11-25",
+          "team": "BAL",
+          "opponent": "CHI",
+          "finalScore": [
+            0,
+            57
+          ],
+          "week": 12,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1964_D19641227_BAL_CLE",
+    "athleteId": "kaggle-22749",
+    "season": 1964,
+    "week": null,
+    "sourceWeek": 15,
+    "gameId": "1964_D19641227_BAL_CLE",
+    "date": "1964-12-27",
+    "teamAtTime": "BAL",
+    "opponent": "CLE",
+    "seasonType": "POST",
+    "stats": {
+      "passingYards": 95,
+      "passingTD": 0,
+      "interceptions": 2,
+      "rushingYards": 30,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1964/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1964/",
+          "completed": true,
+          "date": "1964-12-27",
+          "team": "BAL",
+          "opponent": "CLE",
+          "finalScore": [
+            0,
+            27
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1964/",
+          "completed": true,
+          "date": "1964-12-27",
+          "team": "BAL",
+          "opponent": "CLE",
+          "finalScore": [
+            0,
+            27
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    },
+    "roundLabel": "Postseason"
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1965_D19651205_CHI_BAL",
+    "athleteId": "kaggle-22749",
+    "season": 1965,
+    "week": 13,
+    "sourceWeek": 12,
+    "gameId": "1965_D19651205_CHI_BAL",
+    "date": "1965-12-05",
+    "teamAtTime": "BAL",
+    "opponent": "CHI",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 24,
+      "passingTD": 0,
+      "interceptions": 0,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1965/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1965/",
+          "completed": true,
+          "date": "1965-12-05",
+          "team": "BAL",
+          "opponent": "CHI",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 13,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1965/",
+          "completed": true,
+          "date": "1965-12-05",
+          "team": "BAL",
+          "opponent": "CHI",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 13,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1971_D19720102_BAL_MIA",
+    "athleteId": "kaggle-22749",
+    "season": 1971,
+    "week": null,
+    "sourceWeek": 16,
+    "gameId": "1971_D19720102_BAL_MIA",
+    "date": "1972-01-02",
+    "teamAtTime": "BAL",
+    "opponent": "MIA",
+    "seasonType": "POST",
+    "stats": {
+      "passingYards": 224,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 5,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1971/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1971/",
+          "completed": true,
+          "date": "1972-01-02",
+          "team": "BAL",
+          "opponent": "MIA",
+          "finalScore": [
+            0,
+            21
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1971/",
+          "completed": true,
+          "date": "1972-01-02",
+          "team": "BAL",
+          "opponent": "MIA",
+          "finalScore": [
+            0,
+            21
+          ],
+          "week": null,
+          "homeAway": "A",
+          "sourceRoundLabel": "CONFERENCE CHAMPIONSHIP"
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    },
+    "roundLabel": "Postseason"
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1972_D19721015_DAL_BAL",
+    "athleteId": "kaggle-22749",
+    "season": 1972,
+    "week": 5,
+    "sourceWeek": 5,
+    "gameId": "1972_D19721015_DAL_BAL",
+    "date": "1972-10-15",
+    "teamAtTime": "BAL",
+    "opponent": "DAL",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 97,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 13,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1972/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1972/",
+          "completed": true,
+          "date": "1972-10-15",
+          "team": "BAL",
+          "opponent": "DAL",
+          "finalScore": [
+            0,
+            21
+          ],
+          "week": 5,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1972/",
+          "completed": true,
+          "date": "1972-10-15",
+          "team": "BAL",
+          "opponent": "DAL",
+          "finalScore": [
+            0,
+            21
+          ],
+          "week": 5,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1972_D19721216_BAL_MIA",
+    "athleteId": "kaggle-22749",
+    "season": 1972,
+    "week": 14,
+    "sourceWeek": 14,
+    "gameId": "1972_D19721216_BAL_MIA",
+    "date": "1972-12-16",
+    "teamAtTime": "BAL",
+    "opponent": "MIA",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 3,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.colts.com/schedule/1972/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.colts.com/schedule/1972/",
+          "completed": true,
+          "date": "1972-12-16",
+          "team": "BAL",
+          "opponent": "MIA",
+          "finalScore": [
+            0,
+            16
+          ],
+          "week": 14,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.colts.com/schedule/1972/",
+          "completed": true,
+          "date": "1972-12-16",
+          "team": "BAL",
+          "opponent": "MIA",
+          "finalScore": [
+            0,
+            16
+          ],
+          "week": 14,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1973_D19730916_SDG_WAS",
+    "athleteId": "kaggle-22749",
+    "season": 1973,
+    "week": 1,
+    "sourceWeek": 1,
+    "gameId": "1973_D19730916_SDG_WAS",
+    "date": "1973-09-16",
+    "teamAtTime": "SDG",
+    "opponent": "WAS",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 55,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.chargers.com/schedule/1973/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.chargers.com/schedule/1973/",
+          "completed": true,
+          "date": "1973-09-16",
+          "team": "SDG",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            38
+          ],
+          "week": 1,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.chargers.com/schedule/1973/",
+          "completed": true,
+          "date": "1973-09-16",
+          "team": "SDG",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            38
+          ],
+          "week": 1,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:22749:1973_D19731104_KAN_SDG",
+    "athleteId": "kaggle-22749",
+    "season": 1973,
+    "week": 8,
+    "sourceWeek": 8,
+    "gameId": "1973_D19731104_KAN_SDG",
+    "date": "1973-11-04",
+    "teamAtTime": "SDG",
+    "opponent": "KAN",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 7,
+      "passingTD": 0,
+      "interceptions": 0,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.chargers.com/schedule/1973/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "22749",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.chargers.com/schedule/1973/",
+          "completed": true,
+          "date": "1973-11-04",
+          "team": "SDG",
+          "opponent": "KAN",
+          "finalScore": [
+            0,
+            19
+          ],
+          "week": 8,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.chargers.com/schedule/1973/",
+          "completed": true,
+          "date": "1973-11-04",
+          "team": "SDG",
+          "opponent": "KAN",
+          "finalScore": [
+            0,
+            19
+          ],
+          "week": 8,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:21143:1958_D19581102_GNB_BAL",
+    "athleteId": "kaggle-21143",
+    "season": 1958,
+    "week": 6,
+    "sourceWeek": 6,
+    "gameId": "1958_D19581102_GNB_BAL",
+    "date": "1958-11-02",
+    "teamAtTime": "GNB",
+    "opponent": "BAL",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 58,
+      "passingTD": 0,
+      "interceptions": 2,
+      "rushingYards": 32,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.packers.com/schedule/1958/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "21143",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.packers.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-11-02",
+          "team": "GNB",
+          "opponent": "BAL",
+          "finalScore": [
+            0,
+            56
+          ],
+          "week": 6,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.packers.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-11-02",
+          "team": "GNB",
+          "opponent": "BAL",
+          "finalScore": [
+            0,
+            56
+          ],
+          "week": 6,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:21143:1970_D19700920_DET_GNB",
+    "athleteId": "kaggle-21143",
+    "season": 1970,
+    "week": 1,
+    "sourceWeek": 1,
+    "gameId": "1970_D19700920_DET_GNB",
+    "date": "1970-09-20",
+    "teamAtTime": "GNB",
+    "opponent": "DET",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 35,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.packers.com/schedule/1970/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "21143",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.packers.com/schedule/1970/",
+          "completed": true,
+          "date": "1970-09-20",
+          "team": "GNB",
+          "opponent": "DET",
+          "finalScore": [
+            0,
+            40
+          ],
+          "week": 1,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.packers.com/schedule/1970/",
+          "completed": true,
+          "date": "1970-09-20",
+          "team": "GNB",
+          "opponent": "DET",
+          "finalScore": [
+            0,
+            40
+          ],
+          "week": 1,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:21143:1970_D19701220_GNB_DET",
+    "athleteId": "kaggle-21143",
+    "season": 1970,
+    "week": 14,
+    "sourceWeek": 14,
+    "gameId": "1970_D19701220_GNB_DET",
+    "date": "1970-12-20",
+    "teamAtTime": "GNB",
+    "opponent": "DET",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 122,
+      "passingTD": 0,
+      "interceptions": 3,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.packers.com/schedule/1970/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "21143",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.packers.com/schedule/1970/",
+          "completed": true,
+          "date": "1970-12-20",
+          "team": "GNB",
+          "opponent": "DET",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 14,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.packers.com/schedule/1970/",
+          "completed": true,
+          "date": "1970-12-20",
+          "team": "GNB",
+          "opponent": "DET",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 14,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:11819:1957_D19571027_PHI_PIT",
+    "athleteId": "kaggle-11819",
+    "season": 1957,
+    "week": 5,
+    "sourceWeek": 5,
+    "gameId": "1957_D19571027_PHI_PIT",
+    "date": "1957-10-27",
+    "teamAtTime": "PHI",
+    "opponent": "PIT",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 12,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": -2,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1957/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "11819",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1957/",
+          "completed": true,
+          "date": "1957-10-27",
+          "team": "PHI",
+          "opponent": "PIT",
+          "finalScore": [
+            0,
+            6
+          ],
+          "week": 5,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1957/",
+          "completed": true,
+          "date": "1957-10-27",
+          "team": "PHI",
+          "opponent": "PIT",
+          "finalScore": [
+            0,
+            6
+          ],
+          "week": 5,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:11819:1957_D19571117_PHI_NYG",
+    "athleteId": "kaggle-11819",
+    "season": 1957,
+    "week": 8,
+    "sourceWeek": 8,
+    "gameId": "1957_D19571117_PHI_NYG",
+    "date": "1957-11-17",
+    "teamAtTime": "PHI",
+    "opponent": "NYG",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 0,
+      "passingTD": 0,
+      "interceptions": 0,
+      "rushingYards": 1,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1957/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "11819",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1957/",
+          "completed": true,
+          "date": "1957-11-17",
+          "team": "PHI",
+          "opponent": "NYG",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 8,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1957/",
+          "completed": true,
+          "date": "1957-11-17",
+          "team": "PHI",
+          "opponent": "NYG",
+          "finalScore": [
+            0,
+            13
+          ],
+          "week": 8,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:11819:1958_D19581214_PHI_WAS",
+    "athleteId": "kaggle-11819",
+    "season": 1958,
+    "week": 12,
+    "sourceWeek": 12,
+    "gameId": "1958_D19581214_PHI_WAS",
+    "date": "1958-12-14",
+    "teamAtTime": "PHI",
+    "opponent": "WAS",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 226,
+      "passingTD": 0,
+      "interceptions": 0,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1958/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "11819",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-12-14",
+          "team": "PHI",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 12,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1958/",
+          "completed": true,
+          "date": "1958-12-14",
+          "team": "PHI",
+          "opponent": "WAS",
+          "finalScore": [
+            0,
+            20
+          ],
+          "week": 12,
+          "homeAway": "A",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  },
+  {
+    "reviewOnly": true,
+    "id": "kaggle:11819:1962_D19621111_GNB_PHI",
+    "athleteId": "kaggle-11819",
+    "season": 1962,
+    "week": 10,
+    "sourceWeek": 9,
+    "gameId": "1962_D19621111_GNB_PHI",
+    "date": "1962-11-11",
+    "teamAtTime": "PHI",
+    "opponent": "GNB",
+    "seasonType": "REG",
+    "stats": {
+      "passingYards": 35,
+      "passingTD": 0,
+      "interceptions": 1,
+      "rushingYards": 0,
+      "rushingTD": 0,
+      "receptions": 0,
+      "receivingYards": 0,
+      "receivingTD": 0,
+      "returnTD": 0,
+      "twoPoint": 0,
+      "fumbleRecoveryTD": 0,
+      "fumblesLost": null
+    },
+    "fictional": false,
+    "completed": true,
+    "entityType": "player",
+    "sourceUrl": "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+    "sourceUrls": [
+      "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats",
+      "https://www.philadelphiaeagles.com/schedule/1962/"
+    ],
+    "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "importedAt": "2026-10-07T19:24:33.242423Z",
+    "minimumScoringVersion": 4,
+    "provenance": {
+      "sourcePlayerId": "11819",
+      "originalArchiveSHA256": "d75baf50cf201d4efe4eb67af8963927f1f5b8a5877c9c9807eca5233ff84835",
+      "rawMissingScoringStats": {
+        "fumblesLost": null,
+        "twoPoint": null,
+        "fumbleRecoveryTD": null
+      },
+      "derivations": {
+        "twoPoint": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1962/",
+          "completed": true,
+          "date": "1962-11-11",
+          "team": "PHI",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            49
+          ],
+          "week": 10,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        },
+        "fumbleRecoveryTD": {
+          "url": "https://www.philadelphiaeagles.com/schedule/1962/",
+          "completed": true,
+          "date": "1962-11-11",
+          "team": "PHI",
+          "opponent": "GNB",
+          "finalScore": [
+            0,
+            49
+          ],
+          "week": 10,
+          "homeAway": "H",
+          "sourceRoundLabel": null
+        }
+      },
+      "quality": "Provider-sourced numeric fields, checked against the pinned raw snapshot; selected independent corroboration, not all-field independent verification.",
+      "historicalFranchiseId": null
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790900500515,
+      "tag": "0000_smart_jack_murdock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790911508625,
+      "tag": "0001_brainy_gunslinger",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790919804280,
+      "tag": "0002_nostalgic_lady_mastermind",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791137076337,
+      "tag": "0003_daffy_drax",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791139192122,
+      "tag": "0004_amazing_quicksilver",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1791327632584,
+      "tag": "0005_faithful_hellion",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791416321394,
+      "tag": "0006_exotic_mulholland_black",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791417182198,
+      "tag": "0007_preserve_v4_unscored_draft",
+      "breakpoints": true
+    }
+  ]
+}

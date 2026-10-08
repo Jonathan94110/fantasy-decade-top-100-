@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-07",
+  "requestedRange": [
+    1950,
+    2026
+  ],
+  "verifiedPlayableRange": [
+    1999,
+    2026
+  ],
+  "earlyPlayerGamesImported": 0,
+  "earlyDefenseGamesImported": 0,
+  "reason": "Historical player game logs do exist, including NFL.com 1970 logs. No evaluated 1950\u20131998 source yet established both complete scorer-relevant game fields and a verified permission basis for this database import. Profile dates and franchise founding dates are not game records.",
+  "sourceLeads": [
+    {
+      "name": "NFL.com historical player game logs",
+      "url": "https://www.nfl.com/players/john-brodie/stats/logs/1970/",
+      "status": "Verified 1970 individual game logs exist. Not imported: systematic database retrieval requires prior written consent under NFL terms \u00a71.3, and scorer-relevant blank fields require verification rather than zero-filling.",
+      "termsUrl": "https://www.nfl.com/legal/terms/"
+    },
+    {
+      "name": "NFL/team media guides and gamebooks",
+      "url": "https://www.packers.com/history/media-guide",
+      "status": "Historical evidence; abbreviated summaries are incomplete for the current scoring rules; reuse permission unverified."
+    },
+    {
+      "name": "Pro Football Researchers Association",
+      "url": "https://www.profootballresearchers.com/",
+      "status": "Archival gamebooks have access restrictions; membership does not establish dataset redistribution rights."
+    },
+    {
+      "name": "Sportradar NFL historical coverage",
+      "url": "https://developer.sportradar.com/football/docs/nfl-ig-historical-data",
+      "status": "Standard documented coverage starts in 2000; does not resolve 1950\u20131980."
+    },
+    {
+      "name": "Stats Perform historical data",
+      "url": "https://developers.statsperform.com/historical-sports-data-for-pricing-models",
+      "status": "Advertises football history from 1920; requires written field/season matrix, sample verification and appropriate license. No purchase or outreach made."
+    }
+  ],
+  "identityGuardrails": [
+    "1950 Baltimore Colts are separate from the Colts franchise that began in 1953.",
+    "1952 NFL Dallas Texans are separate from the AFL Dallas Texans (1960\u20131962), now Kansas City.",
+    "Cleveland retains Browns history; no Browns games in 1996\u20131998. Baltimore Ravens begin in 1996."
+  ],
+  "identitySource": "https://www.profootballhof.com/football-history/national-footbal-league-franchise-histories",
+  "importRule": "Unknown scoring values stay unknown. Reject incomplete games; never substitute invented zeros.",
+  "reviewedShutoutPlayerGames": 24,
+  "normalGameplayImportsFromReview": 0,
+  "reviewRoute": "/historical-game-review",
+  "reviewSelectionBias": "Shutout-selected low-scoring sample, not representative career performances; excluded from normal drafts, draws and seasons."
+}

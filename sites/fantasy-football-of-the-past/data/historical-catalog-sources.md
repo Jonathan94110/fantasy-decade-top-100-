@@ -1,0 +1,447 @@
+# 100 greats at each position: source and selection ledger
+
+An editorial collection of 100 quarterbacks, 100 running backs, 100 wide receivers and 100 tight ends whose NFL/AFL/AAFC careers overlap 1950–2026. It is not an official NFL ranking or a claim that cross-era greatness has an objective score.
+
+## Selection
+
+1. Begin with all 115 verified inducted Hall of Fame players in these fantasy positions whose playing careers overlap the requested era: 30 QB, 38 RB, 37 WR and 10 TE. Class of 2026 induction status is included.
+2. Retain the 185 established playable archive selections after review for sustained production, peak seasons and era/position coverage. Thirty-two overlap the Hall-of-Fame core, leaving 153 additional profiles. Retention is an editorial judgment, not a new honor or an objective rank.
+3. Add 60 official-source historical supplements: all 49 eligible post-1950 skill-position names in the Hall of Fame’s published 2026 senior nominee pool, plus 11 selected historical tight ends. Nomination is explicitly distinguished from induction and is not presented as an award.
+4. Add 49 editorial era/production complements: 24 QB, 12 RB, 5 WR and 8 TE. Their official NFL career tables verify identity, position and career scope. Selection gives earlier sustained careers and specialist roles space that a 1999-forward fantasy-points table would miss.
+5. Fill the remaining 23 TE places using a reproducible modern-production composite: 70% percentile of cumulative recorded regular-season source PPR plus 30% percentile of the best recorded regular-season source PPR. Percentiles use positive-PPR TE identities in the eligible verified 1999–2026 snapshot. Tie order: cumulative PPR, then name. Jordan Matthews is excluded from this TE complement because his significant career production was at WR.
+6. Display each position alphabetically, without ordinal ranks. The exact selected name list is frozen in selected-candidates.json; selectionGroup and selectionBasis preserve each player’s inclusion route.
+
+## Coverage
+
+- hallOfFamers: 115
+- linkedPlayableProfiles: 233
+- profileOnly: 167
+- existingPlayableIdentitiesPreserved: 185
+- officialCareerVerified: 388
+- providerMetadataWindow: 12
+- careersIntersecting1950To1980: 140
+- careerStartBefore1950: 22
+- pre1950Only: 0
+- eraIntersectionCounts: {'1950': 54, '1960': 75, '1970': 89, '1980': 94, '1990': 104, '2000': 139, '2010': 162, '2020': 103}
+
+## Boundaries
+
+- Modern PPR totals are source-window totals, not full-career totals for players active before 1999. The composite is used only for the final TE complement, not as a universal cross-era greatness formula.
+- Current and recent stars are included through this dated snapshot; no future achievements are assumed. Statistical totals favor the source-covered modern era, and subjective historical complements mitigate but do not eliminate era bias.
+- Career endpoints describe the first and last source-supported playing season, not appearances in every intervening season. A few profiles retain explicitly unverified provider metadata windows; their careerVerified flag is false and club scope is disclosed.
+- Historical HB/FB map to RB, flanker/receiving end to WR. HOF/player evidence governs ambiguous historical roles. No modern TE is invented for the 1950s simply to fill a decade slot. Hester and Brian Mitchell retain the skill-position grouping used by the game and their return-specialist roles.
+- 400 counts individual people only. Franchise defenses are a separate 32-entity pool and do not count toward any positional 100.
+- A catalog profile establishes identity and historical context only. No pre-1999 game-stat row, zero-stat appearance or fantasy performance is manufactured by this catalog.
+
+## Sources
+
+- Official Hall of Fame position index: https://www.profootballhof.com/hall-of-famers/positions
+- Official Hall of Fame induction year index: https://www.profootballhof.com/hall-of-famers/years
+- Official 2026 senior nominee pool: https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026
+- Official NFL player career tables: https://www.nfl.com/players/
+- nflverse player metadata: https://github.com/nflverse/nflverse-data/releases/download/players/players.csv
+- nflverse player weekly stats: https://github.com/nflverse/nflverse-data/releases/tag/stats_player
+- nflverse player-source documentation: https://nflreadr.nflverse.com/reference/load_players.html
+
+## Per-player provenance
+
+- Aaron Rodgers | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/aaron-rodgers/stats/career
+- Alex Smith | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/alex-smith/stats/career
+- Andrew Luck | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/andrew-luck/stats/career
+- Andy Dalton | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/andy-dalton/stats/career
+- Babe Parilli | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/babe-parilli/stats/career
+- Baker Mayfield | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/baker-mayfield/stats/career
+- Bart Starr | QB | Enshrined in the Pro Football Hall of Fame, Class of 1977. | https://www.profootballhof.com/players/bart-starr
+- Ben Roethlisberger | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ben-roethlisberger/stats/career
+- Bert Jones | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/bert-jones/stats/career
+- Bobby Layne | QB | Enshrined in the Pro Football Hall of Fame, Class of 1967. | https://www.profootballhof.com/players/bobby-layne
+- Bob Griese | QB | Enshrined in the Pro Football Hall of Fame, Class of 1990. | https://www.profootballhof.com/players/bob-griese
+- Bob Waterfield | QB | Enshrined in the Pro Football Hall of Fame, Class of 1965. | https://www.profootballhof.com/players/bob-waterfield
+- Boomer Esiason | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/boomer-esiason/stats/career
+- Brad Johnson | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/brad-johnson/stats/career
+- Brett Favre | QB | Enshrined in the Pro Football Hall of Fame, Class of 2016. | https://www.profootballhof.com/players/brett-favre
+- Brian Sipe | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/brian-sipe/stats/career
+- Cam Newton | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/cam-newton/stats/career
+- Carson Palmer | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/carson-palmer/stats/career
+- Chad Pennington | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/chad-pennington/stats/career
+- Charlie Conerly | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/charlie-conerly/stats/career, https://www.giants.com/news/giants-legends-among-52-senior-players-to-advance-in-pro-football-hall-of-fame-voting
+- Craig Morton | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/craig-morton/stats/career
+- Dak Prescott | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/dak-prescott/stats/career
+- Dan Fouts | QB | Enshrined in the Pro Football Hall of Fame, Class of 1993. | https://www.profootballhof.com/players/dan-fouts
+- Dan Marino | QB | Enshrined in the Pro Football Hall of Fame, Class of 2005. | https://www.profootballhof.com/players/dan-marino
+- Daryle Lamonica | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/daryle-lamonica/stats/career
+- Daunte Culpepper | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/daunte-culpepper/stats/career
+- Dave Krieg | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/dave-krieg/stats/career
+- Derek Carr | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/derek-carr/stats/career
+- Don Meredith | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/don-meredith/stats/career
+- Donovan McNabb | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/donovan-mcnabb/stats/career
+- Doug Williams | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/doug-williams/stats/career
+- Drew Bledsoe | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/drew-bledsoe/stats/career
+- Drew Brees | QB | Enshrined in the Pro Football Hall of Fame, Class of 2026. | https://www.profootballhof.com/players/drew-brees
+- Earl Morrall | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/earl-morrall/stats/career
+- Eli Manning | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/eli-manning/stats/career
+- Frank Ryan | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/frank-ryan/stats/career
+- Fran Tarkenton | QB | Enshrined in the Pro Football Hall of Fame, Class of 1986. | https://www.profootballhof.com/players/fran-tarkenton
+- George Blanda | QB | Enshrined in the Pro Football Hall of Fame, Class of 1981. | https://www.profootballhof.com/players/george-blanda
+- Jack Kemp | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/jack-kemp/stats/career
+- Jake Delhomme | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jake-delhomme/stats/career
+- Jake Plummer | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jake-plummer/stats/career
+- Jalen Hurts | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jalen-hurts/stats/career
+- Jared Goff | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jared-goff/stats/career
+- Jay Cutler | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jay-cutler/stats/career
+- Jeff Garcia | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jeff-garcia/stats/career
+- Jim Everett | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jim-everett/stats/career
+- Jim Hart | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jim-hart/stats/career
+- Jim Kelly | QB | Enshrined in the Pro Football Hall of Fame, Class of 2002. | https://www.profootballhof.com/players/jim-kelly
+- Jim Plunkett | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/jim-plunkett/stats/career
+- Joe Burrow | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/joe-burrow/stats/career
+- Joe Flacco | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/joe-flacco/stats/career
+- Joe Montana | QB | Enshrined in the Pro Football Hall of Fame, Class of 2000. | https://www.profootballhof.com/players/joe-montana
+- Joe Namath | QB | Enshrined in the Pro Football Hall of Fame, Class of 1985. | https://www.profootballhof.com/players/joe-namath
+- John Elway | QB | Enshrined in the Pro Football Hall of Fame, Class of 2004. | https://www.profootballhof.com/players/john-elway
+- John Hadl | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/john-hadl/stats/career
+- Johnny Unitas | QB | Enshrined in the Pro Football Hall of Fame, Class of 1979. | https://www.profootballhof.com/players/johnny-unitas
+- Josh Allen | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/josh-allen/stats/career
+- Justin Herbert | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/justin-herbert/stats/career
+- Ken Anderson | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/ken-anderson-2/stats/career
+- Ken Stabler | QB | Enshrined in the Pro Football Hall of Fame, Class of 2016. | https://www.profootballhof.com/players/ken-stabler | https://www.profootballhof.com/news/left-handed-qbs
+- Kerry Collins | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/kerry-collins/stats/career
+- Kirk Cousins | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/kirk-cousins/stats/career
+- Kurt Warner | QB | Enshrined in the Pro Football Hall of Fame, Class of 2017. | https://www.profootballhof.com/players/kurt-warner
+- Kyler Murray | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/kyler-murray/stats/career
+- Lamar Jackson | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/lamar-jackson/stats/career
+- Len Dawson | QB | Enshrined in the Pro Football Hall of Fame, Class of 1987. | https://www.profootballhof.com/players/len-dawson
+- Matt Hasselbeck | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/matt-hasselbeck/stats/career
+- Matthew Stafford | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/matthew-stafford/stats/career
+- Matt Ryan | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/matt-ryan/stats/career
+- Mike Vick | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Norm Van Brocklin | QB | Enshrined in the Pro Football Hall of Fame, Class of 1971. | https://www.profootballhof.com/players/norm-van-brocklin
+- Otto Graham | QB | Enshrined in the Pro Football Hall of Fame, Class of 1965. | https://www.profootballhof.com/players/otto-graham
+- Patrick Mahomes | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/patrick-mahomes/stats/career
+- Peyton Manning | QB | Enshrined in the Pro Football Hall of Fame, Class of 2021. | https://www.profootballhof.com/players/peyton-manning
+- Philip Rivers | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Phil Simms | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/phil-simms/stats/career
+- Randall Cunningham | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/randall-cunningham/stats/career
+- Rich Gannon | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/rich-gannon/stats/career
+- Roger Staubach | QB | Enshrined in the Pro Football Hall of Fame, Class of 1985. | https://www.profootballhof.com/players/roger-staubach
+- Roman Gabriel | QB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/roman-gabriel/stats/career
+- Ron Jaworski | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/ron-jaworski/stats/career
+- Russell Wilson | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Ryan Fitzpatrick | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ryan-fitzpatrick/stats/career
+- Ryan Tannehill | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ryan-tannehill/stats/career
+- Sammy Baugh | QB | Enshrined in the Pro Football Hall of Fame, Class of 1963. | https://www.profootballhof.com/players/sammy-baugh
+- Sid Luckman | QB | Enshrined in the Pro Football Hall of Fame, Class of 1965. | https://www.profootballhof.com/players/sid-luckman
+- Sonny Jurgensen | QB | Enshrined in the Pro Football Hall of Fame, Class of 1983. | https://www.profootballhof.com/players/sonny-jurgensen
+- Steve Bartkowski | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/steve-bartkowski/stats/career
+- Steve Grogan | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/steve-grogan/stats/career
+- Steve McNair | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/steve-mcnair/stats/career
+- Steve Young | QB | Enshrined in the Pro Football Hall of Fame, Class of 2005. | https://www.profootballhof.com/players/steve-young
+- Terry Bradshaw | QB | Enshrined in the Pro Football Hall of Fame, Class of 1989. | https://www.profootballhof.com/players/terry-bradshaw
+- Tobin Rote | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/tobin-rote/stats/career
+- Tom Brady | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/tom-brady/stats/career
+- Tony Romo | QB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/tony-romo/stats/career
+- Trent Green | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/trent-green/stats/career
+- Troy Aikman | QB | Enshrined in the Pro Football Hall of Fame, Class of 2006. | https://www.profootballhof.com/players/troy-aikman
+- Vinny Testaverde | QB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/vinny-testaverde/stats/career
+- Warren Moon | QB | Enshrined in the Pro Football Hall of Fame, Class of 2006. | https://www.profootballhof.com/players/warren-moon
+- Y.A. Tittle | QB | Enshrined in the Pro Football Hall of Fame, Class of 1971. | https://www.profootballhof.com/players/ya-tittle
+- Aaron Jones | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/aaron-jones/stats/career
+- Adrian Peterson | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/adrian-peterson/stats/career
+- Ahman Green | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ahman-green/stats/career
+- Alan Ameche | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/alan-ameche/stats/career
+- Alvin Kamara | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/alvin-kamara/stats/career
+- Arian Foster | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/arian-foster/stats/career
+- Austin Ekeler | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/austin-ekeler/stats/career
+- Barry Sanders | RB | Enshrined in the Pro Football Hall of Fame, Class of 2004. | https://www.profootballhof.com/players/barry-sanders
+- Bijan Robinson | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/bijan-robinson/stats/career
+- Bill Dudley | RB | Enshrined in the Pro Football Hall of Fame, Class of 1966. | https://www.profootballhof.com/players/bill-dudley
+- Billy Sims | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/billy-sims/stats/career
+- Brian Mitchell | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/brian-mitchell-2/stats/career
+- Brian Westbrook | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/brian-westbrook/stats/career
+- Charley Trippi | RB | Enshrined in the Pro Football Hall of Fame, Class of 1968. | https://www.profootballhof.com/players/charley-trippi
+- Chris Johnson | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/chris-johnson/stats/career
+- Christian McCaffrey | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/christian-mccaffrey/stats/career
+- Chuck Foreman | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/chuck-foreman/stats/career
+- Chuck Muncie | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/chuck-muncie/stats/career
+- Clinton Portis | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/clinton-portis/stats/career
+- Corey Dillon | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/corey-dillon/stats/career
+- Curtis Martin | RB | Enshrined in the Pro Football Hall of Fame, Class of 2012. | https://www.profootballhof.com/players/curtis-martin
+- Curt Warner | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/curt-warner/stats/career
+- Darren Sproles | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/darren-sproles/stats/career
+- DeAngelo Williams | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/deangelo-williams/stats/career
+- Derrick Henry | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/derrick-henry/stats/career
+- Doak Walker | RB | Enshrined in the Pro Football Hall of Fame, Class of 1986. | https://www.profootballhof.com/players/doak-walker
+- Don Perkins | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/don-perkins/stats/career
+- Earl Campbell | RB | Enshrined in the Pro Football Hall of Fame, Class of 1991. | https://www.profootballhof.com/players/earl-campbell
+- Earnest Byner | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/earnest-byner/stats/career
+- Eddie George | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/eddie-george/stats/career
+- Edgerrin James | RB | Enshrined in the Pro Football Hall of Fame, Class of 2020. | https://www.profootballhof.com/players/edgerrin-james
+- Emmitt Smith | RB | Enshrined in the Pro Football Hall of Fame, Class of 2010. | https://www.profootballhof.com/players/emmitt-smith
+- Eric Dickerson | RB | Enshrined in the Pro Football Hall of Fame, Class of 1999. | https://www.profootballhof.com/players/eric-dickerson
+- Ezekiel Elliott | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ezekiel-elliott/stats/career
+- Floyd Little | RB | Enshrined in the Pro Football Hall of Fame, Class of 2010. | https://www.profootballhof.com/players/floyd-little
+- Franco Harris | RB | Enshrined in the Pro Football Hall of Fame, Class of 1990. | https://www.profootballhof.com/players/franco-harris
+- Frank Gifford | RB | Enshrined in the Pro Football Hall of Fame, Class of 1977. | https://www.profootballhof.com/players/frank-gifford
+- Frank Gore | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/frank-gore/stats/career
+- Fred Taylor | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/fred-taylor/stats/career
+- Freeman McNeil | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/freeman-mcneil/stats/career
+- Gale Sayers | RB | Enshrined in the Pro Football Hall of Fame, Class of 1977. | https://www.profootballhof.com/players/gale-sayers
+- George McAfee | RB | Enshrined in the Pro Football Hall of Fame, Class of 1966. | https://www.profootballhof.com/players/george-mcafee
+- George Rogers | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/george-rogers/stats/career
+- Herschel Walker | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/herschel-walker/stats/career
+- Hugh McElhenny | RB | Enshrined in the Pro Football Hall of Fame, Class of 1970. | https://www.profootballhof.com/players/hugh-mcelhenny
+- Jamaal Charles | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jamaal-charles/stats/career
+- Jamal Lewis | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jamal-lewis/stats/career
+- James Brooks | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/james-brooks/stats/career
+- Jerome Bettis | RB | Enshrined in the Pro Football Hall of Fame, Class of 2015. | https://www.profootballhof.com/players/jerome-bettis
+- Jim Brown | RB | Enshrined in the Pro Football Hall of Fame, Class of 1971. | https://www.profootballhof.com/players/jim-brown
+- Jim Taylor | RB | Enshrined in the Pro Football Hall of Fame, Class of 1976. | https://www.profootballhof.com/players/jim-taylor
+- Joe Mixon | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Joe Perry | RB | Enshrined in the Pro Football Hall of Fame, Class of 1969. | https://www.profootballhof.com/players/joe-perry
+- John David Crow | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/john-david-crow/stats/career
+- John Henry Johnson | RB | Enshrined in the Pro Football Hall of Fame, Class of 1987. | https://www.profootballhof.com/players/john-henry-johnson
+- John Riggins | RB | Enshrined in the Pro Football Hall of Fame, Class of 1992. | https://www.profootballhof.com/players/john-riggins
+- Jonathan Taylor | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jonathan-taylor/stats/career
+- Josh Jacobs | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/josh-jacobs/stats/career
+- LaDainian Tomlinson | RB | Enshrined in the Pro Football Hall of Fame, Class of 2017. | https://www.profootballhof.com/players/ladainian-tomlinson
+- Larry Brown | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/larry-brown-7/stats/career
+- Larry Centers | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/larry-centers/stats/career
+- Larry Csonka | RB | Enshrined in the Pro Football Hall of Fame, Class of 1987. | https://www.profootballhof.com/players/larry-csonka
+- Lenny Moore | RB | Enshrined in the Pro Football Hall of Fame, Class of 1975. | https://www.profootballhof.com/players/lenny-moore
+- Leroy Kelly | RB | Enshrined in the Pro Football Hall of Fame, Class of 1994. | https://www.profootballhof.com/players/leroy-kelly
+- LeSean McCoy | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/lesean-mccoy/stats/career
+- Le'Veon Bell | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/le-veon-bell/stats/career
+- Marcus Allen | RB | Enshrined in the Pro Football Hall of Fame, Class of 2003. | https://www.profootballhof.com/players/marcus-allen
+- Marion Motley | RB | Enshrined in the Pro Football Hall of Fame, Class of 1968. | https://www.profootballhof.com/players/marion-motley
+- Mark Ingram | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/mark-ingram/stats/career
+- Marshall Faulk | RB | Enshrined in the Pro Football Hall of Fame, Class of 2011. | https://www.profootballhof.com/players/marshall-faulk
+- Marshawn Lynch | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/marshawn-lynch/stats/career
+- Matt Forte | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/matt-forte/stats/career
+- Maurice Jones-Drew | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/maurice-jones-drew/stats/career
+- Mercury Morris | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/mercury-morris/stats/career
+- Mike Alstott | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/mike-alstott/stats/career
+- Nick Chubb | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- O.J. Simpson | RB | Enshrined in the Pro Football Hall of Fame, Class of 1985. | https://www.profootballhof.com/players/oj-simpson
+- Ollie Matson | RB | Enshrined in the Pro Football Hall of Fame, Class of 1972. | https://www.profootballhof.com/players/ollie-matson
+- Ottis Anderson | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/ottis-anderson/stats/career
+- Paul Hornung | RB | Enshrined in the Pro Football Hall of Fame, Class of 1986. | https://www.profootballhof.com/players/paul-hornung
+- Priest Holmes | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/priest-holmes/stats/career
+- Ray Rice | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ray-rice/stats/career
+- Reggie Bush | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/reggie-bush/stats/career
+- Ricky Watters | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/ricky-watters/stats/career
+- Ricky Williams | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ricky-williams/stats/career
+- Roger Craig | RB | Enshrined in the Pro Football Hall of Fame, Class of 2026. | https://www.profootballhof.com/players/roger-craig
+- Saquon Barkley | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/saquon-barkley/stats/career
+- Shaun Alexander | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/shaun-alexander/stats/career
+- Steven Jackson | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/steven-jackson/stats/career
+- Steve Van Buren | RB | Enshrined in the Pro Football Hall of Fame, Class of 1965. | https://www.profootballhof.com/players/steve-van-buren
+- Tank Younger | RB | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/tank-younger/stats/career, https://www.nfl.com/photos/firsts-by-african-americans-in-the-nfl-09000d5d826ca97b
+- Terrell Davis | RB | Enshrined in the Pro Football Hall of Fame, Class of 2017. | https://www.profootballhof.com/players/terrell-davis
+- Thomas Jones | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/thomas-jones/stats/career
+- Thurman Thomas | RB | Enshrined in the Pro Football Hall of Fame, Class of 2007. | https://www.profootballhof.com/players/thurman-thomas
+- Tiki Barber | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/tiki-barber/stats/career
+- Tony Canadeo | RB | Enshrined in the Pro Football Hall of Fame, Class of 1974. | https://www.profootballhof.com/players/tony-canadeo
+- Tony Dorsett | RB | Enshrined in the Pro Football Hall of Fame, Class of 1994. | https://www.profootballhof.com/players/tony-dorsett
+- Walter Payton | RB | Enshrined in the Pro Football Hall of Fame, Class of 1993. | https://www.profootballhof.com/players/walter-payton
+- Warrick Dunn | RB | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/warrick-dunn/stats/career
+- William Andrews | RB | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/william-andrews/stats/career
+- Adam Thielen | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- A.J. Brown | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/a-j-brown/stats/career
+- A.J. Green | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/a-j-green/stats/career
+- Amari Cooper | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Andre Johnson | WR | Enshrined in the Pro Football Hall of Fame, Class of 2024. | https://www.profootballhof.com/players/andre-johnson
+- Andre Reed | WR | Enshrined in the Pro Football Hall of Fame, Class of 2014. | https://www.profootballhof.com/players/andre-reed
+- Anquan Boldin | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/anquan-boldin/stats/career
+- Anthony Carter | WR | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/anthony-carter/stats/career
+- Antonio Brown | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/antonio-brown/stats/career
+- Art Monk | WR | Enshrined in the Pro Football Hall of Fame, Class of 2008. | https://www.profootballhof.com/players/art-monk
+- Art Powell | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/art-powell/stats/career
+- Billy Howton | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/billy-howton/stats/career
+- Billy "White Shoes" Johnson | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/billy-johnson/stats/career
+- Billy Wilson | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/billy-wilson/stats/career
+- Bobby Mitchell | WR | Enshrined in the Pro Football Hall of Fame, Class of 1983. | https://www.profootballhof.com/players/bobby-mitchell
+- Bobby Walston | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/bobby-walston/stats/career
+- Bob Hayes | WR | Enshrined in the Pro Football Hall of Fame, Class of 2009. | https://www.profootballhof.com/players/bob-hayes
+- Boyd Dowler | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/boyd-dowler/stats/career
+- Brandin Cooks | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/brandin-cooks/stats/career
+- Brandon Marshall | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/brandon-marshall/stats/career
+- Calvin Johnson | WR | Enshrined in the Pro Football Hall of Fame, Class of 2021. | https://www.profootballhof.com/players/calvin-johnson
+- Carroll Dale | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/carroll-dale/stats/career
+- CeeDee Lamb | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ceedee-lamb/stats/career
+- Chad Johnson | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/chad-johnson/stats/career
+- Charley Hennigan | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/charley-hennigan/stats/career
+- Charley Taylor | WR | Enshrined in the Pro Football Hall of Fame, Class of 1984. | https://www.profootballhof.com/players/charley-taylor
+- Charlie Joiner | WR | Enshrined in the Pro Football Hall of Fame, Class of 1996. | https://www.profootballhof.com/players/charlie-joiner
+- Cliff Branch | WR | Enshrined in the Pro Football Hall of Fame, Class of 2022. | https://www.profootballhof.com/players/cliff-branch
+- Cooper Kupp | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/cooper-kupp/stats/career
+- Cris Carter | WR | Enshrined in the Pro Football Hall of Fame, Class of 2013. | https://www.profootballhof.com/players/cris-carter
+- Dante Lavelli | WR | Enshrined in the Pro Football Hall of Fame, Class of 1975. | https://www.profootballhof.com/players/dante-lavelli
+- Davante Adams | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/davante-adams/stats/career
+- DeAndre Hopkins | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Del Shofner | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/del-shofner/stats/career
+- Demaryius Thomas | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/demaryius-thomas/stats/career
+- Derrick Mason | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/derrick-mason/stats/career
+- DeSean Jackson | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/desean-jackson/stats/career
+- Devin Hester | WR | Enshrined in the Pro Football Hall of Fame, Class of 2024. | https://www.profootballhof.com/players/devin-hester
+- Donald Driver | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/donald-driver/stats/career
+- Don Maynard | WR | Enshrined in the Pro Football Hall of Fame, Class of 1987. | https://www.profootballhof.com/players/don-maynard
+- Drew Pearson | WR | Enshrined in the Pro Football Hall of Fame, Class of 2021. | https://www.profootballhof.com/players/drew-pearson
+- Elroy Hirsch | WR | Enshrined in the Pro Football Hall of Fame, Class of 1968. | https://www.profootballhof.com/players/elroy-crazylegs-hirsch
+- Emmanuel Sanders | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/emmanuel-sanders/stats/career
+- Eric Martin | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/eric-martin-2/stats/career
+- Fred Biletnikoff | WR | Enshrined in the Pro Football Hall of Fame, Class of 1988. | https://www.profootballhof.com/players/fred-biletnikoff
+- Gary Collins | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/gary-collins/stats/career
+- Harold Carmichael | WR | Enshrined in the Pro Football Hall of Fame, Class of 2020. | https://www.profootballhof.com/players/harold-carmichael
+- Harold Jackson | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/harold-jackson/stats/career
+- Henry Ellard | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/henry-ellard/stats/career
+- Herman Moore | WR | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/herman-moore/stats/career
+- Hines Ward | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/hines-ward/stats/career
+- Homer Jones | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/homer-jones/stats/career
+- Isaac Bruce | WR | Enshrined in the Pro Football Hall of Fame, Class of 2020. | https://www.profootballhof.com/players/isaac-bruce
+- Isaac Curtis | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/isaac-curtis/stats/career
+- Ja'Marr Chase | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/ja-marr-chase/stats/career
+- James Lofton | WR | Enshrined in the Pro Football Hall of Fame, Class of 2003. | https://www.profootballhof.com/players/james-lofton
+- Jerry Rice | WR | Enshrined in the Pro Football Hall of Fame, Class of 2010. | https://www.profootballhof.com/players/jerry-rice | https://media.denverbroncos.com/wp-content/uploads/2018/08/Denver2006.pdf
+- Jimmy Smith | WR | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jimmy-smith/stats/career
+- John Stallworth | WR | Enshrined in the Pro Football Hall of Fame, Class of 2002. | https://www.profootballhof.com/players/john-stallworth
+- Jordy Nelson | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jordy-nelson/stats/career
+- Julio Jones | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/julio-jones/stats/career
+- Justin Jefferson | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/justin-jefferson/stats/career
+- Keenan Allen | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/keenan-allen/stats/career
+- Lance Alworth | WR | Enshrined in the Pro Football Hall of Fame, Class of 1978. | https://www.profootballhof.com/players/lance-alworth
+- Larry Fitzgerald | WR | Enshrined in the Pro Football Hall of Fame, Class of 2026. | https://www.profootballhof.com/players/larry-fitzgerald
+- Lionel Taylor | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/lionel-taylor/stats/career
+- Lynn Swann | WR | Enshrined in the Pro Football Hall of Fame, Class of 2001. | https://www.profootballhof.com/players/lynn-swann
+- Mac Speedie | WR | Enshrined in the Pro Football Hall of Fame, Class of 2020. | https://www.profootballhof.com/players/mac-speedie
+- Mark Clayton | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/mark-clayton-2/stats/career
+- Mark Duper | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/mark-duper/stats/career
+- Marques Colston | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/marques-colston/stats/career
+- Marvin Harrison | WR | Enshrined in the Pro Football Hall of Fame, Class of 2016. | https://www.profootballhof.com/players/marvin-harrison
+- Michael Irvin | WR | Enshrined in the Pro Football Hall of Fame, Class of 2007. | https://www.profootballhof.com/players/michael-irvin
+- Mike Evans | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/mike-evans/stats/career
+- Muhsin Muhammad | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/muhsin-muhammad/stats/career
+- Otis Taylor | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/otis-taylor/stats/career
+- Paul Warfield | WR | Enshrined in the Pro Football Hall of Fame, Class of 1983. | https://www.profootballhof.com/players/paul-warfield
+- Pete Pihos | WR | Enshrined in the Pro Football Hall of Fame, Class of 1970. | https://www.profootballhof.com/players/pete-pihos
+- Randy Moss | WR | Enshrined in the Pro Football Hall of Fame, Class of 2018. | https://www.profootballhof.com/players/randy-moss
+- Raymond Berry | WR | Enshrined in the Pro Football Hall of Fame, Class of 1973. | https://www.profootballhof.com/players/raymond-berry
+- Reggie Wayne | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/reggie-wayne/stats/career
+- Rick Upchurch | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/rick-upchurch/stats/career
+- Roddy White | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/roddy-white/stats/career
+- Rod Smith | WR | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/rod-smith-2/stats/career
+- Roy Green | WR | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/roy-green/stats/career
+- Santana Moss | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/santana-moss/stats/career
+- Stanley Morgan | WR | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/stanley-morgan-2/stats/career
+- Stefon Diggs | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/stefon-diggs/stats/career
+- Sterling Sharpe | WR | Enshrined in the Pro Football Hall of Fame, Class of 2025. | https://www.profootballhof.com/players/sterling-sharpe
+- Steve Largent | WR | Enshrined in the Pro Football Hall of Fame, Class of 1995. | https://www.profootballhof.com/players/steve-largent
+- Steve Smith | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/steve-smith/stats/career
+- Terrell Owens | WR | Enshrined in the Pro Football Hall of Fame, Class of 2018. | https://www.profootballhof.com/players/terrell-owens
+- Tim Brown | WR | Enshrined in the Pro Football Hall of Fame, Class of 2015. | https://www.profootballhof.com/players/tim-brown
+- Tom Fears | WR | Enshrined in the Pro Football Hall of Fame, Class of 1970. | https://www.profootballhof.com/players/tom-fears
+- Tommy McDonald | WR | Enshrined in the Pro Football Hall of Fame, Class of 1998. | https://www.profootballhof.com/players/tommy-mcdonald
+- Torry Holt | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/torry-holt/stats/career
+- T.Y. Hilton | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/t-y-hilton/stats/career
+- Tyler Lockett | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Tyreek Hill | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Wes Welker | WR | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/wes-welker/stats/career
+- Alge Crumpler | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/alge-crumpler/stats/career
+- Antonio Gates | TE | Enshrined in the Pro Football Hall of Fame, Class of 2025. | https://www.profootballhof.com/players/antonio-gates
+- Austin Hooper | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/austin-hooper/stats/career
+- Ben Coates | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/ben-coates/stats/career
+- Benjamin Watson | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/benjamin-watson/stats/career
+- Billy Joe Dupree | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/billy-joe-dupree/stats/career
+- Bob Trumpy | TE | Four-time AFL/NFL all-star selection | https://www.bengals.com/team/ring-of-honor/bobtrumpy | https://www.nfl.com/players/bob-trumpy/stats/career
+- Brandon Pettigrew | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/brandon-pettigrew/stats/career
+- Brent Celek | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/brent-celek/stats/career
+- Brent Jones | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/brent-jones/stats/career
+- Brock Bowers | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/brock-bowers/stats/career
+- Cameron Brate | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/cameron-brate/stats/career
+- Charles Clay | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/charles-clay/stats/career
+- Charlie Sanders | TE | Enshrined in the Pro Football Hall of Fame, Class of 2007. | https://www.profootballhof.com/players/charlie-sanders
+- Chris Cooley | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/chris-cooley/stats/career
+- Coby Fleener | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/coby-fleener/stats/career
+- Cole Kmet | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/cole-kmet/stats/career
+- Dallas Clark | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/dallas-clark/stats/career
+- Dallas Goedert | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/dallas-goedert/stats/career
+- Dalton Schultz | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/dalton-schultz/stats/career
+- Darren Waller | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/darren-waller/stats/career
+- Dave Casper | TE | Enshrined in the Pro Football Hall of Fame, Class of 2002. | https://www.profootballhof.com/players/dave-casper
+- David Njoku | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/david-njoku/stats/career
+- Dawson Knox | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/dawson-knox/stats/career
+- Delanie Walker | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/delanie-walker/stats/career
+- Desmond Clark | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/desmond-clark/stats/career
+- Dustin Keller | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/dustin-keller/stats/career
+- Eric Ebron | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/eric-ebron/stats/career
+- Eric Green | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/eric-green-2/stats/career
+- Evan Engram | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/evan-engram/stats/career
+- Ferrell Edmunds | TE | Two-time Pro Bowl selection | https://www.miamidolphins.com/news/ac-in-the-am-filling-some-important-needs | https://www.nfl.com/players/ferrell-edmunds/stats/career
+- Frank Wycheck | TE | Titans Ring of Honor; three-time Pro Bowl selection | https://www.tennesseetitans.com/news/history-frank-wycheck | https://www.nfl.com/players/frank-wycheck/stats/career
+- Fred Arbanas | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/fred-arbanas/stats/career
+- Freddie Jones | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/freddie-jones/stats/career
+- George Kittle | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/george-kittle/stats/career
+- Greg Olsen | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/greg-olsen/stats/career
+- Heath Miller | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/heath-miller/stats/career
+- Hunter Henry | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/hunter-henry/stats/career
+- Jack Doyle | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/jack-doyle/stats/career
+- Jackie Harris | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jackie-harris/stats/career
+- Jackie Smith | TE | Enshrined in the Pro Football Hall of Fame, Class of 1994. | https://www.profootballhof.com/players/jackie-smith
+- Jake Ferguson | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/jake-ferguson/stats/career
+- Jared Cook | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jared-cook/stats/career
+- Jason Witten | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jason-witten/stats/career
+- Jay Novacek | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/jay-novacek/stats/career
+- Jeremy Shockey | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jeremy-shockey/stats/career
+- Jermaine Gresham | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jermaine-gresham/stats/career
+- Jermichael Finley | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/jermichael-finley/stats/career
+- Jerry Smith | TE | Two-time Pro Bowl selection | https://www.commanders.com/team-history/pro-bowl | https://www.nfl.com/players/jerry-smith/stats/career
+- Jimmie Giles | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/jimmie-giles/stats/career
+- Jim Mitchell | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/jim-mitchell-2/stats/career
+- Jimmy Graham | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jimmy-graham/stats/career
+- John Mackey | TE | Enshrined in the Pro Football Hall of Fame, Class of 1992. | https://www.profootballhof.com/players/john-mackey
+- Jonnu Smith | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/jonnu-smith/stats/career
+- Jordan Reed | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/jordan-reed/stats/career
+- Julius Thomas | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/julius-thomas/stats/career
+- Juwan Johnson | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/juwan-johnson/stats/career
+- Keith Jackson | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/keith-jackson-2/stats/career
+- Kellen Winslow | TE | Enshrined in the Pro Football Hall of Fame, Class of 1995. | https://www.profootballhof.com/players/kellen-winslow
+- Kellen Winslow II | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/kellen-winslow/stats/career
+- Ken Dilger | TE | 2001 Pro Bowl selection | https://www.colts.com/news/indianapolis-colts-all-35-season-team-second-team | https://www.nfl.com/players/ken-dilger/stats/career
+- Kyle Pitts | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/kyle-pitts/stats/career
+- Kyle Rudolph | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/kyle-rudolph/stats/career
+- Marcedes Lewis | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://github.com/nflverse/nflverse-data/releases/tag/players
+- Marcus Pollard | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/marcus-pollard/stats/career
+- Mark Andrews | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/mark-andrews/stats/career
+- Mark Bavaro | TE | Giants Ring of Honor; two-time Pro Bowl selection | https://www.giants.com/news/mark-bavaro | https://www.nfl.com/players/mark-bavaro/stats/career
+- Martellus Bennett | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/martellus-bennett/stats/career
+- Mike Ditka | TE | Enshrined in the Pro Football Hall of Fame, Class of 1988. | https://www.profootballhof.com/players/mike-ditka
+- Mike Gesicki | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/mike-gesicki/stats/career
+- Noah Fant | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/noah-fant/stats/career
+- Owen Daniels | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/owen-daniels/stats/career
+- Ozzie Newsome | TE | Enshrined in the Pro Football Hall of Fame, Class of 1999. | https://www.profootballhof.com/players/ozzie-newsome
+- Pat Freiermuth | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/pat-freiermuth/stats/career
+- Paul Coffman | TE | Packers Hall of Fame; three-time Pro Bowl selection | https://www.packers.com/history/hof/paul-coffman | https://www.nfl.com/players/paul-coffman/stats/career
+- Pete Metzelaars | TE | Bills 50th Anniversary All-Time Team | https://www.buffalobills.com/news/countdown-to-kickoff-chargers-at-bills-13812361 | https://www.nfl.com/players/pete-metzelaars/stats/career
+- Randy McMichael | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/randy-mcmichael/stats/career
+- Raymond Chester | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/raymond-chester/stats/career
+- Rich Caster | TE | Three-time Pro Bowl selection | https://www.newyorkjets.com/news/where-are-they-now-rich-caster | https://www.nfl.com/players/rich-caster/stats/career
+- Riley Odoms | TE | Broncos Ring of Fame; four-time Pro Bowl selection | https://www.denverbroncos.com/team/tradition/ring-of-fame/riley-odoms | https://www.nfl.com/players/riley-odoms/stats/career
+- Rob Gronkowski | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/rob-gronkowski/stats/career
+- Ron Kramer | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/ron-kramer/stats/career
+- Russ Francis | TE | Three-time Pro Bowl selection | https://www.patriots.com/news/former-patriots-tight-end-russ-francis-has-passed-away | https://www.nfl.com/players/russ-francis/stats/career
+- Sam LaPorta | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/sam-laporta/stats/career
+- Shannon Sharpe | TE | Enshrined in the Pro Football Hall of Fame, Class of 2011. | https://www.profootballhof.com/players/shannon-sharpe
+- Steve Jordan | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/steve-jordan-2/stats/career
+- Taysom Hill | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://github.com/nflverse/nflverse-data/releases/tag/players
+- T.J. Hockenson | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/t-j-hockenson/stats/career
+- Todd Christensen | TE | 2026 HOF senior nominee (not inducted) | https://www.profootballhof.com/news/162-senior-player-nominees-announced-for-pro-football-hall-of-fame-class-of-2026 | https://www.nfl.com/players/todd-christensen/stats/career
+- Todd Heap | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/todd-heap/stats/career
+- Tony Gonzalez | TE | Enshrined in the Pro Football Hall of Fame, Class of 2019. | https://www.profootballhof.com/players/tony-gonzalez
+- Travis Kelce | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/travis-kelce/stats/career
+- Trey McBride | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/trey-mcbride/stats/career
+- Tyler Eifert | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/tyler-eifert/stats/career
+- Tyler Higbee | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/tyler-higbee/stats/career
+- Vernon Davis | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/vernon-davis/stats/career
+- Visanthe Shiancoe | TE | Modern production complement: 70% cumulative-PPR percentile + 30% best-season-PPR percentile within the eligible source position | https://www.nfl.com/players/visanthe-shiancoe/stats/career
+- Wesley Walls | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/wesley-walls/stats/career
+- Zach Ertz | TE | Modern archive standout: established production or peak performance, reviewed for the 100-player positional collection | https://www.nfl.com/players/zach-ertz/stats/career
+- Zach Miller | TE | Historical editorial complement: sustained positional production and era coverage | https://www.nfl.com/players/zach-miller-2/stats/career

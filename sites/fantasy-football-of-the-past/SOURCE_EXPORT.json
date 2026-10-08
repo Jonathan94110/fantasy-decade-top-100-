@@ -1,0 +1,2054 @@
+{
+  "sourceVersion": 42,
+  "sourceCommit": "df34c3417bf4f762a0f7c253cc7317195966295e",
+  "exportAuthorization": "Owner explicitly approved this public repository export on 2026-10-08; no new upstream license grant is asserted.",
+  "hostingConfiguration": "Live Site project identity omitted; generic local DB binding configuration supplied.",
+  "files": [
+    {
+      "source": ".gitignore",
+      "export": ".gitignore",
+      "sha256": "cb59d954d56ab7d6fc77163723519bcd5e10ed4c0271e949bb9c77ebbc7689ea",
+      "bytes": 613
+    },
+    {
+      "source": ".npmrc",
+      "export": ".npmrc",
+      "sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d",
+      "bytes": 45
+    },
+    {
+      "source": "DATA_SOURCES.md",
+      "export": "DATA_SOURCES.md",
+      "sha256": "da7b34f169e1203847a205e3adb41ffe2db6753543e77700772ff31992e8182b",
+      "bytes": 21374
+    },
+    {
+      "source": "README.md",
+      "export": "docs/README_AT_V42.md",
+      "sha256": "572ffd1bd109bc5f91045f350447c41a5708a24019c5a1b2c516547402bb24f6",
+      "bytes": 25224
+    },
+    {
+      "source": "app/api/demo/route.ts",
+      "export": "app/api/demo/route.ts",
+      "sha256": "40f642929b35a2530c1cad90318f1713b09a3b5eeb15f8f44a5cf33d93f2f762",
+      "bytes": 9734
+    },
+    {
+      "source": "app/api/depth-chart/route.ts",
+      "export": "app/api/depth-chart/route.ts",
+      "sha256": "51ef6d695022cc675f05c8a812ec31a0d4186c45250c11fbae0e7249c23956f6",
+      "bytes": 1610
+    },
+    {
+      "source": "app/api/draft-preferences/route.ts",
+      "export": "app/api/draft-preferences/route.ts",
+      "sha256": "bb9240298a2790fff30d9875c114385af99ae93090b6f41dd514f1ec5723f578",
+      "bytes": 3459
+    },
+    {
+      "source": "app/api/game/route.ts",
+      "export": "app/api/game/route.ts",
+      "sha256": "4a437fac83ed43e12802ec91eecf8c36b804896b8ea052e2334f7ba3ed64ab8b",
+      "bytes": 3563
+    },
+    {
+      "source": "app/api/leagues/[id]/route.ts",
+      "export": "app/api/leagues/[id]/route.ts",
+      "sha256": "6562d8c685fc99f99f9a32e9bbfc06102d82078bc9993db9fb7e9274f3bb8ea8",
+      "bytes": 2884
+    },
+    {
+      "source": "app/api/leagues/route.ts",
+      "export": "app/api/leagues/route.ts",
+      "sha256": "5cfc75f4c8b382e9f5f9b95e0272258ff027483900b4aa09cf10625c9f0ceb7d",
+      "bytes": 4608
+    },
+    {
+      "source": "app/api/profile/route.ts",
+      "export": "app/api/profile/route.ts",
+      "sha256": "b9c0576165d9ea2cf307f21b95e58d354a08bdcd13f0391ac537b1e1b62782b8",
+      "bytes": 2194
+    },
+    {
+      "source": "app/broadcast-draft.css",
+      "export": "app/broadcast-draft.css",
+      "sha256": "e8e6e5209f026235d4ca65cae19b4f3beb9595d05f9685597f76dbf854f26142",
+      "bytes": 30681
+    },
+    {
+      "source": "app/broadcast-replay.css",
+      "export": "app/broadcast-replay.css",
+      "sha256": "90397f1aa720cb5ab31463724549a26671f21ef1df3b663029ab24289c1c08e0",
+      "bytes": 34526
+    },
+    {
+      "source": "app/broadcast-season.css",
+      "export": "app/broadcast-season.css",
+      "sha256": "fc95772b86d44479da79eab5bc653dffd194c79e9cd3b35f76494d2d0a68c54e",
+      "bytes": 40579
+    },
+    {
+      "source": "app/broadcast.css",
+      "export": "app/broadcast.css",
+      "sha256": "a9567d5144a1e34ba3b44962042008a4269b0a0698c96f7d0955efd8db2afe10",
+      "bytes": 41472
+    },
+    {
+      "source": "app/chatgpt-auth.ts",
+      "export": "app/chatgpt-auth.ts",
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+      "bytes": 2550
+    },
+    {
+      "source": "app/demo/page.tsx",
+      "export": "app/demo/page.tsx",
+      "sha256": "95a9c538db2885c8fea5a4485308c1afc108f9b6a2ac4d71e5bb91c3f6f86610",
+      "bytes": 121
+    },
+    {
+      "source": "app/depth-chart/page.tsx",
+      "export": "app/depth-chart/page.tsx",
+      "sha256": "4a7cca420a7e1cdbcf178846bbd9807e5c6fb11cb204d83f1fd1af76926d2eec",
+      "bytes": 120
+    },
+    {
+      "source": "app/globals.css",
+      "export": "app/globals.css",
+      "sha256": "0fde2042a5142d6a88cd3218766dc9ee40e779a32c7c8bec7cbcd235e00c9a40",
+      "bytes": 98242
+    },
+    {
+      "source": "app/gridiron.css",
+      "export": "app/gridiron.css",
+      "sha256": "a6c036f14b9e29037084f4396ff6b48fdc274a3179d30ce3529f6cde7fe8d77b",
+      "bytes": 48101
+    },
+    {
+      "source": "app/historical-game-review/page.tsx",
+      "export": "app/historical-game-review/page.tsx",
+      "sha256": "1fdaf630818b82070d9f4043e6d5fe935fc32b7b1a7bb7e91525aaf41e899bf5",
+      "bytes": 624
+    },
+    {
+      "source": "app/historical-preview/page.tsx",
+      "export": "app/historical-preview/page.tsx",
+      "sha256": "e4719bf9aeac3f70e7bc859476d7f1062871c848bfc29a9288a2fe01feee4be9",
+      "bytes": 1459
+    },
+    {
+      "source": "app/layout.tsx",
+      "export": "app/layout.tsx",
+      "sha256": "e6e0185b766c2b8099161503c82b972f91701cbf810d28165afe22ec5191cacc",
+      "bytes": 746
+    },
+    {
+      "source": "app/league/page.tsx",
+      "export": "app/league/page.tsx",
+      "sha256": "c8a98dc4c424c0a0b80a042b5ca1fd19eaa2b17039a4c8f24df2aced034d3340",
+      "bytes": 119
+    },
+    {
+      "source": "app/legends/page.tsx",
+      "export": "app/legends/page.tsx",
+      "sha256": "23f896a9893200e79a9bede79a5346c9e46b734b113338b2502380c1e3fb2267",
+      "bytes": 483
+    },
+    {
+      "source": "app/matchup/page.tsx",
+      "export": "app/matchup/page.tsx",
+      "sha256": "cb57f466461833a15719499e4c119c1cd05f1ec02c12fa8401c5631f5317ac27",
+      "bytes": 36773
+    },
+    {
+      "source": "app/page.tsx",
+      "export": "app/page.tsx",
+      "sha256": "092bb014733a53bf4f37e2c0bb8cc17b1047c838cdaa481bbbf1c1e5f9354ae4",
+      "bytes": 117
+    },
+    {
+      "source": "app/profile/page.tsx",
+      "export": "app/profile/page.tsx",
+      "sha256": "adbf7dcf18f137a1a10b55e82e14ab00030fc782d93e022661f6e5f9f5ecf195",
+      "bytes": 129
+    },
+    {
+      "source": "app/sports.css",
+      "export": "app/sports.css",
+      "sha256": "365fac217cf0e7864e7e09b41d39d6928a0d91f7903f78b1a29335b23e4f9e8a",
+      "bytes": 60432
+    },
+    {
+      "source": "build/connector-preview-plugin.mjs",
+      "export": "build/connector-preview-plugin.mjs",
+      "sha256": "a6a9fe2086e302f94a3f91e3c1a68a45bb3aa07d4a79faf01b14732191eb4e80",
+      "bytes": 7211
+    },
+    {
+      "source": "build/connector-preview-worker.mjs",
+      "export": "build/connector-preview-worker.mjs",
+      "sha256": "c1b6b2c420cb67d9e28f8f4ae440f578c0dfd4cb840a12cfe4b58076629a17ba",
+      "bytes": 594
+    },
+    {
+      "source": "build/sites-vite-plugin.LICENSE",
+      "export": "build/sites-vite-plugin.LICENSE",
+      "sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713",
+      "bytes": 1063
+    },
+    {
+      "source": "build/sites-vite-plugin.ts",
+      "export": "build/sites-vite-plugin.ts",
+      "sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834",
+      "bytes": 7185
+    },
+    {
+      "source": "build/sites-worker.ts",
+      "export": "build/sites-worker.ts",
+      "sha256": "28a75f74adfc226a773d1c00d5779c26412eea40a104da5c77f7d0f0fc30f0e8",
+      "bytes": 1279
+    },
+    {
+      "source": "cloudflare-env.d.ts",
+      "export": "cloudflare-env.d.ts",
+      "sha256": "8b0eca84aa3364cc7ccc43cc3af6beb88dd34ebd410de08690bf094ce39fbcb0",
+      "bytes": 99
+    },
+    {
+      "source": "components.json",
+      "export": "components.json",
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd",
+      "bytes": 420
+    },
+    {
+      "source": "components/bench-points.tsx",
+      "export": "components/bench-points.tsx",
+      "sha256": "5e4c9aba9a5ff07a0d994242909450da96569f61d8dec301545e06468ce547b5",
+      "bytes": 3358
+    },
+    {
+      "source": "components/broadcast-board.tsx",
+      "export": "components/broadcast-board.tsx",
+      "sha256": "f5a99b986a12867b1552a330ded3b9ca7db884f407207b8b3f66091f53d068d9",
+      "bytes": 2408
+    },
+    {
+      "source": "components/bye-availability.tsx",
+      "export": "components/bye-availability.tsx",
+      "sha256": "2a4ab421cc5f42a9f30d1b2b1b289d1a4a487e0ba7dee682f3db8f9bd5b12177",
+      "bytes": 969
+    },
+    {
+      "source": "components/catalog-navigation.tsx",
+      "export": "components/catalog-navigation.tsx",
+      "sha256": "32eb87fb07f8887c656dd2a289b600a05ecab42624a81dddb4823924cfcc9e72",
+      "bytes": 370
+    },
+    {
+      "source": "components/commissioner-controls.tsx",
+      "export": "components/commissioner-controls.tsx",
+      "sha256": "158aa2090def1c1db8290b4b2f269df127b415a794c9fe113b3cb98d9458b149",
+      "bytes": 5831
+    },
+    {
+      "source": "components/connector-error.tsx",
+      "export": "components/connector-error.tsx",
+      "sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155",
+      "bytes": 1082
+    },
+    {
+      "source": "components/demo-draft-room.tsx",
+      "export": "components/demo-draft-room.tsx",
+      "sha256": "2a7e324674175d6b5fef4b382f6d8f9f15a2e4aa05141371dd5100bb256b732c",
+      "bytes": 25700
+    },
+    {
+      "source": "components/depth-chart-page.tsx",
+      "export": "components/depth-chart-page.tsx",
+      "sha256": "93b54b39ad80f2205d4d561f569db3dfd9989f8cab356b91149f43524d7722e3",
+      "bytes": 3993
+    },
+    {
+      "source": "components/depth-chart.tsx",
+      "export": "components/depth-chart.tsx",
+      "sha256": "4b366c353d2606d86bca3d8c32d21c051024fcc9a4c316651c03bf65018a88e5",
+      "bytes": 5544
+    },
+    {
+      "source": "components/draft-assistant.tsx",
+      "export": "components/draft-assistant.tsx",
+      "sha256": "97d5bdf47e0463f19bd7b9f75248b51031b7aae818406fd9c7d10753b79e9ad8",
+      "bytes": 8003
+    },
+    {
+      "source": "components/draft-board.tsx",
+      "export": "components/draft-board.tsx",
+      "sha256": "2a5812505782f94687034ca5927cdf350171abb32f70b78453b81ed884494b2c",
+      "bytes": 4681
+    },
+    {
+      "source": "components/draft-details.tsx",
+      "export": "components/draft-details.tsx",
+      "sha256": "8649859741bf7a05bbdc2a9c9882ffc0242af5e28ba791067c3b3bf2d770e7ef",
+      "bytes": 5280
+    },
+    {
+      "source": "components/draft-order.tsx",
+      "export": "components/draft-order.tsx",
+      "sha256": "bc07837a44732f8e82c5d97d75dd359f1dcd7f1e34c0ac83bc84367aa1130995",
+      "bytes": 5771
+    },
+    {
+      "source": "components/era-library.tsx",
+      "export": "components/era-library.tsx",
+      "sha256": "18fd575f1443d9a12dee1064dcb6e3ffac062d70c152566c19bfbaf7524d24fb",
+      "bytes": 20838
+    },
+    {
+      "source": "components/fantasy-replay.tsx",
+      "export": "components/fantasy-replay.tsx",
+      "sha256": "7110d4be9881856611b9b762ee1eaeb9f7e1173f7ceafbab96a3424b8c4eb00b",
+      "bytes": 11559
+    },
+    {
+      "source": "components/game-header.tsx",
+      "export": "components/game-header.tsx",
+      "sha256": "b219680ab3e32d26f3a3d3c1f1c4116b1bb2cb39e75f291ae0bb33818089cf72",
+      "bytes": 1974
+    },
+    {
+      "source": "components/game-rules.tsx",
+      "export": "components/game-rules.tsx",
+      "sha256": "78f2a088aee0b9d8454bc56131516f6f9e7e1ca15807d73cacf82ecec64f9400",
+      "bytes": 8983
+    },
+    {
+      "source": "components/historical-game-review.tsx",
+      "export": "components/historical-game-review.tsx",
+      "sha256": "438987ec55c3ddcc61ba6803e632f1d6032ae41bc4903aa5afc2c1d0c80a2c9a",
+      "bytes": 9036
+    },
+    {
+      "source": "components/historical-preview.tsx",
+      "export": "components/historical-preview.tsx",
+      "sha256": "e61018e908a36127148b8872a499b7d6c7682298da8647f0a2bac83b9b6824ea",
+      "bytes": 8379
+    },
+    {
+      "source": "components/online-league.tsx",
+      "export": "components/online-league.tsx",
+      "sha256": "05b0636c70825fc9b5ab12ab768435abcd7ca15f92ba5f83a0beb71201d1eded",
+      "bytes": 12484
+    },
+    {
+      "source": "components/player-browser-filters.tsx",
+      "export": "components/player-browser-filters.tsx",
+      "sha256": "8fbca782f0275463d19be7a22076f4bfccf07056f33ca21575dda0b6329e68a9",
+      "bytes": 3185
+    },
+    {
+      "source": "components/profile-settings.tsx",
+      "export": "components/profile-settings.tsx",
+      "sha256": "066d6bbf253e371c7ee43ed45c7eb814b9771c3a6d202d64b623497676663550",
+      "bytes": 6826
+    },
+    {
+      "source": "components/replay-speed.tsx",
+      "export": "components/replay-speed.tsx",
+      "sha256": "d3257c42dd06fd4c516fc90f4b6f56a1abcd092dedf2f75836b95c53e1c8e688",
+      "bytes": 615
+    },
+    {
+      "source": "components/scoring-mode-picker.tsx",
+      "export": "components/scoring-mode-picker.tsx",
+      "sha256": "79bdd8785dde02704d40ba4767b7c77225ea6719ce9f39340dd1ddb04c606413",
+      "bytes": 540
+    },
+    {
+      "source": "components/season-recap.tsx",
+      "export": "components/season-recap.tsx",
+      "sha256": "9eff1c13aa9add5d2053e32dd436f4dcd9d227d2dfe491b569b59f5937fb39df",
+      "bytes": 2178
+    },
+    {
+      "source": "components/season-reset.tsx",
+      "export": "components/season-reset.tsx",
+      "sha256": "77099bcd77866514f456c0fb3d019355dae59c7c9bbc827355d59bce5023f6be",
+      "bytes": 1536
+    },
+    {
+      "source": "components/season-workspace.tsx",
+      "export": "components/season-workspace.tsx",
+      "sha256": "20ce4a956203921e8a4495d45755f9e1a876f2c5cc38e14bcba566cd8e25210e",
+      "bytes": 47160
+    },
+    {
+      "source": "components/trade-desk.tsx",
+      "export": "components/trade-desk.tsx",
+      "sha256": "bf5cec708e25fe4b3b44874c4918bae81cb0eb50cc23dca8e525fc9fb84bd925",
+      "bytes": 7369
+    },
+    {
+      "source": "components/ui/accordion.tsx",
+      "export": "components/ui/accordion.tsx",
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0",
+      "bytes": 2048
+    },
+    {
+      "source": "components/ui/alert-dialog.tsx",
+      "export": "components/ui/alert-dialog.tsx",
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311",
+      "bytes": 5439
+    },
+    {
+      "source": "components/ui/alert.tsx",
+      "export": "components/ui/alert.tsx",
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b",
+      "bytes": 1614
+    },
+    {
+      "source": "components/ui/aspect-ratio.tsx",
+      "export": "components/ui/aspect-ratio.tsx",
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407",
+      "bytes": 274
+    },
+    {
+      "source": "components/ui/attachment.tsx",
+      "export": "components/ui/attachment.tsx",
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790",
+      "bytes": 6002
+    },
+    {
+      "source": "components/ui/avatar.tsx",
+      "export": "components/ui/avatar.tsx",
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34",
+      "bytes": 2916
+    },
+    {
+      "source": "components/ui/badge.tsx",
+      "export": "components/ui/badge.tsx",
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97",
+      "bytes": 1776
+    },
+    {
+      "source": "components/ui/breadcrumb.tsx",
+      "export": "components/ui/breadcrumb.tsx",
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5",
+      "bytes": 2350
+    },
+    {
+      "source": "components/ui/bubble.tsx",
+      "export": "components/ui/bubble.tsx",
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b",
+      "bytes": 4699
+    },
+    {
+      "source": "components/ui/button-group.tsx",
+      "export": "components/ui/button-group.tsx",
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0",
+      "bytes": 2202
+    },
+    {
+      "source": "components/ui/button.tsx",
+      "export": "components/ui/button.tsx",
+      "sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4",
+      "bytes": 2392
+    },
+    {
+      "source": "components/ui/calendar.tsx",
+      "export": "components/ui/calendar.tsx",
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84",
+      "bytes": 7832
+    },
+    {
+      "source": "components/ui/card.tsx",
+      "export": "components/ui/card.tsx",
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c",
+      "bytes": 1987
+    },
+    {
+      "source": "components/ui/carousel.tsx",
+      "export": "components/ui/carousel.tsx",
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3",
+      "bytes": 5556
+    },
+    {
+      "source": "components/ui/chart.tsx",
+      "export": "components/ui/chart.tsx",
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a",
+      "bytes": 10614
+    },
+    {
+      "source": "components/ui/checkbox.tsx",
+      "export": "components/ui/checkbox.tsx",
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27",
+      "bytes": 1214
+    },
+    {
+      "source": "components/ui/collapsible.tsx",
+      "export": "components/ui/collapsible.tsx",
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b",
+      "bytes": 795
+    },
+    {
+      "source": "components/ui/combobox.tsx",
+      "export": "components/ui/combobox.tsx",
+      "sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735",
+      "bytes": 9158
+    },
+    {
+      "source": "components/ui/command.tsx",
+      "export": "components/ui/command.tsx",
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a",
+      "bytes": 4818
+    },
+    {
+      "source": "components/ui/context-menu.tsx",
+      "export": "components/ui/context-menu.tsx",
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017",
+      "bytes": 8268
+    },
+    {
+      "source": "components/ui/dialog.tsx",
+      "export": "components/ui/dialog.tsx",
+      "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14",
+      "bytes": 4303
+    },
+    {
+      "source": "components/ui/direction.tsx",
+      "export": "components/ui/direction.tsx",
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6",
+      "bytes": 506
+    },
+    {
+      "source": "components/ui/drawer.tsx",
+      "export": "components/ui/drawer.tsx",
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f",
+      "bytes": 4255
+    },
+    {
+      "source": "components/ui/dropdown-menu.tsx",
+      "export": "components/ui/dropdown-menu.tsx",
+      "sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a",
+      "bytes": 8418
+    },
+    {
+      "source": "components/ui/empty.tsx",
+      "export": "components/ui/empty.tsx",
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0",
+      "bytes": 2396
+    },
+    {
+      "source": "components/ui/field.tsx",
+      "export": "components/ui/field.tsx",
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd",
+      "bytes": 6159
+    },
+    {
+      "source": "components/ui/form.tsx",
+      "export": "components/ui/form.tsx",
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e",
+      "bytes": 3757
+    },
+    {
+      "source": "components/ui/hover-card.tsx",
+      "export": "components/ui/hover-card.tsx",
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8",
+      "bytes": 1526
+    },
+    {
+      "source": "components/ui/input-group.tsx",
+      "export": "components/ui/input-group.tsx",
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0",
+      "bytes": 5065
+    },
+    {
+      "source": "components/ui/input-otp.tsx",
+      "export": "components/ui/input-otp.tsx",
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299",
+      "bytes": 2254
+    },
+    {
+      "source": "components/ui/input.tsx",
+      "export": "components/ui/input.tsx",
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db",
+      "bytes": 962
+    },
+    {
+      "source": "components/ui/item.tsx",
+      "export": "components/ui/item.tsx",
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f",
+      "bytes": 4486
+    },
+    {
+      "source": "components/ui/kbd.tsx",
+      "export": "components/ui/kbd.tsx",
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13",
+      "bytes": 862
+    },
+    {
+      "source": "components/ui/label.tsx",
+      "export": "components/ui/label.tsx",
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c",
+      "bytes": 606
+    },
+    {
+      "source": "components/ui/marker.tsx",
+      "export": "components/ui/marker.tsx",
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0",
+      "bytes": 1864
+    },
+    {
+      "source": "components/ui/menubar.tsx",
+      "export": "components/ui/menubar.tsx",
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb",
+      "bytes": 8389
+    },
+    {
+      "source": "components/ui/message-scroller.tsx",
+      "export": "components/ui/message-scroller.tsx",
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf",
+      "bytes": 3992
+    },
+    {
+      "source": "components/ui/message.tsx",
+      "export": "components/ui/message.tsx",
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185",
+      "bytes": 2232
+    },
+    {
+      "source": "components/ui/native-select.tsx",
+      "export": "components/ui/native-select.tsx",
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c",
+      "bytes": 1995
+    },
+    {
+      "source": "components/ui/navigation-menu.tsx",
+      "export": "components/ui/navigation-menu.tsx",
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044",
+      "bytes": 6658
+    },
+    {
+      "source": "components/ui/pagination.tsx",
+      "export": "components/ui/pagination.tsx",
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1",
+      "bytes": 2717
+    },
+    {
+      "source": "components/ui/popover.tsx",
+      "export": "components/ui/popover.tsx",
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447",
+      "bytes": 2357
+    },
+    {
+      "source": "components/ui/progress.tsx",
+      "export": "components/ui/progress.tsx",
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d",
+      "bytes": 755
+    },
+    {
+      "source": "components/ui/radio-group.tsx",
+      "export": "components/ui/radio-group.tsx",
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce",
+      "bytes": 1460
+    },
+    {
+      "source": "components/ui/resizable.tsx",
+      "export": "components/ui/resizable.tsx",
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c",
+      "bytes": 1815
+    },
+    {
+      "source": "components/ui/scroll-area.tsx",
+      "export": "components/ui/scroll-area.tsx",
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043",
+      "bytes": 1639
+    },
+    {
+      "source": "components/ui/select.tsx",
+      "export": "components/ui/select.tsx",
+      "sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3",
+      "bytes": 6353
+    },
+    {
+      "source": "components/ui/separator.tsx",
+      "export": "components/ui/separator.tsx",
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e",
+      "bytes": 694
+    },
+    {
+      "source": "components/ui/sheet.tsx",
+      "export": "components/ui/sheet.tsx",
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16",
+      "bytes": 4188
+    },
+    {
+      "source": "components/ui/sidebar.tsx",
+      "export": "components/ui/sidebar.tsx",
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e",
+      "bytes": 21526
+    },
+    {
+      "source": "components/ui/skeleton.tsx",
+      "export": "components/ui/skeleton.tsx",
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239",
+      "bytes": 276
+    },
+    {
+      "source": "components/ui/slider.tsx",
+      "export": "components/ui/slider.tsx",
+      "sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3",
+      "bytes": 1991
+    },
+    {
+      "source": "components/ui/sonner.tsx",
+      "export": "components/ui/sonner.tsx",
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f",
+      "bytes": 1034
+    },
+    {
+      "source": "components/ui/spinner.tsx",
+      "export": "components/ui/spinner.tsx",
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9",
+      "bytes": 331
+    },
+    {
+      "source": "components/ui/switch.tsx",
+      "export": "components/ui/switch.tsx",
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae",
+      "bytes": 1408
+    },
+    {
+      "source": "components/ui/table.tsx",
+      "export": "components/ui/table.tsx",
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3",
+      "bytes": 2478
+    },
+    {
+      "source": "components/ui/tabs.tsx",
+      "export": "components/ui/tabs.tsx",
+      "sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46",
+      "bytes": 3782
+    },
+    {
+      "source": "components/ui/textarea.tsx",
+      "export": "components/ui/textarea.tsx",
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979",
+      "bytes": 759
+    },
+    {
+      "source": "components/ui/toggle-group.tsx",
+      "export": "components/ui/toggle-group.tsx",
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e",
+      "bytes": 2308
+    },
+    {
+      "source": "components/ui/toggle.tsx",
+      "export": "components/ui/toggle.tsx",
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16",
+      "bytes": 1565
+    },
+    {
+      "source": "components/ui/tooltip.tsx",
+      "export": "components/ui/tooltip.tsx",
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4",
+      "bytes": 1830
+    },
+    {
+      "source": "data/archive-quality.json",
+      "export": "data/archive-quality.json",
+      "sha256": "e663aded29fb219f29c744fa956bc2efbedac08bf26efcb43eb3d4122bccf8b4",
+      "bytes": 1202
+    },
+    {
+      "source": "data/classic-legends-verification.json",
+      "export": "data/classic-legends-verification.json",
+      "sha256": "5fca385f89dc5378fb83bfe592dd7b022d76d023ce7c77c75f45d99770e82ca7",
+      "bytes": 357648
+    },
+    {
+      "source": "data/classic-legends.json",
+      "export": "data/classic-legends.json",
+      "sha256": "8b89bac0f7dfd4e18e40c57216ed415635cf4c78eef1eb74cd37add98bae9c5e",
+      "bytes": 134521
+    },
+    {
+      "source": "data/historical-catalog-sources.md",
+      "export": "data/historical-catalog-sources.md",
+      "sha256": "5c2aa1b81a5bd883ad98b17ceb62927f6ba0e6f766136ec03df928868542ff6e",
+      "bytes": 77098
+    },
+    {
+      "source": "data/historical-catalog.json",
+      "export": "data/historical-catalog.json",
+      "sha256": "9a795779fd63458c60de20a0ab6265e44422913907b2d90a8a63302436b26ebf",
+      "bytes": 550144
+    },
+    {
+      "source": "data/historical-import/athletes.json",
+      "export": "data/historical-import/athletes.json",
+      "sha256": "48f710c0837562df010f9a39e2a721bd6d4b05fb7fccfa34a66483351af78755",
+      "bytes": 5659
+    },
+    {
+      "source": "data/historical-import/identity-map.json",
+      "export": "data/historical-import/identity-map.json",
+      "sha256": "ed90a4c8fa6d16665fe5ff1ce134916b09c06277677c695bdd8af738d189fb89",
+      "bytes": 4095
+    },
+    {
+      "source": "data/historical-import/records.json",
+      "export": "data/historical-import/records.json",
+      "sha256": "d6715d7732aa1771625848493a3ee3f74bfacc355e71d8ecbc9aae8dc836d1fb",
+      "bytes": 56865
+    },
+    {
+      "source": "data/historical-import/reviewed-source.json",
+      "export": "data/historical-import/reviewed-source.json",
+      "sha256": "ab894358249781bbf859102c7477c792b6baadd6e3410e1019ae361c423cca4a",
+      "bytes": 73420
+    },
+    {
+      "source": "data/historical-mode/athletes.json",
+      "export": "data/historical-mode/athletes.json",
+      "sha256": "f05bc6a4f8ea14513edf0574216dabaaf27b3ba62e118cbee0d1c141cce9b28a",
+      "bytes": 427556
+    },
+    {
+      "source": "data/historical-mode/catalog.json",
+      "export": "data/historical-mode/catalog.json",
+      "sha256": "c6a0bf47d53cad469e87d88956b1aa2ce0a70e663128f289fe4a333f13352738",
+      "bytes": 556120
+    },
+    {
+      "source": "data/historical-mode/coverage.json",
+      "export": "data/historical-mode/coverage.json",
+      "sha256": "ab070ee31b0b3b83b298a9cfb532cf944f1a026325188c6fed6982647ac52de2",
+      "bytes": 52462
+    },
+    {
+      "source": "data/historical-mode/mode-coverage.json",
+      "export": "data/historical-mode/mode-coverage.json",
+      "sha256": "bddf4fcf69af2f3fa5da0e16ec42b103c218d804ce9ca7ea3a0a0349b5f9de87",
+      "bytes": 1891
+    },
+    {
+      "source": "data/historical-mode/records.json",
+      "export": "data/historical-mode/records.json",
+      "sha256": "feaf5c3166ad7e7853f46c1e1483f3bd892d50e5f76c7cc07a01cd0ceb25264c",
+      "bytes": 24976746
+    },
+    {
+      "source": "data/historical-preview.json",
+      "export": "data/historical-preview.json",
+      "sha256": "6b7b22bd0e9b0cae16ffd1703f8bd9550624901b592bbd91e7971433917c005a",
+      "bytes": 417309
+    },
+    {
+      "source": "data/historical-source-status.json",
+      "export": "data/historical-source-status.json",
+      "sha256": "7efc48b1e448086eb652c37de04343682c6e1359adf42b203f2980f74b353b6a",
+      "bytes": 2865
+    },
+    {
+      "source": "data/nflverse/LICENSE-nflverse.md",
+      "export": "data/nflverse/LICENSE-nflverse.md",
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111",
+      "bytes": 18651
+    },
+    {
+      "source": "data/nflverse/athletes.json",
+      "export": "data/nflverse/athletes.json",
+      "sha256": "ab510b57d3557a5517193f6aa93f841a93eac38cf89135578259e8cf00206a64",
+      "bytes": 148043
+    },
+    {
+      "source": "data/nflverse/audit.json",
+      "export": "data/nflverse/audit.json",
+      "sha256": "7ae61cadba073af578bda7b29dde4c8b7501f2ac18b727729ba8d8fde5df85e6",
+      "bytes": 2018
+    },
+    {
+      "source": "data/nflverse/catalog-playable-map.json",
+      "export": "data/nflverse/catalog-playable-map.json",
+      "sha256": "d23bb4d83ca05f02df6fa710cad61f919475d268dd251813bc1238c0bc32cd12",
+      "bytes": 124068
+    },
+    {
+      "source": "data/nflverse/coverage.json",
+      "export": "data/nflverse/coverage.json",
+      "sha256": "9e89f6e2f716d91f4a3177430fff9a62d64670235ef946912336d29b5680d659",
+      "bytes": 2028
+    },
+    {
+      "source": "data/nflverse/hof-map.json",
+      "export": "data/nflverse/hof-map.json",
+      "sha256": "b232cfbc9727624e59d4165bbab5ae040b1f14635af521c13b46f0cb7f44a6a8",
+      "bytes": 35092
+    },
+    {
+      "source": "data/nflverse/independent-audit.json",
+      "export": "data/nflverse/independent-audit.json",
+      "sha256": "0f7b43144f9b27f77a2c67c4a332985314f8ce97dec7357ff6aa62dc61564ca2",
+      "bytes": 2927
+    },
+    {
+      "source": "data/nflverse/kicker-athletes.json",
+      "export": "data/nflverse/kicker-athletes.json",
+      "sha256": "ac3b9f6a963fc6be67a93e6228948726f2a19225fba91fd15b52060d5528be8d",
+      "bytes": 16295
+    },
+    {
+      "source": "data/nflverse/kicker-records.json",
+      "export": "data/nflverse/kicker-records.json",
+      "sha256": "f7363634e49a3a5395eafc1010555afc6888bd89fd98d5b2fa4f0bdb5fc6a99d",
+      "bytes": 1040546
+    },
+    {
+      "source": "data/nflverse/kicker-source.json",
+      "export": "data/nflverse/kicker-source.json",
+      "sha256": "54e5031406903e09c30ade2511300b6aa2f3edbe1c61021bfc067db14de69967",
+      "bytes": 20442
+    },
+    {
+      "source": "data/nflverse/manifest.json",
+      "export": "data/nflverse/manifest.json",
+      "sha256": "276dbeb09fbe8463bccc00af9d76f697ec7558f77dce1837b35ba4fc322f53cb",
+      "bytes": 48506
+    },
+    {
+      "source": "data/nflverse/playable-expansion-source.json",
+      "export": "data/nflverse/playable-expansion-source.json",
+      "sha256": "c071967fe90bad7168e8dc38493b6ea608f322d938951cc002ad834278020f1a",
+      "bytes": 352812
+    },
+    {
+      "source": "data/nflverse/records.json",
+      "export": "data/nflverse/records.json",
+      "sha256": "becab5c0b092a76925cd2f75244764b2df570365ad3ba9a9d5704cd8ce754419",
+      "bytes": 6654073
+    },
+    {
+      "source": "data/nflverse/verified-addition-audit.json",
+      "export": "data/nflverse/verified-addition-audit.json",
+      "sha256": "582014e70a7e2901c70d05994ad4f75ecaca011034184dfcca3bd3dcc718deee",
+      "bytes": 2927
+    },
+    {
+      "source": "data/playable-expansion.json",
+      "export": "data/playable-expansion.json",
+      "sha256": "c071967fe90bad7168e8dc38493b6ea608f322d938951cc002ad834278020f1a",
+      "bytes": 352812
+    },
+    {
+      "source": "data/verified-player-addition.json",
+      "export": "data/verified-player-addition.json",
+      "sha256": "1d7c66ed93d1c8b156c6cc64aee67cd90fe6c727c0f646b957c93dbab3dfcd06",
+      "bytes": 81402
+    },
+    {
+      "source": "db/index.ts",
+      "export": "db/index.ts",
+      "sha256": "32fa2c531ffb8f1025ba11a0b4932cf133f1f8aa2f587db321f068bd02ce0af3",
+      "bytes": 170
+    },
+    {
+      "source": "db/schema.ts",
+      "export": "db/schema.ts",
+      "sha256": "f95e977bca6aab1fc514b6277c4148e15432a448d428530a19d409a84e50224c",
+      "bytes": 2449
+    },
+    {
+      "source": "docs/all-player-draft-board.md",
+      "export": "docs/all-player-draft-board.md",
+      "sha256": "1c37a518642150aaeb5686a6ec4092684d6c07f4b557f6c5d3210aa652985e68",
+      "bytes": 3037
+    },
+    {
+      "source": "docs/bye-week-five.md",
+      "export": "docs/bye-week-five.md",
+      "sha256": "caa3038866f7d0e511360def57d9dcb60c145f9931f13d9965b4500a8db5a1be",
+      "bytes": 2274
+    },
+    {
+      "source": "docs/game-data-schema-for-deck.md",
+      "export": "docs/game-data-schema-for-deck.md",
+      "sha256": "548ac8a7ae63d37ab5e2b177290d2eb190065c22cd5cc0044202293056aa3ab3",
+      "bytes": 4352
+    },
+    {
+      "source": "docs/historical-shutout-import.md",
+      "export": "docs/historical-shutout-import.md",
+      "sha256": "1803e8044f10db5d3b6dd55ccaed6c1657c872ce8bebc4f7a607ec322010b5af",
+      "bytes": 4953
+    },
+    {
+      "source": "docs/prime-rushmore-csv-validation.md",
+      "export": "docs/prime-rushmore-csv-validation.md",
+      "sha256": "bf4ff305ea00e6b9ee8de9b2bd06e7519644db346ec5ac7561a7565ccde53553",
+      "bytes": 7265
+    },
+    {
+      "source": "docs/scoring-mode-scaffold.md",
+      "export": "docs/scoring-mode-scaffold.md",
+      "sha256": "05f4b212f8d61dd75dcffc41d7d0ba3f68c69cd63236a86d656e596b96a454ea",
+      "bytes": 6913
+    },
+    {
+      "source": "docs/source-refresh-strict.md",
+      "export": "docs/source-refresh-strict.md",
+      "sha256": "0b92470940544e9a5fd46225e5d0bc711feb0570213a1f8b92822ab19714e4b2",
+      "bytes": 3902
+    },
+    {
+      "source": "docs/unified-draft.md",
+      "export": "docs/unified-draft.md",
+      "sha256": "095e86d770a34facba74fda183f61d5a2e990d117474f240a035fc7df0b265cf",
+      "bytes": 3430
+    },
+    {
+      "source": "drizzle.config.ts",
+      "export": "drizzle.config.ts",
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "bytes": 148
+    },
+    {
+      "source": "drizzle/0000_smart_jack_murdock.sql",
+      "export": "drizzle/0000_smart_jack_murdock.sql",
+      "sha256": "bd578fdc0165701ccb6058085d14ddba90f31b71db47fe9e6230b505e6ac7c26",
+      "bytes": 159
+    },
+    {
+      "source": "drizzle/0001_brainy_gunslinger.sql",
+      "export": "drizzle/0001_brainy_gunslinger.sql",
+      "sha256": "edc15fad87bd3dddb33afa3532234f0ab1198fc7d9068e9075200c8bce4a1048",
+      "bytes": 498
+    },
+    {
+      "source": "drizzle/0002_nostalgic_lady_mastermind.sql",
+      "export": "drizzle/0002_nostalgic_lady_mastermind.sql",
+      "sha256": "8e0b8560145b604c0e00bf8a2ba23875d8d88abba0712171d76268cd14df13ec",
+      "bytes": 277
+    },
+    {
+      "source": "drizzle/0003_daffy_drax.sql",
+      "export": "drizzle/0003_daffy_drax.sql",
+      "sha256": "b4755f967a72613d9dc9d3a544b5457432c54334deb6bba8a82d833f181a5b75",
+      "bytes": 187
+    },
+    {
+      "source": "drizzle/0004_amazing_quicksilver.sql",
+      "export": "drizzle/0004_amazing_quicksilver.sql",
+      "sha256": "ca13b0ac506c8ca3b66d33fd997c351d764e7a0af654215a978bf51bad6a1029",
+      "bytes": 165
+    },
+    {
+      "source": "drizzle/0005_faithful_hellion.sql",
+      "export": "drizzle/0005_faithful_hellion.sql",
+      "sha256": "2d5833a4fb9a455760abb6ff22b9ece21932e99c5f0649d9423f90e99c135034",
+      "bytes": 689
+    },
+    {
+      "source": "drizzle/0006_exotic_mulholland_black.sql",
+      "export": "drizzle/0006_exotic_mulholland_black.sql",
+      "sha256": "42e6a20bbbd35cd1af8698f6a8d22e232914e2dbd394769b87b7a65085b05bad",
+      "bytes": 1035
+    },
+    {
+      "source": "drizzle/0007_preserve_v4_unscored_draft.sql",
+      "export": "drizzle/0007_preserve_v4_unscored_draft.sql",
+      "sha256": "ab04b77138c32ef43025e21cf866646635bd0c923aa75c2dbce839c1a5bc51a8",
+      "bytes": 633
+    },
+    {
+      "source": "drizzle/meta/0000_snapshot.json",
+      "export": "drizzle/meta/0000_snapshot.json",
+      "sha256": "af08c9d7e4f2941432941094aee7b481bc2d2d03b5f74cf34020fc15089d0863",
+      "bytes": 1263
+    },
+    {
+      "source": "drizzle/meta/0001_snapshot.json",
+      "export": "drizzle/meta/0001_snapshot.json",
+      "sha256": "64f46cbdbc058c380c8d61db867af58ffe6651a78711eda3a5c5909fbe2857e2",
+      "bytes": 3586
+    },
+    {
+      "source": "drizzle/meta/0002_snapshot.json",
+      "export": "drizzle/meta/0002_snapshot.json",
+      "sha256": "ad6fd76f73778e6810d715fe32b5b4301d8234958a49f92a1baab6bdf07be021",
+      "bytes": 4897
+    },
+    {
+      "source": "drizzle/meta/0003_snapshot.json",
+      "export": "drizzle/meta/0003_snapshot.json",
+      "sha256": "a8d90f2f71b43ecf43982966a8bd106557531b4b52e8b078fbb9dfc527bf9637",
+      "bytes": 6070
+    },
+    {
+      "source": "drizzle/meta/0004_snapshot.json",
+      "export": "drizzle/meta/0004_snapshot.json",
+      "sha256": "2f5b4be7a85940b8e2f8c13358c431dd8d9aa49b94f9cf4a3b0b711ddde1aa08",
+      "bytes": 7042
+    },
+    {
+      "source": "drizzle/meta/0005_snapshot.json",
+      "export": "drizzle/meta/0005_snapshot.json",
+      "sha256": "8cc8b4c838996c97ce9986185a2d277de933306dc4349f16c9a031dd1c66e713",
+      "bytes": 8384
+    },
+    {
+      "source": "drizzle/meta/0006_snapshot.json",
+      "export": "drizzle/meta/0006_snapshot.json",
+      "sha256": "d92357fdee28bffd6c38dcec998c1f7f03fffe475943c1b6988f6daa0771e6c3",
+      "bytes": 10133
+    },
+    {
+      "source": "drizzle/meta/0007_snapshot.json",
+      "export": "drizzle/meta/0007_snapshot.json",
+      "sha256": "fa30f5b4ef2fecf9a6914005e259d198ae0516e0a8ff0e98da22817be6197adc",
+      "bytes": 10133
+    },
+    {
+      "source": "drizzle/meta/_journal.json",
+      "export": "drizzle/meta/_journal.json",
+      "sha256": "bf18ab0317799c1621c395f3f735dd8a25d34b687b9f4180a380c12592348842",
+      "bytes": 1240
+    },
+    {
+      "source": "eslint.config.mjs",
+      "export": "eslint.config.mjs",
+      "sha256": "02af40a0edd809605feb4474e8918747230793a7e5b4f2c16156201cece294b3",
+      "bytes": 891
+    },
+    {
+      "source": "examples/d1/app/api/notes/route.ts",
+      "export": "examples/d1/app/api/notes/route.ts",
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "bytes": 1700
+    },
+    {
+      "source": "examples/d1/db/schema.ts",
+      "export": "examples/d1/db/schema.ts",
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "bytes": 370
+    },
+    {
+      "source": "hooks/use-mobile.ts",
+      "export": "hooks/use-mobile.ts",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+      "bytes": 565
+    },
+    {
+      "source": "hooks/use-replay-speed.ts",
+      "export": "hooks/use-replay-speed.ts",
+      "sha256": "de3c217b8b736bd10bfc8a066c858b4d6346baa8225dc7f785b0503172841f6f",
+      "bytes": 1110
+    },
+    {
+      "source": "lib/classic-legends.ts",
+      "export": "lib/classic-legends.ts",
+      "sha256": "d1311d83f8fbce4c01fd67c5b203f6481728acd4aa5f92b0b578c088559ddb03",
+      "bytes": 2626
+    },
+    {
+      "source": "lib/connector-context.ts",
+      "export": "lib/connector-context.ts",
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
+      "bytes": 612
+    },
+    {
+      "source": "lib/connector-contract.mts",
+      "export": "lib/connector-contract.mts",
+      "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e",
+      "bytes": 5362
+    },
+    {
+      "source": "lib/connector-errors.mts",
+      "export": "lib/connector-errors.mts",
+      "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871",
+      "bytes": 2717
+    },
+    {
+      "source": "lib/connector-preview.d.ts",
+      "export": "lib/connector-preview.d.ts",
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642",
+      "bytes": 433
+    },
+    {
+      "source": "lib/connectors.ts",
+      "export": "lib/connectors.ts",
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
+      "bytes": 416
+    },
+    {
+      "source": "lib/demo-data.ts",
+      "export": "lib/demo-data.ts",
+      "sha256": "38d5b221c90c2a6ceecf02c303516479801072cab83a8859eeba03eabbd9527f",
+      "bytes": 6034
+    },
+    {
+      "source": "lib/demo-draft-engine.ts",
+      "export": "lib/demo-draft-engine.ts",
+      "sha256": "c20001f47234d2036cdac205f26edeba1d005f314aa0d0ec071eeb25f6fd9ae3",
+      "bytes": 14255
+    },
+    {
+      "source": "lib/demo-draft-model.ts",
+      "export": "lib/demo-draft-model.ts",
+      "sha256": "3deb949a02983e4b5a68356483da024d298c8d1b113cb7621a1513017eb527fc",
+      "bytes": 4582
+    },
+    {
+      "source": "lib/depth-chart.ts",
+      "export": "lib/depth-chart.ts",
+      "sha256": "cf360e6510ac97400e461621140d5f816ed8b800d7f98a4172639728a72bb45e",
+      "bytes": 2223
+    },
+    {
+      "source": "lib/draft-board.ts",
+      "export": "lib/draft-board.ts",
+      "sha256": "69cd90cb2b50140ef0743a35ee95c8d9b5ff99293b79d567610474e0f2920caf",
+      "bytes": 871
+    },
+    {
+      "source": "lib/draft-insights.ts",
+      "export": "lib/draft-insights.ts",
+      "sha256": "636ab858334e3223310349055847a946fdebe936e552d9ee90807bdb8b57c618",
+      "bytes": 2836
+    },
+    {
+      "source": "lib/draft-preferences.ts",
+      "export": "lib/draft-preferences.ts",
+      "sha256": "433790c6b3b41b3459a699258de2f279026d371f5db4b05fff666512e44a2619",
+      "bytes": 1302
+    },
+    {
+      "source": "lib/draft-tools.ts",
+      "export": "lib/draft-tools.ts",
+      "sha256": "5d275712c3fca82b1c434c087f54a60cabfca4a5c75557cf1f1593b26c04a138",
+      "bytes": 1664
+    },
+    {
+      "source": "lib/era-catalog.ts",
+      "export": "lib/era-catalog.ts",
+      "sha256": "36d70eed5b400f379f7536416b257c9a3b8007163c87f72635e488475f7f7b96",
+      "bytes": 8334
+    },
+    {
+      "source": "lib/fantasy-replay.ts",
+      "export": "lib/fantasy-replay.ts",
+      "sha256": "24b1b769e2ea22512f52886e16ae0750d3c8e7ee8857841e2f8d0fec0dd6c3b2",
+      "bytes": 3236
+    },
+    {
+      "source": "lib/game-engine.ts",
+      "export": "lib/game-engine.ts",
+      "sha256": "ed0c26e12fe0be7ae66fa4a322f720c42a802a405b4ad04251af7afb1a0b4fc4",
+      "bytes": 5221
+    },
+    {
+      "source": "lib/game-model.ts",
+      "export": "lib/game-model.ts",
+      "sha256": "cad317e86a2ffb573c9b5e42ba713b5caf39efdb5d97a5b8ad3766be90394fa5",
+      "bytes": 15761
+    },
+    {
+      "source": "lib/historical-data.ts",
+      "export": "lib/historical-data.ts",
+      "sha256": "19bee2a741cdbf26a1ec2d031918be697ab1fd4d7760bb47f0d721b6bddd9434",
+      "bytes": 5542
+    },
+    {
+      "source": "lib/historical-game-review.ts",
+      "export": "lib/historical-game-review.ts",
+      "sha256": "a2fbabdd9dd5f688647c3bfcaeec6f8a9a152fb32bee91a1a14657f7802c7da1",
+      "bytes": 11855
+    },
+    {
+      "source": "lib/historical-import.ts",
+      "export": "lib/historical-import.ts",
+      "sha256": "aea647b02524cea2af7f2089c91aacc11edf670ebd2bbeed166035e881a09258",
+      "bytes": 1732
+    },
+    {
+      "source": "lib/historical-preview.ts",
+      "export": "lib/historical-preview.ts",
+      "sha256": "c95a61f1e8dbcaa16315355aed35a2e8c00b6e3a6033c730bdbae7238407e253",
+      "bytes": 1856
+    },
+    {
+      "source": "lib/player-filters.ts",
+      "export": "lib/player-filters.ts",
+      "sha256": "5f015b1158d6a94a16a8c47f10482efcfab445c5096596badf8f38150b1a26af",
+      "bytes": 2066
+    },
+    {
+      "source": "lib/prime-rushmore-csv.ts",
+      "export": "lib/prime-rushmore-csv.ts",
+      "sha256": "bd59e6320057c77762673a5db23a042d871ea9e9daa4fb61d6ee23b02993f6c0",
+      "bytes": 12643
+    },
+    {
+      "source": "lib/profile-model.ts",
+      "export": "lib/profile-model.ts",
+      "sha256": "160397b7c93cce42aab763437635beec42a3bfaafc71087544408da91bf61f8d",
+      "bytes": 2096
+    },
+    {
+      "source": "lib/replay-playback.ts",
+      "export": "lib/replay-playback.ts",
+      "sha256": "11df720c58d6d850f58f1d32d8f049e81ba4e23282e0cb1290254a70d7ffff98",
+      "bytes": 952
+    },
+    {
+      "source": "lib/roster-feasibility.ts",
+      "export": "lib/roster-feasibility.ts",
+      "sha256": "313f9d0f88c49eed4115f04647ce19a6fa166657db4de1665c909d84014b508e",
+      "bytes": 1560
+    },
+    {
+      "source": "lib/scoring-rules.ts",
+      "export": "lib/scoring-rules.ts",
+      "sha256": "ee86e97901bff963195070ae7502d5fd660d1884095711ad56ddeecedfbc20d9",
+      "bytes": 5979
+    },
+    {
+      "source": "lib/season-byes.ts",
+      "export": "lib/season-byes.ts",
+      "sha256": "8af7b77eb9f22e243478f62e256bd77a21b63a5ab02b74212b2ac4ff7f4382e4",
+      "bytes": 9731
+    },
+    {
+      "source": "lib/season-engine.ts",
+      "export": "lib/season-engine.ts",
+      "sha256": "1309d05c6133d995eb0319d7cf18dda6a9df61b4bd9851a8b9d20e24607a63df",
+      "bytes": 31914
+    },
+    {
+      "source": "lib/season-model.ts",
+      "export": "lib/season-model.ts",
+      "sha256": "05cb00760d6e3ea5a18f1baa7f0b13dbfcf3dc964600e5c994caa415edb674a0",
+      "bytes": 2976
+    },
+    {
+      "source": "lib/season-recap.ts",
+      "export": "lib/season-recap.ts",
+      "sha256": "9c061bcddbd93b5b04e033b57f0dcfaa533513c4f3cd39741ac34c60f0665663",
+      "bytes": 1621
+    },
+    {
+      "source": "lib/season-store.ts",
+      "export": "lib/season-store.ts",
+      "sha256": "864e627ed78440b08b4ef058fb93ffb168261016549bb64b84c81d445fe3e873",
+      "bytes": 1963
+    },
+    {
+      "source": "lib/season-view.ts",
+      "export": "lib/season-view.ts",
+      "sha256": "beafe1e7a9d6ac6cbb2bc4d970d4002d891e437d109e7f33f0ccc046dd509031",
+      "bytes": 2860
+    },
+    {
+      "source": "lib/unified-draft.ts",
+      "export": "lib/unified-draft.ts",
+      "sha256": "67e539f10c6ae60e3f3ce2f5b89da203f94d58e881dc4bc5fdf6ba4030663040",
+      "bytes": 2676
+    },
+    {
+      "source": "lib/utils.ts",
+      "export": "lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68",
+      "bytes": 177
+    },
+    {
+      "source": "next.config.ts",
+      "export": "next.config.ts",
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "bytes": 133
+    },
+    {
+      "source": "package-lock.json",
+      "export": "package-lock.json",
+      "sha256": "eedaeab6870c0f70f9db869fcaa24abae9b0f945cbc9acb8a43b6e7ed6bcbfca",
+      "bytes": 504152
+    },
+    {
+      "source": "package.json",
+      "export": "package.json",
+      "sha256": "eb7b53ec5bdce1db5a8576b2ffc3b63ddd8c5fdee0f97dcb341674abbf69843a",
+      "bytes": 2102
+    },
+    {
+      "source": "postcss.config.mjs",
+      "export": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    {
+      "source": "public/archive-coverage.json",
+      "export": "public/archive-coverage.json",
+      "sha256": "cff18b1fe0f0041b2d93283746061a62df023f57d08badb338546d0670b90784",
+      "bytes": 9201
+    },
+    {
+      "source": "public/classic-legends-sources.json",
+      "export": "public/classic-legends-sources.json",
+      "sha256": "d453d75743244595252c8098087398e9ac90c36a68102ce45afb7e23aa57b6c9",
+      "bytes": 177549
+    },
+    {
+      "source": "public/favicon.svg",
+      "export": "public/favicon.svg",
+      "sha256": "f2a763b0ecb9df0b44f2f08789e628e9d82ea0451b6ffcf4906a06ccefaa6614",
+      "bytes": 283
+    },
+    {
+      "source": "public/file.svg",
+      "export": "public/file.svg",
+      "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+      "bytes": 392
+    },
+    {
+      "source": "public/globe.svg",
+      "export": "public/globe.svg",
+      "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+      "bytes": 1036
+    },
+    {
+      "source": "public/kicker-coverage.json",
+      "export": "public/kicker-coverage.json",
+      "sha256": "4127aa8b590c92f8639ded532f064a6b65f25f6012c5d3ec3af5d812d6163605",
+      "bytes": 32386
+    },
+    {
+      "source": "public/roster-selection.json",
+      "export": "public/roster-selection.json",
+      "sha256": "49629c3b7823bf286cb70e391f6eb063f5ee3e7e7bfee08f40696c17a1211724",
+      "bytes": 166669
+    },
+    {
+      "source": "public/stadium-night.webp",
+      "export": "public/stadium-night.webp",
+      "sha256": "fc8be9eed8005db884f89e1769d4b0ac398c646ad33e7e3173c66e74aba66c7b",
+      "bytes": 222372
+    },
+    {
+      "source": "public/verified-player-addition.json",
+      "export": "public/verified-player-addition.json",
+      "sha256": "1d7c66ed93d1c8b156c6cc64aee67cd90fe6c727c0f646b957c93dbab3dfcd06",
+      "bytes": 81402
+    },
+    {
+      "source": "public/window.svg",
+      "export": "public/window.svg",
+      "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+      "bytes": 386
+    },
+    {
+      "source": "scripts/append-verified-players.py",
+      "export": "scripts/append-verified-players.py",
+      "sha256": "58faea3a99f7db76b91f245e26564546c763d75e6465ed70d8dd4a14a1a7eff4",
+      "bytes": 8264
+    },
+    {
+      "source": "scripts/audit-prime-rushmore-csv.mjs",
+      "export": "scripts/audit-prime-rushmore-csv.mjs",
+      "sha256": "2ba16b5d7106c7cdc101165560a01fde9e2d646c741d90584aa4c88d2a03e8e5",
+      "bytes": 5083
+    },
+    {
+      "source": "scripts/build-historical-mode-catalog.py",
+      "export": "scripts/build-historical-mode-catalog.py",
+      "sha256": "f14993076c3b17dad693f6eb52a23ce5c46f1e7d557cad6abac3e8249d488631",
+      "bytes": 4049
+    },
+    {
+      "source": "scripts/build-historical-preview.py",
+      "export": "scripts/build-historical-preview.py",
+      "sha256": "7091e60f4773756a1c6ecf43eb488891ae268058be4a6f244cb23bb9dead5e11",
+      "bytes": 2112
+    },
+    {
+      "source": "scripts/build-playable-historical-pool.py",
+      "export": "scripts/build-playable-historical-pool.py",
+      "sha256": "335b5f6c2003bb5f425a26a02160b1424effb3fdeadb91e62f267e69000bf3be",
+      "bytes": 27954
+    },
+    {
+      "source": "scripts/build-reviewed-shutout-import.py",
+      "export": "scripts/build-reviewed-shutout-import.py",
+      "sha256": "eaf24c2599d17d73c2f586730feabd67c6554de5b6ec01acfecd281b37bf7ab3",
+      "bytes": 5387
+    },
+    {
+      "source": "scripts/build-verified.sh",
+      "export": "scripts/build-verified.sh",
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68",
+      "bytes": 661
+    },
+    {
+      "source": "scripts/connector-preview/connector-preview-session.mjs",
+      "export": "scripts/connector-preview/connector-preview-session.mjs",
+      "sha256": "45d5d0511a5b9689278b59570223017cdd3c4129431c6745e710c26323cac45c",
+      "bytes": 6842
+    },
+    {
+      "source": "scripts/connector-preview/host-binding.mjs",
+      "export": "scripts/connector-preview/host-binding.mjs",
+      "sha256": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea",
+      "bytes": 7793
+    },
+    {
+      "source": "scripts/connector-preview/protocol.mjs",
+      "export": "scripts/connector-preview/protocol.mjs",
+      "sha256": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8",
+      "bytes": 1781
+    },
+    {
+      "source": "scripts/execution-profile.mjs",
+      "export": "scripts/execution-profile.mjs",
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630",
+      "bytes": 624
+    },
+    {
+      "source": "scripts/fetch-prime-rushmore-source.py",
+      "export": "scripts/fetch-prime-rushmore-source.py",
+      "sha256": "6c1c028a391f1153183e68f1888f80beac082c84db622e14731f2126c4018566",
+      "bytes": 3118
+    },
+    {
+      "source": "scripts/import-classic-catalog.mjs",
+      "export": "scripts/import-classic-catalog.mjs",
+      "sha256": "46b84a4fb57dc4c8a54a5a649e09e9b5a8c0b76ea71d5b7a97182b3d89ac3a38",
+      "bytes": 5341
+    },
+    {
+      "source": "scripts/import-kicker-cohort.py",
+      "export": "scripts/import-kicker-cohort.py",
+      "sha256": "7cf8070e1974b57fa6aa526b039730a4d83757979c11a5e1ef699c01ab371dd6",
+      "bytes": 3181
+    },
+    {
+      "source": "scripts/import-nflverse.py",
+      "export": "scripts/import-nflverse.py",
+      "sha256": "291cd776cc00179f864dfae7d03abe81cae541586e07f114f601bd83791fa640",
+      "bytes": 26900
+    },
+    {
+      "source": "scripts/install-ci.mjs",
+      "export": "scripts/install-ci.mjs",
+      "sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7",
+      "bytes": 1685
+    },
+    {
+      "source": "scripts/install-ci.sh",
+      "export": "scripts/install-ci.sh",
+      "sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0",
+      "bytes": 6783
+    },
+    {
+      "source": "scripts/install-pnpm.sh",
+      "export": "scripts/install-pnpm.sh",
+      "sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0",
+      "bytes": 9015
+    },
+    {
+      "source": "scripts/npm-install.mjs",
+      "export": "scripts/npm-install.mjs",
+      "sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6",
+      "bytes": 7025
+    },
+    {
+      "source": "scripts/pnpm-install.mjs",
+      "export": "scripts/pnpm-install.mjs",
+      "sha256": "a83164e344c1947053def83b546be8115deaa827314bbaead7afe6b6451c5cdf",
+      "bytes": 10633
+    },
+    {
+      "source": "scripts/qa/catalog-mode-dom.mjs",
+      "export": "scripts/qa/catalog-mode-dom.mjs",
+      "sha256": "6e8837c9f4b6e3dbfb03fb0601605dcbab4bcddecc99694c61e76c687631c752",
+      "bytes": 11748
+    },
+    {
+      "source": "scripts/qa/classic-catalog-dom.mjs",
+      "export": "scripts/qa/classic-catalog-dom.mjs",
+      "sha256": "d72a2133ef1d16fcfa1f3e67757aa908ee194ebc422d3e70c02b13e3d12e310b",
+      "bytes": 8295
+    },
+    {
+      "source": "scripts/qa/depth-chart-dom.mjs",
+      "export": "scripts/qa/depth-chart-dom.mjs",
+      "sha256": "694e0130ced27a35bb24cadcbd29b46d5edceeb88d938730e645eba5ae99a110",
+      "bytes": 7768
+    },
+    {
+      "source": "scripts/qa/depth-chart-page-dom.mjs",
+      "export": "scripts/qa/depth-chart-page-dom.mjs",
+      "sha256": "23d805fbe21210b341fdd43fcdf5d9bb359a83c15fbad6f0f83363766b4ed4b5",
+      "bytes": 13155
+    },
+    {
+      "source": "scripts/qa/draft-assistant-dom.mjs",
+      "export": "scripts/qa/draft-assistant-dom.mjs",
+      "sha256": "b748681cddccd646587c73cbb52a3321ebe3645ddb641a5bb0e4d85904c0a56e",
+      "bytes": 7047
+    },
+    {
+      "source": "scripts/qa/draft-board-dom.mjs",
+      "export": "scripts/qa/draft-board-dom.mjs",
+      "sha256": "46fb2bbad7c69c19376eb42ad7ca2cb03f72ed0c57a7c25addb9c886b2df9a91",
+      "bytes": 5575
+    },
+    {
+      "source": "scripts/qa/early-season-byes-dom.mjs",
+      "export": "scripts/qa/early-season-byes-dom.mjs",
+      "sha256": "6967d0157186f4eb3c4936c0f6ced44fdcc950b14157509e63ca74e510df9139",
+      "bytes": 10539
+    },
+    {
+      "source": "scripts/qa/era-draft-dom.mjs",
+      "export": "scripts/qa/era-draft-dom.mjs",
+      "sha256": "a468dfbea71b7265a150dee5189e1f5aa2edebfb78a355a5fa5d36f74fc2cbcf",
+      "bytes": 120
+    },
+    {
+      "source": "scripts/qa/gridiron-dom.mjs",
+      "export": "scripts/qa/gridiron-dom.mjs",
+      "sha256": "01be515016ffa4fadb2a93e259af5d7b54e0951c7ebf540a5fb4003c96a131de",
+      "bytes": 13290
+    },
+    {
+      "source": "scripts/qa/historical-game-review-dom.mjs",
+      "export": "scripts/qa/historical-game-review-dom.mjs",
+      "sha256": "86c10590b10d4b314cfdec451ecf4aae8e4419c0d3778eaf86b88de522ddae58",
+      "bytes": 8716
+    },
+    {
+      "source": "scripts/qa/historical-preview-dom.mjs",
+      "export": "scripts/qa/historical-preview-dom.mjs",
+      "sha256": "633a0b27c0c383556229dba8182730733af10adfa8b0a4778ae2d37f3320b54a",
+      "bytes": 7469
+    },
+    {
+      "source": "scripts/qa/kicker-details-dom.mjs",
+      "export": "scripts/qa/kicker-details-dom.mjs",
+      "sha256": "ef759e9d06ade145ed500dca6c72d38ca2bb2f68fcd40d168eb763ff1afa2d62",
+      "bytes": 3836
+    },
+    {
+      "source": "scripts/qa/local-smoke.mjs",
+      "export": "scripts/qa/local-smoke.mjs",
+      "sha256": "afa710fe9adeb0eed0ac9b1fd3cd07b79bdd6df9731ccc0e4bcaad53b162f67d",
+      "bytes": 4960
+    },
+    {
+      "source": "scripts/qa/manager-controls-dom.mjs",
+      "export": "scripts/qa/manager-controls-dom.mjs",
+      "sha256": "d38ce8a361ef5d74d64c71bb35c88df160955ff0d3be8f101867fa647dd7aeee",
+      "bytes": 7187
+    },
+    {
+      "source": "scripts/qa/playable-sports-dom.mjs",
+      "export": "scripts/qa/playable-sports-dom.mjs",
+      "sha256": "a7e9cbf048ab59624561eabfbb421be64aa4250de46fbd386d0d6e4b193de6a6",
+      "bytes": 11623
+    },
+    {
+      "source": "scripts/qa/player-filters-dom.mjs",
+      "export": "scripts/qa/player-filters-dom.mjs",
+      "sha256": "c1c5cd7d85ad05484bcab9e968ebefd189691773fc912cf4e6c5caed7676bace",
+      "bytes": 21203
+    },
+    {
+      "source": "scripts/qa/replay-navigation-dom.mjs",
+      "export": "scripts/qa/replay-navigation-dom.mjs",
+      "sha256": "95f294331c3af7c329731931e38b6472ea149fa0cf886b097a13f1044643718b",
+      "bytes": 19965
+    },
+    {
+      "source": "scripts/qa/scoring-mode-dom.mjs",
+      "export": "scripts/qa/scoring-mode-dom.mjs",
+      "sha256": "b22d7d056a6a575271ae7fab22594e9f5b55e0ba02b49aa73c043f01becde096",
+      "bytes": 25537
+    },
+    {
+      "source": "scripts/qa/trade-desk-dom.mjs",
+      "export": "scripts/qa/trade-desk-dom.mjs",
+      "sha256": "ac31ed9fc44a585470636f92e84da32d1d8cbe42d3ffe84f54b9dadc05efcd5f",
+      "bytes": 5160
+    },
+    {
+      "source": "scripts/qa/verify-expanded-assets.py",
+      "export": "scripts/qa/verify-expanded-assets.py",
+      "sha256": "5a846ab9e8bcc99b82251e51d375b00a3feae7f8b84b9f873bb104c98ddb0a54",
+      "bytes": 11985
+    },
+    {
+      "source": "scripts/qa/verify-player-addition.py",
+      "export": "scripts/qa/verify-player-addition.py",
+      "sha256": "1732ab5acc87c8897bac8ddf8203767f8ad69ceb4d22e1601bfe8f5968cc0bc8",
+      "bytes": 12037
+    },
+    {
+      "source": "scripts/qa/verify-top100-assets.py",
+      "export": "scripts/qa/verify-top100-assets.py",
+      "sha256": "497c6d6c061ea430ac651e872322965bee889032ed7fe36a081942cc0115691a",
+      "bytes": 5414
+    },
+    {
+      "source": "scripts/run-framework.mjs",
+      "export": "scripts/run-framework.mjs",
+      "sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca",
+      "bytes": 993
+    },
+    {
+      "source": "scripts/sites-env.mjs",
+      "export": "scripts/sites-env.mjs",
+      "sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88",
+      "bytes": 906
+    },
+    {
+      "source": "scripts/sites-env.sh",
+      "export": "scripts/sites-env.sh",
+      "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+      "bytes": 1530
+    },
+    {
+      "source": "scripts/summarize-archive.mjs",
+      "export": "scripts/summarize-archive.mjs",
+      "sha256": "b70c096dc52d9cc05080ad0bcc34e0425aec55715bfd7b1f0de20e1688b8c25b",
+      "bytes": 1190
+    },
+    {
+      "source": "tests/bench-points.test.ts",
+      "export": "tests/bench-points.test.ts",
+      "sha256": "6f8217bad9cc15f3f442f1df8714e0b4507ccca5435309218e01634bb3908f04",
+      "bytes": 6795
+    },
+    {
+      "source": "tests/classic-legends.test.ts",
+      "export": "tests/classic-legends.test.ts",
+      "sha256": "28d15a7c15361ca5c028b2a5198eb4e9a41cc2bdd9d1088d6762d6ff3e1b1beb",
+      "bytes": 7927
+    },
+    {
+      "source": "tests/demo-draft.test.ts",
+      "export": "tests/demo-draft.test.ts",
+      "sha256": "03ab10bf51d9b8ff721bfb18b68ec5045e03a8cfebba3c71ab12f470090849f5",
+      "bytes": 22789
+    },
+    {
+      "source": "tests/depth-chart-api.test.ts",
+      "export": "tests/depth-chart-api.test.ts",
+      "sha256": "4aa9643041d6d83aa1163bb1ac57cf22bcfbfc38b2b5614755414da6347f9fe0",
+      "bytes": 4472
+    },
+    {
+      "source": "tests/depth-chart.test.ts",
+      "export": "tests/depth-chart.test.ts",
+      "sha256": "e9b25a4ce80118305636dd7c53932c669491fabf7bfcb089b3dbd0a11bfc08ca",
+      "bytes": 4145
+    },
+    {
+      "source": "tests/draft-board.test.ts",
+      "export": "tests/draft-board.test.ts",
+      "sha256": "d4d346277340f9d4f56d7aa5e2887105838ec0480084ccbe5fe76f5def68a87a",
+      "bytes": 3390
+    },
+    {
+      "source": "tests/draft-insights.test.ts",
+      "export": "tests/draft-insights.test.ts",
+      "sha256": "f6bdc455748265944a4b3d0fb9ea7daa2283fc0251254d2e901bc65fb725d694",
+      "bytes": 7062
+    },
+    {
+      "source": "tests/draft-preferences.test.ts",
+      "export": "tests/draft-preferences.test.ts",
+      "sha256": "c46eae853633cd0fbc7de93663f16cb4bef5a3dd1115cee8a9678ad17f3cb268",
+      "bytes": 6179
+    },
+    {
+      "source": "tests/era-library.test.ts",
+      "export": "tests/era-library.test.ts",
+      "sha256": "7c04e5f962b646c8b835aa1403674c2a53fb3af97373ccf70874588f2c5b66f0",
+      "bytes": 9583
+    },
+    {
+      "source": "tests/expanded-archive-audit.test.ts",
+      "export": "tests/expanded-archive-audit.test.ts",
+      "sha256": "3c7988eb27613a5b731a6f078cc4e57efecb937fabb5d9242cb193984c1a1aaf",
+      "bytes": 9882
+    },
+    {
+      "source": "tests/fantasy-replay.test.ts",
+      "export": "tests/fantasy-replay.test.ts",
+      "sha256": "ede46ee2b8c9630b784988f6bd58c258f0d95c45d21e7c2e5118d89ef8bcc7f6",
+      "bytes": 3562
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/def-disputed-generic-complete.json",
+      "export": "tests/fixtures/prime-rushmore-csv/def-disputed-generic-complete.json",
+      "sha256": "8c503897f6ec723ff30252cdcfcbae83a227317b88385fb553a878523a8ced36",
+      "bytes": 2010
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/def-disputed.json",
+      "export": "tests/fixtures/prime-rushmore-csv/def-disputed.json",
+      "sha256": "3566c7f7d1d01c76f346ade0d3adf3641cea6665748428510dac53e37c0b03ba",
+      "bytes": 2108
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/def-match-complete.json",
+      "export": "tests/fixtures/prime-rushmore-csv/def-match-complete.json",
+      "sha256": "e5f99aeabf53b6add13ffb2d665c95bc86599750f100b2c44a0638e5701ccc6f",
+      "bytes": 1968
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/k-missed-xp.json",
+      "export": "tests/fixtures/prime-rushmore-csv/k-missed-xp.json",
+      "sha256": "17a9d9adb3ec18fe380b142214db3f31b07e2ff3e4ebca4fa8fbc3e6905ad4a5",
+      "bytes": 1749
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/montana-1989-opener.json",
+      "export": "tests/fixtures/prime-rushmore-csv/montana-1989-opener.json",
+      "sha256": "a5a8940d3bbb075db1a7fc56ecfa5993cbda11fe67d8fa0b84642edbd10602f0",
+      "bytes": 1994
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/rb-complete-1999.json",
+      "export": "tests/fixtures/prime-rushmore-csv/rb-complete-1999.json",
+      "sha256": "c1ace2714df3c1938829e7c2605a954f099b8db319afe091163c686a6a370e14",
+      "bytes": 1946
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-10-04.json",
+      "export": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-10-04.json",
+      "sha256": "0fee71ce312315a10b87a2d4517989986730387c6f867cfaea8bcab36be5a4d8",
+      "bytes": 2412
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-10-31.json",
+      "export": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-10-31.json",
+      "sha256": "e3e60c30f9e0045126f0f7f38e90760074c6753dab03ca1210c731988b019578",
+      "bytes": 2412
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-11-07.json",
+      "export": "tests/fixtures/prime-rushmore-csv/refreshed-buf-1999-11-07.json",
+      "sha256": "3959ff1bef4611eb21e3de153f4690a015602861c6b73134fca30bea19c54e4b",
+      "bytes": 2408
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/refreshed-dtx-1952-09-28-def.json",
+      "export": "tests/fixtures/prime-rushmore-csv/refreshed-dtx-1952-09-28-def.json",
+      "sha256": "df96689eb8bcf9ec4e06eb930a59e7b8c020cbfb28ebfd39373c944aa8d35544",
+      "bytes": 2717
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/refreshed-montana-1989-opener.json",
+      "export": "tests/fixtures/prime-rushmore-csv/refreshed-montana-1989-opener.json",
+      "sha256": "73b01af07f60235adb5b0f1f89e5cfa13ab7ac4420850103384b12c9715e7433",
+      "bytes": 2502
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/te-complete-1999.json",
+      "export": "tests/fixtures/prime-rushmore-csv/te-complete-1999.json",
+      "sha256": "22709642dca04abc648e03211e68281b664e817f9a310bb00b0180d41985e2ad",
+      "bytes": 1952
+    },
+    {
+      "source": "tests/fixtures/prime-rushmore-csv/wr-complete-1999.json",
+      "export": "tests/fixtures/prime-rushmore-csv/wr-complete-1999.json",
+      "sha256": "ac17122f6242082be86b2ba606a5bb2e1df25112c704dcee2be79c3a8572df97",
+      "bytes": 1938
+    },
+    {
+      "source": "tests/flex-slot.test.ts",
+      "export": "tests/flex-slot.test.ts",
+      "sha256": "d86ccde3d75aaf4c0fc0e2012896a26512b9b29e2f2e35236cec0b68e6ade893",
+      "bytes": 12462
+    },
+    {
+      "source": "tests/game-api.test.ts",
+      "export": "tests/game-api.test.ts",
+      "sha256": "0458f59fefce8e790b6d42fb0de0bea32afd6493e4be23fa10e5ceed2fddb2d4",
+      "bytes": 14266
+    },
+    {
+      "source": "tests/game-engine.test.ts",
+      "export": "tests/game-engine.test.ts",
+      "sha256": "824edc714e375a1d74c704a7828911fe8257c27f786291a7cc6fe9a7f0fba82e",
+      "bytes": 11614
+    },
+    {
+      "source": "tests/hall-of-fame-unlimited.test.ts",
+      "export": "tests/hall-of-fame-unlimited.test.ts",
+      "sha256": "4c3036313870f5b519fc8d932bca7f864e882b314faf2e3107daf437f65d1500",
+      "bytes": 4881
+    },
+    {
+      "source": "tests/historical-data.test.ts",
+      "export": "tests/historical-data.test.ts",
+      "sha256": "7e1cfd6fe3d5e391396b59c8688155900338649654b76dbc902608329f25fad2",
+      "bytes": 5743
+    },
+    {
+      "source": "tests/historical-game-review.test.ts",
+      "export": "tests/historical-game-review.test.ts",
+      "sha256": "67bb940f3d96f446b4018fbd6eebce6e29de8ee3ca800d6b000f318ce3501eb6",
+      "bytes": 10816
+    },
+    {
+      "source": "tests/historical-playable-pool.test.ts",
+      "export": "tests/historical-playable-pool.test.ts",
+      "sha256": "1a9671e8372926da6827692a294dde3b27373db234f75b10e461da6f1d49c597",
+      "bytes": 15303
+    },
+    {
+      "source": "tests/historical-preview.test.ts",
+      "export": "tests/historical-preview.test.ts",
+      "sha256": "a07b99cebbfa5314bd03a1040928360373f2fb9330cd46e714805be2c93be4a5",
+      "bytes": 4069
+    },
+    {
+      "source": "tests/kickers.test.ts",
+      "export": "tests/kickers.test.ts",
+      "sha256": "2b077dd4cfa41f5090c908293603a8f595c7206847c04aa0318260c579f23281",
+      "bytes": 12567
+    },
+    {
+      "source": "tests/persistent-season.test.ts",
+      "export": "tests/persistent-season.test.ts",
+      "sha256": "2f03543326891c24c5c92a7937cae93ffb8ed16ece5330effe987dbe383a0121",
+      "bytes": 12599
+    },
+    {
+      "source": "tests/player-filters.test.ts",
+      "export": "tests/player-filters.test.ts",
+      "sha256": "4d696aa8744a7429253e452bdd2850e6ce47c174c9651e161011b52920c07d36",
+      "bytes": 8453
+    },
+    {
+      "source": "tests/pre-expansion-anchor.json",
+      "export": "tests/pre-expansion-anchor.json",
+      "sha256": "d71361775e7a95f4b4f301fd47411937c9974619af4dc80b19d7918722a839b8",
+      "bytes": 5076
+    },
+    {
+      "source": "tests/previous-archive-anchor.json",
+      "export": "tests/previous-archive-anchor.json",
+      "sha256": "bebb197f7f55fe6f1ff9863d48a458dc122c15b81195353a78cf05b2d7f47904",
+      "bytes": 4301
+    },
+    {
+      "source": "tests/prime-rushmore-csv.test.ts",
+      "export": "tests/prime-rushmore-csv.test.ts",
+      "sha256": "87d5fcb5a70b0074a28de64334fcc5f988db11e6bb2eba69c2fd00a6331ef9b7",
+      "bytes": 24304
+    },
+    {
+      "source": "tests/profile-api.test.ts",
+      "export": "tests/profile-api.test.ts",
+      "sha256": "41bfe2a7caf5c1d2a96a41052ed550b4c2056fb7d891fdd1de89bf641a9f134f",
+      "bytes": 4608
+    },
+    {
+      "source": "tests/replay-playback.test.ts",
+      "export": "tests/replay-playback.test.ts",
+      "sha256": "9c6dec02c07e0a2f22dd52925c769e6c7b9042182cb0515aa2a862506dfd2a8f",
+      "bytes": 1364
+    },
+    {
+      "source": "tests/scoring-contracts.test.ts",
+      "export": "tests/scoring-contracts.test.ts",
+      "sha256": "28e721045625e02f98ad4dfc340a1b20f7b566774651806d59848fb934f64bf4",
+      "bytes": 9719
+    },
+    {
+      "source": "tests/scoring-mode-math.test.ts",
+      "export": "tests/scoring-mode-math.test.ts",
+      "sha256": "3df87110014a222abad1a72e09aca12df25f68971996bc872e9cb25af76647a3",
+      "bytes": 9923
+    },
+    {
+      "source": "tests/scoring-mode-state.test.ts",
+      "export": "tests/scoring-mode-state.test.ts",
+      "sha256": "74d24f13fa2c9ce49825f753e7566a7f607ec4158825b5bd1f635067cc507a11",
+      "bytes": 19708
+    },
+    {
+      "source": "tests/season-api.test.ts",
+      "export": "tests/season-api.test.ts",
+      "sha256": "36b853f627157ad71547ca217b41d4fba9516d857e86613061603f47e94f857b",
+      "bytes": 22738
+    },
+    {
+      "source": "tests/season-byes-week-five.test.ts",
+      "export": "tests/season-byes-week-five.test.ts",
+      "sha256": "c521c5d723cbed57dfa08f9eb31e773dc0ffdba9cbd860e158b19c9cf76de055",
+      "bytes": 12579
+    },
+    {
+      "source": "tests/season-byes.test.ts",
+      "export": "tests/season-byes.test.ts",
+      "sha256": "792c80e52aedeaf8fd93cde945f30c1be671d30b6f5c8929efffa864f6de45f1",
+      "bytes": 13145
+    },
+    {
+      "source": "tests/season-engine.test.ts",
+      "export": "tests/season-engine.test.ts",
+      "sha256": "72c5b5c826ee751bc483b7bc8d48cd1fbbb7e5c4c991561578fe4ac14d776562",
+      "bytes": 9732
+    },
+    {
+      "source": "tests/season-next-transition.test.ts",
+      "export": "tests/season-next-transition.test.ts",
+      "sha256": "ed54c6672caa31ac7ba9445efb3a5e76d8e5f697cf57a7afb3e43ab0c95bf68d",
+      "bytes": 14440
+    },
+    {
+      "source": "tests/trades.test.ts",
+      "export": "tests/trades.test.ts",
+      "sha256": "c66e862971010eb728d9a878cc3ce9d2ba8446099b8207fd8ba68c0ddb23525c",
+      "bytes": 6710
+    },
+    {
+      "source": "tests/unified-draft.test.ts",
+      "export": "tests/unified-draft.test.ts",
+      "sha256": "ecfbd1c0caa7e9dddb551b60e185f82bee2a124a71f2b7af5042638c599053d8",
+      "bytes": 8674
+    },
+    {
+      "source": "tests/v26-archive-anchor.json",
+      "export": "tests/v26-archive-anchor.json",
+      "sha256": "141e483f9f2d2ce4594149ef500bc1a69f32c4ba8b0e22e9d4679cec9c88113f",
+      "bytes": 6887
+    },
+    {
+      "source": "tsconfig.json",
+      "export": "tsconfig.json",
+      "sha256": "3a28f5aaf27429a058e64dd2e4db538241da736bce860c9d0a77bb1974cd97b7",
+      "bytes": 840
+    },
+    {
+      "source": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "export": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
+      "bytes": 1063
+    },
+    {
+      "source": "vendor/shadcn-tailwind-4.13.0.css",
+      "export": "vendor/shadcn-tailwind-4.13.0.css",
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a",
+      "bytes": 16041
+    },
+    {
+      "source": "vite.config.ts",
+      "export": "vite.config.ts",
+      "sha256": "9f3f4567bba3f0eef71b212f423de83ed1350e67e10558e9071d1b3696fe896b",
+      "bytes": 3283
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+/* Draft-room presentation. All rules stay within the existing draft controls. */
+.draft-round-board.league-panel,
+.draft-recent-picks,
+.draft-pick-queue,
+.draft-lottery,
+.draft-assistant,
+.demo-roster > .draft-assistant,
+.season-pool > .draft-assistant {
+  min-width: 0;
+  color: var(--broadcast-text, #eef4f7);
+  background: var(--broadcast-panel, #102431);
+  border: 1px solid var(--broadcast-line, #28414f);
+  border-radius: 12px;
+  box-shadow: 0 12px 34px #0000001a;
+}
+
+.draft-round-board.league-panel {
+  position: relative;
+  padding: 26px;
+  margin: 24px 0;
+  border-top: 4px solid var(--broadcast-gold, #ffc45b);
+  overflow: hidden;
+}
+.draft-round-board.league-panel .season-panel-heading { align-items: center; gap: 20px; }
+.draft-round-board.league-panel h2 {
+  color: var(--broadcast-text, #eef4f7);
+  font: 500 clamp(32px, 3.5vw, 46px)/1.05 var(--sport-display, Impact, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+:is(.draft-round-board, .draft-recent-picks, .draft-pick-queue, .draft-lottery, .draft-assistant) .sports-kicker {
+  display: block;
+  color: var(--broadcast-gold, #ffc45b);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.draft-round-board.league-panel label { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; font-weight: 700; min-width: 150px; }
+.draft-round-board.league-panel select {
+  min-height: 46px;
+  padding: 11px 34px 11px 14px;
+  border: 1px solid var(--broadcast-line, #28414f);
+  border-radius: 6px;
+  background: var(--broadcast-bg, #091620);
+  color: var(--broadcast-text, #eef4f7);
+  font: inherit;
+  font-size: 16px;
+}
+.draft-board-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 240px);
+  gap: 24px;
+  align-items: center;
+  margin: 24px 0 0;
+  padding: 20px 22px;
+  background: linear-gradient(105deg, #193745, var(--broadcast-bg, #091620));
+  border: 1px solid #365362;
+  border-radius: 8px;
+}
+.draft-board-summary > div:first-child { display: grid; gap: 8px; min-width: 0; }
+.draft-live-status { display: flex; align-items: center; gap: 8px; color: var(--broadcast-muted, #9fb1bd); font-size: 11px; font-weight: 800; letter-spacing: 1.6px; }
+.draft-live-status.is-live { color: var(--broadcast-green, #52d99d); }
+.draft-live-status.is-live::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px #52d99d12; }
+.draft-board-summary strong { color: var(--broadcast-text, #eef4f7); font: 500 clamp(25px, 2.8vw, 36px)/1.1 var(--sport-display, Impact, sans-serif); text-transform: uppercase; overflow-wrap: anywhere; }
+.draft-board-summary > div:first-child > span:last-child { color: var(--broadcast-muted, #9fb1bd); font-size: 14px; }
+.draft-board-progress > span { display: block; color: var(--broadcast-muted, #9fb1bd); font-size: 13px; text-align: right; }
+.draft-board-progress b { color: var(--broadcast-text, #eef4f7); font-size: 26px; font-variant-numeric: tabular-nums; margin-right: 2px; }
+.draft-board-progress > div { height: 5px; border-radius: 5px; background: #ffffff12; overflow: hidden; margin-top: 12px; }
+.draft-board-progress > div > span { display: block; height: 100%; border-radius: inherit; background: var(--broadcast-gold, #ffc45b); transition: width .25s ease-out; }
+.draft-board-round-meta { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0 2px; }
+.draft-board-round-meta p { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; line-height: 1.65; margin: 0; max-width: 750px; }
+.draft-board-round-meta p b { color: var(--broadcast-text, #eef4f7); font-weight: 600; }
+.draft-round-board .season-text-button { min-height: 44px; flex-shrink: 0; color: var(--broadcast-gold, #ffc45b); border: 1px solid #ffc45b60; background: #ffc45b08; border-radius: 6px; padding: 9px 13px; font-size: 13px; font-weight: 700; text-decoration: none; }
+.draft-round-board.league-panel ol { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; gap: 12px; }
+.draft-round-board.league-panel li {
+  position: relative;
+  min-height: 224px;
+  min-width: 0;
+  border: 1px solid var(--broadcast-line, #28414f);
+  border-top: 3px solid #3c5564;
+  border-radius: 7px;
+  background: var(--broadcast-bg, #091620);
+  padding: 17px;
+  overflow: hidden;
+}
+.draft-round-board.league-panel li.pick-saved { border-top-color: #456879; background: #122a38; }
+.draft-round-board.league-panel li.your-team { border-color: #ffc45b65; border-top-color: var(--broadcast-gold, #ffc45b); background: linear-gradient(140deg, #ffc45b0b, #0c1d29 70%); }
+.draft-round-board.league-panel li.on-clock { outline: none; background: linear-gradient(135deg, #25443b, #122b29); border: 1px solid var(--broadcast-green, #52d99d); border-top-width: 3px; box-shadow: inset 0 0 0 1px #52d99d12; animation: draft-clock-arrive .5s ease-out; }
+.draft-round-board .board-pick-heading { align-items: center; gap: 5px; color: var(--broadcast-muted, #9fb1bd); font-size: 11px; letter-spacing: .4px; }
+.draft-round-board .board-pick-heading > b { padding: 3px 7px; color: var(--broadcast-gold, #ffc45b); background: #ffc45b13; border: 1px solid #ffc45b36; border-radius: 4px; font-size: 10px; line-height: 1.2; }
+.draft-round-board.league-panel li h3 { color: var(--broadcast-text, #eef4f7); font: 500 23px/1.2 var(--sport-display, Impact, sans-serif); text-transform: uppercase; margin: 14px 0 18px; letter-spacing: .35px; }
+.draft-round-board.league-panel li > strong { color: var(--broadcast-text, #eef4f7); font: 700 18px/1.35 Arial, sans-serif; overflow-wrap: anywhere; }
+.draft-round-board .board-player-position { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; line-height: 1.5; margin: 9px 0 17px; }
+.draft-round-board .board-player-position b { color: var(--broadcast-green, #52d99d); font-size: 12px; }
+.draft-round-board .player-details-button { min-height: 44px; border: 1px solid #365262; border-radius: 5px; background: #ffffff04; color: var(--broadcast-text, #eef4f7); font-size: 13px; font-weight: 700; padding: 9px 10px; }
+.draft-round-board .board-pick-pending { margin-block: auto; padding-block: 10px; color: #7e98a7; font-size: 13px; font-weight: 600; line-height: 1.5; }
+.draft-round-board li.on-clock .board-pick-pending { color: var(--broadcast-green, #52d99d); font-size: 13px; letter-spacing: .8px; font-weight: 800; }
+.draft-round-board .board-clock-note { display: block; margin-top: auto; color: #b4c8c2; font-size: 12px; line-height: 1.5; }
+
+.draft-recent-picks { padding: 22px; margin: 22px 0; border-top: 3px solid var(--broadcast-gold, #ffc45b); }
+.draft-recent-heading, .draft-queue-heading { display: flex; justify-content: space-between; align-items: end; gap: 14px; }
+.draft-recent-picks h2, .draft-pick-queue h2 { font: 500 28px/1.15 var(--sport-display, Impact, sans-serif); color: var(--broadcast-text, #eef4f7); text-transform: uppercase; letter-spacing: .5px; }
+.draft-rail-hint { color: var(--broadcast-muted, #9fb1bd); font-size: 11px; line-height: 1.6; text-align: right; }
+.draft-recent-picks > p { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; line-height: 1.7; margin-top: 10px; }
+.draft-recent-picks ol { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding-bottom: 12px; margin-top: 18px; scrollbar-color: #426070 #0a1c28; scrollbar-width: thin; }
+.draft-recent-picks li { flex: 0 0 245px; min-width: 0; padding: 16px; border: 1px solid var(--broadcast-line, #28414f); border-radius: 7px; background: var(--broadcast-bg, #091620); gap: 13px; scroll-snap-align: start; }
+.draft-recent-picks li:first-child { border-color: #ffc45b65; animation: draft-pick-arrive .4s ease-out; }
+.draft-recent-picks .draft-pick-tag { color: var(--broadcast-gold, #ffc45b); font: 500 29px/1 var(--sport-display, Impact, sans-serif); }
+.draft-recent-picks .draft-pick-tag small { color: var(--broadcast-muted, #9fb1bd); font-size: 10px; font-family: Arial, sans-serif; letter-spacing: .5px; margin-top: 8px; }
+.draft-recent-picks li > div { min-width: 0; flex: 1; }
+.draft-recent-picks .draft-picking-team { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+.draft-recent-picks li b { color: var(--broadcast-text, #eef4f7); font: 700 16px/1.35 Arial, sans-serif; }
+.draft-recent-picks li small { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; }
+.draft-recent-picks .player-details-button { width: 100%; min-height: 44px; border: 1px solid #365262; border-radius: 5px; background: #ffffff04; color: var(--broadcast-text, #eef4f7); font-size: 13px; font-weight: 700; }
+.draft-pick-queue { padding: 20px 22px; margin: 22px 0; }
+.draft-pick-queue p { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; line-height: 1.7; margin-top: 7px; }
+.draft-pick-queue ol { gap: 10px; margin-top: 17px; padding-bottom: 10px; scrollbar-color: #426070 #0a1c28; scrollbar-width: thin; overscroll-behavior-x: contain; }
+.draft-pick-queue li { flex-basis: 190px; min-width: 0; border: 1px solid var(--broadcast-line, #28414f); border-radius: 6px; padding: 15px; background: var(--broadcast-bg, #091620); gap: 10px; }
+.draft-pick-queue li > span { color: var(--broadcast-muted, #9fb1bd); font-size: 10px; font-weight: 800; letter-spacing: 1px; }
+.draft-pick-queue li > strong { color: var(--broadcast-text, #eef4f7); font: 500 23px/1.2 var(--sport-display, Impact, sans-serif); }
+.draft-pick-queue li > small { color: var(--broadcast-muted, #9fb1bd); font-size: 11px; }
+.draft-pick-queue li.your-team:not(.on-clock) { background: #ffc45b0c; border-color: #ffc45b60; }
+.draft-pick-queue li.on-clock { background: #193a33; border-color: #52d99d80; border-top: 3px solid var(--broadcast-green, #52d99d); padding-top: 13px; color: var(--broadcast-text, #eef4f7); }
+.draft-pick-queue li.on-clock > span { color: var(--broadcast-green, #52d99d); }
+
+.draft-lottery { padding: 30px; border-top: 4px solid var(--broadcast-gold, #ffc45b); }
+.lottery-heading { max-width: 780px; }
+.draft-lottery .lottery-heading h2 { color: var(--broadcast-text, #eef4f7); font-size: clamp(34px, 5vw, 55px); line-height: 1.06; }
+.draft-lottery .lottery-heading p { color: var(--broadcast-muted, #9fb1bd); font-size: 16px; line-height: 1.7; }
+.lottery-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.lottery-meta span { padding: 6px 10px; border: 1px solid var(--broadcast-line, #28414f); border-radius: 4px; color: var(--broadcast-muted, #9fb1bd); font-size: 12px; }
+.draft-lottery .lottery-stage { min-height: 300px; justify-content: center; border: 1px solid #3e5968; border-radius: 8px; background: linear-gradient(180deg, #091620b8, #091620ed), url('/stadium-night.webp') center 55%/cover; }
+.draft-lottery .lottery-stage > span { color: var(--broadcast-gold, #ffc45b); }
+.draft-lottery .lottery-stage > strong { color: var(--broadcast-gold, #ffc45b); text-shadow: 0 6px 28px #0008; font-size: clamp(82px, 12vw, 136px); }
+.draft-lottery .lottery-stage h3 { color: var(--broadcast-text, #eef4f7); }
+.draft-lottery .lottery-stage p { color: var(--broadcast-muted, #9fb1bd); }
+.draft-lottery .lottery-results { gap: 10px; }
+.draft-lottery .lottery-results li { border: 1px dashed #3c5666; border-radius: 6px; padding: 15px; background: #091620; color: #7e98a7; }
+.draft-lottery .lottery-results li.revealed { background: #17313f; border: 1px solid #365464; color: var(--broadcast-text, #eef4f7); }
+.draft-lottery .lottery-results li.your-team.revealed { background: #ffc45b13; border-color: #ffc45b70; }
+.draft-lottery .lottery-results li > strong { color: var(--broadcast-gold, #ffc45b); font-size: 30px; }
+.draft-lottery .lottery-results li > span { flex: 1; min-width: 0; font-size: 14px; line-height: 1.5; }
+.draft-lottery .lottery-results li > b { color: var(--broadcast-gold, #ffc45b); border: 1px solid #ffc45b55; border-radius: 4px; font-size: 10px; }
+.draft-lottery .lottery-note { color: var(--broadcast-muted, #9fb1bd); font-size: 14px; }
+.draft-lottery .lottery-controls .secondary-button { border: 1px solid #3a5666; border-radius: 6px; background: #ffffff04; color: var(--broadcast-text, #eef4f7); min-height: 46px; }
+.custom-draft-order { border: 1px solid var(--broadcast-line, #28414f); border-radius: 7px; background: var(--broadcast-bg, #091620); padding: 8px; gap: 6px; scrollbar-color: #426070 #0a1c28; scrollbar-width: thin; }
+.custom-draft-order li { border: 1px solid #28414f; border-radius: 5px; padding: 7px 9px; background: #132b38; color: var(--broadcast-text, #eef4f7); }
+.custom-draft-order li > strong { color: var(--broadcast-gold, #ffc45b); font-size: 25px; }
+.custom-draft-order li > span { color: var(--broadcast-text, #eef4f7); }
+.custom-draft-order button { background: #ffffff05; color: var(--broadcast-text, #eef4f7); border: 1px solid #365464; border-radius: 4px; }
+
+.draft-assistant, .demo-roster > .draft-assistant, .season-pool > .draft-assistant { padding: 20px; border-top: 3px solid #3f6577; margin: 20px 0; }
+.demo-roster > .draft-assistant { border-radius: 0 0 10px 10px; margin-bottom: 0; }
+.draft-assistant.draft-assistant-your-turn { border-top-color: var(--broadcast-green, #52d99d); }
+.draft-assistant .draft-assistant-top { align-items: start; flex-wrap: wrap; gap: 12px; }
+.draft-assistant .draft-assistant-top h3 { color: var(--broadcast-text, #eef4f7); font: 500 26px/1.15 var(--sport-display, Impact, sans-serif); text-transform: uppercase; letter-spacing: .4px; }
+.draft-assistant .draft-assistant-top h3 span { min-width: 26px; height: 26px; font: 700 12px Arial, sans-serif; color: var(--broadcast-green, #52d99d); background: #52d99d12; border: 1px solid #52d99d38; }
+.draft-assistant .sports-kicker { color: var(--broadcast-green, #52d99d); font-size: 10px; letter-spacing: 1.2px; overflow-wrap: anywhere; }
+.draft-assistant .draft-scoring-tag { color: var(--broadcast-muted, #9fb1bd); background: #ffffff05; border: 1px solid var(--broadcast-line, #28414f); font-size: 11px; font-weight: 600; max-width: 100%; white-space: normal; line-height: 1.5; }
+.draft-assistant .soft-clock { padding: 12px 0; gap: 12px; border-block: 1px solid #28414f; background: transparent; border-radius: 0; color: var(--broadcast-text, #eef4f7); }
+.draft-assistant .soft-clock label { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; gap: 7px; }
+.draft-assistant .soft-clock select { min-height: 44px; background: var(--broadcast-bg, #091620); border: 1px solid #365464; border-radius: 5px; padding: 8px; font-size: 16px; color: var(--broadcast-text, #eef4f7); }
+.draft-assistant .soft-clock strong { color: var(--broadcast-gold, #ffc45b); font-size: 18px; font-variant-numeric: tabular-nums; }
+.draft-assistant .draft-helper-note { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; line-height: 1.7; margin: 12px 0; }
+.draft-assistant :is(.draft-helper-note, .queue-empty) { color: var(--broadcast-muted, #9fb1bd) !important; }
+.draft-assistant .draft-queue-list { margin: 16px 0 0; padding: 0; scrollbar-color: #426070 #0a1c28; scrollbar-width: thin; }
+.draft-assistant .draft-queue-list li { display: grid; grid-template-columns: 24px minmax(0, 1fr); align-items: start; color: var(--broadcast-text, #eef4f7); padding: 12px 0; border-color: #28414f; gap: 8px; }
+.draft-assistant .draft-queue-list li > span { color: var(--broadcast-gold, #ffc45b); background: #ffc45b0b; border-radius: 4px; min-width: 24px; min-height: 26px; display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+.draft-assistant .queue-player b { color: var(--broadcast-text, #eef4f7); font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
+.draft-assistant .queue-player { min-height: 44px; }
+.draft-assistant .queue-player small { color: var(--broadcast-muted, #9fb1bd); font-size: 11px; line-height: 1.6; }
+.draft-assistant .draft-queue-list li > div { display: flex; flex-wrap: wrap; gap: 5px; justify-content: start; grid-column: 2; }
+.draft-assistant .draft-queue-list li > div > button { display: grid; place-items: center; width: 44px; min-height: 44px; padding: 7px; color: var(--broadcast-muted, #9fb1bd); background: #ffffff04; border: 1px solid #365464; border-radius: 5px; }
+.draft-assistant .queue-empty { display: grid; justify-items: start; gap: 12px; margin: 16px 0 0; padding: 18px 16px; border: 1px dashed #365464; border-radius: 6px; background: #09162080; color: var(--broadcast-muted, #9fb1bd); font-size: 13px; line-height: 1.7; }
+.draft-assistant .queue-empty svg { color: #ffc45b9c; }
+.draft-assistant .queue-error { color: #ffbba5; background: #ac402315; border: 1px solid #a94e3655; border-radius: 6px; padding: 12px; font-size: 13px; line-height: 1.7; }
+.draft-assistant .queue-error button { display: block; min-height: 44px; color: var(--broadcast-text, #eef4f7); margin-top: 5px; text-decoration: underline; }
+.queue-toggle { color: var(--broadcast-muted, #9fb1bd); background: #ffffff04; border-color: #365464; border-radius: 5px; min-height: 44px; }
+.queue-toggle.queued { color: var(--broadcast-gold, #ffc45b); background: #ffc45b12; border-color: #ffc45b66; }
+
+.player-browser-filters { background: var(--broadcast-bg, #091620); border: 1px solid var(--broadcast-line, #28414f); border-radius: 7px; padding: 14px; gap: 12px; margin: 18px 0 8px; }
+.player-browser-filters label { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; font-weight: 700; letter-spacing: .3px; gap: 7px; }
+.player-browser-filters select { border: 1px solid #365464; border-radius: 5px; background: #142d3c; color: var(--broadcast-text, #eef4f7); min-height: 46px; font-size: 16px; }
+.player-browser-filters.player-filters-era-active label:nth-child(2) select { border-color: #ffc45b90; }
+.player-browser-filters .secondary-button { color: var(--broadcast-muted, #9fb1bd); background: #ffffff04; border: 1px solid #365464; border-radius: 5px; min-height: 46px; font-size: 12px; padding: 10px 12px; }
+.player-browser-note { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; line-height: 1.7; margin: 8px 0 18px; }
+.player-browser-empty { background: #0b1d2a; border: 1px dashed #365464; border-radius: 8px; padding: 24px; color: var(--broadcast-muted, #9fb1bd); }
+.player-browser-empty h3 { font: 500 25px/1.15 var(--sport-display, Impact, sans-serif); text-transform: uppercase; color: var(--broadcast-text, #eef4f7); }
+.player-browser-empty p { color: var(--broadcast-muted, #9fb1bd); font-size: 14px; line-height: 1.7; }
+.player-browser-empty a { color: var(--broadcast-green, #52d99d); }
+.player-browser-empty .secondary-button { min-height: 44px; background: #ffffff04; color: var(--broadcast-text, #eef4f7); border: 1px solid #365464; border-radius: 5px; }
+
+.draft-detail-modal[data-slot=dialog-content] { max-width: 760px; width: calc(100% - 32px); max-height: calc(100dvh - 32px); border: 1px solid #385668; border-top: 4px solid var(--broadcast-gold, #ffc45b); border-radius: 12px; background: var(--broadcast-panel, #102431); color: var(--broadcast-text, #eef4f7); padding: 30px; gap: 20px; box-shadow: 0 24px 90px #0008; }
+.draft-detail-modal .scouting-player-heading { display: flex; align-items: center; gap: 18px; padding-right: 22px; min-width: 0; }
+.draft-detail-modal .scouting-player-heading > div { min-width: 0; }
+.draft-detail-modal .scouting-position-mark { display: grid; place-items: center; flex: 0 0 60px; width: 60px; height: 76px; clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%); background: var(--broadcast-gold, #ffc45b); color: #091620; font: 500 28px var(--sport-display, Impact, sans-serif); }
+.draft-detail-modal .eyebrow { display: block; color: var(--broadcast-gold, #ffc45b); font-size: 10px; letter-spacing: 1.8px; margin-bottom: 8px; }
+.draft-detail-modal [data-slot=dialog-title] { color: var(--broadcast-text, #eef4f7); font: 500 clamp(30px, 5vw, 42px)/1.05 var(--sport-display, Impact, sans-serif); letter-spacing: .4px; text-transform: uppercase; padding-right: 0; overflow-wrap: anywhere; }
+.draft-detail-modal [data-slot=dialog-description] { color: var(--broadcast-muted, #9fb1bd); font-size: 14px; line-height: 1.7; }
+.draft-detail-modal .player-eligibility { background: #091620; border: 1px solid #28414f; border-radius: 6px; color: var(--broadcast-muted, #9fb1bd); padding: 13px 15px; font-size: 13px; gap: 10px 20px; }
+.draft-detail-modal .player-eligibility span { background: transparent; color: var(--broadcast-muted, #9fb1bd); padding: 0; }
+.draft-detail-modal .player-eligibility b { color: var(--broadcast-text, #eef4f7); }
+.draft-detail-modal .simulated-bye { color: var(--broadcast-muted, #9fb1bd); font-size: 13px; }
+.draft-detail-modal .detail-hof { width: fit-content; color: var(--broadcast-gold, #ffc45b); background: #ffc45b0b; border: 1px solid #ffc45b55; border-radius: 4px; padding: 6px 10px; font-size: 12px; }
+.draft-detail-modal .draft-stat-grid { gap: 10px; margin: 0; }
+.draft-detail-modal .draft-stat-grid > div { border: 1px solid #365464; border-radius: 7px; background: #142e3c; padding: 20px 16px; }
+.draft-detail-modal .draft-stat-grid strong { color: var(--broadcast-text, #eef4f7); font: 500 30px/1.1 var(--sport-display, Impact, sans-serif); font-variant-numeric: tabular-nums; letter-spacing: .5px; }
+.draft-detail-modal .draft-stat-grid span { display: block; color: var(--broadcast-muted, #9fb1bd); font-size: 12px; line-height: 1.6; margin-top: 9px; }
+.draft-detail-modal .detail-note, .draft-detail-modal .draw-method { background: #09162055; color: var(--broadcast-muted, #9fb1bd); border-color: #28414f; border-radius: 6px; font-size: 13px; line-height: 1.8; padding: 14px 16px; margin: 0; }
+.draft-detail-modal .draw-method b { color: var(--broadcast-text, #eef4f7); }
+.draft-detail-modal .season-table-scroll { max-height: 310px; overflow: auto; border: 1px solid #28414f; border-radius: 6px; margin: 0; }
+.draft-detail-modal .season-table { color: var(--broadcast-text, #eef4f7); background: #091620; font-size: 13px; }
+.draft-detail-modal .season-table caption { background: #142c3a; color: var(--broadcast-muted, #9fb1bd); font-size: 12px; padding: 13px 15px; text-align: left; }
+.draft-detail-modal .season-table th, .draft-detail-modal .season-table td { border-color: #28414f; color: var(--broadcast-text, #eef4f7); padding: 12px 15px; }
+.draft-detail-modal .season-table thead th { background: #142c3a; color: var(--broadcast-muted, #9fb1bd); font-size: 11px; position: sticky; top: 0; }
+.draft-detail-modal .season-table tbody tr:nth-child(even) { background: #ffffff02; }
+.draft-detail-modal .season-table tbody th { color: var(--broadcast-gold, #ffc45b); font-weight: 700; }
+.draft-detail-modal .scouting-loading { min-height: 96px; padding: 28px 18px; color: var(--broadcast-muted, #9fb1bd); border: 1px dashed #365464; border-radius: 7px; background: #091620; font-size: 14px; }
+.draft-detail-modal .detail-error { color: #ffc0aa; border-color: #a6533855; border-radius: 7px; background: #6e2d1a20; }
+.draft-detail-modal .detail-error .secondary-button { min-height: 44px; color: var(--broadcast-text, #eef4f7); background: #ffffff04; border: 1px solid #a6533855; border-radius: 5px; }
+.draft-detail-modal > .primary-button { position: sticky; bottom: 0; width: 100%; margin-top: 4px; min-height: 50px; box-shadow: 0 -10px 20px #102431; }
+.draft-detail-modal [data-slot=dialog-close] { top: 16px; right: 16px; min-width: 44px; min-height: 44px; color: var(--broadcast-text, #eef4f7); border: 1px solid #365464; border-radius: 6px; background: #091620; }
+.draft-detail-modal .scoring-contract-summary { background: #091620; border: 1px solid #28414f; border-radius: 6px; color: var(--broadcast-muted, #9fb1bd); padding: 14px 16px; }
+.draft-detail-modal .scoring-contract-summary p { color: var(--broadcast-muted, #9fb1bd); font-size: 12px; line-height: 1.8; margin: 0; }
+.draft-detail-modal .scoring-contract-summary p b { color: var(--broadcast-text, #eef4f7); }
+
+:is(.draft-round-board, .draft-recent-picks, .draft-pick-queue, .draft-lottery, .draft-assistant, .custom-draft-order, .player-browser-filters, .player-browser-empty, .draft-detail-modal) :is(button, select, a):focus-visible {
+  outline: 3px solid var(--broadcast-green, #52d99d);
+  outline-offset: 3px;
+}
+.draft-recent-picks ol:focus-visible, .draft-pick-queue ol:focus-visible { outline: 3px solid var(--broadcast-green, #52d99d); outline-offset: 3px; }
+:is(.draft-round-board, .draft-recent-picks, .draft-lottery, .draft-assistant, .custom-draft-order, .player-browser-filters, .draft-detail-modal) button:disabled { opacity: .45; }
+@media (hover: hover) {
+  :is(.draft-round-board, .draft-recent-picks) .player-details-button:hover { color: var(--broadcast-gold, #ffc45b); background: #ffc45b0b; border-color: #ffc45b66; }
+  .draft-assistant .draft-queue-list li > div > button:not(:disabled):hover, .custom-draft-order button:not(:disabled):hover { color: var(--broadcast-green, #52d99d); border-color: #52d99d66; }
+}
+@keyframes draft-clock-arrive { from { box-shadow: inset 0 0 0 1px #52d99d80, 0 0 20px #52d99d20; } to { box-shadow: inset 0 0 0 1px #52d99d12; } }
+@keyframes draft-pick-arrive { from { opacity: .4; } to { opacity: 1; } }
+
+@media (max-width: 1100px) {
+  .draft-round-board.league-panel ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .draft-lottery .lottery-results { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .draft-round-board.league-panel { padding: 20px 16px; }
+  .draft-round-board.league-panel .season-panel-heading { flex-direction: row; align-items: center; gap: 12px; }
+  .draft-round-board.league-panel h2 { font-size: 30px; }
+  .draft-round-board.league-panel .sports-kicker { font-size: 9px; letter-spacing: 1.1px; }
+  .draft-round-board.league-panel label { min-width: 115px; font-size: 11px; }
+  .draft-round-board.league-panel select { padding-inline: 10px; font-size: 16px; }
+  .draft-board-summary { grid-template-columns: minmax(0, 1fr) 105px; gap: 14px; padding: 16px 14px; margin-top: 18px; }
+  .draft-board-summary strong { font-size: 25px; }
+  .draft-board-summary > div:first-child > span:last-child { font-size: 11px; line-height: 1.6; }
+  .draft-board-progress > span { font-size: 11px; line-height: 1.8; }
+  .draft-board-progress b { display: block; font-size: 24px; }
+  .draft-board-round-meta { align-items: start; flex-direction: column; gap: 10px; }
+  .draft-board-round-meta p { font-size: 12px; }
+  .draft-round-board.league-panel ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+  .draft-round-board.league-panel li { padding: 13px 12px; min-height: 218px; }
+  .draft-round-board .board-pick-heading { font-size: 9px; letter-spacing: 0; }
+  .draft-round-board .board-pick-heading > b { font-size: 9px; padding: 3px 5px; }
+  .draft-round-board.league-panel li h3 { font-size: 21px; margin: 13px 0 15px; }
+  .draft-round-board.league-panel li > strong { font-size: 16px; }
+  .draft-round-board .board-player-position { font-size: 11px; }
+  .draft-round-board .player-details-button { font-size: 11px; padding: 9px 5px; }
+  .draft-round-board .board-pick-pending, .draft-round-board li.on-clock .board-pick-pending { font-size: 11px; }
+  .draft-round-board .board-clock-note { font-size: 11px; }
+  .draft-recent-picks, .draft-pick-queue { padding: 18px 16px; }
+  .draft-recent-picks h2, .draft-pick-queue h2 { font-size: 25px; }
+  .draft-recent-heading, .draft-queue-heading { align-items: start; }
+  .draft-rail-hint { max-width: 86px; font-size: 10px; }
+  .draft-recent-picks li { flex-basis: 225px; padding: 14px; }
+  .draft-pick-queue li { flex-basis: 170px; }
+  .draft-lottery { padding: 23px 17px; }
+  .draft-lottery .lottery-stage { min-height: 280px; padding: 22px 16px; }
+  .draft-lottery .lottery-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .draft-lottery .lottery-results li { gap: 9px; padding: 12px; }
+  .draft-lottery .lottery-results li > span { font-size: 12px; }
+  .draft-lottery .lottery-controls button { flex: 1 1 135px; font-size: 13px; white-space: normal; }
+  .draft-lottery .lottery-controls .primary-button { flex-basis: 100%; }
+  .draft-assistant, .demo-roster > .draft-assistant, .season-pool > .draft-assistant { padding: 18px 16px; }
+  .draft-assistant .soft-clock { flex-wrap: wrap; }
+  .player-browser-filters { padding: 12px; gap: 10px; }
+  .player-browser-filters label { flex-basis: calc(50% - 5px); font-size: 11px; }
+  .player-browser-filters .secondary-button { width: 100%; min-height: 44px; font-size: 12px; }
+  .player-browser-note { font-size: 12px; line-height: 1.7; }
+  .player-browser-empty { padding: 20px 16px; }
+  .draft-detail-modal[data-slot=dialog-content] { padding: 25px 17px; gap: 17px; width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
+  .draft-detail-modal .scouting-player-heading { gap: 12px; padding-right: 28px; }
+  .draft-detail-modal .scouting-position-mark { flex-basis: 44px; width: 44px; height: 61px; font-size: 23px; }
+  .draft-detail-modal .eyebrow { font-size: 8px; letter-spacing: .8px; }
+  .draft-detail-modal [data-slot=dialog-title] { font-size: 30px; }
+  .draft-detail-modal .draft-stat-grid { grid-template-columns: 1fr; gap: 8px; }
+  .draft-detail-modal .draft-stat-grid > div { padding: 16px; }
+  .draft-detail-modal .draft-stat-grid strong { font-size: 30px; }
+  .draft-detail-modal .draft-stat-grid span { margin-top: 7px; font-size: 12px; }
+  .draft-detail-modal .season-table th, .draft-detail-modal .season-table td { padding: 11px 9px; }
+  .draft-detail-modal .player-eligibility { flex-direction: column; gap: 8px; padding: 13px; font-size: 12px; }
+}
+@media (max-width: 359px) {
+  .draft-round-board.league-panel .season-panel-heading { flex-direction: column; align-items: stretch; }
+  .draft-round-board.league-panel ol { grid-template-columns: minmax(0, 1fr); }
+  .draft-round-board.league-panel li { min-height: 185px; }
+  .draft-board-summary { grid-template-columns: minmax(0, 1fr); }
+  .draft-board-progress > span { text-align: left; }
+  .draft-board-progress b { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .draft-round-board.league-panel li.on-clock, .draft-recent-picks li:first-child, .draft-lottery .lottery-stage > strong { animation: none; }
+  .draft-board-progress > div > span { transition: none; }
+}
+html[data-reduce-motion='true'] .draft-round-board.league-panel li.on-clock,
+html[data-reduce-motion='true'] .draft-recent-picks li:first-child,
+html[data-reduce-motion='true'] .draft-lottery .lottery-stage > strong { animation: none; }
+html[data-reduce-motion='true'] .draft-board-progress > div > span { transition: none; }

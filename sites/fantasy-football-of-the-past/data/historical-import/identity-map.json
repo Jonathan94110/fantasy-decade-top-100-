@@ -1,0 +1,135 @@
+[
+  {
+    "sourcePlayerId": "8228",
+    "athleteId": "kaggle-8228",
+    "profileId": "otto-graham",
+    "classicId": null,
+    "name": "Otto Graham",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/otto-graham"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 8228,
+      "name": "Otto Graham",
+      "position": "QB-DB",
+      "birth_date": "1921-12-06"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "13019",
+    "athleteId": "kaggle-13019",
+    "profileId": "bobby-layne",
+    "classicId": "hof:bobby-layne",
+    "name": "Bobby Layne",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/bobby-layne"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 13019,
+      "name": "Bobby Layne",
+      "position": "QB",
+      "birth_date": "1926-12-19"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "22801",
+    "athleteId": "kaggle-22801",
+    "profileId": "norm-van-brocklin",
+    "classicId": "hof:norm-van-brocklin",
+    "name": "Norm Van Brocklin",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/norm-van-brocklin"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 22801,
+      "name": "Norm Van Brocklin ",
+      "position": "QB",
+      "birth_date": "1926-03-15"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "22343",
+    "athleteId": "kaggle-22343",
+    "profileId": "hof-ya-tittle",
+    "classicId": "hof:ya-tittle",
+    "name": "Y.A. Tittle",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/ya-tittle"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 22343,
+      "name": "Y.A. Tittle",
+      "position": "QB",
+      "birth_date": "1926-10-24"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "22749",
+    "athleteId": "kaggle-22749",
+    "profileId": "johnny-unitas",
+    "classicId": "hof:johnny-unitas",
+    "name": "Johnny Unitas",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/johnny-unitas"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 22749,
+      "name": "Johnny Unitas ",
+      "position": "QB",
+      "birth_date": "1933-05-07"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "21143",
+    "athleteId": "kaggle-21143",
+    "profileId": "bart-starr",
+    "classicId": "hof:bart-starr",
+    "name": "Bart Starr",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/bart-starr"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 21143,
+      "name": "Bart Starr",
+      "position": "QB",
+      "birth_date": "1934-01-09"
+    },
+    "reviewed": true
+  },
+  {
+    "sourcePlayerId": "11819",
+    "athleteId": "kaggle-11819",
+    "profileId": "hof-sonny-jurgensen",
+    "classicId": "hof:sonny-jurgensen",
+    "name": "Sonny Jurgensen",
+    "position": "QB",
+    "identityEvidence": [
+      "https://www.profootballhof.com/players/sonny-jurgensen"
+    ],
+    "reviewBasis": "Explicit reviewed source ID, matching profile position, birth/age and career controls; never a runtime name join.",
+    "rawProfile": {
+      "player_id": 11819,
+      "name": "Sonny Jurgensen",
+      "position": "QB",
+      "birth_date": "1934-08-23"
+    },
+    "reviewed": true
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "id": "kaggle-8228",
+    "name": "Otto Graham",
+    "position": "QB",
+    "club": "Cleveland Browns",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1950
+    ],
+    "gameCount": 1,
+    "gamesBySeason": {
+      "1950": 1
+    },
+    "hallOfFameYear": 1965,
+    "hallOfFameSource": "https://www.profootballhof.com/players/otto-graham",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1950": [
+        "kaggle:8228:1950_D19501001_NYG_CLE"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-13019",
+    "name": "Bobby Layne",
+    "position": "QB",
+    "club": "Chicago Bears \u00b7 New York Bulldogs \u00b7 Detroit Lions \u00b7 Pittsburgh Steelers",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1952,
+      1961
+    ],
+    "gameCount": 2,
+    "gamesBySeason": {
+      "1952": 1,
+      "1961": 1
+    },
+    "hallOfFameYear": 1967,
+    "hallOfFameSource": "https://www.profootballhof.com/players/bobby-layne",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1952": [
+        "kaggle:13019:1952_D19521012_SFO_DET"
+      ],
+      "1961": [
+        "kaggle:13019:1961_D19611217_PIT_STL"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-22801",
+    "name": "Norm Van Brocklin",
+    "position": "QB",
+    "club": "Los Angeles Rams \u00b7 Philadelphia Eagles",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1958,
+      1959
+    ],
+    "gameCount": 2,
+    "gamesBySeason": {
+      "1958": 1,
+      "1959": 1
+    },
+    "hallOfFameYear": 1971,
+    "hallOfFameSource": "https://www.profootballhof.com/players/norm-van-brocklin",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1958": [
+        "kaggle:22801:1958_D19581214_PHI_WAS"
+      ],
+      "1959": [
+        "kaggle:22801:1959_D19591129_PHI_PIT"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-22343",
+    "name": "Y.A. Tittle",
+    "position": "QB",
+    "club": "Baltimore Colts \u00b7 San Francisco 49ers \u00b7 New York Giants",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1950,
+      1955,
+      1960,
+      1961
+    ],
+    "gameCount": 4,
+    "gamesBySeason": {
+      "1950": 1,
+      "1955": 1,
+      "1960": 1,
+      "1961": 1
+    },
+    "hallOfFameYear": 1971,
+    "hallOfFameSource": "https://www.profootballhof.com/players/ya-tittle",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1950": [
+        "kaggle:22343:1950_D19500924_CLE_BAL"
+      ],
+      "1955": [
+        "kaggle:22343:1955_D19551113_SFO_WAS"
+      ],
+      "1960": [
+        "kaggle:22343:1960_D19601210_GNB_SFO"
+      ],
+      "1961": [
+        "kaggle:22343:1961_D19611231_NYG_GNB"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-22749",
+    "name": "Johnny Unitas",
+    "position": "QB",
+    "club": "Baltimore Colts \u00b7 San Diego Chargers",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1962,
+      1964,
+      1965,
+      1971,
+      1972,
+      1973
+    ],
+    "gameCount": 8,
+    "gamesBySeason": {
+      "1962": 1,
+      "1964": 1,
+      "1965": 1,
+      "1971": 1,
+      "1972": 2,
+      "1973": 2
+    },
+    "hallOfFameYear": 1979,
+    "hallOfFameSource": "https://www.profootballhof.com/players/johnny-unitas",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1962": [
+        "kaggle:22749:1962_D19621125_CHI_BAL"
+      ],
+      "1964": [
+        "kaggle:22749:1964_D19641227_BAL_CLE"
+      ],
+      "1965": [
+        "kaggle:22749:1965_D19651205_CHI_BAL"
+      ],
+      "1971": [
+        "kaggle:22749:1971_D19720102_BAL_MIA"
+      ],
+      "1972": [
+        "kaggle:22749:1972_D19721015_DAL_BAL",
+        "kaggle:22749:1972_D19721216_BAL_MIA"
+      ],
+      "1973": [
+        "kaggle:22749:1973_D19730916_SDG_WAS",
+        "kaggle:22749:1973_D19731104_KAN_SDG"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-21143",
+    "name": "Bart Starr",
+    "position": "QB",
+    "club": "Green Bay Packers",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1958,
+      1970
+    ],
+    "gameCount": 3,
+    "gamesBySeason": {
+      "1958": 1,
+      "1970": 2
+    },
+    "hallOfFameYear": 1977,
+    "hallOfFameSource": "https://www.profootballhof.com/players/bart-starr",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1958": [
+        "kaggle:21143:1958_D19581102_GNB_BAL"
+      ],
+      "1970": [
+        "kaggle:21143:1970_D19700920_DET_GNB",
+        "kaggle:21143:1970_D19701220_GNB_DET"
+      ]
+    }
+  },
+  {
+    "id": "kaggle-11819",
+    "name": "Sonny Jurgensen",
+    "position": "QB",
+    "club": "Philadelphia Eagles \u00b7 Washington Redskins",
+    "number": "",
+    "style": "Historical quarterback",
+    "legend": true,
+    "color": "#c5a15e",
+    "seasons": [
+      1957,
+      1958,
+      1962
+    ],
+    "gameCount": 4,
+    "gamesBySeason": {
+      "1957": 2,
+      "1958": 1,
+      "1962": 1
+    },
+    "hallOfFameYear": 1983,
+    "hallOfFameSource": "https://www.profootballhof.com/players/sonny-jurgensen",
+    "minimumScoringVersion": 4,
+    "performanceIdsBySeason": {
+      "1957": [
+        "kaggle:11819:1957_D19571027_PHI_PIT",
+        "kaggle:11819:1957_D19571117_PHI_NYG"
+      ],
+      "1958": [
+        "kaggle:11819:1958_D19581214_PHI_WAS"
+      ],
+      "1962": [
+        "kaggle:11819:1962_D19621111_GNB_PHI"
+      ]
+    }
+  }
+]
