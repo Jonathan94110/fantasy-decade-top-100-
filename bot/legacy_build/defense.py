@@ -59,6 +59,19 @@ executed):
                    KICKOFF RETURNS tables. Their player rows add up to the team
                    totals, and the league INT totals equal the league's
                    interceptions thrown (1949 NFL 247; AFL 1960, 1961, 1963-66, 1968).
+  nfl.com          NFL.com team stats pages for 1940-1998, looked up during the build
+                   (not downloaded by this script) and transcribed into
+                   NFLCOM_TEAM_DEFENSE below: INT from
+                   https://www.nfl.com/stats/team-stats/defense/interceptions/{YYYY}/reg/all
+                   and SFTY from
+                   https://www.nfl.com/stats/team-stats/defense/scoring/{YYYY}/reg/all
+                   (the AAFC teams those pages also list are left out). These are team
+                   totals, not sums of NFL.com's player lines. SFTY equals
+                   profootballarchives' SAF, which counts safeties credited to no player,
+                   for all 98 NFL team-seasons of 1940-49 and all 86 AFL ones. INT equals
+                   profootballarchives for the same 184 and PFR for 537 of the 540 1980-98
+                   team-seasons. In the other 3 (1988 RAM, 1991 DEN and WAS) NFL.com is 1
+                   higher and profootballarchives agrees with PFR.
 
 How each column is built
   points_allowed   per game, the opponent's final score (538).
@@ -73,18 +86,24 @@ How each column is built
                    PFR's unofficial 1980-81 team totals are used too (SACKS_FROM =
                    1980) so the whole 1980s decade is comparable. Empty before 1980.
   interceptions    1980-1998: PFR team totals (allenjake440 Int).
-                   1950-1979 NFL: sum of trevyoungquist player interceptions by
-                   team-season (traded players split by team with kendallgillies
-                   where it can), plus MANUAL_SEASON_STATS.
+                   1950-1979 NFL: NFL.com team totals (NFLCOM_TEAM_DEFENSE). The sums of
+                   NFL.com's player lines (trevyoungquist, with traded players split by
+                   team with kendallgillies where it can) are only printed for
+                   comparison. They differ in 69 team-seasons, because a traded player's
+                   season is filed under one team (Dan Sandifer's 2 interceptions for
+                   the 1950 Lions are filed under the Eagles) or players are missing from
+                   the scrape. In all 69, profootballarchives' INTERCEPTIONS Team Totals
+                   agree with the team totals (PFA_INT_CHECKS).
                    1940-1949 NFL and 1960-1969 AFL: profootballarchives team
-                   totals (NFL.com is missing whole players in the 1940s and AFL).
-                   Empty before 1940 (not recorded).
+                   totals, which equal NFL.com's (NFL.com's player lines are missing whole
+                   players in the 1940s and AFL). Empty before 1940 (not recorded).
   fumble_recoveries  1980-1998: PFR team FL (opponent fumbles lost), PFR's
                    definition; it can differ by 1 from the game books' "opponent
                    fumbles recovered" (3 of 33 team-seasons checked, e.g. 1985 RAM
                    17 vs 16). No team-level source found before 1980 (NFL.com has
                    player fumble recoveries only from about 1991), so empty.
-  def_tds          NFL 1922-1998: PFR IntTD + FblTD summed by team. From 1950 on,
+  def_tds          NFL 1922-1998: PFR IntTD + FblTD summed by team (rows checked and
+                   corrected as described under "Checks on PFR's scoring rows"). From 1950 on,
                    FblTD scored by players listed only at an offensive position
                    (QB, RB, WR, TE, offensive line, LE/RE ...) are left out: those
                    are mostly an offense recovering its own fumble in the end zone.
@@ -104,15 +123,36 @@ How each column is built
                    return TDs are in def_tds, same points). Empty for 1920-1921.
   safeties         1940-1949 NFL and 1960-1969 AFL: profootballarchives team
                    totals (SAF), which include safeties credited only to the team.
-                   1950-1998 NFL: PFR Sfty (safeties credited to a defender) by
-                   team; safeties credited to no player (holding in the end zone, a
-                   snap out of the end zone) are missing, about 25% of checked
-                   team-seasons are low by 1-2. Empty before 1940: PFR's player
-                   safeties are almost all missing then (0 league-wide in 1934-36,
-                   1938-41 and 1943), and team totals were looked up for 1940-49 only.
+                   1950-1998 NFL: NFL.com team totals (SFTY, NFLCOM_TEAM_DEFENSE), which
+                   include them as well (see Sources, and the points check below). PFR's
+                   Sfty (safeties credited to a player, placed on teams like the TDs)
+                   is only compared. It misses the safeties credited to no player
+                   (holding in the end zone, a snap out of the end zone): 443 against
+                   578 team safeties in 1950-98, low in 127 of 1075 team-seasons (1996
+                   CAR 0 vs 2, SFO 2 vs 4). Empty before 1940: PFR's player safeties
+                   are almost all missing then (0 league-wide in 1934-36, 1938-41 and
+                   1943), and no team totals were used.
   blocked_kicks    no source has blocked kicks before 1999: empty everywhere.
   source_notes     short per-row note of which source filled each column and any
                    partial column.
+
+Checks on PFR's scoring rows (they feed def_tds and st_tds)
+  * Row check (build fails otherwise): a row's TD types add up to its AllTD, and its
+    Pts equal 6 x TDs + XP + 3 x FG + 2 x Sfty + 2 x 2PT, unless the gap can't hide or
+    double a D/ST score. Allowed gaps are a missing XP, safety or 2PT (under 6 points),
+    or fewer points on a row with no return, fumble, interception, other or safety
+    scores. The rows that failed were looked up and are corrected in PFR_ROW_FIXES.
+    One is Darrell Hogan 1952: IntTD 1 and OthTD 1 but 6 points. He scored one
+    "other" TD and returned none of his 4 interceptions for a score.
+  * Points check (a self-check): from 1950 on, take a season's points scored (538,
+    equal to the standings), minus PFR's single-team players' non-safety points
+    (TDs, XP, FG, 2PT), minus 2 x the team safeties. The result equals PFR's
+    multi-team ("2TM") players' non-safety points in every season. That checks the
+    NFL.com safeties and catches a TD counted twice even when its row adds up, as
+    Floyd Rice 1973 did (PFR 2 TDs, profootballarchives 1). AFL_NFL_SPLIT_SCORERS adds
+    the NFL points of five players whose season was split between the AFL and the NFL,
+    whom PFR's NFL table lacks. Back to 1922, no team-season scored fewer points than
+    PFR's single-team players plus 2 x its known safeties.
 
 Judgement calls
   * Seasons 1920-1998, regular season only: 538 games with playoff=1 are dropped.
@@ -152,11 +192,12 @@ Judgement calls
     Reference's naming (e.g. 1920 "Chicago Cardinals", 1940 "Pittsburgh
     Steelers", 1925 "Akron Pros"); the run prints where NFL.com's standings name
     differs.
-  * Traded players (1950-79 interceptions): when kendallgillies has a player's
-    season split by team and its totals (INT, sacks, INT TDs, safeties) equal
-    trevyoungquist's single-team line, the kendallgillies per-team lines replace
-    it. Other traded players' interceptions stay on the team NFL.com files them
-    under; MANUAL_SEASON_STATS fixes 1977 CHI/TAM (Greg Johnson).
+  * Traded players (NFL.com player interceptions, now only compared with the team
+    totals): when kendallgillies has a player's season split by team and its totals
+    (INT, sacks, INT TDs, safeties) equal trevyoungquist's single-team line, the
+    kendallgillies per-team lines replace it. Other traded players' interceptions
+    stay on the team NFL.com files them under, one reason the player sums differ
+    from the team totals.
   * PFR rows for players on two or more teams in a season ("2TM"/"3TM") with D/ST
     scoring are placed by kendallgillies' per-team split of the same stat when it
     adds up, otherwise by MANUAL_PLACEMENTS (each entry backed by a web lookup,
@@ -172,12 +213,6 @@ Columns that are empty, and why (empty = unknown; the bot counts it as 0)
   safeties           1920-1939 (PFR player safeties missing; no team totals used)
   blocked_kicks      every season (no source)
 Partial (not empty, but can be undercounted):
-  * interceptions 1950-1979 NFL: NFL.com player sums. A traded player's season
-    filed under one team moves his interceptions (1952 DTX 27 vs 28 and DET 33 vs
-    32), and players missing from the scrape are lost; the run prints league
-    totals against interceptions thrown (gaps up to about 10 in some 1950s-60s
-    seasons, 0 in every 1970-79 season).
-  * safeties 1950-1998 NFL: player-credited safeties only (team safeties missing).
   * def_tds 1960-1998 NFL (and 9 of the 18 checked 1950s cases, 4 of them on an
     unclear fumble-table row): fumble TDs by offensive-position players are
     excluded, which drops the odd special-teams fumble-recovery TD. AFL def_tds can include a rare offensive own-fumble TD
@@ -216,7 +251,7 @@ SACKS_FROM = 1980          # official from 1982; PFR's unofficial 1980-81 team t
 FR_FROM = 1980
 TDS_FROM = 1922
 SAFETIES_FROM = 1940
-PFR_SAFETIES_FROM = 1950   # NFL safeties from PFR player rows; 1940-49 from PFA_NFL_1940S
+PFR_SAFETIES_FROM = 1950   # PFR player safeties placed on teams from here (compared with the team totals)
 PFA_NFL_SEASONS = range(1940, 1950)
 PLATOON_FROM = 1950
 
@@ -446,22 +481,200 @@ season team td saf rush_td rec_td int int_td pr_td kr_td
 1969 DEN 37 0 12 23 14 2 0 0
 """
 
-# Team-season values the bulk sources get wrong, from a web lookup.
-MANUAL_SEASON_STATS = {
-    # NFL.com files Greg Johnson's 1977 interception (returned for a TD for Tampa Bay at New
-    # Orleans) under the Bears. profootballarchives.com 1977nflchib / 1977nfltb INTERCEPTIONS
-    # Team Totals: CHI 18, TB 23.
-    (1977, "CHI"): {"interceptions": 18},
-    (1977, "TAM"): {"interceptions": 23},
-    # NFL.com player sums that miss or misfile interceptions (traded players, players missing
-    # from the scrape). statscrew / profootballarchives INTERCEPTIONS Team Totals.
-    (1961, "WAS"): {"interceptions": 26},  # Dale Hackbart's 6 and Jim Steffen's 1 missing
-    (1978, "SFO"): {"interceptions": 18},
-    (1978, "DET"): {"interceptions": 22},  # Tony Leonard's 4 filed under Detroit
-    (1963, "NYG"): {"interceptions": 34},
-    (1952, "DET"): {"interceptions": 32},
-    (1952, "DTX"): {"interceptions": 28},
-}
+# --- team totals from NFL.com (web lookup, see the docstring) --------------------------
+# "team:INT:SFTY" for every NFL and AFL team-season 1940-1998. INT from
+# https://www.nfl.com/stats/team-stats/defense/interceptions/{YYYY}/reg/all, SFTY from
+# https://www.nfl.com/stats/team-stats/defense/scoring/{YYYY}/reg/all (NFL.com's nicknames
+# mapped to the era codes; the AAFC teams on the 1946-49 pages left out). Used for NFL
+# interceptions 1950-79 and NFL safeties 1950-98, and checked against the other sources.
+NFLCOM_TEAM_DEFENSE = """
+1940 BKN:18:1 CHI:27:0 CRD:23:1 DET:29:1 GNB:40:0 NYG:23:1 PHI:12:0 PIT:8:0 RAM:25:1 WAS:18:0
+1941 BKN:20:1 CHI:34:0 CRD:16:0 DET:18:0 GNB:25:1 NYG:29:0 PHI:21:0 PIT:19:0 RAM:15:0 WAS:23:0
+1942 BKN:14:0 CHI:33:0 CRD:25:0 DET:18:0 GNB:33:0 NYG:15:0 PHI:18:0 PIT:21:0 RAM:23:1 WAS:19:2
+1943 BKN:15:0 CHI:24:0 CRD:16:0 DET:19:0 GNB:42:0 NYG:18:0 PHI:22:0 WAS:26:0
+1944 BKN:10:0 BOS:16:0 CHI:24:0 CRD:16:0 DET:26:0 GNB:29:1 NYG:34:2 PHI:33:0 RAM:27:0 WAS:19:0
+1945 BOS:30:0 CHI:15:0 CRD:12:1 DET:23:1 GNB:24:1 NYG:13:0 PHI:19:0 PIT:13:0 RAM:28:0 WAS:16:0
+1946 BOS:17:0 CHI:27:0 CRD:25:1 DET:13:1 GNB:24:2 NYG:19:0 PHI:26:2 PIT:14:0 RAM:23:0 WAS:24:0
+1947 BOS:28:0 CHI:27:0 CRD:27:0 DET:25:0 GNB:30:2 NYG:27:0 PHI:23:0 PIT:18:3 RAM:24:0 WAS:21:0
+1948 BOS:18:0 CHI:30:0 CRD:23:0 DET:14:0 GNB:29:0 NYG:39:1 PHI:23:1 PIT:13:0 RAM:19:0 WAS:24:1
+1949 CHI:27:1 CRD:33:1 DET:32:0 GNB:20:0 NYG:22:0 NYY:14:0 PHI:29:1 PIT:22:1 RAM:30:0 WAS:18:0
+1950 BCL:34:0 CHI:16:1 CLE:31:1 CRD:22:0 DET:31:0 GNB:27:0 NYG:27:2 NYY:30:3 PHI:31:0 PIT:22:1
+     RAM:31:1 SFO:22:0 WAS:19:0
+1951 CHI:21:0 CLE:22:0 CRD:27:0 DET:15:1 GNB:22:0 NYG:41:1 NYY:22:0 PHI:18:1 PIT:30:1 RAM:19:0
+     SFO:33:1 WAS:18:0
+1952 CHI:20:2 CLE:22:1 CRD:25:0 DET:32:1 DTX:28:0 GNB:22:0 NYG:28:1 PHI:20:1 PIT:27:0 RAM:38:1
+     SFO:17:2 WAS:18:2
+1953 BAL:29:1 CHI:14:1 CLE:25:0 CRD:24:1 DET:38:0 GNB:28:0 NYG:23:2 PHI:24:0 PIT:21:2 RAM:30:0
+     SFO:23:0 WAS:27:0
+1954 BAL:20:1 CHI:27:0 CLE:23:1 CRD:24:0 DET:30:0 GNB:19:0 NYG:33:1 PHI:28:1 PIT:30:1 RAM:23:0
+     SFO:19:0 WAS:18:2
+1955 BAL:19:0 CHI:19:1 CLE:25:1 CRD:29:0 DET:15:1 GNB:31:0 NYG:23:0 PHI:16:0 PIT:10:0 RAM:31:1
+     SFO:21:0 WAS:19:0
+1956 BAL:13:0 CHI:23:0 CLE:18:1 CRD:33:0 DET:28:0 GNB:21:0 NYG:17:1 PHI:16:0 PIT:18:1 RAM:18:0
+     SFO:17:0 WAS:18:1
+1957 BAL:28:0 CHI:15:0 CLE:19:0 CRD:12:1 DET:25:1 GNB:30:0 NYG:18:0 PHI:17:0 PIT:19:1 RAM:14:1
+     SFO:18:1 WAS:16:0
+1958 BAL:35:0 CHI:22:0 CLE:16:0 CRD:15:0 DET:22:0 GNB:13:0 NYG:21:1 PHI:15:0 PIT:24:1 RAM:28:1
+     SFO:16:0 WAS:16:0
+1959 BAL:40:0 CHI:22:1 CLE:18:0 CRD:15:0 DET:14:0 GNB:14:2 NYG:22:0 PHI:20:0 PIT:22:0 RAM:7:1
+     SFO:14:1 WAS:13:1
+1960 BAL:30:2 BOS:25:1 BUF:33:0 CHI:10:0 CLE:31:0 DAL:15:0 DEN:27:0 DET:19:3 DTX:32:0 GNB:22:0
+     HOU:25:0 LAC:28:0 NYG:22:1 NYT:24:0 OAK:25:1 PHI:30:0 PIT:16:0 RAM:23:0 SFO:20:2 STL:21:3
+     WAS:15:0
+1961 BAL:16:1 BOS:22:0 BUF:29:1 CHI:24:0 CLE:20:0 DAL:25:0 DEN:26:1 DET:29:1 DTX:25:0 GNB:29:0
+     HOU:33:2 MIN:22:0 NYG:33:2 NYT:25:0 OAK:23:1 PHI:17:0 PIT:25:0 RAM:23:0 SDG:49:0 SFO:19:1
+     STL:24:1 WAS:26:0
+1962 BAL:23:2 BOS:25:0 BUF:36:0 CHI:23:0 CLE:24:0 DAL:20:0 DEN:27:1 DET:24:4 DTX:32:0 GNB:31:0
+     HOU:35:2 MIN:25:2 NYG:26:0 NYT:29:1 OAK:29:0 PHI:26:0 PIT:28:2 RAM:19:1 SDG:29:0 SFO:12:0
+     STL:16:0 WAS:28:0
+1963 BAL:15:1 BOS:29:2 BUF:22:2 CHI:36:1 CLE:22:0 DAL:26:0 DEN:15:0 DET:24:1 GNB:22:1 HOU:36:1
+     KAN:26:1 MIN:11:0 NYG:34:0 NYJ:21:0 OAK:35:2 PHI:15:0 PIT:25:1 RAM:19:1 SDG:29:0 SFO:14:0
+     STL:18:0 WAS:21:0
+1964 BAL:23:0 BOS:31:1 BUF:28:3 CHI:10:0 CLE:19:0 DAL:18:0 DEN:32:1 DET:22:1 GNB:16:0 HOU:30:0
+     KAN:28:0 MIN:19:0 NYG:15:0 NYJ:34:1 OAK:26:1 PHI:17:0 PIT:12:0 RAM:17:0 SDG:30:0 SFO:15:1
+     STL:25:1 WAS:34:1
+1965 BAL:22:1 BOS:21:2 BUF:32:0 CHI:20:0 CLE:24:0 DAL:18:0 DEN:25:0 DET:26:1 GNB:27:0 HOU:27:1
+     KAN:20:0 MIN:19:3 NYG:16:1 NYJ:26:0 OAK:24:1 PHI:25:0 PIT:12:0 RAM:11:1 SDG:28:0 SFO:13:0
+     STL:17:1 WAS:27:0
+1966 ATL:19:0 BAL:22:0 BOS:22:0 BUF:29:1 CHI:15:0 CLE:30:0 DAL:17:1 DEN:13:0 DET:24:0 GNB:28:0
+     HOU:18:1 KAN:33:0 MIA:31:0 MIN:14:0 NYG:17:0 NYJ:21:1 OAK:23:0 PHI:20:0 PIT:24:1 RAM:26:1
+     SDG:27:1 SFO:18:0 STL:21:0 WAS:23:0
+1967 ATL:17:0 BAL:32:0 BOS:17:2 BUF:27:0 CHI:28:0 CLE:22:0 DAL:29:2 DEN:28:2 DET:23:1 GNB:26:1
+     HOU:26:0 KAN:31:1 MIA:28:0 MIN:16:0 NOR:22:1 NYG:17:0 NYJ:27:0 OAK:30:1 PHI:21:0 PIT:26:0
+     RAM:32:1 SDG:13:0 SFO:16:0 STL:19:0 WAS:20:1
+1968 ATL:14:0 BAL:29:0 BOS:23:1 BUF:22:1 CHI:18:0 CIN:10:1 CLE:32:0 DAL:26:1 DEN:20:1 DET:24:0
+     GNB:17:0 HOU:20:1 KAN:37:1 MIA:22:0 MIN:16:1 NOR:16:0 NYG:26:0 NYJ:28:1 OAK:25:2 PHI:13:1
+     PIT:17:0 RAM:25:1 SDG:20:1 SFO:20:0 STL:13:0 WAS:21:0
+1969 ATL:19:0 BAL:15:0 BOS:20:2 BUF:19:0 CHI:16:2 CIN:21:1 CLE:19:0 DAL:24:1 DEN:14:0 DET:21:1
+     GNB:19:0 HOU:23:1 KAN:32:0 MIA:18:0 MIN:30:0 NOR:12:1 NYG:19:0 NYJ:29:0 OAK:26:1 PHI:15:1
+     PIT:25:0 RAM:26:1 SDG:31:0 SFO:20:1 STL:15:0 WAS:16:1
+1970 ATL:19:0 BAL:25:0 BOS:8:0 BUF:11:0 CHI:17:0 CIN:23:0 CLE:19:3 DAL:24:0 DEN:16:2 DET:28:0
+     GNB:20:0 HOU:18:1 KAN:31:0 MIA:23:0 MIN:28:0 NOR:22:0 NYG:17:1 NYJ:23:1 OAK:19:0 PHI:10:0
+     PIT:23:0 RAM:19:0 SDG:9:1 SFO:22:2 STL:21:0 WAS:15:0
+1971 ATL:20:1 BAL:28:1 BUF:11:1 CHI:22:0 CIN:27:0 CLE:24:1 DAL:26:1 DEN:20:1 DET:22:1 GNB:16:1
+     HOU:23:0 KAN:27:0 MIA:17:0 MIN:27:2 NOR:20:0 NWE:15:0 NYG:15:0 NYJ:13:0 OAK:23:0 PHI:22:0
+     PIT:17:0 RAM:27:0 SDG:22:1 SFO:14:0 STL:17:0 WAS:29:0
+1972 ATL:18:2 BAL:23:0 BUF:23:0 CHI:21:0 CIN:20:1 CLE:13:0 DAL:16:2 DEN:10:0 DET:12:0 GNB:17:1
+     HOU:6:0 KAN:24:0 MIA:26:0 MIN:26:0 NOR:14:1 NWE:10:0 NYG:23:0 NYJ:19:0 OAK:25:0 PHI:19:1
+     PIT:28:1 RAM:16:1 SDG:24:1 SFO:19:0 STL:11:0 WAS:17:1
+1973 ATL:22:1 BAL:15:0 BUF:14:0 CHI:14:0 CIN:18:0 CLE:12:0 DAL:18:2 DEN:14:1 DET:22:0 GNB:15:0
+     HOU:17:0 KAN:21:0 MIA:21:1 MIN:21:1 NOR:16:0 NWE:13:1 NYG:20:0 NYJ:19:0 OAK:17:0 PHI:15:0
+     PIT:37:1 RAM:20:3 SDG:16:0 SFO:17:1 STL:10:0 WAS:26:0
+1974 ATL:17:0 BAL:10:0 BUF:20:1 CHI:18:0 CIN:9:1 CLE:24:0 DAL:13:1 DEN:22:0 DET:17:1 GNB:23:1
+     HOU:21:0 KAN:28:1 MIA:16:1 MIN:22:1 NOR:16:0 NWE:24:0 NYG:15:0 NYJ:17:0 OAK:27:1 PHI:18:0
+     PIT:25:1 RAM:22:0 SDG:15:0 SFO:20:0 STL:16:0 WAS:25:0
+1975 ATL:25:0 BAL:29:1 BUF:25:0 CHI:13:1 CIN:22:0 CLE:10:1 DAL:25:0 DEN:16:0 DET:20:2 GNB:14:3
+     HOU:24:2 KAN:20:0 MIA:21:1 MIN:28:2 NOR:16:0 NWE:13:0 NYG:16:0 NYJ:15:0 OAK:35:2 PHI:26:0
+     PIT:27:1 RAM:22:1 SDG:20:0 SFO:11:0 STL:22:0 WAS:18:0
+1976 ATL:18:1 BAL:15:1 BUF:19:0 CHI:24:2 CIN:26:1 CLE:21:1 DAL:16:2 DEN:24:0 DET:24:0 GNB:11:1
+     HOU:11:0 KAN:23:1 MIA:11:0 MIN:19:0 NOR:12:0 NWE:23:0 NYG:12:0 NYJ:11:0 OAK:16:1 PHI:9:0
+     PIT:22:1 RAM:32:0 SDG:20:0 SEA:15:1 SFO:9:2 STL:19:0 TAM:9:0 WAS:26:1
+1977 ATL:26:0 BAL:30:1 BUF:21:1 CHI:18:0 CIN:16:0 CLE:23:1 DAL:21:0 DEN:25:0 DET:19:1 GNB:13:0
+     HOU:26:3 KAN:21:0 MIA:15:0 MIN:16:1 NOR:10:1 NWE:19:1 NYG:12:0 NYJ:11:1 OAK:26:0 PHI:21:0
+     PIT:31:0 RAM:25:0 SDG:21:0 SEA:25:0 SFO:8:0 STL:19:0 TAM:23:0 WAS:21:0
+1978 ATL:12:2 BAL:17:1 BUF:14:1 CHI:17:1 CIN:20:2 CLE:27:0 DAL:23:1 DEN:31:1 DET:22:0 GNB:27:0
+     HOU:17:0 KAN:21:1 MIA:32:2 MIN:22:0 NOR:21:1 NWE:22:2 NYG:21:0 NYJ:23:0 OAK:28:1 PHI:28:0
+     PIT:27:0 RAM:28:0 SDG:22:0 SEA:22:1 SFO:18:0 STL:26:1 TAM:29:0 WAS:22:0
+1979 ATL:15:1 BAL:23:0 BUF:24:0 CHI:29:1 CIN:20:0 CLE:16:0 DAL:13:2 DEN:19:1 DET:14:1 GNB:18:0
+     HOU:34:0 KAN:23:0 MIA:23:1 MIN:22:0 NOR:26:1 NWE:20:1 NYG:21:1 NYJ:21:1 OAK:24:0 PHI:22:0
+     PIT:27:0 RAM:25:1 SDG:28:2 SEA:17:1 SFO:15:0 STL:18:0 TAM:14:0 WAS:26:0
+1980 ATL:26:1 BAL:17:0 BUF:24:2 CHI:17:1 CIN:20:2 CLE:22:0 DAL:27:1 DEN:16:1 DET:23:1 GNB:13:0
+     HOU:26:0 KAN:28:0 MIA:28:0 MIN:24:1 NOR:12:0 NWE:24:0 NYG:18:0 NYJ:23:1 OAK:35:1 PHI:25:0
+     PIT:26:2 RAM:25:0 SDG:20:0 SEA:23:0 SFO:17:1 STL:20:0 TAM:15:0 WAS:33:0
+1981 ATL:25:0 BAL:16:1 BUF:19:2 CHI:18:1 CIN:19:0 CLE:15:1 DAL:37:3 DEN:23:0 DET:24:0 GNB:30:0
+     HOU:18:0 KAN:26:0 MIA:18:1 MIN:16:3 NOR:17:0 NWE:16:0 NYG:17:0 NYJ:21:1 OAK:13:3 PHI:26:1
+     PIT:30:0 RAM:17:0 SDG:23:0 SEA:21:0 SFO:27:0 STL:21:0 TAM:32:0 WAS:24:0
+1982 ATL:10:0 BAL:5:0 BUF:13:0 CHI:13:1 CIN:14:1 CLE:17:0 DAL:15:0 DEN:12:2 DET:18:0 GNB:12:0
+     HOU:3:0 KAN:12:0 MIA:19:0 MIN:12:1 NOR:9:0 NWE:12:1 NYG:12:1 NYJ:17:0 PHI:15:0 PIT:17:1
+     RAI:18:0 RAM:11:0 SDG:13:2 SEA:13:0 SFO:9:0 STL:6:0 TAM:11:0 WAS:11:0
+1983 ATL:15:0 BAL:20:1 BUF:13:0 CHI:21:0 CIN:23:0 CLE:22:0 DAL:27:1 DEN:27:1 DET:22:3 GNB:19:1
+     HOU:14:0 KAN:30:0 MIA:26:1 MIN:25:2 NOR:23:0 NWE:17:0 NYG:23:1 NYJ:22:0 PHI:8:1 PIT:28:1
+     RAI:20:2 RAM:24:2 SDG:16:0 SEA:26:0 SFO:24:0 STL:28:1 TAM:23:0 WAS:34:1
+1984 ATL:12:2 BUF:16:0 CHI:21:1 CIN:25:1 CLE:20:0 DAL:28:1 DEN:31:0 DET:14:0 GNB:27:0 HOU:13:0
+     IND:18:1 KAN:30:0 MIA:24:0 MIN:11:0 NOR:13:0 NWE:17:1 NYG:19:0 NYJ:15:1 PHI:20:0 PIT:31:0
+     RAI:20:2 RAM:17:3 SDG:19:0 SEA:38:1 SFO:25:1 STL:21:0 TAM:18:0 WAS:21:0
+1985 ATL:22:0 BUF:20:0 CHI:34:3 CIN:19:1 CLE:18:0 DAL:33:0 DEN:24:0 DET:18:0 GNB:15:1 HOU:15:0
+     IND:16:1 KAN:27:0 MIA:23:0 MIN:22:1 NOR:21:0 NWE:23:2 NYG:24:0 NYJ:22:1 PHI:18:1 PIT:20:0
+     RAI:17:1 RAM:29:1 SDG:26:0 SEA:24:1 SFO:18:1 STL:13:1 TAM:18:0 WAS:23:1
+1986 ATL:22:1 BUF:10:0 CHI:31:2 CIN:17:1 CLE:18:0 DAL:17:0 DEN:18:2 DET:22:0 GNB:20:0 HOU:16:0
+     IND:16:1 KAN:31:0 MIA:13:0 MIN:24:0 NOR:26:0 NWE:21:1 NYG:24:0 NYJ:20:1 PHI:23:1 PIT:20:1
+     RAI:26:1 RAM:28:1 SDG:15:1 SEA:22:0 SFO:39:0 STL:10:0 TAM:13:0 WAS:19:0
+1987 ATL:15:1 BUF:17:2 CHI:13:0 CIN:14:1 CLE:23:0 DAL:23:0 DEN:28:1 DET:19:1 GNB:18:0 HOU:23:1
+     IND:20:1 KAN:11:0 MIA:16:0 MIN:26:1 NOR:30:2 NWE:21:0 NYG:20:0 NYJ:18:1 PHI:21:1 PIT:27:1
+     RAI:13:0 RAM:16:1 SDG:13:2 SEA:17:0 SFO:25:1 STL:14:0 TAM:16:0 WAS:23:0
+1988 ATL:24:0 BUF:15:1 CHI:26:1 CIN:22:1 CLE:20:1 DAL:10:1 DEN:16:0 DET:15:0 GNB:20:2 HOU:22:2
+     IND:15:0 KAN:18:3 MIA:16:0 MIN:36:2 NOR:17:2 NWE:20:0 NYG:15:1 NYJ:24:1 PHI:32:2 PHO:16:1
+     PIT:20:1 RAI:17:0 RAM:23:1 SDG:16:0 SEA:22:0 SFO:22:1 TAM:21:1 WAS:14:1
+1989 ATL:20:0 BUF:23:0 CHI:26:0 CIN:21:0 CLE:27:0 DAL:7:0 DEN:21:1 DET:16:0 GNB:25:1 HOU:21:2
+     IND:21:0 KAN:15:1 MIA:15:1 MIN:18:2 NOR:21:3 NWE:16:0 NYG:22:2 NYJ:15:1 PHI:30:1 PHO:16:1
+     PIT:21:0 RAI:18:1 RAM:21:0 SDG:25:0 SEA:9:0 SFO:21:0 TAM:21:2 WAS:27:3
+1990 ATL:17:1 BUF:18:0 CHI:31:0 CIN:15:2 CLE:13:0 DAL:11:1 DEN:10:3 DET:17:0 GNB:16:0 HOU:21:1
+     IND:9:0 KAN:20:1 MIA:19:1 MIN:22:2 NOR:8:1 NWE:14:0 NYG:23:0 NYJ:18:1 PHI:19:0 PHO:16:0
+     PIT:24:1 RAI:13:0 RAM:12:0 SDG:19:1 SEA:12:0 SFO:17:1 TAM:25:0 WAS:21:2
+1991 ATL:19:3 BUF:23:0 CHI:17:0 CIN:17:1 CLE:15:1 DAL:12:1 DEN:24:0 DET:19:1 GNB:15:1 HOU:20:0
+     IND:15:0 KAN:15:1 MIA:12:0 MIN:17:0 NOR:29:0 NWE:12:0 NYG:12:0 NYJ:18:0 PHI:26:0 PHO:17:0
+     PIT:19:0 RAI:18:1 RAM:11:1 SDG:19:0 SEA:18:0 SFO:12:1 TAM:11:0 WAS:28:0
+1992 ATL:11:0 BUF:23:1 CHI:14:0 CIN:16:0 CLE:13:0 DAL:17:1 DEN:15:0 DET:21:0 GNB:15:0 HOU:20:1
+     IND:20:0 KAN:24:0 MIA:18:0 MIN:28:1 NOR:18:0 NWE:14:0 NYG:14:0 NYJ:21:1 PHI:24:1 PHO:16:1
+     PIT:22:0 RAI:12:1 RAM:18:1 SDG:25:3 SEA:20:0 SFO:17:0 TAM:20:0 WAS:23:0
+1993 ATL:13:0 BUF:23:1 CHI:18:0 CIN:12:3 CLE:13:2 DAL:14:0 DEN:18:1 DET:19:0 GNB:18:1 HOU:26:1
+     IND:10:0 KAN:21:0 MIA:13:0 MIN:24:2 NOR:10:1 NWE:13:0 NYG:18:1 NYJ:19:1 PHI:20:2 PHO:9:2
+     PIT:24:0 RAI:14:0 RAM:11:0 SDG:22:0 SEA:22:4 SFO:19:0 TAM:9:0 WAS:17:1
+1994 ARI:23:1 ATL:22:0 BUF:16:1 CHI:12:0 CIN:10:1 CLE:18:0 DAL:22:0 DEN:12:0 DET:12:1 GNB:21:0
+     HOU:14:1 IND:18:0 KAN:12:2 MIA:23:0 MIN:18:0 NOR:17:0 NWE:22:0 NYG:16:2 NYJ:17:0 PHI:21:1
+     PIT:17:0 RAI:12:0 RAM:14:1 SDG:17:0 SEA:19:1 SFO:23:0 TAM:9:0 WAS:17:1
+1995 ARI:19:0 ATL:18:0 BUF:17:0 CAR:21:0 CHI:16:1 CIN:12:2 CLE:17:0 DAL:19:0 DEN:8:0 DET:22:1
+     GNB:13:0 HOU:21:1 IND:13:1 JAX:13:0 KAN:16:0 MIA:14:0 MIN:25:0 NOR:17:0 NWE:15:0 NYG:16:1
+     NYJ:17:1 OAK:11:0 PHI:19:0 PIT:22:0 SDG:17:1 SEA:16:1 SFO:26:0 STL:22:1 TAM:14:0 WAS:16:1
+1996 ARI:11:0 ATL:6:0 BAL:15:0 BUF:14:0 CAR:22:2 CHI:17:1 CIN:34:0 DAL:19:0 DEN:23:0 DET:11:0
+     GNB:26:1 HOU:12:2 IND:13:1 JAX:13:0 KAN:17:1 MIA:20:1 MIN:22:0 NOR:12:0 NWE:23:1 NYG:22:2
+     NYJ:11:0 OAK:17:2 PHI:19:1 PIT:23:0 SDG:22:0 SEA:14:0 SFO:20:4 STL:26:1 TAM:17:0 WAS:21:0
+1997 ARI:15:0 ATL:18:0 BAL:17:1 BUF:15:1 CAR:11:1 CHI:13:1 CIN:13:0 DAL:7:0 DEN:18:0 DET:17:1
+     GNB:21:0 IND:12:1 JAX:14:0 KAN:21:3 MIA:10:0 MIN:12:0 NOR:16:0 NWE:19:1 NYG:27:1 NYJ:18:0
+     OAK:10:1 PHI:14:0 PIT:20:0 SDG:15:0 SEA:13:1 SFO:25:0 STL:25:0 TAM:13:0 TEN:14:0 WAS:16:0
+1998 ARI:20:2 ATL:19:1 BAL:17:2 BUF:18:1 CAR:19:0 CHI:14:2 CIN:13:0 DAL:14:1 DEN:19:0 DET:12:0
+     GNB:13:1 IND:8:0 JAX:13:0 KAN:13:1 MIA:29:0 MIN:19:1 NOR:21:2 NWE:24:0 NYG:19:0 NYJ:21:1
+     OAK:21:0 PHI:9:1 PIT:16:0 SDG:20:1 SEA:24:0 SFO:21:0 STL:16:0 TAM:12:0 TEN:12:0 WAS:13:1
+"""
+
+# profootballarchives.com INTERCEPTIONS Team Totals (https://www.profootballarchives.com/
+# {YYYY}nfl{team}.html; LA Rams "larm", Bears "chib", Chicago Cardinals "chic", 1950 Colts "bal",
+# 1952 Texans "dal", Tampa Bay "tb") for all 69 1950-79 NFL team-seasons where NFL.com's team
+# total and the sum of its player lines differ. The player rows add up to the Team Totals in
+# all of them. Examples: 1950 PHI 31 and DET 31 (Dan Sandifer's 2 interceptions were for
+# Detroit; 1950nfldet lists "Dan Sandifer 2 27", and NFL.com files his season under the Eagles),
+# 1956 CRD 33, 1977 CHI 18 and TB 23 (Greg Johnson's interception, returned for a TD for Tampa
+# Bay at New Orleans, is filed under the Bears), 1961 WAS 26 (Dale Hackbart's 6 and Jim
+# Steffen's 1 missing from the scrape), 1978 DET 22 (Tony Leonard's 4 filed under Detroit). The
+# 1952 DET/DTX, 1961 WAS, 1963 NYG and 1977-78 values used to be manual fixes; NFL.com's team
+# totals now give the same values.
+PFA_INT_CHECKS = """
+1950 BCL:34 CRD:22 DET:31 PHI:31 WAS:19
+1951 DET:15
+1952 DET:32 DTX:28 GNB:22 PHI:20 WAS:18
+1953 CHI:14 CRD:24
+1954 PHI:28
+1955 DET:15 NYG:23 PHI:16 WAS:19
+1956 CHI:23 CRD:33 GNB:21 PIT:18 RAM:18 SFO:17
+1957 BAL:28 DET:25
+1958 CHI:22 GNB:13 PHI:15 SFO:16
+1959 WAS:13
+1961 BAL:16 MIN:22 PHI:17 WAS:26
+1963 NYG:34
+1966 CLE:30
+1967 MIN:16 PIT:26
+1969 NOR:12 PHI:15 PIT:25 SFO:20 STL:15
+1970 CIN:23 PIT:23
+1972 CLE:13 MIA:26 PIT:28 STL:11
+1973 BUF:14 DEN:14 NWE:13 NYG:20
+1974 BUF:20 NYJ:17
+1975 BUF:25 CHI:13 CLE:10 NYG:16 SDG:20
+1976 BAL:15 MIA:11
+1977 CHI:18 TAM:23
+1978 DET:22 SFO:18
+1979 DET:14 MIN:22
+"""
+
 MIN_TREV_PLAYERS = 5  # fewer trevyoungquist defense players than this = coverage gap
 
 # PFR multi-team ("2TM"/"3TM") rows with D/ST scoring that kendallgillies cannot split:
@@ -518,12 +731,10 @@ MANUAL_PLACEMENTS = {
     (1961, "Dale Hackbart", "int_tds"): {"WAS": 2},
     # pfa 1972 HOU: 1 TD for Walsh, not rushing or receiving.
     (1972, "Ward Walsh", "oth_tds"): {"HOU": 1},
-    # PFR has Rice with 2 TD in 1973 (FblTD 1, OthTD 1); statscrew (p-riceflo001) puts one
-    # with each team. pfa 1973 SD: FUMBLES 51 yds TD 1 (the PFR box score of 1973-12-02 SD at
-    # NE: "51 yard defensive fumble return"), so the fumble TD is San Diego's and the other
-    # TD Houston's (pfa 1973 HOU shows no TD for him).
+    # pfa 1973 SD: FUMBLES 51 yds TD 1 for Rice (the PFR box score of 1973-12-02 SD at NE: "51
+    # yard defensive fumble return"). PFR's second TD for him (OthTD) is not real: see
+    # PFR_ROW_FIXES.
     (1973, "Floyd Rice", "fbl_tds_def"): {"SDG": 1},
-    (1973, "Floyd Rice", "oth_tds"): {"HOU": 1},
     # pfa 1973 WAS: 1 TD for Ken Stone.
     (1973, "Ken Stone", "oth_tds"): {"WAS": 1},
     # pfa 1977 TB: INTERCEPTIONS 1, 0t, TD 1 for Greg Johnson; 1977 CHI: not listed.
@@ -570,6 +781,54 @@ FBL_TD_DEFENSIVE_1950S = {
     (1950, "Ken Kavanaugh"), (1950, "Dick Woodard"), (1952, "Bob Carey"), (1953, "Bill McColl"),
     (1954, "Wayne Hansen"), (1954, "Leon Hart"), (1954, "Harley Sewell"), (1955, "Bob Schnelker"),
     (1956, "Billy Wells"),
+}
+
+# PFR scoring rows that fail the row check or the points check (see the docstring), corrected
+# from a web lookup: (season, player as PFR spells him, PFR team) -> {column: value}. Columns
+# are load_pfr_scoring's names (rsh_tds, rec_tds, pr_tds, kr_tds, fbl_tds, int_tds, oth_tds,
+# pts). The rushing fixes only make the row add up; they don't feed this table.
+PFR_ROW_FIXES = {
+    # https://www.profootballarchives.com/1940nflchib.html: Clarke SCORING 3 TD, 18 pts = RUSHING
+    # 2 TD + INTERCEPTIONS 4-62, TD 1; the FUMBLES table's only TD is Johnny Siegal's (PFR has
+    # it too). PFR also gives Clarke FblTD 1 (4 TD for 18 pts). Joe Maniaci's 3rd TD (PFR
+    # "other") is his interception return (INTERCEPTIONS 2-38, TD 1; Team Totals TD 2).
+    (1940, "Harry Clarke", "CHI"): {"fbl_tds": 0},
+    (1940, "Joe Maniaci", "CHI"): {"oth_tds": 0, "int_tds": 1},
+    # https://www.profootballarchives.com/1941nflchib.html: McAfee 12 TD, 72 pts = RUSHING 6,
+    # RECEIVING 3, PUNT RETURNS 1, KICKOFF RETURNS 1, INTERCEPTIONS 6-78, TD 1. PFR has 5
+    # rushing + 1 "other" and no INT-return TD (11 TD for 72 pts).
+    (1941, "George McAfee", "CHI"): {"rsh_tds": 6, "oth_tds": 0, "int_tds": 1},
+    # https://www.statscrew.com/football/stats/t-PHI/y-1945: Steele rushing 20-212-2, 12 pts (team
+    # 26 rushing TDs). PFR has 1 rushing TD for 12 pts. No D/ST score is missing.
+    (1945, "Ernie Steele", "PHI"): {"rsh_tds": 2},
+    # https://www.statscrew.com/football/stats/t-DET/y-1948: LeForce rushing 28-86-1, 3 receiving,
+    # 1 other, 30 pts. PFR has no rushing TD (4 TD for 30 pts). No D/ST score is missing.
+    (1948, "Clyde LeForce", "DET"): {"rsh_tds": 1},
+    # https://www.profootballarchives.com/1952nflpit.html: Hogan SCORING 1 TD, 6 pts; INTERCEPTIONS
+    # 4-50, TD 0 (George Hays has the team's only INT-return TD). PFR has IntTD 1 and OthTD 1
+    # (2 TD for 6 pts). The Steelers' 42 TDs = 12 rushing + 21 receiving + 1 INT + 1 fumble + 3 PR
+    # + 2 KR + 2 other (Dodrill, Hogan).
+    (1952, "Darrell Hogan", "PIT"): {"int_tds": 0},
+    # https://www.profootballarchives.com/1973nflsd.html: Rice SCORING 1 TD, 6 pts (FUMBLES 51 yds,
+    # TD 1); https://www.profootballarchives.com/1973nflhou.html: no scoring for him (the Oilers'
+    # 22 TDs = 9 rushing + 11 receiving + 1 KR + 1 other). PFR has FblTD 1 and OthTD 1, 12 pts.
+    # The points check agrees: Houston's 199 points leave no room for a second TD.
+    (1973, "Floyd Rice", "2TM"): {"oth_tds": 0, "pts": 6},
+}
+
+# NFL points PFR's NFL table lacks: players whose season was split between the AFL and the NFL
+# have no NFL row. Only used by the points check. (season, team) -> (player, non-safety points),
+# from the SCORING tables of https://www.profootballarchives.com/{YYYY}nfl{team}.html.
+# The AFL part of each season: kendallgillies (Agajanian DTX/GNB, McCarthy ATL/DEN), NFL.com's
+# player line (trevyoungquist files Bivins 1967 under the Bills), https://en.wikipedia.org/wiki/
+# Gene_Mingo (Dolphins 1966-67, Redskins 1967) and https://en.wikipedia.org/wiki/
+# Mike_Mercer_(American_football) (Bills 1967-68, Packers 1968-69).
+AFL_NFL_SPLIT_SCORERS = {
+    (1961, "GNB"): ("Ben Agajanian", 11),     # 1961nflgb: 8 XP, 1 FG; also the AFL Texans
+    (1967, "WAS"): ("Gene Mingo", 32),        # 1967nflwas: 20 XP, 4 FG; also the AFL Dolphins
+    (1967, "PIT"): ("Charlie Bivins", 6),     # 1967nflpit: 1 rushing TD; also the AFL Bills
+    (1968, "GNB"): ("Mike Mercer", 33),       # 1968nflgb: 12 XP, 7 FG; also the AFL Bills
+    (1968, "ATL"): ("Brendan McCarthy", 6),   # 1968nflatl: 1 rushing TD; also the AFL Broncos
 }
 
 # --- teams --------------------------------------------------------------------
@@ -770,6 +1029,22 @@ def pfa_table(text):
     return t.set_index(["season", "team"])
 
 
+def token_table(text, columns):
+    """A "YYYY team:n:n ..." table above (a 4-digit token starts a season), indexed by
+    (season, team) with one int column per name in columns."""
+    rows, season = [], None
+    for tok in text.split():
+        if re.fullmatch(r"\d{4}", tok):
+            season = int(tok)
+            continue
+        team, *values = tok.split(":")
+        assert season is not None and len(values) == len(columns), tok
+        rows.append((season, team, *map(int, values)))
+    t = pd.DataFrame(rows, columns=["season", "team", *columns])
+    assert not t.duplicated(["season", "team"]).any()
+    return t.set_index(["season", "team"])
+
+
 # --- games (538) ----------------------------------------------------------------
 
 
@@ -911,15 +1186,45 @@ def split_traded(dfn, kendall, names, log):
     return pd.concat([kept[cols], added[cols]], ignore_index=True)
 
 
-def load_pfr_scoring():
+PFR_TD_COLS = ["rsh_tds", "rec_tds", "pr_tds", "kr_tds", "fbl_tds", "int_tds", "oth_tds"]
+PFR_DST_COLS = ["pr_tds", "kr_tds", "fbl_tds", "int_tds", "oth_tds", "safeties"]
+
+
+def load_pfr_scoring(log):
     m = pd.read_csv(raw("michaelmallari_nfl_players_1922_2022.csv"), low_memory=False)
     m = m[m["Season"].between(FIRST_SEASON, LAST_SEASON)].copy()
-    m = m.rename(columns={"Season": "season", "Tm": "team", "PR TD": "pr_tds", "KR TD": "kr_tds",
-                          "FblTD": "fbl_tds", "IntTD": "int_tds", "OthTD": "oth_tds", "Sfty": "safeties"})
-    for col in ("pr_tds", "kr_tds", "fbl_tds", "int_tds", "oth_tds", "safeties", "G"):
+    m = m.rename(columns={"Season": "season", "Tm": "team", "RshTD": "rsh_tds", "RecTD": "rec_tds",
+                          "PR TD": "pr_tds", "KR TD": "kr_tds", "FblTD": "fbl_tds", "IntTD": "int_tds",
+                          "OthTD": "oth_tds", "AllTD": "all_tds", "Sfty": "safeties", "XPM": "xpm", "FGM": "fgm",
+                          "2PM": "two_pm", "Pts": "pts"})
+    for col in (*PFR_TD_COLS, "all_tds", "safeties", "xpm", "fgm", "two_pm", "pts", "G"):
         m[col] = num(m[col]).fillna(0)
     m["season"] = m["season"].astype(int)
     m["player"] = m["Player"].map(pfr_name)
+    assert (m[PFR_TD_COLS].sum(axis=1) == m["all_tds"]).all(), "PFR TD types do not add up to AllTD"
+
+    # corrections from a web lookup (PFR_ROW_FIXES), then the row check (see the docstring)
+    for (y, p, t), fix in PFR_ROW_FIXES.items():
+        hit = m.index[(m["season"] == y) & (m["player"] == p) & (m["team"] == t)]
+        assert len(hit) == 1, f"PFR_ROW_FIXES {(y, p, t)} matches {len(hit)} PFR rows"
+        for col, v in fix.items():
+            assert m.at[hit[0], col] != v, f"PFR_ROW_FIXES {(y, p, t)}: PFR already has {col} = {v}"
+            m.at[hit[0], col] = v
+    m["tds"] = m[PFR_TD_COLS].sum(axis=1)
+    m["nonsafety_pts"] = 6 * m["tds"] + m["xpm"] + 3 * m["fgm"] + 2 * m["two_pm"]
+    gap = m["pts"] - m["nonsafety_pts"] - 2 * m["safeties"]
+    dst = m[PFR_DST_COLS].sum(axis=1) > 0
+    hides = (gap >= 6) | ((gap < 0) & dst)
+
+    def show(rows):
+        return "; ".join(f"{r.season} {r.player} ({r.team}) {r.pts:g} pts vs {r.pts - g:g} from its scores"
+                         for r, g in zip(rows.itertuples(index=False), gap[rows.index]))
+
+    assert not hides.any(), ("PFR rows whose points can hide or double a D/ST score; look them up and add "
+                             "them to PFR_ROW_FIXES: " + show(m[hides]))
+    log.append(f"PFR scoring rows: {len(PFR_ROW_FIXES)} corrected (PFR_ROW_FIXES); {int((gap != 0).sum())} "
+               f"others whose points differ by an XP, safety or 2PT, or score less with no D/ST score "
+               f"(no effect here): " + show(m[gap != 0]))
     offense = offense_only(m["Pos"], m["season"])
     kept = pd.Series([(y, p) in FBL_TD_DEFENSIVE_1950S for y, p in zip(m["season"], m["player"])], index=m.index)
     hit = m[kept]
@@ -951,7 +1256,8 @@ SPLITTABLE = {"int_tds", "safeties", "kr_tds", "pr_tds"}  # stats kendallgillies
 
 
 def stat_used(stat, season):
-    """Whether this PFR stat feeds the table in this (NFL) season."""
+    """Whether this PFR stat is placed on teams in this (NFL) season: TDs feed def_tds/st_tds;
+    player safeties are compared with the team totals."""
     return season >= (PFR_SAFETIES_FROM if stat == "safeties" else TDS_FROM)
 
 
@@ -1057,7 +1363,7 @@ def build_seasons(games, log):
     a, shift_ok = pfr_team_defense(s.index)
 
     # PFR scoring 1922+: TDs and safeties (NFL only)
-    pfr = load_pfr_scoring()
+    pfr = load_pfr_scoring(log)
     single = pfr[~pfr["team"].str.fullmatch(r"\dTM")]
     unknown = set(zip(single["season"], single["team"])) - set(s.index)
     assert not unknown, f"PFR scoring team-seasons with no games: {sorted(unknown)}"
@@ -1066,6 +1372,17 @@ def build_seasons(games, log):
     pfr_team = pd.concat([single[["season", "team", *PFR_STATS, "fbl_tds_offense"]], multi], ignore_index=True)
     pfr_team = pfr_team.groupby(["season", "team"])[[*PFR_STATS, "fbl_tds_offense"]].sum()
     pfr_team = pfr_team.reindex(s.index).fillna(0)
+
+    # points check data (see the docstring): PFR's non-safety points by team-season (single-team
+    # rows plus the NFL lines PFR lacks) and by season for its multi-team rows
+    for (y, t), (player, _) in AFL_NFL_SPLIT_SCORERS.items():
+        assert (t, y) in TEAM_SEASONS and not ((pfr["season"] == y) & (pfr["player"] == player)).any(), \
+            f"AFL_NFL_SPLIT_SCORERS: PFR has a {y} row for {player}"
+    split = pd.Series([pts for _, pts in AFL_NFL_SPLIT_SCORERS.values()], dtype=float,
+                      index=pd.MultiIndex.from_tuples(list(AFL_NFL_SPLIT_SCORERS), names=["season", "team"]))
+    s["pfr_nonsafety_pts"] = (single.groupby(["season", "team"])["nonsafety_pts"].sum().reindex(s.index).fillna(0)
+                              + split.reindex(s.index).fillna(0))
+    multi_pts = pfr[pfr["team"].str.fullmatch(r"\dTM")].groupby("season")["nonsafety_pts"].sum()
 
     # profootballarchives team totals: NFL 1940-49 and AFL 1960-69
     season = s.index.get_level_values("season")
@@ -1080,6 +1397,12 @@ def build_seasons(games, log):
     in40 = season.isin(PFA_NFL_SEASONS)
     p40, pafl = pfa40.reindex(s.index), pfa_afl.reindex(s.index)
 
+    # NFL.com team totals 1940-98: INT and SFTY
+    nfc = token_table(NFLCOM_TEAM_DEFENSE, ["int", "saf"])
+    assert set(nfc.index) == set(s.index[season >= INT_FROM]), "NFLCOM_TEAM_DEFENSE teams != 1940-98 games"
+    nfc = nfc.reindex(s.index)
+    s["nflcom_int"], s["nflcom_saf"] = nfc["int"], nfc["saf"]
+
     nan = float("nan")
     s["sacks"] = a["pfr_sacks"].reindex(s.index).where(season >= SACKS_FROM, nan)
     s["pfr_sacks"] = a["pfr_sacks"].reindex(s.index)
@@ -1087,8 +1410,7 @@ def build_seasons(games, log):
     s["trev_int_raw"] = raw_sums.reindex(s.index).fillna(0)
     s["trev_int"] = trev["interceptions"]
     s = s.join(a.drop(columns="pfr_sacks"))
-    ints = trev["interceptions"].where(season >= INT_FROM, nan)
-    ints = ints.where(~in40, p40["int"]).where(~afl, pafl["int"])
+    ints = nfc["int"].where(~in40, p40["int"]).where(~afl, pafl["int"])  # NaN before 1940
     s["interceptions"] = ints.where(s["pfr_int"].isna(), s["pfr_int"])
     s["fumble_recoveries"] = s["pfr_fr"].where(season >= FR_FROM, nan)
 
@@ -1100,20 +1422,16 @@ def build_seasons(games, log):
     s["def_tds"] = nfl_def.where(~afl, pafl["def_tds"]).where(season >= TDS_FROM, nan)
     s["st_tds"] = nfl_st.where(~afl, pafl["st_tds"]).where(season >= TDS_FROM, nan)
     s["pfr_safeties"] = pfr_team["safeties"]
-    sfty = pfr_team["safeties"].where(~in40, p40["saf"]).where(~afl, pafl["saf"])
+    sfty = nfc["saf"].where(~in40, p40["saf"]).where(~afl, pafl["saf"])
     s["safeties"] = sfty.where(season >= SAFETIES_FROM, nan)
     s["blocked_kicks"] = nan
 
-    # coverage gaps in the NFL.com scrape where its interceptions are used (NFL 1950-79)
+    # coverage gaps in the NFL.com scrape where its player interceptions are compared with the
+    # team totals (NFL 1950-79)
     use_trev = (season >= PLATOON_FROM) & (season < FR_FROM) & ~afl
     players = dfn_raw.groupby(["season", "team"])["Player_Id"].nunique().reindex(s.index[use_trev]).fillna(0)
     gaps = sorted(players[players < MIN_TREV_PLAYERS].index)
-    assert not gaps, f"trevyoungquist coverage gaps where its interceptions are used: {gaps}"
-    for key, values in MANUAL_SEASON_STATS.items():
-        for col, v in values.items():
-            s.at[key, col] = v
-    log.append("manual team-season values (web lookup): " + "; ".join(
-        f"{y} {t} {values}" for (y, t), values in MANUAL_SEASON_STATS.items()))
+    assert not gaps, f"trevyoungquist coverage gaps where its interceptions are compared: {gaps}"
     pre = a[a.index.get_level_values("season") < SACKS_FROM]
     if len(pre):
         log.append("PFR also has unofficial team sacks for "
@@ -1122,7 +1440,6 @@ def build_seasons(games, log):
 
     notes = []
     for (y, t), row in s.iterrows():
-        manual_int = "interceptions" in MANUAL_SEASON_STATS.get((y, t), {})
         if y < INT_FROM:
             n_int = "int=unknown"
         elif y >= FR_FROM:
@@ -1130,8 +1447,7 @@ def build_seasons(games, log):
         elif row["afl"] or y in PFA_NFL_SEASONS:
             n_int = "int=profootballarchives"
         else:
-            n_int = "int=nfl.com player sums (partial: traded or missing players)" + (
-                "; manual fix for a traded player" if manual_int else "")
+            n_int = "int=nfl.com team totals"
         n = ["sacks=pfr team totals" if y >= SACKS_FROM else "sacks=unknown", n_int,
              "fr=pfr (opponent fumbles lost)" if y >= FR_FROM else "fr=unknown"]
         if y < TDS_FROM:
@@ -1146,11 +1462,11 @@ def build_seasons(games, log):
         elif row["afl"] or y in PFA_NFL_SEASONS:
             n.append("sfty=profootballarchives (incl. team safeties)")
         else:
-            n.append("sfty=pfr (player-credited only)")
+            n.append("sfty=nfl.com team totals (incl. team safeties)")
         n.append("blk=unknown")
         notes.append("; ".join(n))
     s["source_notes"] = notes
-    return s.reset_index(), shift_ok
+    return s.reset_index(), shift_ok, multi_pts
 
 
 # --- checks and summary ---------------------------------------------------------
@@ -1184,15 +1500,20 @@ def fantasy_points(games, seasons):
     return tot
 
 
+def points_for(games):
+    """Points scored per (season, team): the opponent's points allowed in each game."""
+    pf = games.merge(games[["game_id", "team", "points_allowed"]].rename(
+        columns={"team": "opponent", "points_allowed": "pf"}), on=["game_id", "opponent"])
+    return pf.groupby(["season", "team"])["pf"].sum()
+
+
 def octonion_compare(games):
     o = pd.read_csv(raw("octonion_nfl_team_standings.csv"), sep="\t")
     o = o[o["season"].between(FIRST_SEASON, LAST_SEASON)].copy()
     o["team"] = [code_from_name(n, y) for n, y in zip(o["team_name"], o["season"])]
     o = o[o["team"].notna()].set_index(["season", "team"])  # AAFC dropped
     ours = games.groupby(["season", "team"]).agg(pa=("points_allowed", "sum"), g=("game_id", "nunique"))
-    pf = games.merge(games[["game_id", "team", "points_allowed"]].rename(
-        columns={"team": "opponent", "points_allowed": "pf"}), on=["game_id", "opponent"])
-    ours["pf"] = pf.groupby(["season", "team"])["pf"].sum()
+    ours["pf"] = points_for(games)
     both = ours.join(o[["points_for", "points_against", "wins", "losses", "ties", "team_name"]], how="outer")
     both["g_std"] = both["wins"] + both["losses"] + both["ties"]
     return both
@@ -1217,7 +1538,7 @@ def fmt(v):
 def main():
     log = []
     games = load_games(log)
-    seasons, shift_ok = build_seasons(games, log)
+    seasons, shift_ok, multi_pts = build_seasons(games, log)
 
     out_games = games[GAME_COLUMNS].copy()
     out_seasons = seasons[SEASON_COLUMNS].copy()
@@ -1313,15 +1634,42 @@ def main():
           f"for 1940-49; equal in {(x['trev_int'] == x['interceptions']).mean():.0%} of team-seasons)")
     expect("1977: CHI 18 INT, TAM 23 INT (Greg Johnson's interception moved to Tampa Bay)",
            stats(1977, "CHI", "interceptions") + stats(1977, "TAM", "interceptions"), (18, 23))
+    expect("1950: PHI 31 INT, DET 31 (Dan Sandifer's 2 were Detroit's; NFL.com files his season under the "
+           "Eagles); 1956 CRD 33", stats(1950, "PHI", "interceptions") + stats(1950, "DET", "interceptions")
+           + stats(1956, "CRD", "interceptions"), (31, 31, 33))
+    x = seasons[seasons["season"].isin(PFA_NFL_SEASONS) | seasons["afl"]]
+    check("NFL.com team INT and SFTY = profootballarchives team totals in every 1940-49 NFL and 1960-69 AFL "
+          "team-season (so NFL.com's SFTY counts safeties credited to no player)",
+          (x["nflcom_int"] == x["interceptions"]).all() and (x["nflcom_saf"] == x["safeties"]).all(),
+          f"{len(x)} team-seasons")
+    # https://www.profootballarchives.com/1988nfllarm.html, 1991nflden.html, 1991nflwas.html:
+    # INTERCEPTIONS Team Totals 22, 23, 27 (NFL.com 23, 24, 28)
+    pfa_side = {(1988, "RAM"): 22, (1991, "DEN"): 23, (1991, "WAS"): 27}
+    x = seasons[seasons["pfr_int"].notna()].set_index(["season", "team"])
+    off = x[x["nflcom_int"] != x["pfr_int"]]
+    check("1980-98: NFL.com team INT = PFR's in all but 3 team-seasons, where profootballarchives agrees with PFR "
+          "(1988 RAM 22, 1991 DEN 23, WAS 27)",
+          set(off.index) == set(pfa_side) and all(off.at[k, "pfr_int"] == v for k, v in pfa_side.items()),
+          f"{len(x) - len(off)}/{len(x)} equal; differ: "
+          + ", ".join(f"{y} {t} {r.nflcom_int:g} vs {r.pfr_int:g}" for (y, t), r in off.iterrows()))
+    pfa_int = token_table(PFA_INT_CHECKS, ["int"])["int"]
+    x = seasons[seasons["season"].between(PLATOON_FROM, FR_FROM - 1) & ~seasons["afl"]].set_index(["season", "team"])
+    differ = x[x["nflcom_int"] != x["trev_int"]]
+    ok = (set(differ.index) == set(pfa_int.index) and (x["interceptions"] == x["nflcom_int"]).all()
+          and (x["interceptions"].reindex(pfa_int.index) == pfa_int).all())
+    check("1950-79 NFL INT = NFL.com team totals; profootballarchives' Team Totals agree with them in all "
+          f"{len(pfa_int)} team-seasons where NFL.com's player sums differ (PFA_INT_CHECKS)", ok,
+          f"player sums {int(x['trev_int'].sum())} vs team totals {int(x['interceptions'].sum())}; differ by "
+          + ", ".join(f"{d:+d}: {n}" for d, n in (differ["trev_int"] - differ["nflcom_int"]).astype(int)
+                      .value_counts().sort_index().items()))
     li = league_int(seasons)
     exact_nfl = [(y, False) for y in [1949, *range(1970, LAST_SEASON + 1)]]
     exact_afl = [(y, True) for y in (1960, 1961, 1963, 1964, 1965, 1966, 1968)]
     bad = {k: int(li.at[k, "gap"]) for k in exact_nfl + exact_afl if li.at[k, "gap"] != 0}
     check("league INT caught = INT thrown (NFL.com passing): NFL 1949 and 1970-98, AFL 1960-61, 1963-66, 1968",
           not bad, f"gaps: {bad}" if bad else f"{len(exact_nfl) + len(exact_afl)} league-seasons")
-    print("    caught/thrown (gap) where they differ -- 1940-48 and AFL 1962/1967: thrown side incomplete "
-          "(NFL.com lacks some passers, e.g. 1962 OAK 78 attempts); 1950-69 NFL: players missing or traded on "
-          "either side:")
+    print("    caught/thrown (gap) where they differ -- the thrown side (NFL.com player lines) is incomplete: "
+          "NFL.com lacks some passers (e.g. 1962 OAK 78 attempts) and some 1950s-60s lines:")
     rows = [f"{y}{' AFL' if lg else ''} {r.caught}/{r.thrown} ({r.gap:+d})" for (y, lg), r in li.iterrows() if r.gap]
     for i in range(0, len(rows), 7):
         print("      " + "; ".join(rows[i:i + 7]))
@@ -1350,6 +1698,40 @@ def main():
     expect("1989 Sean Smith safety: RAM 0, TAM 1 of its safeties", stat(1989, "RAM", "safeties") == 0
            and stat(1989, "TAM", "safeties") >= 1, True)
     expect("1952 Rams def_tds 9 (Bob Carey's fumble return kept)", stat(1952, "RAM", "def_tds"), 9)
+    expect("1952 Steelers def_tds 2, st_tds 7: 9 non-offensive TDs (Darrell Hogan scored 1 TD, an 'other', "
+           "and no INT-return TD)", stats(1952, "PIT", "def_tds", "st_tds"), (2, 7))
+    expect("1940 Bears def_tds 3, st_tds 3 (Harry Clarke's PFR fumble TD dropped; Joe Maniaci's 'other' TD an "
+           "INT return); 1941 Bears def_tds 4, st_tds 3 (George McAfee's INT-return TD)",
+           stats(1940, "CHI", "def_tds", "st_tds") + stats(1941, "CHI", "def_tds", "st_tds"), (3, 3, 4, 3))
+    expect("1973 Floyd Rice scored 1 TD (San Diego fumble return): SDG def_tds 2, st_tds 2; HOU def_tds 0, "
+           "st_tds 2", stats(1973, "SDG", "def_tds", "st_tds") + stats(1973, "HOU", "def_tds", "st_tds"), (2, 2, 0, 2))
+    pf = points_for(games)
+    x = seasons[~seasons["afl"] & seasons["season"].between(TDS_FROM, LAST_SEASON)].set_index(["season", "team"])
+    left = pf.reindex(x.index) - x["pfr_nonsafety_pts"] - 2 * x["safeties"].fillna(0)
+    check("no NFL team-season 1922-98 scored fewer points than PFR's single-team players' TDs and kicks plus 2 "
+          "per known team safety (no TD counted twice)", (left >= 0).all(),
+          ", ".join(f"{y} {t} {v:+g}" for (y, t), v in left[left < 0].items()))
+    by_season = left[left.index.get_level_values("season") >= PFR_SAFETIES_FROM].groupby(level="season").sum()
+    off = (by_season - multi_pts.reindex(by_season.index).fillna(0)).astype(int)
+    check("1950-98, every season: points scored - PFR's single-team players' TDs/kicks - 2 x NFL.com team "
+          "safeties = PFR's multi-team players' TDs/kicks (plus AFL_NFL_SPLIT_SCORERS)", (off == 0).all(),
+          f"off: {off[off != 0].to_dict()}" if (off != 0).any()
+          else f"{len(by_season)} seasons; multi-team players {int(multi_pts.reindex(by_season.index).sum())} pts")
+    x = seasons[~seasons["afl"] & (seasons["season"] >= PFR_SAFETIES_FROM)]
+    check("1950-98 NFL safeties = NFL.com team totals, never fewer than PFR's player-credited safeties",
+          (x["safeties"] == x["nflcom_saf"]).all() and (x["safeties"] >= x["pfr_safeties"]).all(),
+          f"{int(x['safeties'].sum())} vs {int(x['pfr_safeties'].sum())} player-credited; more in "
+          f"{int((x['safeties'] > x['pfr_safeties']).sum())} of {len(x)} team-seasons")
+    want = {(1996, "CAR"): 2, (1996, "SFO"): 4, (1996, "NYG"): 2, (1996, "OAK"): 2, (1996, "HOU"): 2,
+            (1994, "KAN"): 2, (1994, "NYG"): 2, (1991, "ATL"): 3}
+    got = {k: stat(*k, "safeties") for k in want}
+    league = seasons.groupby("season")["safeties"].sum()
+    got_league = [int(league[y]) for y in (1996, 1994, 1991)]
+    check("team safeties incl. those credited to no player: 1996 CAR 2 (player-credited 0), SFO 4 (2), NYG 2, "
+          "OAK 2, HOU 2; 1994 KAN 2, NYG 2; 1991 ATL 3; league 1996 20, 1994 13, 1991 12",
+          got == want and got_league == [20, 13, 12],
+          f"league {got_league}" + ("; wrong: " + str({k: v for k, v in got.items() if v != want[k]})
+                                    if got != want else ""))
     expect("1944 Giants 2 safeties (incl. a team safety)", stat(1944, "NYG", "safeties"), 2)
     expect("AFL: 1960 Texans 32 INT; 1962 Titans st_tds 3 (Christy 2, Cooke 1), def_tds 2 (INT + Grantham "
            "fumble return), 1 safety", stats(1960, "DTX", "interceptions") + stats(1962, "NYT", "st_tds", "def_tds",

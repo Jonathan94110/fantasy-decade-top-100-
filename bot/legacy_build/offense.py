@@ -22,11 +22,14 @@ Sources
     1922-98, NFL only): games and TDs of multi-team seasons, return/fumble/other
     TDs, 2-point conversions, TD cross-check, and TD counts for players missing
     from both NFL.com scrapes.
-  * Hand-checked lines (WEB_LINES, WEB_TEAMS, PFR_MULTI_TEAMS below, one URL per
-    line): per-team season tables and player pages of jt-sw.com, whose lines are
-    identical to NFL.com's wherever both exist (Zimmerman 1943, Layne 1958 and
-    every first stint below), plus Wikipedia / HOF / profootballarchives for
-    1920s teams. Looked up once with a web search tool; the script doesn't fetch them.
+  * Hand-checked lines (WEB_LINES, WEB_TEAMS, PFR_MULTI_TEAMS, TD_CONFLICTS,
+    TE_SEASONS below, one URL per line): per-team season tables and player pages of
+    jt-sw.com, whose lines are identical to NFL.com's wherever both exist (Zimmerman
+    1943, Layne 1958 and every first stint below), plus Wikipedia / HOF /
+    profootballarchives / statscrew (team scoring tables with TDs by type) for 1920s-40s
+    teams and positions, profootballarchives team rosters and Wikipedia for 1950-69
+    tight ends, and NFL.com's per-team career pages for 1970-98 split seasons.
+    Looked up once with a web search tool; the script doesn't fetch them.
   * nflverse players.csv: Pro Football Reference ids (pfr_id).
   * octonion NFL.com standings: team games per season, for the postseason check.
 
@@ -66,6 +69,20 @@ Known gaps in the NFL.com backbone, and what this script does about them
          not even a candidate: such seasons may still be one stint filed under
          the last team. 1922-31 seasons that PFR doesn't show as multi-team
          and 1920-21 seasons are only fixed where listed (WEB_TEAMS).
+  * Split seasons from 1970: the line is the full season, under the last team's
+    name. kendallgillies' per-team lines name the teams (its game logs cover the
+    same players, so they add nothing); a per-team line with no games and no
+    stats is a team that only held the player's rights (Darrin Nelson 1989, sent
+    to Dallas, refused to report) and isn't named, and when NFL.com's single team
+    is such a team the season is renamed (Bartkowski 1985: ATL, not WAS). Seasons
+    kendallgillies doesn't have that PFR shows as 2TM/3TM are named from NFL.com's
+    per-team career pages (WEB_TEAMS) for players in a decade's top 100 (Muncie
+    1980, Pruitt 1985, ...); the others (players outside the top 100s) keep the
+    last team only, counted in the build log.
+  * TDs: before 1970 NFL.com's and PFR's rushing/receiving TDs disagree on 15
+    single-team lines; each was checked on a per-team scoring table (TD_CONFLICTS:
+    PFR right for 9, e.g. Pug Manders 1944, Jack Banta 1944; NFL.com for 6), and a
+    new disagreement fails a self-check until it is checked.
   * Some profiles have no stat lines at all (e.g. Roy Zimmerman, Ernie Steele,
     Bill Hewitt). Seasons through 1969 are added from kendallgillies when it has
     them; otherwise, when PFR's scoring table shows rushing/receiving TDs, a
@@ -80,6 +97,11 @@ Known gaps in the NFL.com backbone, and what this script does about them
     yardage for some players (and jt-sw.com some), but none of the sources used
     here has it, so these columns are empty; TDs come from NFL.com and, for
     1922-31 split seasons and players NFL.com lacks, from PFR's scoring table.
+    1920-21 players NFL.com lacks are in no table used here; the 1921 Buffalo
+    All-Americans (none of whom NFL.com has for 1921) and Scotty Bierce's 1921
+    Akron TD are hand-checked TD-only lines (statscrew TDs by type,
+    profootballarchives games). Other 1920-21 teams with no rows (1921 DET, HAM,
+    NYG, LOU, MUN, TON) and Buffalo's 1920 league-game scorers are not added.
 
 Judgement calls
   * Seasons 1920-1998, regular season only. The AFL (1960-69) is included; the
@@ -88,8 +110,8 @@ Judgement calls
   * One row per player-season; a split season sums the teams and joins their
     codes with "/" in the order played (e.g. "RAM/IND"; for Scotty Bierce 1923
     the order isn't known), when a source names both teams. Otherwise team is
-    NFL.com's single team for that season (1970-98 split seasons that
-    kendallgillies doesn't name have full stats but only the last team).
+    NFL.com's single team for that season (1970-98 split seasons that neither
+    kendallgillies nor WEB_TEAMS names have full stats but only the last team).
   * Team codes are Pro Football Reference's season-table codes of the era (the
     "Tm" column of the PFR tables above): GNB, CRD, BOS for every Boston team,
     RAM for the Cleveland/LA Rams, STL for the St. Louis Cardinals and Rams,
@@ -114,18 +136,54 @@ Judgement calls
     interceptions make their passing points look small). Before 1950 a career
     "QB" who ran more than he passed (>= 20 runs) and gained more yards running
     and receiving than passing counts as RB: NFL.com lists single-wing blocking
-    backs as QBs (e.g. Gene Ronzani). Players with no position or a non-offense
-    one (two-way era DBs and linemen, kickers, punters, CBs who also played WR)
-    get a per-season position from PFR's fantasy table (1970-98) or else from
-    where their points came from (passing -> QB, rushing -> RB, receiving ->
-    WR; before 1960 a "RB" with the passing usage above -> QB). Those rows are
-    kept only with meaningful offense: >= 10 touches, or before 1950 (two-way
-    football) >= 6 PPR points, so a tackle-eligible TD catch or a punter's fake
-    run doesn't make a lineman a WR. Inferred TEs are dropped. Finally a player
-    with two positions inside one decade gets the one that scored most for
+    backs as QBs (e.g. Gene Ronzani). Before 1960 a halfback's season is told
+    from an end's by usage (runs + passes vs catches; in TD-only 1920-31 seasons,
+    whether he scored running/passing or receiving) and PFR's scoring-table season
+    position (WB/TB/FB/HB/LH/RH... vs E/LE/RE/FL...): a career end in a season PFR
+    places in the backfield and in which he ran/passed more than he caught is a
+    back (Bobby Mitchell and Johnny Morris 1958-59, Jim Kendrick 1926, then a QB
+    by the passing rule), and the other way round. Players with no position or a
+    non-offense one (two-way era DBs and linemen, kickers, punters, CBs who also
+    played WR) get a per-season position from PFR's fantasy table (1970-98) or
+    else from where their points came from (passing -> QB, rushing -> RB,
+    receiving -> WR), except that before 1960 RB vs WR is by usage as above (the
+    point per catch made pass-catching halfbacks listed as DB, e.g. Kercheval,
+    Shipwreck Kelly, Seymour, Wilbur Moore, look like ends; in TD-only seasons the
+    type of TD decides, and PFR's season position only when he scored both ways,
+    e.g. Swede Hagberg 1929, 3 receiving TDs, PFR "WB": WR), and before 1960 such
+    a season is QB only by the passer rules above, never by points alone (Ralph
+    Kercheval 1940, 7 passes and 11 runs: RB). Those rows are kept only with
+    meaningful offense: >= 10 touches, or before 1950 (two-way football) >= 6 PPR
+    points, so a tackle-eligible TD catch or a punter's fake run doesn't make a
+    lineman a WR; before 1950 also his other seasons of a decade in which he had a
+    meaningful one (a back's small season: Roger Grove 1935, 7 runs). Tight ends:
+    PFR's season position "TE" (1950 on; PFR uses it from about 1962), the TD-less
+    seasons between two such seasons or after the last one with the same team (no
+    PFR row), and the hand-checked seasons of TE_SEASONS are dropped. TE_SEASONS
+    covers the seasons PFR can't label (its 1950-61 ends are LE/RE/E for tight and
+    split ends alike; no AFL rows), from two sources: profootballarchives.com
+    rosters, which give each player's positions per team-season (TE/SE/FL from
+    1960; checked for every 1960-61 NFL team and the AFL team-seasons of the ends in
+    the 1960s WR top 100), and Wikipedia (checked for every NFL.com end, OE/E, in the
+    1950s WR top 100): a season is a tight end's when one source puts him at tight
+    end and the other doesn't put him elsewhere (Mutscheller, Nickel 1950-55, Schnelker, Johnny
+    Carson, Joe Walton, Leon Clarke, Brewster 1955-56, Lundy 1957-59; 1960-61
+    Phillips, Nagler, Walston, Doran, Knafelc, Kramer, Gibbons, Carpenter; AFL
+    Billy Cannon 1965-69, Hewritt Dixon 1964-65, Tom Rychlec 1961/1963, Willard
+    Dewveall 1961/1964, Max Boydston 1960-62 ...). TE_CHECKED_NOT lists the ends
+    checked and kept as WR (Lionel Taylor 1960: profootballarchives TE-FL, every
+    other source wide receiver; Bill Anderson 1958-61: Wikipedia tight end, rosters
+    SE/FL; Leon Hart; Ron Kramer 1957; Tom Rychlec 1960 SE ...). AFL team-seasons
+    not listed above, and 1950s ends outside the top 100, are not checked. A career
+    TE in a season both PFR tables show as a wide receiver's (one says WR, neither
+    TE; >= 10 touches) is a WR (Jerome Barkum 1973-75, Rich Caster). Finally a
+    player with two positions inside one decade gets the one that scored most for
     that decade, so his decade isn't split across two lists; before 1960 a back
     with QB and RB seasons in a decade also gets QB if he threw more than he ran
-    over the decade (e.g. Ed Matesic 1930s; Tuffy Leemans stays a 1940s RB).
+    over the decade (e.g. Ed Matesic 1930s; Tuffy Leemans stays a 1940s RB), and
+    a career end or back whose decade mixes RB and WR seasons keeps NFL.com's
+    position unless the other one scored at least a tenth more (Bob Wilkinson
+    1950s: 1951 end 35.2 points, 1952 halfback 35.4: WR).
   * Rows with no offensive production at all are dropped (nflverse likewise
     only has weeks where a player recorded a stat).
   * other_tds = punt + kick return TDs + PFR's "other" TDs (blocked/missed kick
@@ -135,6 +193,8 @@ Judgement calls
     Return TDs are PFR's for lines linked to its scoring table (it files some
     as "other", which would count twice if NFL.com's were added too; the two
     agree on 99.9% of lines) and NFL.com's otherwise (AFL, unlinked lines).
+    PFR's "other" TD isn't counted when the line's rushing/receiving TDs exceed
+    PFR's by as many: PFR filed that run/catch as "other" (George McAfee 1941).
     Before 1950 (two-way football) a fumble-return TD was usually a defensive
     play (e.g. George Halas's 98-yard return against Oorang in 1923), so none
     is counted; AFL fumble-recovery TDs are unknown and count as 0.
@@ -160,6 +220,7 @@ source column
   nflcom-kg       season found only in the kendallgillies scrape
   ...+web         line replaced by a hand-checked one (WEB_LINES / WEB_TEAMS)
   web             hand-checked line of a player missing from both NFL.com scrapes
+                  (player_id "web:<name>" when he has no NFL.com profile either)
   ...+pfr         linked to a PFR table (fumbles lost, 2PM, return/fumble/other
                   TDs; for multi-team seasons also games and rushing/receiving TDs)
   ...+split       multi-team season with one stint's yardage (none left; see above)
@@ -168,7 +229,8 @@ source column
 
 Unknown (empty) cells
   * 1920-1931: completions, attempts, passing_yards, interceptions, carries,
-    rushing_yards, receptions, receiving_yards (no official statistics; see above).
+    rushing_yards, receptions, receiving_yards (no official statistics; see above;
+    also on the hand-checked 1921 TD-only lines).
   * Before 1994: fumbles_lost.
   * AFL 1960-69: two_point_conversions.
   * Rows with source "pfr-scoring" (1922-29 players missing from both NFL.com
@@ -199,6 +261,7 @@ FUMBLES_LOST_FROM = 1994
 TWO_POINT_FROM = 1994
 PLATOON_FROM = 1950  # free substitution; from here on non-offense players need 10 touches
 SINGLE_WING_UNTIL = 1960  # before this, a back who threw more than he ran is a QB
+HALFBACK_ERA_UNTIL = 1960  # before this, usage and PFR's season position tell a halfback from an end
 
 COLUMNS = [
     "player_id", "pfr_id", "name", "position", "season", "team", "team_name", "games",
@@ -337,6 +400,22 @@ PFR_MULTI_TEAMS = {
     ("Gus Sonnenberg", 1923): ("BUF/COL", "en.wikipedia.org/wiki/Gus_Sonnenberg (Buffalo one game, then Columbus)"),
     ("Ed Halicki", 1930): ("FRN/MIN", "en.wikipedia.org/wiki/Ed_Halicki_(American_football) (FRN 13 G, MIN 1 G)"),
     ("Chief McLain", 1931): ("PRT/SIS", "profootballarchives.com/players/m/mcla00600.html (PRT 1 G, SIS 9 G)"),
+    # 1922-30 split seasons NFL.com files under one team (all its TDs were scored for the team
+    # named first here, except Knop's and Sternaman's).
+    ("Jimmy Conzelman", 1922): ("RII/MIL", "en.wikipedia.org/wiki/Jimmy_Conzelman (RII 7 G, then signed with MIL "
+                                "for its last 3 G); statscrew t-RI/y-1922 (7 rush TD), t-MIL/y-1922 (coach only)"),
+    ("Dutch Lauer", 1922): ("RII/GNB", "en.wikipedia.org/wiki/Dutch_Lauer (both teams in 1922); profootballarchives."
+                            "com/1922nflri.html (RII 7 G, 31 pts); statscrew t-GB/y-1922 (no Lauer)"),
+    ("Candy Miller", 1922): ("CAN/RAC", "statscrew t-CAN/y-1922 (his TD, a 10-yard run in Canton's opener) and "
+                             "rosters (CAN 3 G, RAC 8 G); en.wikipedia.org/wiki/Candy_Miller"),
+    ("Oscar Knop", 1923): ("HAM/CHI", "en.wikipedia.org/wiki/Oscar_Knop (Hammond 1921-23, Bears 1923-27); statscrew "
+                           "roster t-HAM/y-1923 (4 G); his TD in statscrew t-CHI/y-1923"),
+    ("Joey Sternaman", 1923): ("DUL/CHI", "statscrew t-DUL/y-1923 (5 FG, 2 XP; head coach, en.wikipedia.org/wiki/"
+                               "Joey_Sternaman) and t-CHI/y-1923 (his rushing TD) (order not known)"),
+    ("Johnny Bryan", 1926): ("MIL/CHI", "en.wikipedia.org/wiki/Johnny_Bryan (Milwaukee player-coach 1926, Bears "
+                             "1926-27); his TD in statscrew t-MIL/y-1926, roster MIL 9 G (order not known)"),
+    ("Frosty Peters", 1930): ("PRV/PRT", "en.wikipedia.org/wiki/Frosty_Peters; profootballarchives.com 1930nflpro."
+                              "html (all his scoring) and nflboxscores1/1930nfl014.html (PRV, Oct 1); POR 3 G"),
     ("Coley McDonough", 1939): ("CRD/PIT", JTSW + "players.nsf/ID/02020005"),
     ("Johnny Butler", 1944): ("CRD/BKN", JTSW + "players.nsf/ID/02420006"),
     ("Don Currivan", 1948): ("BOS/RAM", JTSW + "players.nsf/ID/02450020"),
@@ -346,6 +425,15 @@ def _web(teams, games, url, p=(0, 0, 0, 0, 0), r=(0, 0, 0), c=(0, 0, 0)):
     """A hand-checked season line: p = completions, attempts, yards, TDs, INTs; r = carries,
     yards, TDs; c = receptions, yards, TDs. teams = era codes joined in the order played."""
     return {"teams": teams, "games": games, "url": url, **dict(zip(LINE, (*p, *r, *c)))}
+
+
+def _tds(teams, games, url, rush=0, rec=0, pas=0, pr=0, kr=0, name=None):
+    """A hand-checked 1920-31 line: TDs only (no yardage was kept; those cells stay empty).
+    pr/kr = punt/kick-return TDs (other_tds); interception and fumble returns are defensive and
+    aren't counted, as everywhere before 1950. name: for a player without an NFL.com profile
+    (player_id "web:...")."""
+    return {"teams": teams, "games": games, "url": url, **dict.fromkeys(LINE),
+            "passing_tds": pas, "rushing_tds": rush, "receiving_tds": rec, "pr_tds": pr, "kr_tds": kr, "name": name}
 
 
 # Full season lines checked by hand on jt-sw.com (per-team season tables and player pages,
@@ -365,6 +453,8 @@ _MILLER = JTSW + "players.nsf/ID/02460011"
 _MCCULLOUGH = JTSW + "players.nsf/ID/02080004"
 _MCDONOUGH = JTSW + "players.nsf/ID/02020005"
 _RUCINSKI = JTSW + "players.nsf/ID/02250014"
+_STATSCREW_BUF21 = ("statscrew.com/football/stats/t-BU1/y-1921; profootballarchives.com/1921apfabuf.html "
+                    "(roster games)")
 WEB_LINES = {
     # Split seasons: NFL.com shows the first stint under the second team's name.
     # From Wikipedia's per-team 1967 table (BOS 7 G 27/81 442 1 TD 7 INT, 19-35-3; HOU 3 G
@@ -504,11 +594,85 @@ WEB_LINES = {
     ("nflcom:eddie-rucinski", 1944): _web("CRD", 10, _RUCINSKI, r=(16, 72, 0), c=(22, 284, 1)),
     ("nflcom:eddie-rucinski", 1945): _web("CRD", 8, _RUCINSKI, c=(23, 400, 2)),
     ("nflcom:eddie-rucinski", 1946): _web("CRD", 10, _RUCINSKI, c=(2, 23, 0)),
+    # 1921 players missing from NFL.com's stat lines (PFR's scoring table starts in 1922).
+    # Buffalo All-Americans, 9-1-2, 211 points: TDs by type from statscrew's scoring table
+    # (rush, rec, punt return; its table leaves out Cedric Smith's 3 TDs, type unknown, so he
+    # isn't listed); games and TD totals from profootballarchives (Anderson 7 TD, Scott 5 incl.
+    # an interception return, Hughitt 3, Miller 3, Oliphant 1); the typed TDs add up to
+    # statscrew's 9 rushing and 11 receiving.
+    ("nflcom:ockie-anderson", 1921): _tds("BUF", 11, _STATSCREW_BUF21, rush=5, rec=1, pr=1),
+    ("nflcom:johnny-scott", 1921): _tds("BUF", 7, _STATSCREW_BUF21, rush=2, rec=2),
+    ("nflcom:tommy-hughitt", 1921): _tds("BUF", 12, _STATSCREW_BUF21, rush=1, rec=2),
+    ("nflcom:heinie-miller", 1921): _tds("BUF", 7, _STATSCREW_BUF21, rec=3),
+    ("nflcom:elmer-oliphant", 1921): _tds("BUF", 10, _STATSCREW_BUF21, rush=1),
+    ("nflcom:waddy-kuehl", 1921): _tds("BUF", 2, _STATSCREW_BUF21, rec=1),
+    ("web:luke-urban", 1921): _tds("BUF", 12, _STATSCREW_BUF21, rec=1, name="Luke Urban"),
+    ("nflcom:swede-youngstrom", 1921): _tds("BUF", 12, _STATSCREW_BUF21, rec=1),
+    # Akron Pros: 1 receiving TD (and a fumble return, not counted), 12 G.
+    ("nflcom:scotty-bierce", 1921): _tds("AKR", 12, "statscrew.com/football/stats/t-AKR/y-1921; "
+                                         "profootballarchives.com/1921apfaakr.html (12 G)", rec=1),
 }
-# 1920-21 split seasons (PFR's scoring table starts in 1922): NFL.com shows the first stint
-# under the last team's name. Teams and games, plus TDs where the other stint scored (no
-# yardage is kept before 1932).
+# Hand-checked 1920-31 lines: yardage unknown, TDs and return TDs by type.
+TD_ONLY_WEB = {k for k, w in WEB_LINES.items() if w["passing_yards"] is None}
+_NFLCOM = "nfl.com/players/{}/stats/career"
+# Split seasons whose teams no source used here names. 1920-21 (PFR's scoring table starts in
+# 1922): NFL.com shows the first stint under the last team's name; teams and games, plus TDs
+# where the other stint scored (no yardage is kept before 1932). 1970-98: NFL.com has the full
+# season under the last team only (PFR's tables say "2TM"/"3TM"), and kendallgillies' per-team
+# lines and game logs only cover players whose splits are named already. NFL.com's career page
+# lists each team's line, newest first, with its games (they add up to the season's games,
+# which the build checks): these are the ones of players in a decade's top 100 (checked by hand;
+# the others are counted in the build log).
 WEB_TEAMS = {
+    # Akron 2 G, 3 rushing TDs (statscrew t-AKR/y-1921 roster and scoring; profootballarchives
+    # 1921apfaakr.html lists 3 G), then Cincinnati 1 G, no scoring (profootballarchives
+    # 1921apfacin.html). NFL.com files the Akron line under Cincinnati.
+    ("nflcom:frank-mccormick", 1921): ("AKR/CIN", 3, "statscrew.com/football/roster/t-AKR/y-1921; "
+                                       "profootballarchives.com/1921apfacin.html", {}),
+    ("nflcom:chuck-muncie", 1980): ("NOR/SDG", 15, _NFLCOM.format("chuck-muncie") + " (NO 4 G, SD 11 G); "
+                                    "en.wikipedia.org/wiki/Chuck_Muncie", {}),
+    ("nflcom:mike-pruitt", 1985): ("BUF/KAN", 13, _NFLCOM.format("mike-pruitt") + " (BUF 4 G, KC 9 G); "
+                                   "en.wikipedia.org/wiki/Mike_Pruitt", {}),
+    ("nflcom:theotis-brown", 1981): ("STL/SEA", 14, _NFLCOM.format("theotis-brown") + " (STL 4 G, SEA 10 G)", {}),
+    ("nflcom:theotis-brown", 1983): ("SEA/KAN", 15, _NFLCOM.format("theotis-brown") + " (SEA 3 G, KC 12 G)", {}),
+    ("nflcom:jessie-clark", 1989): ("PHO/MIN", 14, _NFLCOM.format("jessie-clark") + " (PHO 11 G, MIN 3 G); "
+                                    "profootballarchives.com/players/c/clar06400.html", {}),
+    ("nflcom:fred-willis", 1972): ("CIN/HOU", 13, _NFLCOM.format("fred-willis") + " (CIN 5 G, HOU 8 G)", {}),
+    ("nflcom:charlie-joiner", 1972): ("HOU/CIN", 12, _NFLCOM.format("charlie-joiner") + " (HOU 6 G, CIN 6 G)", {}),
+    ("nflcom:haven-moses", 1972): ("BUF/DEN", 13, _NFLCOM.format("haven-moses") + " (BUF 5 G, DEN 8 G)", {}),
+    ("nflcom:dave-smith-2", 1972): ("PIT/HOU", 14, _NFLCOM.format("dave-smith-2") + " (PIT 6 G, HOU 8 G)", {}),
+    ("nflcom:reggie-rucker", 1971): ("DAL/NYG/NWE", 11, _NFLCOM.format("reggie-rucker")
+                                     + " (DAL 2 G, NYG 4 G, NE 5 G)", {}),
+    ("nflcom:dick-shiner", 1973): ("ATL/NWE", 7, _NFLCOM.format("dick-shiner") + " (ATL 4 G, NE 3 G)", {}),
+    ("nflcom:craig-morton", 1974): ("DAL/NYG", 14, _NFLCOM.format("craig-morton") + " (DAL 6 G, NYG 8 G)", {}),
+    ("nflcom:norm-snead", 1974): ("NYG/SFO", 8, _NFLCOM.format("norm-snead") + " (NYG 5 G, SF 3 G)", {}),
+    ("nflcom:marlin-briscoe", 1975): ("SDG/DET", 11, _NFLCOM.format("marlin-briscoe") + " (SD 3 G, DET 8 G)", {}),
+    ("nflcom:bobby-douglass", 1975): ("CHI/SDG", 4, _NFLCOM.format("bobby-douglass") + " (CHI 1 G, SD 3 G)", {}),
+    ("nflcom:cleo-miller", 1975): ("KAN/CLE", 11, _NFLCOM.format("cleo-miller") + " (KC 6 G, CLE 5 G)", {}),
+    ("nflcom:danny-buggs", 1976): ("NYG/WAS", 11, _NFLCOM.format("danny-buggs") + " (NYG 5 G, WAS 6 G)", {}),
+    ("nflcom:john-brockington", 1977): ("GNB/KAN", 11, _NFLCOM.format("john-brockington") + " (GB 1 G, KC 10 G)", {}),
+    ("nflcom:jim-braxton", 1978): ("BUF/MIA", 16, _NFLCOM.format("jim-braxton") + " (BUF 6 G, MIA 10 G)", {}),
+    ("nflcom:frank-grant", 1978): ("WAS/TAM", 16, _NFLCOM.format("frank-grant") + " (WAS 6 G, TB 10 G)", {}),
+    ("nflcom:ray-butler", 1985): ("IND/SEA", 13, _NFLCOM.format("ray-butler") + " (IND 11 G, SEA 2 G)", {}),
+    ("nflcom:kevin-house-2", 1986): ("TAM/RAM", 15, _NFLCOM.format("kevin-house-2") + " (TB 7 G, LA 8 G)", {}),
+    ("nflcom:larry-moriarty", 1986): ("HOU/KAN", 15, _NFLCOM.format("larry-moriarty") + " (HOU 5 G, KC 10 G)", {}),
+    ("nflcom:wayne-wilson", 1986): ("MIN/NOR", 12, _NFLCOM.format("wayne-wilson") + " (MIN 7 G, NO 5 G)", {}),
+    ("nflcom:stephen-starring", 1988): ("DET/TAM", 12, _NFLCOM.format("stephen-starring") + " (DET 6 G, TB 6 G)", {}),
+    ("nflcom:joe-cribbs", 1988): ("IND/MIA", 13, _NFLCOM.format("joe-cribbs") + " (IND 1 G, MIA 12 G)", {}),
+    ("nflcom:chris-burkett", 1989): ("BUF/NYJ", 15, _NFLCOM.format("chris-burkett") + " (BUF 2 G, NYJ 13 G)", {}),
+    ("nflcom:randal-hill", 1991): ("MIA/PHO", 16, _NFLCOM.format("randal-hill") + " (MIA 1 G, PHO 15 G)", {}),
+    ("nflcom:james-brooks", 1992): ("CLE/TAM", 6, _NFLCOM.format("james-brooks") + " (CLE 4 G, TB 2 G)", {}),
+    ("nflcom:james-lofton", 1993): ("RAM/PHI", 10, _NFLCOM.format("james-lofton") + " (LA 1 G, PHI 9 G)", {}),
+    ("nflcom:mark-higgs", 1994): ("MIA/ARI", 11, _NFLCOM.format("mark-higgs") + " (MIA 5 G, ARI 6 G)", {}),
+    ("nflcom:vince-workman", 1995): ("CAR/IND", 10, _NFLCOM.format("vince-workman") + " (CAR 9 G, IND 1 G)", {}),
+    ("nflcom:leroy-hoard", 1996): ("BAL/CAR/MIN", 11, _NFLCOM.format("leroy-hoard")
+                                   + " (BAL 2 G, CAR 3 G, MIN 6 G)", {}),
+    ("nflcom:calvin-williams", 1996): ("BAL/PHI", 8, _NFLCOM.format("calvin-williams") + " (BAL 7 G, PHI 1 G)", {}),
+    ("nflcom:billy-joe-hobert", 1997): ("BUF/NOR", 7, _NFLCOM.format("billy-joe-hobert") + " (BUF 2 G, NO 5 G)", {}),
+    ("nflcom:roosevelt-potts", 1997): ("IND/MIA", 8, _NFLCOM.format("roosevelt-potts") + " (IND 2 G, MIA 6 G)", {}),
+    ("nflcom:kerry-collins", 1998): ("CAR/NOR", 11, _NFLCOM.format("kerry-collins") + " (CAR 4 G, NO 7 G)", {}),
+    ("nflcom:bam-morris", 1998): ("CHI/KAN", 12, _NFLCOM.format("bam-morris") + " (CHI 2 G, KC 10 G)", {}),
+    ("nflcom:darick-holmes", 1998): ("BUF/GNB", 14, _NFLCOM.format("darick-holmes") + " (BUF 3 G, GB 11 G)", {}),
     # NFL.com: Decatur Staleys, 9 G. He played 9 games for the (Racine) Cardinals and the
     # season finale for Decatur: HOF profile "1920 Chicago (Racine) Car/Decatur 10";
     # statscrew 1920 Decatur roster (1 G).
@@ -545,6 +709,38 @@ PFR_ALIASES = {
     "Mickey MacDonnell": "Mickey MacDonell",  # NFL.com spelling; same Cardinals wingback 1925-30
 }
 
+# Single-team lines (before 1970) whose rushing/receiving TDs differ between NFL.com and PFR's
+# scoring table, checked by hand on per-team scoring tables that split TDs by type: "pfr" when
+# PFR's are right (they replace NFL.com's), "nflcom" when NFL.com's are. The build lists any
+# such line missing here (a self-check).
+TD_CONFLICTS = {
+    ("nflcom:joe-guyon", 1922): ("pfr", "statscrew.com/football/stats/t-OOR/y-1922: 4 rush, 1 rec TD"),
+    ("nflcom:al-bloodgood", 1927): ("nflcom", "statscrew.com/football/stats/t-CL3/y-1927: 4 rush, 1 rec and a fumble "
+                                    "return TD (not counted), 1 FG, 6 XP, 45 pts (profootballarchives.com/"
+                                    "1927nflcle.html: 6 TD, 45 pts); PFR has 5 rush"),
+    ("nflcom:proc-randels", 1927): ("pfr", "statscrew.com/football/stats/t-CL3/y-1927 and en.wikipedia.org/wiki/"
+                                    "Proc_Randels: 1 rush, 1 rec TD"),
+    ("nflcom:bullet-baker", 1927): ("nflcom", "statscrew.com/football/stats/t-NY1/y-1927: 1 rush TD, 6 pts"),
+    ("nflcom:wes-fry", 1927): ("nflcom", "statscrew.com/football/stats/t-NY1/y-1927: 3 rush TD and an interception "
+                               "return, 25 pts"),
+    ("nflcom:mule-wilson", 1929): ("pfr", "statscrew.com/football/stats/t-NYG/y-1929: 1 rush TD, 6 pts"),
+    ("nflcom:johnny-blood-mcnally", 1931):("nflcom", "statscrew.com/football/stats/t-GB/y-1931: 2 rush, 11 rec TD "
+                                            "(+1 interception return), 84 pts"),
+    ("nflcom:roger-grove", 1931): ("nflcom", "statscrew.com/football/stats/t-GB/y-1931: no TD, 2 pts (kicks)"),
+    ("nflcom:ike-frankian", 1935): ("pfr", "statscrew.com/football/stats/t-NYG/y-1935: 7 rec, 39 yds, 1 TD"),
+    ("nflcom:dale-burnett", 1935): ("pfr", "statscrew.com/football/stats/t-NYG/y-1935: 12 rec, 209 yds, 4 TD, plus "
+                                    "an 'other' TD (counted) and a fumble return (not), 36 pts"),
+    ("nflcom:bob-mcchesney-2", 1942): ("pfr", "statscrew.com/football/stats/t-WAS/y-1942: 8 rec, 100 yds, 2 TD"),
+    ("nflcom:dick-todd", 1942): ("pfr", "statscrew.com/football/stats/t-WAS/y-1942: 23 rec, 328 yds, 4 TD, 26 pts"),
+    ("nflcom:pug-manders", 1944): ("pfr", "profootballarchives.com/1944nflbkn.html: 127-430-5, 5 TD, 30 pts; "
+                                   "statscrew.com/football/stats/p-mandepug001"),
+    ("nflcom:jack-banta", 1944): ("pfr", "statscrew.com/football/stats/t-PHI/y-1944: 38-198-3, 18 pts"),
+    # George McAfee 1941: NFL.com's 6 rushing TDs are right (profootballarchives.com/1941nflchib.html:
+    # 6 rush, 3 rec, 1 PR, 1 KR, 1 INT return); PFR has 5 plus an "other" TD, which the
+    # double-count rule in build() then leaves out of other_tds.
+    ("nflcom:george-mcafee", 1941): ("nflcom", "profootballarchives.com/1941nflchib.html"),
+}
+
 DEFENSIVE_POSITIONS = {
     "DE", "LDE", "RDE", "DT", "LDT", "RDT", "NT", "MG", "DG", "LB", "LLB", "RLB", "MLB", "LILB", "RILB",
     "ILB", "OLB", "LOLB", "ROLB", "CB", "LCB", "RCB", "DB", "S", "SS", "FS", "DH", "LDH", "RDH", "K", "P",
@@ -555,6 +751,139 @@ CAREER_POSITION = {
     "RB": "RB", "HB": "RB", "FB": "RB", "TB": "RB", "BB": "RB", "WB": "RB", "B": "RB",
     "WR": "WR", "E": "WR", "OE": "WR", "SE": "WR", "FL": "WR",
     "TE": "TE",
+}
+# PFR scoring-table season positions (the first of "A/B") of backs and of ends, before 1960.
+PFR_BACKS = {"RB", "HB", "FB", "TB", "BB", "WB", "B", "LH", "RH", "LHB", "RHB"}
+PFR_ENDS = {"E", "LE", "RE", "OE", "SE", "FL", "WR"}
+
+# Tight-end seasons that PFR's season position can't show: PFR's tables say "TE" only from
+# about 1962 (its 1950s-61 ends are LE/RE/E for tight and split ends alike: Billy Howton and
+# Billy Wilson are "RE" like Mutscheller) and have no AFL rows. (TD-less seasons between or after
+# PFR "TE" seasons are caught by the rule in assign_positions, e.g. Kramer 1964/1966-67, Gibbons
+# 1967-68.) Checked by hand with two sources, URL per player; a season is a tight end's when
+# one source puts him at tight end and the other doesn't put him elsewhere:
+#   * profootballarchives.com team rosters, from 1960 (its 1950s rosters say LOE/ROE, e.g.
+#     1955nflbal.html, 1958nflnyg.html, 1959nflbal.html): his positions for that team-season,
+#     the most-played first; TE first = tight end, SE/FL first = elsewhere. Checked: every
+#     1960-61 NFL roster, and the AFL team-seasons of the ends (NFL.com "OE"/"E") in the 1960s
+#     WR top 100 and just below it (BUF 1960-62, DEN 1960/1963, HOU 1960-64, DTX 1960-61, OAK
+#     1962-63, LAC 1960, NYT 1960, BOS 1960). Every player with a WR/RB row listed TE first on
+#     them is here (except Lionel Taylor 1960, see TE_CHECKED_NOT; Harvey White, BOS 1960 TE,
+#     keeps his QB row: NFL.com QB, 7 passes).
+#   * Wikipedia: the seasons the article says he played tight end, or tight end as his only
+#     offensive position (infobox/lead) for his career; an article that says only "end" has no
+#     opinion, and one that names only wide receiver/split end/flanker puts him elsewhere. A
+#     career-wide "tight end" doesn't reach a season PFR labels FL or as a back, nor his seasons
+#     with a team whose 1960-61 rosters list him at SE/FL. Checked for every player NFL.com lists
+#     as an end (OE/E, or DE/LB) in the 1950s WR top 100 and the ten below it, as of this build
+#     (not for its flankers, NFL.com FL/WR); TE_CHECKED_NOT below lists ends kept as WR on purpose.
+TE_SEASONS = {
+    "nflcom:jim-mutscheller": (range(1955, 1962), "en.wikipedia.org/wiki/Jim_Mutscheller: the Colts' starting "
+                               "tight end 1955-61 (1954 mostly defensive end); PFR: RE; profootballarchives.com/"
+                               "1960nflbal.html, 1961nflbal.html: TE"),
+    "nflcom:jim-gibbons": (range(1958, 1962), "en.wikipedia.org/wiki/Jim_Gibbons_(American_football): Lions "
+                           "tight end 1958-68, Pro Bowls 1960, 1961, 1964; PFR: RE 1958-61, TE 1962-66; "
+                           "profootballarchives.com/1960nfldet.html, 1961nfldet.html: TE"),
+    "nflcom:ron-kramer": ([1960, 1961], "en.wikipedia.org/wiki/Ron_Kramer: moved to tight end during the 1961 "
+                          "season (so not 1957); profootballarchives.com/1960nflgb.html TE-SE, 1961nflgb.html TE "
+                          "(14 starts); PFR: RE 1961, TE 1962-65"),
+    "nflcom:preston-carpenter": ([1960, 1961, 1967], "profootballarchives.com/1960nflpit.html, 1961nflpit.html "
+                                 "(rosters list Carpenter TE; Dial FL, Orr SE) and 1967aflmia.html (TE, 13 G); "
+                                 "PFR: RE 1960-61, TE 1962-66"),
+    "nflcom:billy-cannon-2": (range(1965, 1970), "en.wikipedia.org/wiki/Billy_Cannon: moved to tight end the "
+                              "season after his 1964 trade to Oakland; led AFL tight ends in 1967"),
+    "nflcom:hewritt-dixon": ([1964, 1965], "en.wikipedia.org/wiki/Hewritt_Dixon: Denver moved him to tight end in "
+                             "1964 (12 starts) and 1965 (11 starts); Oakland moved him back to RB in 1966"),
+    "nflcom:lamar-lundy": (range(1957, 1960), "en.wikipedia.org/wiki/Lamar_Lundy: 1957-1959 played mostly at "
+                           "tight end, defensive end full time from 1960"),
+    # 1950s ends Wikipedia calls tight ends (no 1950s source codes TE).
+    "nflcom:elbie-nickel": (range(1950, 1956), "en.wikipedia.org/wiki/Elbie_Nickel: 'a tight end in the NFL', "
+                            "Steelers 1947-57 (infobox: Tight end; Steelers.com: one of the team's best tight ends); "
+                            "PFR RE 1950-55; not 1956 (PFR FL) or 1957 (PFR HB; profootballarchives.com/"
+                            "1957nflpit.html ROH-LOE)"),
+    "nflcom:bob-schnelker": (range(1953, 1961), "en.wikipedia.org/wiki/Bob_Schnelker: 'played as a tight end for nine "
+                             "seasons, primarily with the New York Giants' (infobox: Tight end); profootballarchives."
+                             "com/1958nflnyg.html ROE 12 starts, 1960nflnyg.html TE 11 starts; not 1961 (1961nflmin."
+                             "html TE 6 G, 1961nflpit.html SE 8 G)"),
+    "nflcom:johnny-carson": (range(1954, 1961), "en.wikipedia.org/wiki/Johnny_Carson_(American_football): 'a tight "
+                             "end for the Washington Redskins ... from 1953 to 1959' (infobox: Tight end); "
+                             "profootballarchives.com/1960aflhou.html: TE-SE, 14 starts"),
+    "nflcom:leon-clarke": ([1957, 1958, 1959, 1961, 1962, 1963], "en.wikipedia.org/wiki/Leon_Clarke_(American_"
+                           "football): 'a tight end in the NFL from 1956 to 1963' (infobox: Tight end); "
+                           "profootballarchives.com/1961nflcle.html TE; not 1956 (PFR FL) or 1960 (1960nflcle.html "
+                           "FL-TE)"),
+    "nflcom:joe-walton": (range(1957, 1962), "en.wikipedia.org/wiki/Joe_Walton: 'eight seasons ... as a pass "
+                          "catching tight end for the Redskins and Giants'; profootballarchives.com/1960nflwas.html "
+                          "TE 12 starts, 1961nflnyg.html TE 11 starts; PFR TE 1962-63"),
+    "nflcom:pete-brewster": ([1955, 1956], "en.wikipedia.org/wiki/Pete_Brewster: 'Pro Bowl honors in 1955 and 1956 "
+                             "at the tight end position' (otherwise 'an end')"),
+    # 1960-61 NFL: profootballarchives.com rosters list TE first (Wikipedia: 'end', or tight end too).
+    "nflcom:jim-phillips": ([1960, 1961], "profootballarchives.com/1960nfllarm.html TE 12 starts, 1961nfllarm.html "
+                            "TE 14 starts; en.wikipedia.org/wiki/Jim_Phillips_(American_football): 'Phillips "
+                            "played tight end that season' (1961); PFR TE 1962"),
+    "nflcom:gern-nagler": ([1960, 1961], "profootballarchives.com/1960nflcle.html TE 11 starts, 1961nflcle.html "
+                           "TE-SE 13 starts; en.wikipedia.org/wiki/Gern_Nagler: end"),
+    "nflcom:bobby-walston": ([1960, 1961], "profootballarchives.com/1960nflphi.html, 1961nflphi.html: TE-K, "
+                             "12 and 14 starts; en.wikipedia.org/wiki/Bobby_Walston: 'He played tight end in 1960'"),
+    "nflcom:jim-doran": ([1960, 1961], "profootballarchives.com/1960nfldal.html TE 8 starts, 1961nfldal.html TE; "
+                         "en.wikipedia.org/wiki/Jim_Doran: 'converted into a tight end' by Dallas in 1960"),
+    "nflcom:dick-bielski": ([1960, 1961], "profootballarchives.com/1960nfldal.html TE, 1961nfldal.html TE-K 13 "
+                            "starts; en.wikipedia.org/wiki/Dick_Bielski: backup tight end 1962"),
+    "nflcom:gary-knafelc": ([1960, 1961], "profootballarchives.com/1960nflgb.html TE 11 starts, 1961nflgb.html TE; "
+                            "en.wikipedia.org/wiki/Gary_Knafelc: 'a wide receiver and a tight end'"),
+    "nflcom:steve-junker": ([1960, 1961], "profootballarchives.com/1960nfldet.html TE-SE, 1961nflwas.html TE 6 "
+                            "starts; en.wikipedia.org/wiki/Steve_Junker: end"),
+    "nflcom:dick-lucas": ([1960, 1961], "profootballarchives.com/1960nflphi.html TE, 1961nflphi.html TE-FL-SE"),
+    "nflcom:steve-meilinger": ([1960], "profootballarchives.com/1960nflgb.html TE; en.wikipedia.org/wiki/"
+                               "Steve_Meilinger: end"),
+    "nflcom:a-d-williams": ([1960], "profootballarchives.com/1960nflcle.html TE-FL-SE (1961nflmin.html SE); "
+                            "en.wikipedia.org/wiki/A._D._Williams: end"),
+    "nflcom:perry-richards": ([1960], "profootballarchives.com/1960nflstl.html TE; en.wikipedia.org/wiki/"
+                              "Perry_Richards: end"),
+    "nflcom:pete-hall": ([1961], "profootballarchives.com/1961nflnyg.html TE-SE-FL"),
+    # AFL (PFR has no AFL rows): profootballarchives.com rosters list TE first.
+    "nflcom:tom-rychlec": ([1961, 1963], "profootballarchives.com/1961aflbuf.html TE, 1963aflden.html TE; "
+                           "en.wikipedia.org/wiki/Tom_Rychlec: tight end; not 1960 (1960aflbuf.html SE-TE, 13 "
+                           "starts) or 1962 (1962aflbuf.html SE)"),
+    "nflcom:willard-dewveall": ([1961, 1964], "profootballarchives.com/1961aflhou.html TE-SE, 1964aflhou.html "
+                                "TE-SE 9 starts; not 1962 (1962aflhou.html SE-TE) or 1963 (1963aflhou.html SE, 14 "
+                                "starts); en.wikipedia.org/wiki/Willard_Dewveall: end; PFR TE 1960 (Bears)"),
+    "nflcom:max-boydston": ([1960, 1961, 1962], "profootballarchives.com/1960afldal.html TE 14 starts, 1961afldal."
+                            "html TE, 1962afloak.html TE 13 starts; en.wikipedia.org/wiki/Max_Boydston: end"),
+    "nflcom:dan-chamberlain": ([1960], "profootballarchives.com/1960aflbuf.html TE-SE (1961aflbuf.html SE); "
+                               "en.wikipedia.org/wiki/Dan_Chamberlain: end"),
+    "nflcom:dick-brubaker": ([1960], "profootballarchives.com/1960aflbuf.html TE; en.wikipedia.org/wiki/"
+                             "Dick_Brubaker: end"),
+    "nflcom:al-hoisington": ([1960], "profootballarchives.com/1960aflbuf.html TE; en.wikipedia.org/wiki/"
+                             "Al_Hoisington: end"),
+    "nflcom:jim-greer": ([1960], "profootballarchives.com/1960aflden.html TE"),
+    "nflcom:don-carothers": ([1960], "profootballarchives.com/1960aflden.html TE"),
+    "nflcom:dave-ross": ([1960], "profootballarchives.com/1960aflny.html TE; en.wikipedia.org/wiki/"
+                         "Dave_Ross_(American_football): end"),
+    "nflcom:oscar-lofton": ([1960], "profootballarchives.com/1960aflbos.html TE, 14 G; en.wikipedia.org/wiki/"
+                            "Oscar_Lofton: end"),
+    "nflcom:jack-atchason": ([1960], "profootballarchives.com/1960aflbos.html TE (1 G) and 1960aflhou.html TE (2 G); "
+                             "en.wikipedia.org/wiki/Jack_Atchason: end"),
+}
+# Ends checked the same way and kept as wide receivers, with the reason (each is a self-check).
+TE_CHECKED_NOT = {
+    ("Lionel Taylor", 1960, 1960): "profootballarchives.com/1960aflden.html lists him TE-FL, but en.wikipedia.org/"
+                                   "wiki/Lionel_Taylor and denverbroncos.com (Ring of Fame) say wide receiver",
+    ("Bill Anderson", 1958, 1961): "en.wikipedia.org/wiki/Bill_Anderson_(American_football,_born_1936) says tight "
+                                   "end, but profootballarchives.com/1960nflwas.html lists him SE (12 starts) and "
+                                   "1961nflwas.html FL-TE-SE (Joe Walton was the TE); PFR TE 1962 only",
+    ("Tom Rychlec", 1960, 1960): "profootballarchives.com/1960aflbuf.html: SE-TE",
+    ("Willard Dewveall", 1962, 1963): "profootballarchives.com/1962aflhou.html SE-TE, 1963aflhou.html SE",
+    ("Leon Hart", 1950, 1954): "en.wikipedia.org/wiki/Leon_Hart: end and fullback, no tight end",
+    ("Ron Kramer", 1957, 1957): "en.wikipedia.org/wiki/Ron_Kramer: moved to tight end in 1961",
+    ("Gary Knafelc", 1955, 1959): "en.wikipedia.org/wiki/Gary_Knafelc: 'a wide receiver and a tight end', no seasons",
+    ("Elbie Nickel", 1956, 1956): "PFR FL in 1956",
+    ("Art Powell", 1960, 1960): "profootballarchives.com/1960aflny.html SE; en.wikipedia.org/wiki/Art_Powell_"
+                                "(wide_receiver)",
+    ("Ralph Anderson", 1960, 1960): "profootballarchives.com/1960aflla.html SE",
+    ("Frank Clarke", 1966, 1966): "en.wikipedia.org/wiki/Frank_Clarke_(American_football): backup tight end in 1966, "
+                                  "but profootballarchives.com/1966nfldal.html lists him SE (Pettis Norman TE)",
+    ("Raymond Berry", 1955, 1959): "en.wikipedia.org/wiki/Raymond_Berry: split end (one 1958 game at tight end)",
 }
 
 
@@ -804,6 +1133,16 @@ def load_kg():
         log(f"  kendallgillies: ignoring {int(unknown.sum())} lines with unknown teams: "
             + ", ".join(sorted(lines.loc[unknown, "label"].unique())[:8]))
         lines = lines[~unknown]
+    # A line with no games and no stats is a team that only held the player's rights (Darrin
+    # Nelson 1989: traded to Dallas, refused to report, sent on to San Diego), not a stint.
+    # NFL.com's single team for such a season is often that team (Steve Bartkowski 1985: Atlanta
+    # 5 G, Washington 0 G, filed under Washington), so the season is renamed even when one team
+    # is left (rights_dropped).
+    rights_only = (lines["g"].fillna(0) == 0) & (lines[KG_STATS].fillna(0) == 0).all(axis=1)
+    log(f"  kendallgillies: ignoring {int(rights_only.sum())} per-team lines with no games and no stats "
+        "(teams that only held the player's rights)")
+    rights_dropped = set(zip(lines.loc[rights_only, "kg_id"], lines.loc[rights_only, "season"]))
+    lines = lines[~rights_only]
     name = lines["kg_name"].str.split(",", n=1)
     lines["name"] = [f"{p[1].strip()} {p[0].strip()}" if len(p) == 2 else p[0] for p in name]
     lines = fill_line(add_names(lines))
@@ -816,6 +1155,7 @@ def load_kg():
     for c in ("name", "nname", "lname"):
         seasons[c] = g[c].first()
     seasons = fill_line(seasons.reset_index())
+    seasons["rights_dropped"] = [k in rights_dropped for k in zip(seasons["kg_id"], seasons["season"])]
     basic = read_zip_csv("kendallgillies.zip", "Basic_Stats.csv", dtype=str, keep_default_na=False)
     basic = basic.set_index("Player Id")
     seasons["college_n"] = seasons["kg_id"].map(basic["College"]).fillna("").map(norm_name)
@@ -872,13 +1212,14 @@ def apply_kg(base, bio):
         f"lines, {by_college} by name + college")
     kg["player_id"] = kg["kg_id"].map(mapping)
     idx = {k: i for i, k in enumerate(zip(base["player_id"], base["season"]))}
-    repaired, named, added, clash, disagree, games_raised = [], 0, [], 0, 0, 0
+    repaired, named, added, clash, disagree, games_raised, rights_renamed = [], 0, [], 0, 0, 0, []
     names_by_team = base.groupby(["season", "label"])["name"].apply(list).to_dict()
     new_rows = []
     for r in kg.itertuples(index=False):
         i = idx.get((r.player_id, r.season)) if isinstance(r.player_id, str) else None
         if i is not None:
-            if r.n_teams < 2:
+            # One team: nothing to rename, unless NFL.com's team only held his rights.
+            if r.n_teams < 2 and not (r.rights_dropped and r.labels != base.at[i, "label"]):
                 continue
             ours = base.loc[i, LINE].fillna(0).to_numpy()
             theirs = pd.Series({c: getattr(r, c) for c in LINE}).fillna(0).to_numpy()
@@ -898,6 +1239,10 @@ def apply_kg(base, bio):
                 repaired.append(f"{r.name} {r.season}")
             else:
                 disagree += 1
+                continue
+            if base.at[i, "label"] not in r.labels.split("/"):
+                rights_renamed.append(f"{r.name} {r.season} {base.at[i, 'label']} -> {r.labels}")
+                base.at[i, "label"] = r.labels.split("/")[-1]
             continue
         if r.season >= COMBINED_SPLITS_FROM:
             continue
@@ -928,6 +1273,8 @@ def apply_kg(base, bio):
     log(f"  added {len(added)} player-seasons missing from the trevyoungquist scrape "
         f"(e.g. {', '.join(added[:4])}); {clash} skipped as possible duplicates; "
         f"{disagree} 1970+ split seasons differ (kept NFL.com)")
+    log(f"  seasons NFL.com files under a team that only held the player's rights, renamed to the team(s) he "
+        f"played for: {len(rights_renamed)} ({'; '.join(rights_renamed)})")
     return add_names(base), {"repaired": len(repaired), "added": len(added)}
 
 
@@ -1097,12 +1444,22 @@ def apply_pfr_scoring(base, bio):
     early = split & (base["season"] < NO_YARDAGE_BEFORE)
     single_differs = (base["pfr_linked"] & ~multi & (base["season"] < COMBINED_SPLITS_FROM)
                       & (pfr_td != base["rushing_tds"].fillna(0) + base["receiving_tds"].fillna(0)))
+    # Which source is right was checked by hand for each one (TD_CONFLICTS).
+    verdict = pd.Series([TD_CONFLICTS.get((p, int(s)), (None,))[0] for p, s in zip(base["player_id"], base["season"])],
+                        index=base.index)
+    take_pfr = single_differs & verdict.eq("pfr")
+    base.loc[take_pfr, "rushing_tds"] = base.loc[take_pfr, "pfr_rush_td"]
+    base.loc[take_pfr, "receiving_tds"] = base.loc[take_pfr, "pfr_rec_td"]
+    unchecked = [f"{base.at[i, 'player_id']} {int(base.at[i, 'season'])}"
+                 for i in base.index[single_differs & verdict.isna()]]
     log(f"  split seasons PFR shows as multi-team that NFL.com has one stint of: {int(split.sum())} "
         f"({int(early.sum())} in 1922-31, where only TDs are kept anyway); TDs raised to PFR's for "
         f"{int(more_tds.sum())}, games for {int(more_games.sum())}; teams named by hand for {named}; "
         f"{int(base['split_partial'].sum())} "
         f"1932-69 rows have one stint's yardage (source '+split' unless a hand-checked line replaces it); "
-        f"{int(single_differs.sum())} single-team lines differ from PFR's TDs (kept NFL.com)")
+        f"{int(single_differs.sum())} single-team lines differ from PFR's TDs: PFR's taken for {int(take_pfr.sum())}, "
+        f"NFL.com's kept for {int((single_differs & verdict.eq('nflcom')).sum())} (checked by hand, TD_CONFLICTS), "
+        f"not checked: {len(unchecked)} {unchecked}")
 
     # Scoring lines with rushing/receiving TDs that found no NFL.com line (before 1970;
     # PFR's fantasy tables show NFL.com is complete from then on).
@@ -1166,7 +1523,7 @@ def apply_pfr_scoring(base, bio):
         f"like name variants of a player with another line ({', '.join(variants)}); {len(unnamed)} multi-team lines without a hand-checked team skipped: "
         + ", ".join(unnamed))
     split_rows = base[base["split_partial"].fillna(False).astype(bool)]
-    return base, [f"{r.name} {r.season}" for r in split_rows.itertuples()]
+    return base, [f"{r.name} {r.season}" for r in split_rows.itertuples()], {"td_unchecked": unchecked}
 
 
 def apply_web_lines(base, bio):
@@ -1191,26 +1548,37 @@ def apply_web_lines(base, bio):
             base.at[i, "src"] = "web" if src.startswith("pfr-scoring") else src + "+web"
             replaced += 1
         else:
-            nflcom = pid.split(":", 1)[1]
-            info = bio.loc[nflcom]
+            if pid.startswith("nflcom:"):
+                nflcom = pid.split(":", 1)[1]
+                info = bio.loc[nflcom]
+                name, career, college = info["name"], info["Position"], info["college_n"]
+            else:  # "web:..." -- no NFL.com profile
+                nflcom, name, career, college = None, w["name"], "", ""
             i = len(base)
             base.loc[i, ["player_id", "nflcom_id", "season", "name", "career_pos", "college_n", "src"]] = [
-                pid, nflcom, season, info["name"], info["Position"], info["college_n"], "web"]
+                pid, nflcom, season, name, career, college, "web"]
             for c in ("kr_tds", "pr_tds", "fbl_td", "oth_td"):
                 base.at[i, c] = 0
             base.at[i, "pfr_linked"] = False
-            added.append(f"{info['name']} {season}")
+            added.append(f"{name} {season}")
         for c in LINE:
-            base.at[i, c] = w[c]
+            base.at[i, c] = w[c] if w[c] is not None else float("nan")
+        for c in ("pr_tds", "kr_tds"):
+            if c in w:
+                base.at[i, c] = w[c]
         base.at[i, "games"] = w["games"]
         base.at[i, "labels"] = labels
         base.at[i, "label"] = labels.split("/")[-1]
         base.at[i, "split_partial"] = False
+    games_differ = []
     for (pid, season), (teams, games, _url, tds) in WEB_TEAMS.items():
         hit = base.index[(base["player_id"] == pid) & (base["season"] == season)]
         if len(hit) != 1:
             raise ValueError(f"{pid} {season}: {len(hit)} rows")
         i = hit[0]
+        if season >= COMBINED_SPLITS_FROM and base.at[i, "games"] != games:
+            # NFL.com's line is the full season here: the teams' games must add up to its games.
+            games_differ.append(f"{pid} {season}: NFL.com {base.at[i, 'games']}, hand {games}")
         labels = "/".join(label_for(c, season) for c in teams.split("/"))
         base.at[i, "labels"], base.at[i, "label"], base.at[i, "games"] = labels, labels.split("/")[-1], games
         for c, v in tds.items():
@@ -1218,8 +1586,9 @@ def apply_web_lines(base, bio):
         base.at[i, "src"] = base.at[i, "src"] + "+web"
     log(f"  hand-checked lines: {replaced} replaced, {len(added)} added ({', '.join(added)}); "
         f"{len(WEB_TEAMS)} team/games fixes; rushing/receiving TDs and games equal PFR's scoring table on "
-        f"{compared - len(differ)} of {compared} lines it has ({'; '.join(differ)})")
-    return add_names(base), {"web_compared": compared, "web_differ": differ}
+        f"{compared - len(differ)} of {compared} lines it has ({'; '.join(differ)}); 1970-98 team fixes whose "
+        f"games don't add up to NFL.com's: {len(games_differ)} {games_differ}")
+    return add_names(base), {"web_compared": compared, "web_differ": differ, "web_games_differ": games_differ}
 
 
 # --- pfr ids -------------------------------------------------------------------
@@ -1327,8 +1696,21 @@ def assign_positions(df):
 
     career = df["career_pos"].fillna("").map(CAREER_POSITION)
     pos = career.copy()
-    att, car = f["attempts"], f["carries"]
+    att, car, rec = f["attempts"], f["carries"], f["receptions"]
     known = df["attempts"].notna()
+    # Halfback or end, before 1960 (two-way and early platoon football): NFL.com's career
+    # position is one label for a whole career, and two-way halfbacks are often listed by their
+    # defensive position (DB). A season is a back's when he ran and passed more than he caught
+    # (TD-only 1920-31 seasons: he scored running or passing, not receiving), an end's when he
+    # caught more; PFR's scoring-table season position (backfield spots WB/TB/FB/HB/LH/RH/...,
+    # ends E/LE/RE/FL/...) is the second witness for players NFL.com files as backs or ends.
+    halfback_era = df["season"] < HALFBACK_ERA_UNTIL
+    pfr_first = df["pfr_sco_pos"].fillna("").str.split("/").str[0]
+    pfr_role = pfr_first.map(lambda p: "RB" if p in PFR_BACKS else "WR" if p in PFR_ENDS else None)
+    back_use = (known & (car + att > rec)) | (~known & (f["rushing_tds"] + f["passing_tds"] > 0)
+                                               & (f["receiving_tds"] == 0))
+    end_use = (known & (rec > car + att)) | (~known & (f["receiving_tds"] > 0)
+                                             & (f["rushing_tds"] + f["passing_tds"] == 0))
     # A back whose season was mostly passing is a QB (single-wing tailbacks): passing
     # out-scored his running and receiving (>= 20 passes, or >= 2 TD passes in 1920-31 when
     # attempts are unknown), or, before 1960, by usage: >= 20 passes and more passes than runs,
@@ -1343,25 +1725,66 @@ def assign_positions(df):
     # running and receiving yards exceed his passing yards.
     runner = (known & (df["season"] < PLATOON_FROM) & (car >= 20) & (att < car)
               & (f["passing_yards"] < f["rushing_yards"] + f["receiving_yards"]))
-    pos = pos.mask((career == "RB") & passer, "QB")
+    # A career end in a season PFR places in the backfield and in which he ran/passed more than
+    # he caught is a back (Bobby Mitchell and Johnny Morris 1958-59, flankers only from the
+    # 1960s; Jim Kendrick 1926, a blocking back who threw 5 TD passes); and the other way round.
+    pos = pos.mask(halfback_era & (career == "WR") & (pfr_role == "RB") & back_use, "RB")
+    pos = pos.mask(halfback_era & (career == "RB") & (pfr_role == "WR") & end_use, "WR")
+    pos = pos.mask((pos == "RB") & passer, "QB")
     pos = pos.mask((career == "QB") & runner, "RB")
     # No usable career position: PFR's season position (1970-98), else where the points came
-    # from, with the same usage rules before 1960.
+    # from, with the same usage rules before 1960; before 1960 a back's season and an end's are
+    # told apart by usage (not by points: the point per catch made pass-catching halfbacks
+    # such as Kercheval, Seymour or Wilbur Moore look like ends): in TD-only seasons whether he
+    # scored running/passing or receiving, and PFR's season position only when he scored both
+    # ways or neither (Swede Hagberg 1929, 3 receiving TDs, PFR "WB": an end's season). Points
+    # alone don't make a QB before 1960 either: only the passer rules above do (Ralph Kercheval
+    # 1940, 7 passes and 11 runs: RB, not QB); otherwise the season is a back's or an end's as
+    # above.
     inferred = df["pfr_pos"].where(df["pfr_pos"].isin(["QB", "RB", "WR", "TE"]), produced)
+    run_or_catch = pd.Series(["RB" if r >= c else "WR" for r, c in zip(rushing, receiving)], index=df.index)
+    inferred = inferred.mask((inferred == "QB") & ~df["pfr_pos"].eq("QB") & ~passer & halfback_era, run_or_catch)
+    rb_wr = halfback_era & inferred.isin(["RB", "WR"])
+    inferred = inferred.mask(rb_wr & back_use, "RB").mask(rb_wr & end_use, "WR")
+    inferred = inferred.mask(rb_wr & ~known & ~back_use & ~end_use & pfr_role.notna(), pfr_role)
     inferred = inferred.mask(by_usage & (inferred == "RB") & usage_passer & (att >= 20), "QB")
     # Two-way era: a lineman/defender listed player who scored was usually a real back or end.
     # Platoon era (1950+): ten touches, so trick plays by linemen/kickers/punters don't count.
+    # Before 1950 a small season of a player who had a meaningful one in the same decade is kept
+    # too: he was a back or end, not a lineman (Roger Grove 1935: 3 games, 7 runs for 21 yards).
     meaningful = (touches >= 10) | ((total >= 6) & (df["season"] < PLATOON_FROM))
+    decade = df["season"] // 10 * 10
+    meaningful_decade = meaningful.groupby([df["player_id"], decade]).transform("any")
+    meaningful = meaningful | (meaningful_decade & (df["season"] < PLATOON_FROM))
     unknown = career.isna()
     pos = pos.mask(unknown & meaningful, inferred)
     pos = pos.mask(unknown & ~meaningful, None)
     # Tight ends aren't ranked. From 1950, PFR's season position catches the ones NFL.com
-    # files as ends ("OE"/"E") or whose position was inferred from receiving (Retzlaff,
-    # Carpenter, Kramer, ...).
-    pfr_te = df["pfr_pos"].fillna("").eq("TE")
-    if "pfr_sco_pos" in df:
-        pfr_te |= df["pfr_sco_pos"].fillna("").eq("TE")
-    pos = pos.mask(pfr_te & (df["season"] >= PLATOON_FROM), None)
+    # files as ends ("OE"/"E") or whose position was inferred from receiving (Retzlaff 1963-66,
+    # Carpenter, Kramer, ...). Its tables list a season only when the player scored (scoring
+    # table, before 1970), so a season with no PFR position between two "TE" seasons, or after
+    # the player's last labelled season when that one is "TE" and he is still with that team,
+    # is a TE season too (Kramer 1964 and 1966-67, Gibbons 1967-68, Carpenter 1965; not
+    # Willard Dewveall's AFL seasons after his 1960 "TE" season with the Bears: profootballarchives
+    # lists him TE-SE in 1961 and 1964, SE-TE and SE in 1962-63). TE_SEASONS adds the hand-checked
+    # seasons no PFR label reaches (pre-1962 tight ends PFR calls E/LE/RE, AFL; see there).
+    pfr_te = df["pfr_pos"].fillna("").eq("TE") | df["pfr_sco_pos"].fillna("").eq("TE")
+    labelled = (df["pfr_pos"].fillna("") != "") | (df["pfr_sco_pos"].fillna("").str.strip("/ ") != "")
+    order = df.sort_values(["player_id", "season"]).index
+    by_player = df.loc[order, "player_id"]
+    te_label = pfr_te.astype(object).where(labelled)[order]
+    prev_te, next_te = te_label.groupby(by_player).ffill(), te_label.groupby(by_player).bfill()
+    prev_team = df["label"].where(labelled)[order].groupby(by_player).ffill()
+    after_last = next_te.isna() & prev_team.eq(df.loc[order, "label"])
+    te_between = (~labelled[order] & prev_te.eq(True) & (next_te.eq(True) | after_last)).reindex(df.index)
+    te_hand = pd.Series([s in TE_SEASONS.get(p, ((),))[0] for p, s in zip(df["player_id"], df["season"])],
+                        index=df.index)
+    # The other way round: a career TE in a season both PFR tables show as a wide receiver (one
+    # says "WR", neither "TE"), e.g. Jerome Barkum 1973-75 (Pro Bowl WR 1973) and Rich Caster
+    # 1971 and 1977-79, is a WR (with ten touches, as above).
+    pfr_wr = (df["pfr_pos"].fillna("").eq("WR") | df["pfr_sco_pos"].fillna("").eq("WR")) & ~pfr_te
+    pos = pos.mask((career == "TE") & pfr_wr & (touches >= 10) & (df["season"] >= PLATOON_FROM), "WR")
+    pos = pos.mask(((pfr_te | te_between) & (df["season"] >= PLATOON_FROM)) | te_hand, None)
     df["position"] = pos
     df["inferred_position"] = unknown & meaningful
     df = df[df["position"].isin(["QB", "RB", "WR"])].copy()
@@ -1381,6 +1804,19 @@ def assign_positions(df):
                   & (usage.index.get_level_values("decade") < SINGLE_WING_UNTIL)]
     passers = backs[(backs["att"] >= 20) & (backs["att"] > backs["car"])]
     main = pd.Series("QB", index=passers.index).combine_first(main)
+    # Before 1960, a career end or back (NFL.com) whose decade mixes RB and WR seasons by the
+    # halfback rules keeps NFL.com's position unless the other one scored clearly more (by a
+    # tenth): Bob Wilkinson, NFL.com "OE", 1951 end 35.2 points, 1952 halfback 35.4: WR.
+    pts = by.pivot_table(index=["player_id", "decade"], columns="position", values="_fp", fill_value=0)
+    pts = pts.reindex(columns=["QB", "RB", "WR"], fill_value=0)
+    career = df.drop_duplicates("player_id").set_index("player_id")["career_pos"].fillna("").map(CAREER_POSITION)
+    own = pd.Series([career.get(i) for i, _ in pts.index], index=pts.index)
+    other = own.map({"RB": "WR", "WR": "RB"})
+    mixed = ((pts["RB"] > 0) & (pts["WR"] > 0) & (pts["QB"] == 0) & other.notna()
+             & (pts.index.get_level_values("decade") < HALFBACK_ERA_UNTIL))
+    near = mixed & pd.Series([isinstance(o, str) and pts.at[k, o] < 1.1 * pts.at[k, c]
+                              for k, c, o in zip(pts.index, own, other)], index=pts.index)
+    main = own[near].combine_first(main)
     smoothed = pd.Series([main[(i, d)] for i, d in zip(df["player_id"], df["decade"])], index=df.index)
     changed = int((smoothed != df["position"]).sum())
     df["position"] = smoothed
@@ -1400,7 +1836,7 @@ def build():
     base, kg_report = apply_kg(base, bio)
 
     log("Linking PFR scoring table (michaelmallari, 1922-98, NFL only) ...")
-    base, partial = apply_pfr_scoring(base, bio)
+    base, partial, td_report = apply_pfr_scoring(base, bio)
 
     log("Applying hand-checked lines (jt-sw.com and others) ...")
     base, web_report = apply_web_lines(base, bio)
@@ -1437,7 +1873,16 @@ def build():
     defensive = base["pfr_sco_pos"].fillna("").str.split("/").str[0].isin(DEFENSIVE_POSITIONS)
     fbl = base["fbl_td"].fillna(0)
     fbl_kept = fbl.where((base["season"] >= PLATOON_FROM) & ~defensive, 0)
-    base["other_tds"] = returns + base["oth_td"].fillna(0) + fbl_kept
+    # A line whose rushing/receiving TDs (NFL.com's, checked) exceed PFR's while PFR shows
+    # "other" TDs: PFR filed that rushing/receiving TD as "other" (George McAfee 1941: 6 rushing
+    # TDs, PFR 5 + 1 "other"; his 12th TD was an interception return), so it isn't counted twice.
+    oth = base["oth_td"].fillna(0)
+    excess = (base["rushing_tds"].fillna(0) + base["receiving_tds"].fillna(0)
+              - base["pfr_rush_td"].fillna(0) - base["pfr_rec_td"].fillna(0)).clip(lower=0)
+    twice = excess.where(base["pfr_rush_td"].notna(), 0).clip(upper=oth)
+    log(f"  PFR 'other' TDs left out as the same TD as an NFL.com rushing/receiving TD: {int(twice.sum())} ("
+        + ", ".join(f"{r.name} {int(r.season)}" for r in base[twice > 0].itertuples()) + ")")
+    base["other_tds"] = returns + oth - twice + fbl_kept
     base["fbl_dropped"] = fbl - fbl_kept
     afl = base["label"].isin(AFL_TEAMS) & base["season"].between(1960, 1969)
     base["two_point_conversions"] = 0.0
@@ -1468,6 +1913,10 @@ def build():
     # --- positions ---
     produced = base[STATS].fillna(0).abs().sum(axis=1) > 0
     base = base[produced].copy()
+    # AFL single-team player-seasons that are hand-checked tight-end seasons (left out below).
+    te_hand = [s in TE_SEASONS.get(p, ((),))[0] for p, s in zip(base["player_id"], base["season"])]
+    afl_te_rows = int((pd.Series(te_hand, index=base.index) & base["season"].between(1960, 1969)
+                       & base["label"].isin(AFL_TEAMS) & ~base["labels"].str.contains("/", na=False)).sum())
     base, smoothed = assign_positions(base)
     log(f"Positions: {int(base['inferred_position'].sum())} rows inferred from production; "
         f"{smoothed} rows moved to the player's main position for the decade")
@@ -1501,8 +1950,8 @@ def build():
     out = base[COLUMNS].sort_values(["season", "position", "player_id"]).reset_index(drop=True)
     for c in ["season", "games"] + STATS:
         out[c] = out[c].round().astype("Int64")
-    report = {"players": players, "pfr_ids": pfr_ids, "no_pfr": no_pfr, "ambiguous": ambiguous,
-              "fuzzy": fuzzy, "partial": partial, **kg_report, **web_report}
+    report = {"players": players, "pfr_ids": pfr_ids, "no_pfr": no_pfr, "ambiguous": ambiguous, "afl_te_rows": afl_te_rows,
+              "fuzzy": fuzzy, "partial": partial, **kg_report, **web_report, **td_report}
     return out, report
 
 
@@ -1659,10 +2108,96 @@ CHECKS = [
     # return TD counted twice (Sacksteder 1922: one TD, PFR files it as "other").
     ("Norb Sacksteder", 1922, {"other_tds": 1}),
     ("Ernie Steele", 1942, {"other_tds": 1}),
+    # McAfee 1941: 6 rush, 3 rec, PR, KR (+ an interception return, not counted); PFR's "other"
+    # TD is one of the six runs (profootballarchives 1941nflchib).
+    ("George McAfee", 1941, {"rushing_tds": 6, "receiving_tds": 3, "other_tds": 2}),
+    # Single-team TD conflicts settled by hand (TD_CONFLICTS).
+    ("Pug Manders", 1944, {"carries": 127, "rushing_yards": 430, "rushing_tds": 5}),
+    ("Jack Banta", 1944, {"carries": 38, "rushing_yards": 198, "rushing_tds": 3}),
+    ("Dale Burnett", 1935, {"receiving_tds": 4, "other_tds": 1}),
+    ("Dick Todd", 1942, {"receiving_tds": 4}),
+    ("Wes Fry", 1927, {"rushing_tds": 3}),
+    ("Al Bloodgood", 1927, {"rushing_tds": 4, "receiving_tds": 1, "other_tds": 0}),
+    # 1920s split seasons named by hand (PFR_MULTI_TEAMS / WEB_TEAMS).
+    ("Jimmy Conzelman", 1922, {"team": "RII/MIL", "games": 10, "rushing_tds": 7}),
+    ("Dutch Lauer", 1922, {"team": "RII/GNB", "team_name": "Rock Island Independents / Green Bay Packers"}),
+    ("Johnny Bryan", 1926, {"team": "MIL/CHI"}),
+    ("Candy Miller", 1922, {"team": "CAN/RAC"}),
+    ("Oscar Knop", 1923, {"team": "HAM/CHI", "games": 16}),
+    ("Joey Sternaman", 1923, {"team": "DUL/CHI"}),
+    ("Frank McCormick", 1921, {"team": "AKR/CIN", "games": 3, "rushing_tds": 3}),
+    ("Frosty Peters", 1930, {"team": "PRV/PRT", "games": 15}),
+    # 1970-98 split seasons: no team that only held his rights (Nelson), and the first team named.
+    ("Darrin Nelson", 1989, {"team": "MIN/SDG", "games": 14}),
+    # ... also when NFL.com files the whole season under that team (nfl.com career pages: ATL 5 G,
+    # BUF 10 G; kendallgillies lists WAS / GNB with 0 games).
+    ("Steve Bartkowski", 1985, {"team": "ATL", "team_name": "Atlanta Falcons", "games": 5}),
+    ("Vince Ferragamo", 1985, {"team": "BUF", "games": 10}),
+    ("Chuck Muncie", 1980, {"team": "NOR/SDG", "team_name": "New Orleans Saints / San Diego Chargers",
+                            "games": 15, "rushing_yards": 827}),
+    ("Mike Pruitt", 1985, {"team": "BUF/KAN", "games": 13}),
+    ("Theotis Brown", 1981, {"team": "STL/SEA", "games": 14}),
+    ("Theotis Brown", 1983, {"team": "SEA/KAN", "games": 15}),
+    ("Jessie Clark", 1989, {"team": "PHO/MIN", "games": 14}),
+    # 1921 players missing from NFL.com's lines (statscrew / profootballarchives).
+    ("Ockie Anderson", 1921, {"team": "BUF", "games": 11, "rushing_tds": 5, "receiving_tds": 1, "other_tds": 1,
+                              "carries": None, "position": "RB"}),
+    ("Heinie Miller", 1921, {"team": "BUF", "receiving_tds": 3, "position": "WR"}),
+    ("Tommy Hughitt", 1921, {"team": "BUF", "rushing_tds": 1, "receiving_tds": 2}),
+    ("Johnny Scott", 1921, {"team": "BUF", "rushing_tds": 2, "receiving_tds": 2, "other_tds": 0}),
+    ("Scotty Bierce", 1921, {"team": "AKR", "team_name": "Akron Pros", "receiving_tds": 1, "other_tds": 0}),
+    # Single-wing passer listed as an end (Buffalo Rangers blocking back, 5 TD passes).
+    ("Jim Kendrick", 1926, {"position": "QB", "passing_tds": 5}),
+    # A back's small season is kept, not dropped as a lineman's (NFL.com lists him "DB"): NFL.com's
+    # 1935 line (3 G, 7-21 rushing; its career total 82-308) is in the scrape; statscrew.com/football/
+    # roster/t-GB/y-1935: BB, 3 G; profootballarchives.com/1935nflgb.html: 7-21.
+    ("Roger Grove", 1935, {"team": "GNB", "games": 3, "carries": 7, "rushing_yards": 21, "rushing_tds": 0,
+                           "receptions": 0, "attempts": 0, "position": "RB"}),
+]
+
+# Positions over a span of seasons: every row of the player in it has this position (and he has
+# one). Two-way halfbacks NFL.com lists as DB/LB/G (or, before they became flankers, as WR) are
+# backs; real ends stay ends.
+POSITION_CHECKS = [
+    ("Ralph Kercheval", 1934, 1939, "RB"), ("Shipwreck Kelly", 1932, 1937, "RB"), ("Chris Cagle", 1931, 1934, "RB"),
+    ("Roger Grove", 1931, 1935, "RB"), ("Wuert Engelmann", 1930, 1933, "RB"), ("Franny Murray", 1939, 1939, "RB"),
+    ("Izzy Weinstock", 1935, 1937, "RB"), ("Howie Tipton", 1933, 1937, "RB"), ("Jim McDonald", 1938, 1939, "RB"),
+    ("Algy Clark", 1931, 1934, "RB"), ("Bob Seymour", 1940, 1945, "RB"), ("Frank Seno", 1943, 1948, "RB"),
+    ("Wilbur Moore", 1940, 1946, "RB"), ("Howie Livingston", 1944, 1949, "RB"), ("Johnny Martin", 1941, 1945, "RB"),
+    ("Joe Golding", 1947, 1949, "RB"), ("Jimmy Johnston", 1940, 1940, "RB"), ("Ben Kish", 1940, 1949, "RB"),
+    ("Dan Sandifer", 1948, 1949, "RB"), ("Bill deCorrevont", 1945, 1949, "RB"), ("Noah Mullins", 1946, 1949, "RB"),
+    ("George Cheverko", 1947, 1948, "RB"), ("Russ Craft", 1946, 1949, "RB"), ("Red Cochran", 1947, 1949, "RB"),
+    ("Frank Martin", 1943, 1945, "RB"), ("Bobby Mitchell", 1958, 1959, "RB"), ("Johnny Morris", 1958, 1959, "RB"),
+    ("Carl Taseff", 1951, 1954, "RB"), ("Jim Kendrick", 1925, 1926, "QB"),
+    # No QB on a handful of passes (7 passes, 11 runs); a TD-only season with receiving TDs only
+    # is an end's (PFR "WB"); a career end's 26-yard rushing season doesn't make him a back.
+    ("Ralph Kercheval", 1940, 1940, "RB"), ("Swede Hagberg", 1929, 1929, "WR"), ("Bob Wilkinson", 1951, 1952, "WR"),
+    ("Roger Grove", 1935, 1935, "RB"),
+    # ... while real ends, and these backs' later flanker seasons, stay WR.
+    ("Lavvie Dilweg", 1927, 1929, "WR"), ("Bill Hewitt", 1932, 1939, "WR"), ("Don Hutson", 1935, 1945, "WR"),
+    ("Jim Benton", 1938, 1947, "WR"), ("Pete Pihos", 1950, 1955, "WR"), ("Tom Fears", 1950, 1956, "WR"),
+    ("Crazy Legs Hirsch", 1950, 1957, "WR"), ("Raymond Berry", 1955, 1959, "WR"), ("Bobby Mitchell", 1962, 1968, "WR"),
+    ("Johnny Morris", 1961, 1967, "WR"), ("Pete Retzlaff", 1958, 1962, "WR"),
+    # Career TEs in seasons PFR shows as a wide receiver's.
+    ("Jerome Barkum", 1973, 1975, "WR"), ("Rich Caster", 1971, 1971, "WR"), ("Rich Caster", 1977, 1979, "WR"),
+]
+# Tight-end seasons, which aren't ranked: no row.
+TE_CHECKS = [
+    ("Jim Mutscheller", 1955, 1961), ("Jim Gibbons", 1958, 1968), ("Ron Kramer", 1961, 1967),
+    ("Preston Carpenter", 1960, 1967), ("Billy Cannon", 1965, 1969), ("Hewritt Dixon", 1964, 1965),
+    ("Lamar Lundy", 1957, 1959), ("Pete Retzlaff", 1963, 1966), ("Jerome Barkum", 1976, 1983),
+    ("Jerome Barkum", 1972, 1972), ("Rich Caster", 1972, 1976),
+    # 1950s ends Wikipedia calls tight ends; 1960-61 NFL and AFL ends profootballarchives lists at TE.
+    ("Elbie Nickel", 1950, 1955), ("Bob Schnelker", 1953, 1960), ("Johnny Carson", 1954, 1960),
+    ("Joe Walton", 1957, 1963), ("Leon Clarke", 1957, 1959), ("Pete Brewster", 1955, 1956),
+    ("Jim Phillips", 1960, 1962), ("Gern Nagler", 1960, 1961), ("Bobby Walston", 1960, 1962),
+    ("Jim Doran", 1960, 1961), ("Gary Knafelc", 1960, 1961), ("Ron Kramer", 1960, 1960),
+    ("Tom Rychlec", 1961, 1961), ("Tom Rychlec", 1963, 1963), ("Willard Dewveall", 1961, 1961),
+    ("Willard Dewveall", 1964, 1964), ("Max Boydston", 1960, 1962),
 ]
 
 
-def self_checks(out):
+def self_checks(out, afl_te_rows=0):
     results = []
     for name, season, want in CHECKS:
         rows = out[(out["name"] == name) & (out["season"] == season)]
@@ -1679,9 +2214,35 @@ def self_checks(out):
     for (pid, season), w in WEB_LINES.items():
         rows = out[(out["player_id"] == pid) & (out["season"] == season)]
         want = {c: w[c] for c in LINE} | {"team": w["teams"], "games": w["games"]}
+        if (pid, season) in TD_ONLY_WEB:
+            want["other_tds"] = w["pr_tds"] + w["kr_tds"]
         got = rows.iloc[0] if len(rows) == 1 else None
-        bad = {c: got[c] for c, v in want.items() if got[c] != v} if got is not None else f"{len(rows)} rows"
+        bad = ({c: got[c] for c, v in want.items() if not (v is None and pd.isna(got[c])) and got[c] != v}
+               if got is not None else f"{len(rows)} rows")
         check(f"hand-checked line {pid} {season}", not bad, f"got {bad}")
+    for name, first, last, position in POSITION_CHECKS:
+        rows = out[(out["name"] == name) & out["season"].between(first, last)]
+        check(f"{name} {first}-{last} is {position}", len(rows) and (rows["position"] == position).all(),
+              f"got {dict(zip(rows['season'], rows['position']))}")
+    for name, first, last in TE_CHECKS:
+        rows = out[(out["name"] == name) & out["season"].between(first, last)]
+        check(f"{name} {first}-{last}: tight-end seasons aren't ranked (no row)", rows.empty,
+              f"got {rows['season'].tolist()}")
+    te_rows = [f"{p} {s}" for p, s in zip(out["player_id"], out["season"]) if s in TE_SEASONS.get(p, ((),))[0]]
+    check("no hand-checked tight-end season (TE_SEASONS: pre-1962 NFL, AFL) is in the QB/RB/WR rows",
+          not te_rows, ", ".join(te_rows))
+    for (name, first, last), why in TE_CHECKED_NOT.items():
+        rows = out[(out["name"] == name) & out["season"].between(first, last)]
+        check(f"{name} {first}-{last}: checked, not a tight end ({why[:40]}...): WR", len(rows)
+              and (rows["position"] == "WR").all(), f"got {dict(zip(rows['season'], rows['position']))}")
+    for (pid, season), (teams, games, _url, _tds) in WEB_TEAMS.items():
+        rows = out[(out["player_id"] == pid) & (out["season"] == season)]
+        check(f"hand-checked teams {pid} {season}", len(rows) == 1 and rows["team"].iloc[0] == teams
+              and rows["games"].iloc[0] == games, f"got {rows[['team', 'games']].values.tolist()}")
+    buf21 = out[(out["season"] == 1921) & (out["team"] == "BUF")]
+    check("1921 Buffalo All-Americans: 9 rushing and 11 receiving TDs (statscrew t-BU1/y-1921)",
+          (buf21["rushing_tds"].sum(), buf21["receiving_tds"].sum()) == (9, 11),
+          f"got {buf21['rushing_tds'].sum()}, {buf21['receiving_tds'].sum()}")
     halas = out[(out["name"] == "George Halas") & (out["season"] == 1923)]
     check("George Halas 1923: his defensive fumble-return TD isn't an offensive TD (no row, or other_tds 0)",
           halas.empty or (halas["other_tds"] == 0).all())
@@ -1714,7 +2275,12 @@ def self_checks(out):
           out.loc[out["season"] < 1994, "fumbles_lost"].isna().all() and out.loc[out["season"] >= 1994, "fumbles_lost"].notna().all())
     afl = out[out["season"].between(1960, 1969) & out["team"].isin(
         ["BOS", "BUF", "DTX", "KAN", "DEN", "HOU", "LAC", "SDG", "NYT", "NYJ", "OAK", "MIA", "CIN"])]
-    check("AFL included 1960-69", len(afl) > 1000, f"{len(afl)} rows")
+    # (+ the AFL tight-end seasons the build leaves out on purpose, so this still tests that the AFL
+    # player-seasons are all there.)
+    check("AFL included 1960-69 (rows + hand-checked AFL tight-end seasons left out)", len(afl) + afl_te_rows > 1000,
+          f"{len(afl)} rows + {afl_te_rows}")
+    per_season = afl.groupby("season").size().reindex(range(1960, 1970), fill_value=0)
+    check("every AFL season 1960-69 has at least 75 rows", (per_season >= 75).all(), str(per_season.to_dict()))
     check("AFL 2-pt conversions unknown", afl["two_point_conversions"].isna().all())
     check("no 2-pt conversions before 1994 (NFL)", out.loc[out["season"] < 1994, "two_point_conversions"].fillna(0).eq(0).all())
     check("some 2-pt conversions 1994-98", out.loc[out["season"] >= 1994, "two_point_conversions"].sum() > 50)
@@ -1744,11 +2310,15 @@ def main():
     out.to_csv(OUT, index=False)
     summary(out, rep)
     written = pd.read_csv(OUT, dtype={"pfr_id": str})
-    results = self_checks(written)
+    results = self_checks(written, rep["afl_te_rows"])
     # Steele 1945: PFR has 1 rushing TD but 12 points; jt-sw.com has 2 rushing TDs, 12 points.
     differ = [d for d in rep["web_differ"] if not d.startswith("nflcom:ernie-steele 1945")]
     results.append(("hand-checked lines agree with PFR's TDs and games (except Steele 1945)",
                     rep["web_compared"] >= 70 and not differ, "; ".join(differ)))
+    results.append(("every single-team line whose TDs differ from PFR's was checked by hand (TD_CONFLICTS)",
+                    not rep["td_unchecked"], ", ".join(rep["td_unchecked"])))
+    results.append(("1970-98 hand-checked teams: their games add up to NFL.com's season games",
+                    not rep["web_games_differ"], "; ".join(rep["web_games_differ"])))
     float_cells = re.search(r",-?\d+\.\d+(,|\n)", OUT.read_text())
     results.append(("integers written as integers", not float_cells, float_cells.group(0) if float_cells else ""))
     log()

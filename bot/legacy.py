@@ -135,6 +135,10 @@ def coverage_notes():
             notes.append(f"Fumbles lost aren't available before {since} and count as 0 for earlier seasons.")
     kickers = _read(KICKER_CSV)
     if not kickers.empty:
+        since = _first_known(kickers, "fg_att")
+        if since and since > int(kickers["season"].min()):
+            notes.append(f"Kickers: attempts (and so misses) aren't known before {since}; those seasons show "
+                         "attempts as unknown and lose no points for misses.")
         bucketed = kickers.loc[(kickers["fg_made"] > 0) & (kickers["fg_made_unknown"] == 0), "season"]
         if not bucketed.empty:
             notes.append(

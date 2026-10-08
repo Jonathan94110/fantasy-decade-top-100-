@@ -1,15 +1,73 @@
 player_id,pfr_id,name,position,season,team,team_name,games,fg_made,fg_att,fg_made_0_39,fg_made_40_49,fg_made_50_plus,fg_made_unknown,xp_made,xp_att,source
+k:al-feeney,,Al Feeney,K,1920,CAN,Canton Bulldogs,8,1,,0,0,0,1,8,,profootballarchives
+k:al-pierotti,,Al Pierotti,K,1920,AKR/CLE,Akron Pros / Cleveland Tigers,5,0,,0,0,0,0,2,,profootballarchives
+k:bobby-marshall,,Bobby Marshall,K,1920,RII,Rock Island Independents,7,0,,0,0,0,0,3,,profootballarchives
+k:bodie-weldon,,Bodie Weldon,K,1920,BUF,Buffalo All-Americans,5,1,,0,0,0,1,5,,profootballarchives
+k:charlie-copley,,Charlie Copley,K,1920,AKR,Akron Pros,9,1,,0,0,0,1,12,,profootballarchives
+k:dick-abrell,,Dick Abrell,K,1920,DAY,Dayton Triangles,5,0,,0,0,0,0,2,,profootballarchives
+k:dutch-sternaman,,Dutch Sternaman,K,1920,DEC,Decatur Staleys,8,3,,0,0,0,3,1,,profootballarchives
+k:frank-bacon,,Frank Bacon,K,1920,DAY,Dayton Triangles,8,0,,0,0,0,0,2,,profootballarchives
+k:george-kinderdine,,George Kinderdine,K,1920,DAY,Dayton Triangles,8,0,,0,0,0,0,12,,profootballarchives
+k:george-roudebush,,George Roudebush,K,1920,DAY,Dayton Triangles,8,1,,0,0,0,1,0,,profootballarchives
+k:hugh-blacklock,,Hugh Blacklock,K,1920,DEC,Decatur Staleys,8,0,,0,0,0,0,6,,profootballarchives
+k:jim-laird,,Jim Laird,K,1920,BUF/RCH,Buffalo All-Americans / Rochester Jeffersons,2,2,,0,0,0,2,0,,profootballarchives
+k:jim-thorpe,,Jim Thorpe,K,1920,CAN,Canton Bulldogs,6,3,,0,0,0,3,0,,profootballarchives
+k:jimmy-conzelman,,Jimmy Conzelman,K,1920,DEC,Decatur Staleys,7,1,,0,0,0,1,0,,profootballarchives
+k:johnny-barrett,,Johnny Barrett,K,1920,CHT,Chicago Tigers,6,1,,0,0,0,1,0,,profootballarchives
+k:louie-kolls,,Louie Kolls,K,1920,CRD/HAM,Chicago Cardinals / Hammond Pros,2,0,,0,0,0,0,1,,profootballarchives
+k:neil-mathews,,Neil Mathews,K,1920,CHT,Chicago Tigers,6,0,,0,0,0,0,1,,profootballarchives
+k:ockie-anderson,,Ockie Anderson,K,1920,BUF,Buffalo All-Americans,6,0,,0,0,0,0,1,,profootballarchives
+k:oscar-kuhner,,Oscar Kuhner,K,1920,COL,Columbus Panhandles,5,0,,0,0,0,0,1,,profootballarchives
+k:paddy-driscoll,,Paddy Driscoll,K,1920,CRD/DEC,Chicago Cardinals / Decatur Staleys,7,0,,0,0,0,0,4,,profootballarchives
+k:rube-ursella,,Rube Ursella,K,1920,RII,Rock Island Independents,5,1,,0,0,0,1,5,,profootballarchives
+k:sid-nichols,,Sid Nichols,K,1920,RII,Rock Island Independents,6,0,,0,0,0,0,3,,profootballarchives
+k:tommy-hughitt,,Tommy Hughitt,K,1920,BUF,Buffalo All-Americans,6,0,,0,0,0,0,3,,profootballarchives
+k:al-feeney,,Al Feeney,K,1921,CAN,Canton Bulldogs,8,0,,0,0,0,0,7,,profootballarchives
+k:art-lewis,,Art Lewis,K,1921,CIN,Cincinnati Celts,3,0,,0,0,0,0,1,,profootballarchives
+k:belf-west,,Belf West,K,1921,CAN,Canton Bulldogs,10,1,,0,0,0,1,4,,profootballarchives
+k:benny-boynton,,Benny Boynton,K,1921,RCH/WSN,Rochester Jeffersons / Washington Senators,5,1,,0,0,0,1,11,,profootballarchives
+k:bob-higgins,,Bob Higgins,K,1921,CAN,Canton Bulldogs,9,0,,0,0,0,0,2,,profootballarchives
+k:bob-koehler,,Bob Koehler,K,1921,CRD,Chicago Cardinals,8,0,,0,0,0,0,2,,profootballarchives
+k:bourbon-bondurant,,Bourbon Bondurant,K,1921,EVN,Evansville Crimson Giants,5,0,,0,0,0,0,6,,profootballarchives
+k:carl-cramer,,Carl Cramer,K,1921,AKR,Akron Pros,11,0,,0,0,0,0,1,,profootballarchives
+k:charlie-copley,,Charlie Copley,K,1921,AKR,Akron Pros,11,0,,0,0,0,0,10,,profootballarchives
+k:charlie-mathys,,Charlie Mathys,K,1921,HAM,Hammond Pros,5,1,,0,0,0,1,0,,profootballarchives
+k:curly-lambeau,,Curly Lambeau,K,1921,GNB,Green Bay Packers,6,3,,0,0,0,3,7,,profootballarchives
+k:cy-degree,,Cy DeGree,K,1921,DET,Detroit Tigers,7,1,,0,0,0,1,0,,profootballarchives
+k:dutch-sternaman,,Dutch Sternaman,K,1921,CHI,Chicago Staleys,11,5,,0,0,0,5,9,,profootballarchives
+k:elliott-risley,,Elliott Risley,K,1921,HAM,Hammond Pros,5,0,,0,0,0,0,2,,profootballarchives
+k:elmer-oliphant,,Elmer Oliphant,K,1921,BUF,Buffalo All-Americans,10,5,,0,0,0,5,26,,profootballarchives
+k:emmett-ruh,,Emmett Ruh,K,1921,COL,Columbus Panhandles,7,2,,0,0,0,2,1,,profootballarchives
+k:frank-nesser,,Frank Nesser,K,1921,COL,Columbus Panhandles,9,0,,0,0,0,0,1,,profootballarchives
+k:george-munns,,George Munns,K,1921,CIN,Cincinnati Celts,4,0,,0,0,0,0,1,,profootballarchives
+k:harry-bliss,,Harry Bliss,K,1921,COL,Columbus Panhandles,9,0,,0,0,0,0,1,,profootballarchives
+k:herb-henderson,,Herb Henderson,K,1921,EVN,Evansville Crimson Giants,4,0,,0,0,0,0,5,,profootballarchives
+k:howard-berry,,Howard Berry,K,1921,RCH,Rochester Jeffersons,4,2,,0,0,0,2,2,,profootballarchives
+k:hugh-blacklock,,Hugh Blacklock,K,1921,CHI,Chicago Staleys,11,0,,0,0,0,0,2,,profootballarchives
+k:jim-thorpe,,Jim Thorpe,K,1921,CLE,Cleveland Indians,5,1,,0,0,0,1,2,,profootballarchives
+k:jimmy-conzelman,,Jimmy Conzelman,K,1921,RII,Rock Island Independents,7,1,,0,0,0,1,0,,profootballarchives
+k:joe-guyon,,Joe Guyon,K,1921,CLE/WSN,Cleveland Indians / Washington Senators,9,0,,0,0,0,0,10,,profootballarchives
+k:leo-tobin,,Leo Tobin,K,1921,AKR,Akron Pros,9,0,,0,0,0,0,1,,profootballarchives
+k:obe-wenig,,Obe Wenig,K,1921,RII,Rock Island Independents,7,0,,0,0,0,0,8,,profootballarchives
+k:paddy-driscoll,,Paddy Driscoll,K,1921,CRD,Chicago Cardinals,8,1,,0,0,0,1,4,,profootballarchives
+k:paul-sheeks,,Paul Sheeks,K,1921,AKR,Akron Pros,11,2,,0,0,0,2,1,,profootballarchives
+k:ralph-horween,,Ralph Horween,K,1921,CRD,Chicago Cardinals,4,1,,0,0,0,1,0,,profootballarchives
+k:rip-king,,Rip King,K,1921,AKR,Akron Pros,11,0,,0,0,0,0,3,,profootballarchives
+k:rube-ursella,,Rube Ursella,K,1921,MIN,Minneapolis Marines,4,1,,0,0,0,1,4,,profootballarchives
+k:russ-hathaway,,Russ Hathaway,K,1921,DAY,Dayton Triangles,9,4,,0,0,0,4,12,,profootballarchives
+k:tillie-voss,,Tillie Voss,K,1921,BUF/DET,Buffalo All-Americans / Detroit Tigers,12,0,,0,0,0,0,2,,profootballarchives
+k:tommy-hughitt,,Tommy Hughitt,K,1921,BUF,Buffalo All-Americans,12,0,,0,0,0,0,2,,profootballarchives
 k:arda-bowser,,Arda Bowser,K,1922,CAN,Canton Bulldogs,5,0,,0,0,0,0,2,,michaelmallari
 k:arnie-horween,,Arnie Horween,K,1922,CRD,Chicago Cardinals,11,1,,0,0,0,1,0,,michaelmallari
 k:bill-irgens,,Bill Irgens,K,1922,MIN,Minneapolis Marines,4,0,,0,0,0,0,1,,michaelmallari
 k:bird-carroll,,Bird Carroll,K,1922,CAN,Canton Bulldogs,12,0,,0,0,0,0,1,,michaelmallari
-k:charlie-copley,,Charlie Copley,K,1922,2TM,2 teams,7,0,,0,0,0,0,1,,michaelmallari
+k:charlie-copley,,Charlie Copley,K,1922,AKR/MIL,Akron Pros / Milwaukee Badgers,7,0,,0,0,0,0,1,,michaelmallari
 k:charlie-mathys,,Charlie Mathys,K,1922,GNB,Green Bay Packers,10,1,,0,0,0,1,0,,michaelmallari
-k:cliff-steele,,Cliff Steele,K,1922,2TM,2 teams,5,0,,0,0,0,0,1,,michaelmallari
+k:cliff-steele,,Cliff Steele,K,1922,AKR/RCH,Akron Pros / Rochester Jeffersons,5,0,,0,0,0,0,1,,michaelmallari
 k:cub-buck,,Cub Buck,K,1922,GNB,Green Bay Packers,10,1,,0,0,0,1,3,,michaelmallari
 k:curly-lambeau,,Curly Lambeau,K,1922,GNB,Green Bay Packers,8,1,,0,0,0,1,3,,michaelmallari
 k:dunc-annan,,Dunc Annan,K,1922,TOL,Toledo Maroons,9,0,,0,0,0,0,1,,michaelmallari
-k:dutch-lauer,,Dutch Lauer,K,1922,2TM,2 teams,9,0,,0,0,0,0,1,,michaelmallari
+k:dutch-lauer,,Dutch Lauer,K,1922,GNB/RII,Green Bay Packers / Rock Island Independents,9,0,,0,0,0,0,1,,michaelmallari
 k:dutch-sternaman,,Dutch Sternaman,K,1922,CHI,Chicago Bears,11,6,,0,0,0,6,5,,michaelmallari
 k:ed-shaw,,Ed Shaw,K,1922,CAN,Canton Bulldogs,12,2,,0,0,0,2,8,,michaelmallari
 k:frank-morrissey,,Frank Morrissey,K,1922,BUF,Buffalo All-Americans,10,2,,0,0,0,2,8,,michaelmallari
@@ -18,9 +76,9 @@ k:george-halas,,George Halas,K,1922,CHI,Chicago Bears,12,0,,0,0,0,0,2,,michaelma
 k:hank-gillo,,Hank Gillo,K,1922,RAC,Racine Legion,11,6,,0,0,0,6,4,,michaelmallari
 k:harold-fenner,,Harold Fenner,K,1922,DAY,Dayton Triangles,6,1,,0,0,0,1,0,,michaelmallari
 k:irv-langhoff,,Irv Langhoff,K,1922,RAC,Racine Legion,11,0,,0,0,0,0,2,,michaelmallari
-k:jab-murray,,Jab Murray,K,1922,2TM,2 teams,11,0,,0,0,0,0,1,,michaelmallari
-k:jerry-johnson,,Jerry Johnson,K,1922,2TM,2 teams,8,1,,0,0,0,1,6,,michaelmallari
-k:jimmy-conzelman,,Jimmy Conzelman,K,1922,2TM,2 teams,10,2,,0,0,0,2,0,,michaelmallari
+k:jab-murray,,Jab Murray,K,1922,GNB/RAC,Green Bay Packers / Racine Legion,11,0,,0,0,0,0,1,,michaelmallari
+k:jerry-johnson,,Jerry Johnson,K,1922,RAC/RII,Racine Legion / Rock Island Independents,8,1,,0,0,0,1,6,,michaelmallari
+k:jimmy-conzelman,,Jimmy Conzelman,K,1922,MIL/RII,Milwaukee Badgers / Rock Island Independents,10,2,,0,0,0,2,0,,michaelmallari
 k:jimmy-van-dyke,,Jimmy Van Dyke,K,1922,LOU,Louisville Brecks,3,0,,0,0,0,0,1,,michaelmallari
 k:joe-guyon,,Joe Guyon,K,1922,OOR,Oorang Indians,9,0,,0,0,0,0,3,,michaelmallari
 k:joe-mills,,Joe Mills,K,1922,AKR,Akron Pros,7,0,,0,0,0,0,1,,michaelmallari
@@ -31,9 +89,9 @@ k:pete-henry,,Pete Henry,K,1922,CAN,Canton Bulldogs,12,2,,0,0,0,2,4,,michaelmall
 k:ralph-horween,,Ralph Horween,K,1922,CRD,Chicago Cardinals,9,3,,0,0,0,3,2,,michaelmallari
 k:rat-watson,,Rat Watson,K,1922,TOL,Toledo Maroons,7,1,,0,0,0,1,0,,michaelmallari
 k:rip-king,,Rip King,K,1922,AKR,Akron Pros,6,0,,0,0,0,0,3,,michaelmallari
-k:russ-hathaway,,Russ Hathaway,K,1922,2TM,2 teams,10,2,,0,0,0,2,9,,michaelmallari
+k:russ-hathaway,,Russ Hathaway,K,1922,CAN/DAY,Canton Bulldogs / Dayton Triangles,10,2,,0,0,0,2,9,,michaelmallari
 k:russ-stein,,Russ Stein,K,1922,TOL,Toledo Maroons,7,1,,0,0,0,1,2,,michaelmallari
-k:tillie-voss,,Tillie Voss,K,1922,2TM,2 teams,10,0,,0,0,0,0,6,,michaelmallari
+k:tillie-voss,,Tillie Voss,K,1922,AKR/RII,Akron Pros / Rock Island Independents,10,0,,0,0,0,0,6,,michaelmallari
 k:truck-myers,,Truck Myers,K,1922,TOL,Toledo Maroons,9,0,,0,0,0,0,1,,michaelmallari
 k:waddy-kuehl,,Waddy Kuehl,K,1922,BUF,Buffalo All-Americans,10,0,,0,0,0,0,1,,michaelmallari
 k:wally-sieb,,Wally Sieb,K,1922,RAC,Racine Legion,2,0,,0,0,0,0,1,,michaelmallari
@@ -47,7 +105,7 @@ k:bird-carroll,,Bird Carroll,K,1923,CAN,Canton Bulldogs,9,0,,0,0,0,0,1,,michaelm
 k:cub-buck,,Cub Buck,K,1923,GNB,Green Bay Packers,10,6,,0,0,0,6,5,,michaelmallari
 k:dick-king,,Dick King,K,1923,STL,St. Louis All-Stars,7,0,,0,0,0,0,2,,michaelmallari
 k:doug-roby,,Doug Roby,K,1923,CLI,Cleveland Indians,7,0,,0,0,0,0,1,,michaelmallari
-k:dutch-hendrian,,Dutch Hendrian,K,1923,2TM,2 teams,9,0,,0,0,0,0,1,,michaelmallari
+k:dutch-hendrian,,Dutch Hendrian,K,1923,AKR/CAN,Akron Pros / Canton Bulldogs,9,0,,0,0,0,0,1,,michaelmallari
 k:dutch-sternaman,,Dutch Sternaman,K,1923,CHI,Chicago Bears,11,5,,0,0,0,5,6,,michaelmallari
 k:ed-robinson,,Ed Robinson,K,1923,HAM,Hammond Pros,3,0,,0,0,0,0,1,,michaelmallari
 k:emmett-mclemore,,Emmett McLemore,K,1923,OOR,Oorang Indians,9,0,,0,0,0,0,2,,michaelmallari
@@ -59,7 +117,7 @@ k:herb-sies,,Herb Sies,K,1923,RII,Rock Island Independents,8,3,,0,0,0,3,8,,micha
 k:jim-thorpe,,Jim Thorpe,K,1923,OOR,Oorang Indians,9,1,,0,0,0,1,0,,michaelmallari
 k:jimmy-conzelman,,Jimmy Conzelman,K,1923,MIL,Milwaukee Badgers,12,0,,0,0,0,0,2,,michaelmallari
 k:joe-little-twig,,Joe Little Twig,K,1923,OOR,Oorang Indians,11,0,,0,0,0,0,1,,michaelmallari
-k:joey-sternaman,,Joey Sternaman,K,1923,2TM,2 teams,10,6,,0,0,0,6,4,,michaelmallari
+k:joey-sternaman,,Joey Sternaman,K,1923,CHI/DUL,Chicago Bears / Duluth Kelleys,10,6,,0,0,0,6,4,,michaelmallari
 k:john-tanner,,John Tanner,K,1923,CLI,Cleveland Indians,6,0,,0,0,0,0,2,,michaelmallari
 k:larry-conover,,Larry Conover,K,1923,CAN,Canton Bulldogs,12,0,,0,0,0,0,1,,michaelmallari
 k:paddy-driscoll,,Paddy Driscoll,K,1923,CRD,Chicago Cardinals,10,10,,0,0,0,10,6,,michaelmallari
@@ -77,7 +135,7 @@ k:tommy-hughitt,,Tommy Hughitt,K,1923,BUF,Buffalo All-Americans,12,1,,0,0,0,1,0,
 k:al-elliott,,Al Elliott,K,1924,RAC,Racine Legion,7,1,,0,0,0,1,0,,michaelmallari
 k:ben-jones,,Ben Jones,K,1924,CLE,Cleveland Bulldogs,8,0,,0,0,0,0,1,,michaelmallari
 k:ben-winkelman,,Ben Winkelman,K,1924,MIL,Milwaukee Badgers,13,1,,0,0,0,1,0,,michaelmallari
-k:benny-boynton,,Benny Boynton,K,1924,2TM,2 teams,10,4,,0,0,0,4,11,,michaelmallari
+k:benny-boynton,,Benny Boynton,K,1924,BUF/RCH,Buffalo Bisons / Rochester Jeffersons,10,4,,0,0,0,4,11,,michaelmallari
 k:carl-cramer,,Carl Cramer,K,1924,AKR,Akron Pros,8,1,,0,0,0,1,0,,michaelmallari
 k:chuck-corgan,,Chuck Corgan,K,1924,KAN,Kansas City Blues,9,0,,0,0,0,0,2,,michaelmallari
 k:cub-buck,,Cub Buck,K,1924,GNB,Green Bay Packers,11,3,,0,0,0,3,8,,michaelmallari
@@ -87,7 +145,7 @@ k:dutch-hendrian,,Dutch Hendrian,K,1924,GNB,Green Bay Packers,11,1,,0,0,0,1,0,,m
 k:dutch-sternaman,,Dutch Sternaman,K,1924,CHI,Chicago Bears,11,1,,0,0,0,1,2,,michaelmallari
 k:dutch-wallace,,Dutch Wallace,K,1924,AKR,Akron Pros,7,0,,0,0,0,0,2,,michaelmallari
 k:eddie-novak,,Eddie Novak,K,1924,MIN,Minneapolis Marines,5,0,,0,0,0,0,1,,michaelmallari
-k:frank-morrissey,,Frank Morrissey,K,1924,2TM,2 teams,4,2,,0,0,0,2,0,,michaelmallari
+k:frank-morrissey,,Frank Morrissey,K,1924,BUF/MIL,Buffalo Bisons / Milwaukee Badgers,4,2,,0,0,0,2,0,,michaelmallari
 k:gus-tebell,,Gus Tebell,K,1924,COL,Columbus Tigers,1,1,,0,0,0,1,3,,michaelmallari
 k:hank-gillo,,Hank Gillo,K,1924,RAC,Racine Legion,10,8,,0,0,0,8,6,,michaelmallari
 k:herb-schell,,Herb Schell,K,1924,COL,Columbus Tigers,5,1,,0,0,0,1,0,,michaelmallari
@@ -124,10 +182,10 @@ k:charlie-berry,,Charlie Berry,K,1925,POT,Pottsville Maroons,10,3,,0,0,0,3,29,,m
 k:cub-buck,,Cub Buck,K,1925,GNB,Green Bay Packers,12,0,,0,0,0,0,8,,michaelmallari
 k:curly-lambeau,,Curly Lambeau,K,1925,GNB,Green Bay Packers,11,1,,0,0,0,1,5,,michaelmallari
 k:denny-hughes,,Denny Hughes,K,1925,POT,Pottsville Maroons,7,0,,0,0,0,0,2,,michaelmallari
-k:doc-bruder,,Doc Bruder,K,1925,2TM,2 teams,11,0,,0,0,0,0,2,,michaelmallari
+k:doc-bruder,,Doc Bruder,K,1925,BUF/FRN,Buffalo Bisons / Frankford Yellow Jackets,11,0,,0,0,0,0,2,,michaelmallari
 k:doc-elliott,,Doc Elliott,K,1925,CLE,Cleveland Bulldogs,14,3,,0,0,0,3,6,,michaelmallari
 k:dutch-connor,,Dutch Connor,K,1925,PRV,Providence Steam Roller,3,0,,0,0,0,0,2,,michaelmallari
-k:dutch-hendrian,,Dutch Hendrian,K,1925,2TM,2 teams,12,3,,0,0,0,3,1,,michaelmallari
+k:dutch-hendrian,,Dutch Hendrian,K,1925,NYG/RII,New York Giants / Rock Island Independents,12,3,,0,0,0,3,1,,michaelmallari
 k:ed-carman,,Ed Carman,K,1925,BUF/HAM,Buffalo Bisons / Hammond Pros,6,0,,0,0,0,0,1,,michaelmallari
 k:ed-robinson,,Ed Robinson,K,1925,HAM,Hammond Pros,5,0,,0,0,0,0,1,,michaelmallari
 k:fay-abbott,,Fay Abbott,K,1925,DAY,Dayton Triangles,8,1,,0,0,0,1,0,,michaelmallari
@@ -138,7 +196,7 @@ k:gus-sonnenberg,,Gus Sonnenberg,K,1925,DET,Detroit Panthers,12,5,,0,0,0,5,12,,m
 k:ike-mahoney,,Ike Mahoney,K,1925,CRD,Chicago Cardinals,7,0,,0,0,0,0,1,,michaelmallari
 k:jack-ernst,,Jack Ernst,K,1925,POT,Pottsville Maroons,12,0,,0,0,0,0,1,,michaelmallari
 k:jack-mcbride,,Jack McBride,K,1925,NYG,New York Giants,12,2,,0,0,0,2,7,,michaelmallari
-k:jim-kendrick,,Jim Kendrick,K,1925,4TM,4 teams,11,3,,0,0,0,3,3,,michaelmallari
+k:jim-kendrick,,Jim Kendrick,K,1925,BUF/HAM/RCH/RII,Buffalo Bisons / Hammond Pros / Rochester Jeffersons / Rock Island Independents,11,3,,0,0,0,3,3,,michaelmallari
 k:jim-laird,,Jim Laird,K,1925,PRV,Providence Steam Roller,11,3,,0,0,0,3,2,,michaelmallari
 k:joey-sternaman,,Joey Sternaman,K,1925,CHI,Chicago Bears,17,3,,0,0,0,3,17,,michaelmallari
 k:john-armstrong,,John Armstrong,K,1925,RII,Rock Island Independents,11,0,,0,0,0,0,1,,michaelmallari
@@ -147,7 +205,7 @@ k:matt-brennan,,Matt Brennan,K,1925,NYG,New York Giants,6,1,,0,0,0,1,0,,michaelm
 k:obie-newman,,Obie Newman,K,1925,AKR,Akron Pros,8,0,,0,0,0,0,1,,michaelmallari
 k:paddy-driscoll,,Paddy Driscoll,K,1925,CRD,Chicago Cardinals,13,11,,0,0,0,11,10,,michaelmallari
 k:pete-henry,,Pete Henry,K,1925,CAN,Canton Bulldogs,6,1,,0,0,0,1,5,,michaelmallari
-k:phil-white,,Phil White,K,1925,2TM,2 teams,11,1,,0,0,0,1,1,,michaelmallari
+k:phil-white,,Phil White,K,1925,KAN/NYG,Kansas City Cowboys / New York Giants,11,1,,0,0,0,1,1,,michaelmallari
 k:red-dunn,,Red Dunn,K,1925,CRD,Chicago Cardinals,10,0,,0,0,0,0,10,,michaelmallari
 k:red-maloney,,Red Maloney,K,1925,PRV,Providence Steam Roller,12,3,,0,0,0,3,4,,michaelmallari
 k:roddy-lamb,,Roddy Lamb,K,1925,RII,Rock Island Independents,9,0,,0,0,0,0,3,,michaelmallari
@@ -167,7 +225,7 @@ k:bill-senn,,Bill Senn,K,1926,CHI,Chicago Bears,15,0,,0,0,0,0,3,,michaelmallari
 k:curly-lambeau,,Curly Lambeau,K,1926,GNB,Green Bay Packers,12,0,,0,0,0,0,4,,michaelmallari
 k:cy-wentworth,,Cy Wentworth,K,1926,PRV,Providence Steam Roller,8,1,,0,0,0,1,3,,michaelmallari
 k:doc-bruder,,Doc Bruder,K,1926,FRN,Frankford Yellow Jackets,13,0,,0,0,0,0,1,,michaelmallari
-k:don-curtin,,Don Curtin,K,1926,2TM,2 teams,4,2,,0,0,0,2,1,,michaelmallari
+k:don-curtin,,Don Curtin,K,1926,MIL/RAC,Milwaukee Badgers / Racine Tornadoes,4,2,,0,0,0,2,1,,michaelmallari
 k:don-newmeyer,,Don Newmeyer,K,1926,LAB,Los Angeles Buccaneers,10,0,,0,0,0,0,2,,michaelmallari
 k:dutch-sternaman,,Dutch Sternaman,K,1926,CHI,Chicago Bears,14,1,,0,0,0,1,2,,michaelmallari
 k:ed-weir,,Ed Weir,K,1926,FRN,Frankford Yellow Jackets,4,1,,0,0,0,1,2,,michaelmallari
@@ -190,7 +248,7 @@ k:lou-reichel,,Lou Reichel,K,1926,COL,Columbus Tigers,7,0,,0,0,0,0,2,,michaelmal
 k:matt-brennan,,Matt Brennan,K,1926,BRL,Brooklyn Lions,10,1,,0,0,0,1,2,,michaelmallari
 k:milt-romney,,Milt Romney,K,1926,CHI,Chicago Bears,16,0,,0,0,0,0,1,,michaelmallari
 k:paddy-driscoll,,Paddy Driscoll,K,1926,CHI,Chicago Bears,16,12,,0,0,0,12,14,,michaelmallari
-k:paul-hogan,,Paul Hogan,K,1926,2TM,2 teams,13,0,,0,0,0,0,5,,michaelmallari
+k:paul-hogan,,Paul Hogan,K,1926,FRN/NYG,Frankford Yellow Jackets / New York Giants,13,0,,0,0,0,0,5,,michaelmallari
 k:pete-henry,,Pete Henry,K,1926,CAN,Canton Bulldogs,13,0,,0,0,0,0,3,,michaelmallari
 k:pid-purdy,,Pid Purdy,K,1926,GNB,Green Bay Packers,11,2,,0,0,0,2,14,,michaelmallari
 k:red-dunn,,Red Dunn,K,1926,CRD,Chicago Cardinals,11,4,,0,0,0,4,3,,michaelmallari
@@ -212,19 +270,19 @@ k:bo-molenda,,Bo Molenda,K,1927,NYY,New York Yankees,10,0,,0,0,0,0,1,,michaelmal
 k:bub-weller,,Bub Weller,K,1927,CRD,Chicago Cardinals,11,0,,0,0,0,0,2,,michaelmallari
 k:dick-moynihan,,Dick Moynihan,K,1927,FRN,Frankford Yellow Jackets,9,1,,0,0,0,1,0,,michaelmallari
 k:doug-wycoff,,Doug Wycoff,K,1927,NYG,New York Giants,11,0,,0,0,0,0,1,,michaelmallari
-k:earl-britton,,Earl Britton,K,1927,2TM,2 teams,14,1,,0,0,0,1,0,,michaelmallari
+k:earl-britton,,Earl Britton,K,1927,DAY/FRN,Dayton Triangles / Frankford Yellow Jackets,14,1,,0,0,0,1,0,,michaelmallari
 k:ed-weir,,Ed Weir,K,1927,FRN,Frankford Yellow Jackets,18,0,,0,0,0,0,1,,michaelmallari
 k:eddie-tryon,,Eddie Tryon,K,1927,NYY,New York Yankees,14,0,,0,0,0,0,8,,michaelmallari
 k:ernie-nevers,,Ernie Nevers,K,1927,DUL,Duluth Eskimos,9,0,,0,0,0,0,7,,michaelmallari
 k:evar-swanson,,Evar Swanson,K,1927,CRD,Chicago Cardinals,7,1,,0,0,0,1,2,,michaelmallari
 k:gus-sonnenberg,,Gus Sonnenberg,K,1927,PRV,Providence Steam Roller,14,3,,0,0,0,3,7,,michaelmallari
-k:hap-moran,,Hap Moran,K,1927,2TM,2 teams,10,3,,0,0,0,3,6,,michaelmallari
+k:hap-moran,,Hap Moran,K,1927,CRD/FRN,Chicago Cardinals / Frankford Yellow Jackets,10,3,,0,0,0,3,6,,michaelmallari
 k:jack-mcbride,,Jack McBride,K,1927,NYG,New York Giants,12,2,,0,0,0,2,15,,michaelmallari
 k:joey-sternaman,,Joey Sternaman,K,1927,CHI,Chicago Bears,14,0,,0,0,0,0,4,,michaelmallari
 k:ken-mercer,,Ken Mercer,K,1927,FRN,Frankford Yellow Jackets,17,5,,0,0,0,5,6,,michaelmallari
 k:ossie-wiberg,,Ossie Wiberg,K,1927,CLE,Cleveland Bulldogs,10,0,,0,0,0,0,1,,michaelmallari
 k:paddy-driscoll,,Paddy Driscoll,K,1927,CHI,Chicago Bears,14,2,,0,0,0,2,7,,michaelmallari
-k:pete-henry,,Pete Henry,K,1927,2TM,2 teams,13,2,,0,0,0,2,1,,michaelmallari
+k:pete-henry,,Pete Henry,K,1927,NYG/POT,New York Giants / Pottsville Maroons,13,2,,0,0,0,2,1,,michaelmallari
 k:phil-white,,Phil White,K,1927,NYG,New York Giants,12,0,,0,0,0,0,1,,michaelmallari
 k:pid-purdy,,Pid Purdy,K,1927,GNB,Green Bay Packers,6,1,,0,0,0,1,1,,michaelmallari
 k:red-dunn,,Red Dunn,K,1927,GNB,Green Bay Packers,10,0,,0,0,0,0,7,,michaelmallari
@@ -232,7 +290,7 @@ k:wes-fry,,Wes Fry,K,1927,NYY,New York Yankees,15,0,,0,0,0,0,1,,michaelmallari
 k:benny-friedman,,Benny Friedman,K,1928,DET,Detroit Wolverines,10,0,,0,0,0,0,19,,michaelmallari
 k:bill-pritchard,,Bill Pritchard,K,1928,NYY,New York Yankees,13,0,,0,0,0,0,1,,michaelmallari
 k:bill-senn,,Bill Senn,K,1928,CHI,Chicago Bears,12,0,,0,0,0,0,1,,michaelmallari
-k:bo-molenda,,Bo Molenda,K,1928,2TM,2 teams,12,0,,0,0,0,0,3,,michaelmallari
+k:bo-molenda,,Bo Molenda,K,1928,GNB/NYY,Green Bay Packers / New York Yankees,12,0,,0,0,0,0,3,,michaelmallari
 k:bruce-caldwell,,Bruce Caldwell,K,1928,NYG,New York Giants,10,1,,0,0,0,1,0,,michaelmallari
 k:curly-oden,,Curly Oden,K,1928,PRV,Providence Steam Roller,11,0,,0,0,0,0,3,,michaelmallari
 k:dick-sturtridge,,Dick Sturtridge,K,1928,CHI,Chicago Bears,10,0,,0,0,0,0,1,,michaelmallari
@@ -258,7 +316,7 @@ k:ox-eckhardt,,Ox Eckhardt,K,1928,NYG,New York Giants,11,0,,0,0,0,0,1,,michaelma
 k:paddy-driscoll,,Paddy Driscoll,K,1928,CHI,Chicago Bears,12,0,,0,0,0,0,8,,michaelmallari
 k:pete-henry,,Pete Henry,K,1928,POT,Pottsville Maroons,7,0,,0,0,0,0,2,,michaelmallari
 k:red-dunn,,Red Dunn,K,1928,GNB,Green Bay Packers,12,0,,0,0,0,0,1,,michaelmallari
-k:red-smith,,Red Smith,K,1928,2TM,2 teams,11,0,,0,0,0,0,2,,michaelmallari
+k:red-smith,,Red Smith,K,1928,NYG/NYY,New York Giants / New York Yankees,11,0,,0,0,0,0,2,,michaelmallari
 k:ted-drews,,Ted Drews,K,1928,CHI,Chicago Bears,7,0,,0,0,0,0,1,,michaelmallari
 k:tony-kostos,,Tony Kostos,K,1928,FRN,Frankford Yellow Jackets,16,0,,0,0,0,0,2,,michaelmallari
 k:benny-friedman,,Benny Friedman,K,1929,NYG,New York Giants,15,0,,0,0,0,0,20,,michaelmallari
@@ -268,7 +326,7 @@ k:cy-wentworth,,Cy Wentworth,K,1929,BOS,Boston Bulldogs,6,0,,0,0,0,0,6,,michaelm
 k:duke-hanny,,Duke Hanny,K,1929,PRV,Providence Steam Roller,11,0,,0,0,0,0,1,,michaelmallari
 k:ed-halicki,,Ed Halicki,K,1929,FRN,Frankford Yellow Jackets,17,1,,0,0,0,1,6,,michaelmallari
 k:ernie-nevers,,Ernie Nevers,K,1929,CRD,Chicago Cardinals,11,1,,0,0,0,1,10,,michaelmallari
-k:fait-elkins,,Fait Elkins,K,1929,2TM,2 teams,9,1,,0,0,0,1,0,,michaelmallari
+k:fait-elkins,,Fait Elkins,K,1929,CRD/FRN,Chicago Cardinals / Frankford Yellow Jackets,9,1,,0,0,0,1,0,,michaelmallari
 k:felix-mccormick,,Felix McCormick,K,1929,TOR,Orange Tornadoes,10,1,,0,0,0,1,0,,michaelmallari
 k:george-kenneally,,George Kenneally,K,1929,BOS,Boston Bulldogs,8,0,,0,0,0,0,1,,michaelmallari
 k:hal-erickson,,Hal Erickson,K,1929,MIN,Minneapolis Red Jackets,10,1,,0,0,0,1,1,,michaelmallari
@@ -289,7 +347,7 @@ k:red-dunn,,Red Dunn,K,1929,GNB,Green Bay Packers,11,2,,0,0,0,2,11,,michaelmalla
 k:red-grange,,Red Grange,K,1929,CHI,Chicago Bears,14,0,,0,0,0,0,1,,michaelmallari
 k:tony-plansky,,Tony Plansky,K,1929,NYG,New York Giants,11,2,,0,0,0,2,2,,michaelmallari
 k:walt-holmer,,Walt Holmer,K,1929,CHI,Chicago Bears,15,1,,0,0,0,1,0,,michaelmallari
-k:art-pharmer,,Art Pharmer,K,1930,2TM,2 teams,13,0,,0,0,0,0,6,,michaelmallari
+k:art-pharmer,,Art Pharmer,K,1930,FRN/MIN,Frankford Yellow Jackets / Minneapolis Red Jackets,13,0,,0,0,0,0,6,,michaelmallari
 k:benny-friedman,,Benny Friedman,K,1930,NYG,New York Giants,15,1,,0,0,0,1,10,,michaelmallari
 k:bill-glassgow,,Bill Glassgow,K,1930,PRT,Portsmouth Spartans,12,0,,0,0,0,0,4,,michaelmallari
 k:bo-molenda,,Bo Molenda,K,1930,GNB,Green Bay Packers,13,0,,0,0,0,0,4,,michaelmallari
@@ -299,20 +357,20 @@ k:chuck-weimer,,Chuck Weimer,K,1930,BKN,Brooklyn Dodgers,11,0,,0,0,0,0,1,,michae
 k:cookie-tackwell,,Cookie Tackwell,K,1930,FRN/MIN,Frankford Yellow Jackets / Minneapolis Red Jackets,18,0,,0,0,0,0,1,,michaelmallari
 k:curly-oden,,Curly Oden,K,1930,PRV,Providence Steam Roller,10,0,,0,0,0,0,1,,michaelmallari
 k:dale-burnett,,Dale Burnett,K,1930,NYG,New York Giants,14,0,,0,0,0,0,4,,michaelmallari
-k:ed-halicki,,Ed Halicki,K,1930,2TM,2 teams,14,0,,0,0,0,0,5,,michaelmallari
+k:ed-halicki,,Ed Halicki,K,1930,FRN/MIN,Frankford Yellow Jackets / Minneapolis Red Jackets,14,0,,0,0,0,0,5,,michaelmallari
 k:ernie-nevers,,Ernie Nevers,K,1930,CRD,Chicago Cardinals,11,1,,0,0,0,1,9,,michaelmallari
-k:frosty-peters,,Frosty Peters,K,1930,2TM,2 teams,15,2,,0,0,0,2,7,,michaelmallari
+k:frosty-peters,,Frosty Peters,K,1930,PRT/PRV,Portsmouth Spartans / Providence Steam Roller,15,2,,0,0,0,2,7,,michaelmallari
 k:gardie-grange,,Gardie Grange,K,1930,CHI,Chicago Bears,12,0,,0,0,0,0,1,,michaelmallari
 k:gene-rose,,Gene Rose,K,1930,CRD,Chicago Cardinals,12,0,,0,0,0,0,1,,michaelmallari
-k:george-bogue,,George Bogue,K,1930,2TM,2 teams,7,0,,0,0,0,0,1,,michaelmallari
+k:george-bogue,,George Bogue,K,1930,CRD/TOR,Chicago Cardinals / Newark Tornadoes,7,0,,0,0,0,0,1,,michaelmallari
 k:hap-moran,,Hap Moran,K,1930,NYG,New York Giants,16,0,,0,0,0,0,3,,michaelmallari
 k:jack-mcbride,,Jack McBride,K,1930,BKN,Brooklyn Dodgers,11,0,,0,0,0,0,8,,michaelmallari
-k:jim-mooney,,Jim Mooney,K,1930,2TM,2 teams,15,0,,0,0,0,0,2,,michaelmallari
+k:jim-mooney,,Jim Mooney,K,1930,BKN/TOR,Brooklyn Dodgers / Newark Tornadoes,15,0,,0,0,0,0,2,,michaelmallari
 k:joey-sternaman,,Joey Sternaman,K,1930,CHI,Chicago Bears,9,0,,0,0,0,0,5,,michaelmallari
 k:ken-strong,,Ken Strong,K,1930,SIS,Staten Island Stapletons,12,1,,0,0,0,1,8,,michaelmallari
 k:laurie-walquist,,Laurie Walquist,K,1930,CHI,Chicago Bears,10,0,,0,0,0,0,1,,michaelmallari
 k:luke-johnsos,,Luke Johnsos,K,1930,CHI,Chicago Bears,14,0,,0,0,0,0,4,,michaelmallari
-k:mally-nydall,,Mally Nydall,K,1930,2TM,2 teams,13,0,,0,0,0,0,1,,michaelmallari
+k:mally-nydall,,Mally Nydall,K,1930,FRN/MIN,Frankford Yellow Jackets / Minneapolis Red Jackets,13,0,,0,0,0,0,1,,michaelmallari
 k:mike-stramiello,,Mike Stramiello,K,1930,BKN,Brooklyn Dodgers,12,0,,0,0,0,0,6,,michaelmallari
 k:ossie-wiberg,,Ossie Wiberg,K,1930,NYG,New York Giants,17,0,,0,0,0,0,6,,michaelmallari
 k:red-dunn,,Red Dunn,K,1930,GNB,Green Bay Packers,13,0,,0,0,0,0,14,,michaelmallari
@@ -320,13 +378,13 @@ k:red-grange,,Red Grange,K,1930,CHI,Chicago Bears,14,0,,0,0,0,0,1,,michaelmallar
 k:red-smith,,Red Smith,K,1930,TOR,Newark Tornadoes,7,0,,0,0,0,0,1,,michaelmallari
 k:rex-thomas,,Rex Thomas,K,1930,BKN,Brooklyn Dodgers,6,0,,0,0,0,0,1,,michaelmallari
 k:tiny-lewis,,Tiny Lewis,K,1930,PRT,Portsmouth Spartans,13,0,,0,0,0,0,10,,michaelmallari
-k:tony-kostos,,Tony Kostos,K,1930,2TM,2 teams,18,0,,0,0,0,0,1,,michaelmallari
+k:tony-kostos,,Tony Kostos,K,1930,FRN/MIN,Frankford Yellow Jackets / Minneapolis Red Jackets,18,0,,0,0,0,0,1,,michaelmallari
 k:bill-senn,,Bill Senn,K,1931,BKN/CHI,Brooklyn Dodgers / Chicago Bears,10,0,,0,0,0,0,1,,michaelmallari
 k:bo-molenda,,Bo Molenda,K,1931,GNB,Green Bay Packers,14,0,,0,0,0,0,3,,michaelmallari
 k:butch-meeker,,Butch Meeker,K,1931,PRV,Providence Steam Roller,9,0,,0,0,0,0,1,,michaelmallari
 k:cookie-tackwell,,Cookie Tackwell,K,1931,CHI/FRN,Chicago Bears / Frankford Yellow Jackets,12,0,,0,0,0,0,3,,michaelmallari
 k:dave-mishel,,Dave Mishel,K,1931,CLE,Cleveland Indians,6,0,,0,0,0,0,1,,michaelmallari
-k:deck-shelley,,Deck Shelley,K,1931,2TM,2 teams,10,0,,0,0,0,0,4,,michaelmallari
+k:deck-shelley,,Deck Shelley,K,1931,PRT/PRV,Portsmouth Spartans / Providence Steam Roller,10,0,,0,0,0,0,4,,michaelmallari
 k:dutch-clark,,Dutch Clark,K,1931,PRT,Portsmouth Spartans,11,0,,0,0,0,0,6,,michaelmallari
 k:dutch-kitzmiller,,Dutch Kitzmiller,K,1931,NYG,New York Giants,14,0,,0,0,0,0,3,,michaelmallari
 k:ernie-nevers,,Ernie Nevers,K,1931,CRD,Chicago Cardinals,9,1,,0,0,0,1,15,,michaelmallari
@@ -348,7 +406,7 @@ k:roger-grove,,Roger Grove,K,1931,GNB,Green Bay Packers,14,0,,0,0,0,0,2,,michael
 k:whitey-woodin,,Whitey Woodin,K,1931,GNB,Green Bay Packers,2,0,,0,0,0,0,3,,michaelmallari
 k:benny-friedman,,Benny Friedman,K,1932,BKN,Brooklyn Dodgers,11,1,,0,0,0,1,5,,michaelmallari
 k:bill-buckler,,Bill Buckler,K,1932,CHI,Chicago Bears,14,0,,0,0,0,0,1,,michaelmallari
-k:bo-molenda,,Bo Molenda,K,1932,2TM,2 teams,12,0,,0,0,0,0,3,,michaelmallari
+k:bo-molenda,,Bo Molenda,K,1932,GNB/NYG,Green Bay Packers / New York Giants,12,0,,0,0,0,0,3,,michaelmallari
 k:clarke-hinkle,,Clarke Hinkle,K,1932,GNB,Green Bay Packers,13,0,,0,0,0,0,1,,michaelmallari
 k:cookie-tackwell,,Cookie Tackwell,K,1932,CHI,Chicago Bears,11,0,,0,0,0,0,3,,michaelmallari
 k:dick-frahm,,Dick Frahm,K,1932,SIS,Staten Island Stapletons,9,0,,0,0,0,0,2,,michaelmallari
@@ -403,7 +461,7 @@ k:roger-grove,,Roger Grove,K,1933,GNB,Green Bay Packers,13,0,,0,0,0,0,8,,michael
 k:shipwreck-kelly,,Shipwreck Kelly,K,1933,BKN,Brooklyn Dodgers,10,0,,0,0,0,0,1,,michaelmallari
 k:tiny-engebretsen,,Tiny Engebretsen,K,1933,CRD/PIT,Chicago Cardinals / Pittsburgh Pirates,11,0,,0,0,0,0,1,,michaelmallari
 k:ade-schwammel,,Ade Schwammel,K,1934,GNB,Green Bay Packers,13,1,,0,0,0,1,0,,michaelmallari
-k:algy-clark,,Algy Clark,K,1934,2TM,2 teams,10,1,,0,0,0,1,0,,michaelmallari
+k:algy-clark,,Algy Clark,K,1934,CIN/PHI,Cincinnati Reds / Philadelphia Eagles,10,1,,0,0,0,1,0,,michaelmallari
 k:armand-niccolai,,Armand Niccolai,K,1934,PIT,Pittsburgh Pirates,12,3,,0,0,0,3,1,,michaelmallari
 k:beattie-feathers,,Beattie Feathers,K,1934,CHI,Chicago Bears,11,0,,0,0,0,0,1,,michaelmallari
 k:bernie-masterson,,Bernie Masterson,K,1934,CHI,Chicago Bears,9,0,,0,0,0,0,1,,michaelmallari
@@ -439,7 +497,7 @@ k:ted-wright,,Ted Wright,K,1934,BOS,Boston Redskins,10,0,,0,0,0,0,2,,michaelmall
 k:ade-schwammel,,Ade Schwammel,K,1935,GNB,Green Bay Packers,11,4,,0,0,0,4,3,,michaelmallari
 k:armand-niccolai,,Armand Niccolai,K,1935,PIT,Pittsburgh Pirates,12,6,,0,0,0,6,10,,michaelmallari
 k:arnie-herber,,Arnie Herber,K,1935,GNB,Green Bay Packers,11,0,,0,0,0,0,1,,michaelmallari
-k:bill-shepherd,,Bill Shepherd,K,1935,2TM,2 teams,12,0,,0,0,0,0,1,,michaelmallari
+k:bill-shepherd,,Bill Shepherd,K,1935,BOS/DET,Boston Redskins / Detroit Lions,12,0,,0,0,0,0,1,,michaelmallari
 k:bill-smith,,Bill Smith,K,1935,CRD,Chicago Cardinals,11,6,,0,0,0,6,5,,michaelmallari
 k:bo-molenda,,Bo Molenda,K,1935,NYG,New York Giants,12,0,,0,0,0,0,5,,michaelmallari
 k:bob-monnett,,Bob Monnett,K,1935,GNB,Green Bay Packers,11,1,,0,0,0,1,2,,michaelmallari
@@ -541,7 +599,7 @@ k:chuck-gelatka,,Chuck Gelatka,K,1938,NYG,New York Giants,10,0,0,0,0,0,0,0,1,mic
 k:clarke-hinkle,,Clarke Hinkle,K,1938,GNB,Green Bay Packers,11,3,9,0,0,0,3,7,7,michaelmallari
 k:corby-davis,,Corby Davis,K,1938,RAM,Cleveland Rams,11,0,0,0,0,0,0,1,1,michaelmallari
 k:dave-smukler,,Dave Smukler,K,1938,PHI,Philadelphia Eagles,11,0,2,0,0,0,0,6,6,michaelmallari+manual
-k:dick-tuckey,,Dick Tuckey,K,1938,2TM,2 teams,7,0,0,0,0,0,0,2,3,michaelmallari
+k:dick-tuckey,,Dick Tuckey,K,1938,RAM/WAS,Cleveland Rams / Washington Redskins,7,0,0,0,0,0,0,2,3,michaelmallari
 k:dick-zoll,,Dick Zoll,K,1938,RAM,Cleveland Rams,11,0,0,0,0,0,0,1,1,michaelmallari
 k:don-hutson,,Don Hutson,K,1938,GNB,Green Bay Packers,10,0,0,0,0,0,0,3,3,michaelmallari
 k:don-irwin,,Don Irwin,K,1938,WAS,Washington Redskins,10,0,0,0,0,0,0,0,1,michaelmallari
@@ -668,7 +726,7 @@ k:dean-mcadams,,Dean McAdams,K,1941,BKN,Brooklyn Dodgers,11,2,3,0,0,0,2,3,3,mich
 k:dick-plasman,,Dick Plasman,K,1941,CHI,Chicago Bears,10,0,0,0,0,0,0,6,9,michaelmallari
 k:don-hutson,,Don Hutson,K,1941,GNB,Green Bay Packers,11,1,1,0,0,0,1,20,24,michaelmallari
 k:ed-jankowski,,Ed Jankowski,K,1941,GNB,Green Bay Packers,11,1,1,0,0,0,1,1,2,michaelmallari
-k:frank-balazs,,Frank Balazs,K,1941,2TM,2 teams,10,0,0,0,0,0,0,1,1,michaelmallari
+k:frank-balazs,,Frank Balazs,K,1941,CRD/GNB,Chicago Cardinals / Green Bay Packers,10,0,0,0,0,0,0,1,1,michaelmallari
 k:hal-lahar,,Hal Lahar,K,1941,CHI,Chicago Bears,8,1,1,0,0,0,1,1,3,michaelmallari
 k:hank-soar,,Hank Soar,K,1941,NYG,New York Giants,11,0,0,0,0,0,0,3,3,michaelmallari
 k:harry-clarke,,Harry Clarke,K,1941,CHI,Chicago Bears,10,0,0,0,0,0,0,1,1,michaelmallari
@@ -2164,8 +2222,8 @@ k:steve-christie,chrisste01,Steve Christie,K,1990,TAM,Tampa Bay Buccaneers,16,23
 k:teddy-garcia,,Teddy Garcia,K,1990,HOU,Houston Oilers,9,14,20,0,0,0,14,26,28,michaelmallari
 k:tony-zendejas,,Tony Zendejas,K,1990,HOU,Houston Oilers,7,7,12,0,0,0,7,20,21,michaelmallari
 k:al-del-greco,delgralx01,Al Del Greco,K,1991,HOU,Houston Oilers,7,10,13,7,2,1,0,16,16,michaelmallari+josephvm
-k:brad-daluiso,daluibra01,Brad Daluiso,K,1991,ATL/BUF,Atlanta Falcons / Buffalo Bills,16,2,3,0,0,0,2,2,2,michaelmallari
-k:charlie-baumann,,Charlie Baumann,K,1991,MIA/NWE,Miami Dolphins / New England Patriots,9,9,12,3,4,0,2,15,16,michaelmallari+josephvm
+k:brad-daluiso,daluibra01,Brad Daluiso,K,1991,ATL/BUF,Atlanta Falcons / Buffalo Bills,16,2,3,2,0,0,0,2,2,michaelmallari+kendallgillies
+k:charlie-baumann,,Charlie Baumann,K,1991,MIA/NWE,Miami Dolphins / New England Patriots,9,9,12,4,5,0,0,15,16,michaelmallari+josephvm+kendallgillies
 k:chip-lohmiller,,Chip Lohmiller,K,1991,WAS,Washington Redskins,16,31,43,19,10,2,0,56,56,michaelmallari+josephvm
 k:chris-jacke,jackechr01,Chris Jacke,K,1991,GNB,Green Bay Packers,16,18,24,13,4,1,0,31,31,michaelmallari+josephvm
 k:david-treadwell,,David Treadwell,K,1991,DEN,Denver Broncos,16,27,36,24,3,0,0,31,32,michaelmallari+josephvm
@@ -2192,7 +2250,7 @@ k:nick-lowery,,Nick Lowery,K,1991,KAN,Kansas City Chiefs,16,25,30,21,4,0,0,35,35
 k:norm-johnson,johnsnor01,Norm Johnson,K,1991,ATL,Atlanta Falcons,14,19,23,13,5,1,0,38,39,michaelmallari+josephvm
 k:pat-leahy,,Pat Leahy,K,1991,NYJ,New York Jets,15,26,37,25,1,0,0,30,30,michaelmallari+josephvm
 k:pete-stoyanovich,stoyapet01,Pete Stoyanovich,K,1991,MIA,Miami Dolphins,14,31,37,21,7,3,0,28,29,michaelmallari+josephvm
-k:raul-allegre,,Raul Allegre,K,1991,NYG/NYJ,New York Giants / New York Jets,4,5,6,2,1,0,2,7,7,michaelmallari+josephvm
+k:raul-allegre,,Raul Allegre,K,1991,NYG/NYJ,New York Giants / New York Jets,4,5,6,4,1,0,0,7,7,michaelmallari+josephvm+kendallgillies
 k:roger-ruzek,,Roger Ruzek,K,1991,PHI,Philadelphia Eagles,16,28,33,19,8,1,0,27,29,michaelmallari+josephvm
 k:scott-norwood,,Scott Norwood,K,1991,BUF,Buffalo Bills,16,18,29,11,5,2,0,56,58,michaelmallari+josephvm
 k:steve-christie,chrisste01,Steve Christie,K,1991,TAM,Tampa Bay Buccaneers,16,15,20,12,3,0,0,22,22,michaelmallari+josephvm
@@ -2205,7 +2263,7 @@ k:chip-lohmiller,,Chip Lohmiller,K,1992,WAS,Washington Redskins,16,30,40,20,8,2,
 k:chris-jacke,jackechr01,Chris Jacke,K,1992,GNB,Green Bay Packers,16,22,29,14,6,2,0,30,30,michaelmallari+josephvm
 k:david-treadwell,,David Treadwell,K,1992,DEN,Denver Broncos,16,20,24,16,4,0,0,28,28,michaelmallari+josephvm
 k:dean-biasucci,,Dean Biasucci,K,1992,IND,Indianapolis Colts,16,16,29,9,6,1,0,24,24,michaelmallari+josephvm
-k:eddie-murray,murraedd01,Eddie Murray,K,1992,KAN/TAM,Kansas City Chiefs / Tampa Bay Buccaneers,8,5,9,2,2,0,1,13,13,michaelmallari+josephvm
+k:eddie-murray,murraedd01,Eddie Murray,K,1992,KAN/TAM,Kansas City Chiefs / Tampa Bay Buccaneers,8,5,9,2,2,1,0,13,13,michaelmallari+josephvm+manual
 k:fuad-reveiz,,Fuad Reveiz,K,1992,MIN,Minnesota Vikings,16,19,25,11,5,3,0,45,45,michaelmallari+josephvm
 k:gary-anderson,andergar02,Gary Anderson,K,1992,PIT,Pittsburgh Steelers,16,28,36,24,4,0,0,29,31,michaelmallari+josephvm
 k:greg-davis,,Greg Davis,K,1992,PHO,Phoenix Cardinals,16,13,26,9,4,0,0,28,28,michaelmallari+josephvm
@@ -2215,7 +2273,7 @@ k:jeff-jaeger,jaegejef01,Jeff Jaeger,K,1992,RAI,Los Angeles Raiders,16,15,26,7,5
 k:jim-breech,,Jim Breech,K,1992,CIN,Cincinnati Bengals,16,19,27,15,4,0,0,31,31,michaelmallari+josephvm
 k:john-carney,carnejoh01,John Carney,K,1992,SDG,San Diego Chargers,16,26,32,18,7,1,0,35,35,michaelmallari+josephvm
 k:john-kasay,kasayjoh01,John Kasay,K,1992,SEA,Seattle Seahawks,16,14,22,12,2,0,0,14,14,michaelmallari+josephvm
-k:ken-willis,,Ken Willis,K,1992,NYG/TAM,New York Giants / Tampa Bay Buccaneers,15,10,16,1,1,0,8,27,27,michaelmallari+josephvm
+k:ken-willis,,Ken Willis,K,1992,NYG/TAM,New York Giants / Tampa Bay Buccaneers,15,10,16,5,5,0,0,27,27,michaelmallari+josephvm+manual
 k:kevin-butler,,Kevin Butler,K,1992,CHI,Chicago Bears,16,19,26,18,0,1,0,34,34,michaelmallari+josephvm
 k:lee-johnson,,Lee Johnson,K,1992,CIN,Cincinnati Bengals,16,0,1,0,0,0,0,0,0,josephvm
 k:lin-elliott,,Lin Elliott,K,1992,DAL,Dallas Cowboys,16,24,35,16,5,3,0,47,48,michaelmallari+josephvm
@@ -2248,8 +2306,8 @@ k:jeff-jaeger,jaegejef01,Jeff Jaeger,K,1993,RAI,Los Angeles Raiders,16,35,44,25,
 k:john-carney,carnejoh01,John Carney,K,1993,SDG,San Diego Chargers,16,31,40,22,7,2,0,31,33,michaelmallari+josephvm
 k:john-kasay,kasayjoh01,John Kasay,K,1993,SEA,Seattle Seahawks,16,23,28,16,4,3,0,29,29,michaelmallari+josephvm
 k:kevin-butler,,Kevin Butler,K,1993,CHI,Chicago Bears,16,27,36,19,3,5,0,21,22,michaelmallari+josephvm
-k:lin-elliott,,Lin Elliott,K,1993,DAL,Dallas Cowboys,2,2,4,0,0,0,2,2,3,michaelmallari
-k:matt-bahr,,Matt Bahr,K,1993,NWE/PHI,New England Patriots / Philadelphia Eagles,14,13,18,5,0,0,8,28,29,michaelmallari+josephvm
+k:lin-elliott,,Lin Elliott,K,1993,DAL,Dallas Cowboys,2,2,4,1,1,0,0,2,3,michaelmallari+kendallgillies
+k:matt-bahr,,Matt Bahr,K,1993,NWE/PHI,New England Patriots / Philadelphia Eagles,14,13,18,11,2,0,0,28,29,michaelmallari+josephvm+kendallgillies
 k:matt-stover,stovemat01,Matt Stover,K,1993,CLE,Cleveland Browns,16,16,22,9,6,1,0,36,36,michaelmallari+josephvm
 k:michael-husted,hustemic01,Michael Husted,K,1993,TAM,Tampa Bay Buccaneers,16,16,22,10,3,3,0,27,27,michaelmallari+josephvm
 k:mike-cofer,,Mike Cofer,K,1993,SFO,San Francisco 49ers,16,16,26,12,4,0,0,59,61,michaelmallari+josephvm
@@ -2301,7 +2359,7 @@ k:chris-jacke,jackechr01,Chris Jacke,K,1995,GNB,Green Bay Packers,14,17,23,6,8,3
 k:cole-ford,,Cole Ford,K,1995,OAK,Oakland Raiders,5,8,9,7,1,0,0,17,18,michaelmallari+josephvm
 k:craig-hentrich,,Craig Hentrich,K,1995,GNB,Green Bay Packers,16,3,5,2,1,0,0,5,5,michaelmallari+josephvm
 k:dean-biasucci,,Dean Biasucci,K,1995,STL,St. Louis Rams,8,9,12,7,1,1,0,13,14,michaelmallari+josephvm
-k:doug-brien,briendou01,Doug Brien,K,1995,NOR/SFO,New Orleans Saints / San Francisco 49ers,14,19,29,8,4,0,7,35,35,michaelmallari+josephvm
+k:doug-brien,briendou01,Doug Brien,K,1995,NOR/SFO,New Orleans Saints / San Francisco 49ers,14,19,29,12,6,1,0,35,35,michaelmallari+josephvm+manual
 k:doug-pelfrey,pelfrdou01,Doug Pelfrey,K,1995,CIN,Cincinnati Bengals,16,29,36,18,10,1,0,34,34,michaelmallari+josephvm
 k:eddie-murray,murraedd01,Eddie Murray,K,1995,WAS,Washington Redskins,16,27,36,20,6,1,0,33,33,michaelmallari+josephvm
 k:fuad-reveiz,,Fuad Reveiz,K,1995,MIN,Minnesota Vikings,16,26,36,16,9,1,0,44,44,michaelmallari+josephvm
@@ -2327,11 +2385,11 @@ k:pete-stoyanovich,stoyapet01,Pete Stoyanovich,K,1995,MIA,Miami Dolphins,16,27,3
 k:steve-christie,chrisste01,Steve Christie,K,1995,BUF,Buffalo Bills,16,31,40,26,3,2,0,33,35,michaelmallari+josephvm
 k:steve-mclaughlin,,Steve McLaughlin,K,1995,STL,St. Louis Rams,8,8,16,7,1,0,0,17,17,michaelmallari+josephvm
 k:todd-peterson,petertod01,Todd Peterson,K,1995,SEA,Seattle Seahawks,16,23,28,15,8,0,0,40,40,michaelmallari+josephvm
-k:tony-zendejas,,Tony Zendejas,K,1995,ATL/SFO,Atlanta Falcons / San Francisco 49ers,4,3,6,1,0,0,2,5,6,michaelmallari+josephvm
+k:tony-zendejas,,Tony Zendejas,K,1995,ATL/SFO,Atlanta Falcons / San Francisco 49ers,4,3,6,1,2,0,0,5,6,michaelmallari+josephvm+kendallgillies
 k:adam-vinatieri,vinatada01,Adam Vinatieri,K,1996,NWE,New England Patriots,16,27,35,18,8,1,0,39,42,michaelmallari+josephvm
 k:al-del-greco,delgralx01,Al Del Greco,K,1996,HOU,Houston Oilers,16,32,38,21,10,1,0,35,35,michaelmallari+josephvm
 k:brad-daluiso,daluibra01,Brad Daluiso,K,1996,NYG,New York Giants,16,24,27,21,3,0,0,22,22,michaelmallari+josephvm
-k:carlos-huerta,,Carlos Huerta,K,1996,CHI/STL,Chicago Bears / St. Louis Rams,4,4,7,0,0,0,4,5,5,michaelmallari+josephvm
+k:carlos-huerta,,Carlos Huerta,K,1996,CHI/STL,Chicago Bears / St. Louis Rams,4,4,7,3,1,0,0,5,5,michaelmallari+josephvm+manual
 k:cary-blanchard,blanccar01,Cary Blanchard,K,1996,IND,Indianapolis Colts,16,36,40,20,11,5,0,27,27,michaelmallari+josephvm
 k:chip-lohmiller,,Chip Lohmiller,K,1996,STL,St. Louis Rams,15,21,25,16,4,1,0,28,29,michaelmallari+josephvm
 k:chris-boniol,boniochr01,Chris Boniol,K,1996,DAL,Dallas Cowboys,16,32,36,26,5,1,0,24,25,michaelmallari+josephvm
@@ -2371,7 +2429,7 @@ k:doug-brien,briendou01,Doug Brien,K,1997,NOR,New Orleans Saints,16,23,27,13,6,4
 k:doug-pelfrey,pelfrdou01,Doug Pelfrey,K,1997,CIN,Cincinnati Bengals,16,12,16,7,5,0,0,41,43,michaelmallari+josephvm
 k:eddie-murray,murraedd01,Eddie Murray,K,1997,MIN,Minnesota Vikings,12,12,17,8,4,0,0,23,24,michaelmallari+josephvm
 k:gary-anderson,andergar02,Gary Anderson,K,1997,SFO,San Francisco 49ers,16,29,36,20,8,1,0,38,38,michaelmallari+josephvm
-k:greg-davis,,Greg Davis,K,1997,MIN/SDG,Minnesota Vikings / San Diego Chargers,16,26,34,14,5,0,7,31,32,michaelmallari+josephvm
+k:greg-davis,,Greg Davis,K,1997,MIN/SDG,Minnesota Vikings / San Diego Chargers,16,26,34,20,6,0,0,31,32,michaelmallari+josephvm+kendallgillies
 k:jason-elam,elamxjas01,Jason Elam,K,1997,DEN,Denver Broncos,15,26,36,20,3,3,0,46,46,michaelmallari+josephvm
 k:jason-hanson,hansojas01,Jason Hanson,K,1997,DET,Detroit Lions,16,26,29,18,5,3,0,39,40,michaelmallari+josephvm
 k:jeff-jaeger,jaegejef01,Jeff Jaeger,K,1997,CHI,Chicago Bears,16,21,26,16,4,1,0,20,20,michaelmallari+josephvm
@@ -2390,7 +2448,7 @@ k:olindo-mare,marexoli01,Olindo Mare,K,1997,MIA,Miami Dolphins,16,28,36,24,3,1,0
 k:pete-stoyanovich,stoyapet01,Pete Stoyanovich,K,1997,KAN,Kansas City Chiefs,16,26,27,12,12,2,0,35,36,michaelmallari+josephvm
 k:richie-cunningham,cunniric01,Richie Cunningham,K,1997,DAL,Dallas Cowboys,16,34,37,26,7,1,0,24,24,michaelmallari+josephvm
 k:ryan-longwell,longwrya01,Ryan Longwell,K,1997,GNB,Green Bay Packers,16,24,30,21,2,1,0,48,48,michaelmallari+josephvm
-k:scott-bentley,bentlsco01,Scott Bentley,K,1997,ATL/DEN,Atlanta Falcons / Denver Broncos,3,2,3,0,0,0,2,4,4,michaelmallari
+k:scott-bentley,bentlsco01,Scott Bentley,K,1997,ATL/DEN,Atlanta Falcons / Denver Broncos,3,2,3,2,0,0,0,4,4,michaelmallari+manual
 k:scott-blanton,,Scott Blanton,K,1997,WAS,Washington Redskins,15,16,24,11,4,1,0,34,34,michaelmallari+josephvm
 k:steve-christie,chrisste01,Steve Christie,K,1997,BUF,Buffalo Bills,16,24,30,15,8,1,0,21,21,michaelmallari+josephvm
 k:toby-gowin,,Toby Gowin,K,1997,DAL,Dallas Cowboys,16,0,1,0,0,0,0,0,0,josephvm

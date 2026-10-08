@@ -29,12 +29,24 @@ Sources (all treated as untrusted data and read with pandas):
                   (https://www.statscrew.com/football/stats/t-<code>/y-<season>),
                   48 pages read with a web lookup and transcribed into
                   AFL_KICKING below, one row per kicker per team, XP and FG.
+                  Also the 21 APFA team pages of 1921 (STATSCREW_1921), the
+                  independent check of the 1921 PFA table.
+  profootballarchives  Pro Football Archives (PFA) team-season pages
+                  (profootballarchives.com/<season>apfa<team>.html), the SCORING
+                  table of all 14 APFA teams of 1920 and all 21 of 1921, read once
+                  and transcribed into EARLY_KICKING below; the rosters' games
+                  played; and, for 1922-1945, the rosters and per-team PAT/FG lines
+                  (profootballarchives.com/<season>nfl<team>.html) that split PFR's
+                  "2TM" rows (MANUAL_TEAMS). For 1991-1998 also a few per-team
+                  distance splits (MANUAL_BUCKETS).
   nflverse        players.csv, used only to attach pfr_id to kickers who also
                   played in 1999 or later, so their careers merge with nflverse.
   octonion        nfl_team_standings.csv (points for, touchdowns per team-season),
                   used only by the team reconciliation self-checks.
 
 How each era is built:
+  1920-1921 APFA  PFA team pages (EARLY_KICKING), checked against statscrew (1921),
+                  the pages' own team totals and NFL.com's standings (octonion).
   1922-1965 NFL   michaelmallari (PFR). kendallgillies adds the few kicking rows
                   PFR lacks: players with attempts but no points, and Ben
                   Agajanian's 1961 Green Bay stint.
@@ -52,8 +64,27 @@ How each era is built:
 Judgement calls:
   * Seasons 1920-1998, regular season only. The AFL (1960-69) is included. The
     AAFC (1946-49) is excluded: PFR has no AAFC rows, and AAFC teams in the
-    NFL.com scrapes are dropped. 1920-1921 have no rows because no source has
-    individual kicking stats for those seasons.
+    NFL.com scrapes are dropped.
+  * 1920-1921. PFR's scoring table (michaelmallari) starts in 1922 and the
+    NFL.com kicking scrapes in 1926 (trevyoungquist) and 1933 (kendallgillies),
+    so these two seasons come from the SCORING table of every PFA APFA team
+    page (EARLY_KICKING: per kicker PAT and FG made, attempts when PFA has them,
+    games from the page's roster). PFA counts only games between APFA members.
+    For 1921 that is every game NFL.com's standings count: each PFA page's
+    points and touchdowns equal octonion's for all 21 teams (a check), and the
+    kicking matches statscrew's 1921 pages except one PAT (see
+    STATSCREW_1921_DIFFERENCES). For 1920 NFL.com's standings also count games
+    against non-members (Decatur 10-1-2 and 164 points, PFA 5-1-2 and 67), and
+    no source has the kicking of those games, so the 1920 rows (and their games
+    column) cover APFA-vs-APFA games only. A player's other-team stint without a
+    kick is added from the PFA rosters (EARLY_STINTS), as for Gene Mingo 1964.
+    Names follow PFR (later seasons) or NFL.com (the offense table) where PFA
+    spells them differently (PFA's "Ed Sternaman" is PFR's Dutch Sternaman, see
+    the comments in EARLY_KICKING). Where PFA and statscrew credit a kick to
+    different players a third source decides: the 1921 Cardinals' FG is Ralph
+    Horween's (statscrew and PFR's box score of 10/23/1921; PFA: Arnie Horween),
+    and Canton's 7 PATs are all Al Feeney's (PFA's and PFR's box scores;
+    statscrew credits one to Jim Morrow).
   * josephvm is the backbone for 1966-1998 as asked, but its per-season files
     keep only one team's stint for a player traded mid-season. For example,
     Greg Davis in 1989 shows 7/11 FG (ATL only) where the real total is 23/34
@@ -63,14 +94,23 @@ Judgement calls:
     buckets and the rows PFR lacks: kickers with attempts but no points, and
     the AFL 1966-69. On the 1,000+ single-team rows the two sources agree,
     except two off-by-one attempt counts.
-  * Distance buckets are filled only from josephvm, for 1991+:
-    fg_made_0_39 = 1-19 + 20-29 + 30-39, fg_made_40_49, fg_made_50_plus.
-    fg_made_unknown = fg_made - buckets. That is 0 normally, and above 0 only
-    for a traded kicker whose josephvm row holds just one stint. Before 1991,
-    every made FG goes in fg_made_unknown and the buckets are 0.
+  * Distance buckets, 1991+: fg_made_0_39 = 1-19 + 20-29 + 30-39, fg_made_40_49,
+    fg_made_50_plus, from josephvm. Its row holds one stint of a kicker traded
+    mid-season (and a few single-team kickers have no josephvm row), so the
+    other stints come from kendallgillies' per-team NFL.com rows (20-29 + 30-39,
+    40-49, 50+; used only when they add up to the stint's FGM, since the scrape
+    has no 1-19 column), else from MANUAL_BUCKETS (NFL.com career pages and PFA
+    team pages). A row takes them only when every made FG is then placed:
+    fg_made_unknown = fg_made - buckets is 0 for every 1991+ row (a check). E.g.
+    Greg Davis 1997 = SDG 14/5/0 (josephvm) + MIN 6/1/0 (kendallgillies).
+    Before 1991, every made FG goes in fg_made_unknown and the buckets are 0.
   * PFR's scoring table records FG and XP attempts only from 1938. For
     1922-1937, fg_att and xp_att are empty (unknown), and a row is a kicker row
-    when FGM or XPM is above 0. From 1938 on, a row needs FGA > 0, XPA > 0 or
+    when FGM or XPM is above 0. The same rule holds for 1920-1921: PFA has most
+    attempts there, but they are kept only in EARLY_KICKING, not written, so
+    that every pre-1938 season is scored alike (no misses counted); writing them
+    would charge Elmer Oliphant 10 missed FGs in 1921 while no 1922-1937 kicker
+    is charged any. From 1938 on, a row needs FGA > 0, XPA > 0 or
     XPM > 0. One 1938+ row has makes but blank attempts in PFR (Dave Smukler,
     PHI 1938, XPM 6): its attempts come from Pro Football Archives
     (profootballarchives.com/1938nflphi.html: 6/6 XP, 0/2 FG; that page matches
@@ -122,13 +162,20 @@ Judgement calls:
     playing 7 games for OAK without kicking (NFL.com career pages, statscrew
     DEN/OAK 1964). Their rows are BUF/NYT and DEN/OAK with all games.
   * Team codes are Pro Football Reference codes for that era (CRD, PRT, BOS,
-    RAM, STL, NYT, DTX, LAC, TEN, ...). For a player on several teams in a
-    season, the team column is "A/B" and team_name is "Name A / Name B", in
-    alphabetical code order, because the sources do not say which stint came
-    first. The teams come from kendallgillies' per-team rows, or, for every
-    post-1945 PFR "2TM" row, from MANUAL_TEAMS (NFL.com career pages,
-    Wikipedia, PFA). Only 1922-1945 rows that no source splits keep PFR's
-    "2TM"/"3TM", with team_name "2 teams" etc.
+    RAM, STL, NYT, DTX, LAC, TEN, ...); 1920-21 clubs PFR has no tables for use
+    the offense and defense tables' codes (DEC Decatur Staleys, CHT Chicago
+    Tigers, MUN Muncie Flyers, TON Tonawanda Kardex, WSN Washington Senators).
+    For a player on several teams in a season, the team column is "A/B" and
+    team_name is "Name A / Name B", in alphabetical code order, because the
+    sources do not say which stint came first. The teams of a PFR "2TM"/"3TM"/
+    "4TM" row come from MANUAL_TEAMS, else from kendallgillies' per-team rows
+    when they name exactly that many teams. MANUAL_TEAMS covers every row
+    kendallgillies can't split: after 1945 from NFL.com career pages,
+    Wikipedia and PFA; 1922-1945 from the PFA team pages, where the player is
+    on each team's roster (games played) and his per-team PATs and FGs add up
+    to PFR's row (e.g. Joey Sternaman 1923: Bears 2 PAT 1 FG, Duluth 2 PAT 5 FG
+    = PFR's 4 and 6). No placeholder team is left (a check), so the joined
+    teams string never shows "2TM".
   * player_id is "k:" plus a slug of the name, so it does not change between
     sources. The same person under different names in different sources (e.g.
     "Richie Szaro" in josephvm, "Rich Szaro" in PFR) is matched within a season
@@ -141,16 +188,17 @@ Judgement calls:
     1999+ seasons in the bot.
 
 Columns that are empty, and why:
-  fg_att, xp_att   1922-1937 only: attempts were not recorded (PFR leaves them
-                   blank). From 1938 on both are always known.
+  fg_att, xp_att   1920-1937 only: attempts were not recorded (PFR leaves them
+                   blank; for 1920-21 see above). From 1938 on both are always
+                   known.
   pfr_id           kickers with no nflverse (1999+) record.
   games            never empty in practice. The check below asserts it.
 Every other cell is a known integer (buckets are 0 when distance is unknown).
 
 NOTE for consumers: an empty fg_att or xp_att means attempts are unknown, not
 zero. Fill them with fg_made and xp_made before scoring "missed" kicks, or the
-misses come out negative (bot/legacy.py currently fills them with 0, which
-turns every pre-1938 make into a bonus point).
+misses come out negative. The 1920 rows cover APFA-vs-APFA games only (see
+above), which a coverage note may want to say.
 """
 
 from __future__ import annotations
@@ -196,7 +244,8 @@ URLS = {
 
 # --- teams --------------------------------------------------------------------
 
-# (PFR code, first season, last season, name of the era). Only 1920-1998.
+# (PFR code, first season, last season, name of the era). Only 1920-1998. 1920-21 clubs that
+# PFR has no tables for carry the offense/defense tables' codes (DEC, CHT, MUN, TON, WSN).
 TEAMS = [
     ("AKR", 1920, 1925, "Akron Pros"), ("AKR", 1926, 1926, "Akron Indians"),
     ("ARI", 1994, 1998, "Arizona Cardinals"), ("ATL", 1966, 1998, "Atlanta Falcons"),
@@ -211,8 +260,9 @@ TEAMS = [
     ("BUF", 1926, 1926, "Buffalo Rangers"), ("BUF", 1927, 1929, "Buffalo Bisons"),
     ("BUF", 1960, 1998, "Buffalo Bills"),
     ("CAN", 1920, 1926, "Canton Bulldogs"), ("CAR", 1995, 1998, "Carolina Panthers"),
-    ("CHI", 1920, 1920, "Decatur Staleys"), ("CHI", 1921, 1921, "Chicago Staleys"),
+    ("DEC", 1920, 1920, "Decatur Staleys"), ("CHI", 1921, 1921, "Chicago Staleys"),
     ("CHI", 1922, 1998, "Chicago Bears"),
+    ("CHT", 1920, 1920, "Chicago Tigers"), ("CIN", 1921, 1921, "Cincinnati Celts"),
     ("CIN", 1933, 1934, "Cincinnati Reds"), ("CIN", 1968, 1998, "Cincinnati Bengals"),
     ("CLE", 1920, 1920, "Cleveland Tigers"), ("CLE", 1921, 1921, "Cleveland Indians"),
     ("CLE", 1924, 1927, "Cleveland Bulldogs"), ("CLE", 1931, 1931, "Cleveland Indians"),
@@ -222,6 +272,7 @@ TEAMS = [
     ("CRD", 1920, 1959, "Chicago Cardinals"),
     ("DAL", 1960, 1998, "Dallas Cowboys"), ("DAY", 1920, 1929, "Dayton Triangles"),
     ("DEN", 1960, 1998, "Denver Broncos"),
+    ("DET", 1920, 1920, "Detroit Heralds"), ("DET", 1921, 1921, "Detroit Tigers"),
     ("DET", 1925, 1926, "Detroit Panthers"), ("DET", 1928, 1928, "Detroit Wolverines"),
     ("DET", 1934, 1998, "Detroit Lions"),
     ("DTX", 1952, 1952, "Dallas Texans"), ("DTX", 1960, 1962, "Dallas Texans"),
@@ -235,11 +286,13 @@ TEAMS = [
     ("KEN", 1924, 1924, "Kenosha Maroons"), ("LAB", 1926, 1926, "Los Angeles Buccaneers"),
     ("LAC", 1960, 1960, "Los Angeles Chargers"),
     ("LOU", 1921, 1923, "Louisville Brecks"), ("LOU", 1926, 1926, "Louisville Colonels"),
+    ("MUN", 1920, 1921, "Muncie Flyers"),
     ("MIA", 1966, 1998, "Miami Dolphins"), ("MIL", 1922, 1926, "Milwaukee Badgers"),
     ("MIN", 1921, 1924, "Minneapolis Marines"), ("MIN", 1929, 1930, "Minneapolis Red Jackets"),
     ("MIN", 1961, 1998, "Minnesota Vikings"),
     ("NOR", 1967, 1998, "New Orleans Saints"), ("NWE", 1971, 1998, "New England Patriots"),
-    ("NYG", 1925, 1998, "New York Giants"), ("NYJ", 1963, 1998, "New York Jets"),
+    ("NYG", 1921, 1921, "New York Brickley Giants"), ("NYG", 1925, 1998, "New York Giants"),
+    ("NYJ", 1963, 1998, "New York Jets"),
     ("NYT", 1960, 1962, "New York Titans"),
     ("NYY", 1927, 1928, "New York Yankees"), ("NYY", 1949, 1949, "New York Bulldogs"),
     ("NYY", 1950, 1951, "New York Yanks"),
@@ -258,9 +311,9 @@ TEAMS = [
     ("STL", 1923, 1923, "St. Louis All-Stars"), ("STL", 1934, 1934, "St. Louis Gunners"),
     ("STL", 1960, 1987, "St. Louis Cardinals"), ("STL", 1995, 1998, "St. Louis Rams"),
     ("TAM", 1976, 1998, "Tampa Bay Buccaneers"), ("TEN", 1997, 1998, "Tennessee Oilers"),
-    ("TOL", 1922, 1923, "Toledo Maroons"),
+    ("TOL", 1922, 1923, "Toledo Maroons"), ("TON", 1921, 1921, "Tonawanda Kardex"),
     ("TOR", 1929, 1929, "Orange Tornadoes"), ("TOR", 1930, 1930, "Newark Tornadoes"),
-    ("WAS", 1937, 1998, "Washington Redskins"),
+    ("WAS", 1937, 1998, "Washington Redskins"), ("WSN", 1921, 1921, "Washington Senators"),
 ]
 # The wartime mergers, under the codes PFR files them under.
 SPECIAL_NAMES = {("PHI", 1943): "Phil-Pitt Combine", ("CRD", 1944): "Card-Pitt Combine"}
@@ -388,11 +441,177 @@ AFL_NFLCOM_DIFFERENCES = {
     ("bill shockley", 1961): "NFL.com's scrape lost his BUF stint (1/2 FG, 2 g; nfl.com career page has it)",
 }
 
+# --- APFA 1920-1921: Pro Football Archives team pages -----------------------------------
+
+PFA_APFA = "https://www.profootballarchives.com/{}apfa{}.html"  # season, PFA team slug
+# The SCORING table of every APFA team page (PFA_APFA, slug in the trailing comment), transcribed
+# as (name, xp_made, xp_att, fg_made, fg_att, games) per player with a kick or a try, plus the
+# page's Team Totals row (points, touchdowns, xp_made, xp_att, fg_made, fg_att). None = blank on
+# PFA. games = the page roster's GP. Attempts are kept here but not written (see the docstring).
+# Checks: the rows add up to the Totals; points - 6*TD - XP - 3*FG leaves only safeties; 1921
+# points and TDs equal NFL.com's standings; 1921 matches statscrew (STATSCREW_1921).
+EARLY_KICKING = {
+    # 1920: games between APFA members only (NFL.com's 1920 standings also count other games).
+    (1920, "AKR"): ([("Charlie Copley", 12, 13, 1, 1, 9), ("Chief Crawford", 0, 0, 0, 2, 5)],
+                    (95, 13, 12, 13, 1, 3)),  # akr
+    (1920, "BUF"): ([("Bodie Weldon", 5, 5, 1, 3, 5),  # PFA "John Weldon"; NFL.com and PFR "Bodie Weldon"
+                     ("Ockie Anderson", 1, 1, 0, 1, 6), ("Tommy Hughitt", 3, 3, 0, 0, 6),
+                     ("Heinie Miller", 0, 1, 0, 0, 6)], (74, 10, 9, 10, 1, 4)),  # buf
+    (1920, "CAN"): ([("Al Feeney", 8, 8, 1, 1, 8), ("Jim Thorpe", 0, 0, 3, 9, 6), ("Joe Guyon", 0, 0, 0, 4, 8)],
+                    (72, 8, 8, 8, 4, 14)),  # can
+    (1920, "CRD"): ([("Paddy Driscoll", 4, 5, 0, None, 6)], (34, 5, 4, 5, 0, None)),  # chic
+    (1920, "CHT"): ([("Johnny Barrett", 0, 0, 1, 5, 6), ("Neil Mathews", 1, 1, 0, 0, 6), ("Milt Ghee", 0, 2, 0, 0, 7)],
+                    (22, 3, 1, 3, 1, 5)),  # chit
+    (1920, "CLE"): ([("Al Pierotti", 2, 2, 0, 0, 4), ("Mark Devlin", 0, 0, 0, 3, 3)], (14, 2, 2, 2, 0, 3)),  # cle
+    (1920, "COL"): ([("Oscar Kuhner", 1, 1, 0, 0, 5), ("Frank Nesser", 0, 0, 0, 2, 5)], (7, 1, 1, 1, 0, 2)),  # col
+    (1920, "DAY"): ([("Frank Bacon", 2, 2, 0, 1, 8), ("George Kinderdine", 12, 14, 0, 0, 8),
+                     ("George Roudebush", 0, 0, 1, 1, 8), ("Dick Abrell", 2, 2, 0, 0, 5)],
+                    (127, 18, 16, 18, 1, 2)),  # day
+    (1920, "DEC"): ([("Dutch Sternaman", 1, 1, 3, 6, 8),  # PFA "Ed Sternaman"
+                     ("Bob Koehler", 0, 0, 0, 1, 7), ("Jimmy Conzelman", 0, 0, 1, 2, 7),
+                     ("Hugh Blacklock", 6, 7, 0, 1, 8)],  # X1A blank on PFA; 7 from its 85.7%
+                    (67, 8, 7, 8, 4, None)),  # dec
+    (1920, "DET"): ([("Clarence Horning", 0, 1, 0, 0, 4)], (6, 1, 0, 1, 0, 0)),  # det
+    (1920, "HAM"): ([("Louie Kolls", 1, 1, 0, 0, 1)], (7, 1, 1, 1, 0, 0)),  # ham
+    (1920, "MUN"): ([], (0, 0, 0, 0, 0, 0)),  # mun
+    (1920, "RII"): ([("Rube Ursella", 5, 6, 1, 2, 5), ("Sid Nichols", 3, 3, 0, 1, 6), ("Bobby Marshall", 3, 5, 0, 0, 7),
+                     ("Harry Webber", 0, 0, 0, 1, 2)], (98, 14, 11, 14, 1, 4)),  # ri
+    (1920, "RCH"): ([("Jim Laird", 0, 0, 2, 2, 1)], (6, 0, 0, 0, 2, None)),  # roc
+    # 1921: every game NFL.com's standings count.
+    (1921, "AKR"): ([("Carl Cramer", 1, 2, 0, 1, 11),  # PFA "Earl Cramer"; NFL.com, PFR, statscrew "Carl"
+                     ("Rip King", 3, 4, 0, 0, 11),  # PFA "Andy King"; NFL.com, PFR, statscrew "Rip King"
+                     ("Paul Sheeks", 1, 1, 2, 6, 11), ("Charlie Copley", 10, 13, 0, 0, 11),
+                     # PFA "Elgie Tobin" (the coach); statscrew and Wikipedia (Leo_Tobin: "his only
+                     # statistic was one extra point") credit his brother Leo.
+                     ("Leo Tobin", 1, 1, 0, 0, 9)],
+                    (148, 21, 16, 21, 2, 6)),  # akr (PFA's FGA total 6, its rows 7)
+    (1921, "BUF"): ([("Elmer Oliphant", 26, 26, 5, 15, 10), ("Johnny Scott", 0, 0, 0, 3, 7),
+                     ("Tommy Hughitt", 2, 2, 0, 0, 12)], (211, 28, 28, 28, 5, 18)),  # buf
+    (1921, "CAN"): ([("Bob Higgins", 2, 2, 0, 0, 9),
+                     # PFA lists Feeney twice (7/7 PAT; 0/2 FG), one player link. PFA's box scores and
+                     # PFR's (pro-football-reference.com/boxscores/192110090cbd, 192110160day,
+                     # 192111060cbd, 192111130cti, 192111200bff, via search) give him all 7 PATs (1, 2, 2,
+                     # 1, 1); statscrew credits one to Jim Morrow (6 + 1).
+                     ("Al Feeney", 7, 7, 0, 2, 8), ("Belf West", 4, 6, 1, 4, 10),
+                     ("Pete Henry", 0, 0, 0, 1, 10), ("Glenn Killinger", 0, 0, 0, 1, 1)],
+                    (106, 15, 13, 15, 1, 8)),  # can
+    (1921, "CRD"): ([("Paddy Driscoll", 4, None, 1, 4, 8), ("Bob Koehler", 2, 2, 0, 0, 8),
+                     # PFA "Arnold Horween" (roster: Arnie, 4 g); statscrew and PFR's box score of
+                     # 10/23/1921 (pro-football-reference.com/boxscores/192110230crd.htm, via search)
+                     # credit the FG to Ralph Horween. Games: PFA's line.
+                     ("Ralph Horween", 0, None, 1, 3, 4)], (54, 7, 6, 7, 2, 7)),  # chic
+    (1921, "CIN"): ([("Art Lewis", 1, 1, 0, 0, 3), ("George Munns", 1, 1, 0, 0, 4)], (14, 2, 2, 2, 0, 0)),  # cin
+    (1921, "CLE"): ([("Joe Guyon", 10, 11, 0, 0, 8), ("Jim Thorpe", 2, 2, 1, 2, 5), ("Phil Bower", 0, 0, 0, 1, 4)],
+                    (95, 13, 12, 13, 1, None)),  # cle
+    (1921, "COL"): ([("Emmett Ruh", 1, None, 2, 5, 7), ("Frank Nesser", 1, None, 0, 1, 9),
+                     ("Harry Bliss", 1, None, 0, 0, 9)], (47, 6, 3, 6, 2, 6)),  # col
+    (1921, "DAY"): ([("Russ Hathaway", 12, 12, 4, 6, 9)], (96, 12, 12, 12, 4, 6)),  # day
+    (1921, "CHI"): ([("Dutch Sternaman", 9, None, 5, 12, 11),  # PFA "Ed Sternaman"
+                     ("Hugh Blacklock", 2, 3, 0, 0, 11),  # X1A blank on PFA; 3 from its 66.7%
+                     ("Chic Harley", 0, None, 0, 1, 8)], (128, 17, 11, 17, 5, 13)),  # dec (the Staleys)
+    (1921, "DET"): ([("Tillie Voss", 2, 2, 0, 0, 7),
+                     ("Cy DeGree", 0, 0, 1, 1, 7)],  # PFA "Walt DeGree"; PFR, statscrew "Cy DeGree"
+                    (19, 2, 2, 2, 1, 1)),  # det
+    (1921, "EVN"): ([("Herb Henderson", 5, 5, 0, 0, 4), ("Bourbon Bondurant", 6, 7, 0, 1, 5),
+                     ("Jerry Zeller", 0, 1, 0, 0, 3)], (89, 13, 11, 13, 0, None)),  # eva
+    (1921, "GNB"): ([("Curly Lambeau", 7, 9, 3, 12, 6)], (70, 9, 7, 9, 3, 12)),  # gb
+    (1921, "HAM"): ([("Charlie Mathys", 0, 0, 1, 2, 5), ("Elliott Risley", 2, 2, 0, 1, 5),
+                     ("Marshall Jones", 0, 0, 0, 1, None)], (17, 2, 2, 2, 1, 4)),  # ham (Jones: not on its roster)
+    (1921, "LOU"): ([], (0, 0, 0, 0, 0, None)),  # lou
+    (1921, "MIN"): ([("Eber Sampson", 0, 1, 0, 1, 4), ("Rube Ursella", 4, 4, 1, 4, 4)], (37, 5, 4, 5, 1, 5)),  # min
+    (1921, "MUN"): ([], (0, 0, 0, 0, 0, 0)),  # mun
+    (1921, "NYG"): ([], (0, 0, 0, 0, 0, None)),  # ny (the Brickley Giants)
+    (1921, "RII"): ([("Obe Wenig", 8, 9, 0, 1, 7), ("Jimmy Conzelman", 0, 0, 1, 7, 7), ("Sid Nichols", 0, 0, 0, 1, 5),
+                     ("Walt Brindley", 0, 0, 0, 1, 2)], (65, 9, 8, 9, 1, 10)),  # ri
+    (1921, "RCH"): ([("Benny Boynton", 8, None, 1, None, 3), ("Howard Berry", 2, None, 2, 2, 4)],
+                    (85, 11, 10, 11, 3, None)),  # roc
+    (1921, "TON"): ([], (0, 0, 0, 0, 0, None)),  # ton
+    (1921, "WSN"): ([("Benny Boynton", 3, 3, 0, None, 2)], (21, 3, 3, 3, 0, None)),  # was
+}
+# Stints of 1920-21 kickers on another team where they didn't kick: (name, season, team, games),
+# from the PFA rosters (the same player link on both pages).
+EARLY_STINTS = [("Paddy Driscoll", 1920, "DEC", 1), ("Al Pierotti", 1920, "AKR", 1), ("Louie Kolls", 1920, "CRD", 1),
+                ("Jim Laird", 1920, "BUF", 1), ("Joe Guyon", 1921, "WSN", 1), ("Tillie Voss", 1921, "BUF", 5)]
+
+# The Kicking table of statscrew's 21 team pages of 1921
+# (https://www.statscrew.com/football/stats/t-<code>/y-1921, codes AKR BU1 CAN CHC CHI CI1 CL1 COL
+# DAY DE1 EVA GB HAM LOU MI1 MUN NY1 RI ROC TON WA1): (name, xp_made, fg_made) per kicker.
+# statscrew has no attempts for 1921. Pages with no kicker (LOU, MUN, NYG, TON) are left out.
+STATSCREW_1921 = {
+    "AKR": [("Paul Sheeks", 1, 2), ("Charlie Copley", 10, 0), ("Rip King", 3, 0), ("Leo Tobin", 1, 0),
+            ("Carl Cramer", 1, 0)],
+    "BUF": [("Elmer Oliphant", 26, 5), ("Tommy Hughitt", 2, 0)],
+    "CAN": [("Belf West", 4, 1), ("Al Feeney", 6, 0), ("Bob Higgins", 2, 0), ("Jim Morrow", 1, 0)],
+    "CRD": [("Paddy Driscoll", 4, 1), ("Ralph Horween", 0, 1), ("Bob Koehler", 2, 0)],
+    "CHI": [("Dutch Sternaman", 9, 5), ("Hugh Blacklock", 2, 0)],
+    "CIN": [("Art Lewis", 1, 0), ("George Munns", 1, 0)],
+    "CLE": [("Jim Thorpe", 2, 1), ("Joe Guyon", 10, 0)],
+    "COL": [("Emmett Ruh", 1, 2), ("Frank Nesser", 1, 0), ("Harry Bliss", 1, 0)],
+    "DAY": [("Russ Hathaway", 12, 4)],
+    "DET": [("Cy DeGree", 0, 1), ("Tillie Voss", 2, 0)],
+    "EVN": [("Bourbon Bondurant", 6, 0), ("Herb Henderson", 5, 0)],
+    "GNB": [("Curly Lambeau", 7, 3)],
+    "HAM": [("Charlie Mathys", 0, 1), ("Elliott Risley", 2, 0)],
+    "MIN": [("Rube Ursella", 4, 1)],
+    "RII": [("Jimmy Conzelman", 0, 1), ("Obe Wenig", 8, 0)],
+    "RCH": [("Howard Berry", 2, 2), ("Benny Boynton", 8, 1)],
+    "WSN": [("Benny Boynton", 3, 0)],
+}
+# (name, team) lines where the final 1921 table differs from statscrew, with the reason.
+# A check asserts this is exactly the set of differences.
+STATSCREW_1921_DIFFERENCES = {
+    ("Al Feeney", "CAN"): "7 PAT (PFA and PFR box scores) vs statscrew 6",
+    ("Jim Morrow", "CAN"): "no PAT on PFA or in PFR's box scores; statscrew credits him 1",
+}
+
 # --- other verified fixes -----------------------------------------------------------
 
-# Multi-team PFR rows ("2TM") after 1945 -> the teams, alphabetical. Sources: NFL.com career
-# pages (nfl.com/players/<slug>/stats/career), Wikipedia, PFA team pages, josephvm stints.
+# Multi-team PFR rows ("2TM", "4TM") -> the teams, alphabetical; a check asserts every such row
+# is resolved and names as many teams as PFR counts. Sources after 1945: NFL.com career pages
+# (nfl.com/players/<slug>/stats/career), Wikipedia, PFA team pages, josephvm stints.
+# 1922-1945: the PFA team pages "PFA <season>nfl<team>" = profootballarchives.com/<that>.html
+# (read once, 2026-10): games played on each roster, and the per-team PAT/FG that add up to
+# PFR's row (where they don't, it says so). Same teams as offense.py where it splits the season.
 MANUAL_TEAMS = {
+    ("jimmy conzelman", 1922): "MIL/RII",   # PFA 1922nflri 7 g 2 FG + 1922nflmil 3 g
+    ("dutch lauer", 1922): "GNB/RII",       # PFA ("Hal Lauer") 1922nflri 7 g 1 PAT + 1922nflgb 2 g
+    ("tillie voss", 1922): "AKR/RII",       # PFA 1922nflri 7 g 6 PAT + 1922nflakr 2 g; offense.py (Wikipedia)
+    ("russ hathaway", 1922): "CAN/DAY",     # PFA 1922nflday 8 g 9 PAT 2 FG + 1922nflcan 2 g
+    ("jerry johnson", 1922): "RAC/RII",     # PFA 1922nflri 5 g 6 PAT 1 FG + 1922nflrac 3 g
+    ("charlie copley", 1922): "AKR/MIL",    # PFA 1922nflmil 4 g 1 PAT + 1922nflakr 3 g
+    ("jab murray", 1922): "GNB/RAC",        # PFA 1922nflrac 8 g 1 PAT + 1922nflgb 3 g
+    ("cliff steele", 1922): "AKR/RCH",      # PFA 1922nflroc 1 g 1 PAT + 1922nflakr 4 g
+    ("joey sternaman", 1923): "CHI/DUL",    # PFA 1923nfldul 7 g 2 PAT 5 FG + 1923nflchib 3 g 2 PAT 1 FG
+    ("dutch hendrian", 1923): "AKR/CAN",    # PFA 1923nflakr 5 g 1 PAT + 1923nflcan 4 g
+    ("benny boynton", 1924): "BUF/RCH",     # PFA 1924nflbuf 9 g 11 PAT 4 FG + 1924nflroc 1 g
+    ("frank morrissey", 1924): "BUF/MIL",   # PFA 1924nflbuf 2 g 2 FG + 1924nflmil 2 g
+    ("phil white", 1925): "KAN/NYG",        # PFA 1925nflkc 8 g 1 PAT 1 FG + 1925nflnyg 2 g
+    ("dutch hendrian", 1925): "NYG/RII",    # PFA 1925nflnyg 10 g 1 PAT 3 FG + 1925nflri 1 g
+    ("jim kendrick", 1925): "BUF/HAM/RCH/RII",  # PFA 1925nflbuf 8 g 2 PAT 2 FG, 1925nflham 2 g 1 PAT 1 FG,
+                                                # 1925nflroc 1 g, 1925nflri 1 g; Wikipedia Jim_Kendrick
+    ("doc bruder", 1925): "BUF/FRN",        # PFA ("Woody Bruder") 1925nflfra 4 g 2 PAT + 1925nflbuf 5 g
+    ("don curtin", 1926): "MIL/RAC",        # PFA 1926nflmil 3 g 1 PAT 2 FG; signed by Racine 10/5/1926 (PFA
+                                            # player page curt00200, en.wikipedia.org/wiki/Donald_Curtin)
+    ("paul hogan", 1926): "FRN/NYG",        # PFA 1926nflnyg 10 g 3 PAT + 1926nflfra 3 g 2 PAT
+    ("hap moran", 1927): "CRD/FRN",         # PFA 1927nflfra 6 g 6 PAT 3 FG + 1927nflchic 5 g
+    ("pete henry", 1927): "NYG/POT",        # PFA 1927nflpot 9 g 1 PAT 2 FG + 1927nflnyg 4 g
+    ("earl britton", 1927): "DAY/FRN",      # PFA 1927nflday 8 g 1 FG + 1927nflfra 6 g
+    ("red smith", 1928): "NYG/NYY",         # PFA 1928nflnyy 9 g 2 PAT + 1928nflnyg 1 g
+    ("bo molenda", 1928): "GNB/NYY",        # PFA 1928nflnyy 8 g 3 PAT + 1928nflgb 3 g
+    ("fait elkins", 1929): "CRD/FRN",       # PFA ("Chief Elkins") 1929nflchic 2 g 1 FG + 1929nflfra 9 g
+    ("ed halicki", 1930): "FRN/MIN",        # PFA 1930nflfra 14 g 5 PAT + 1930nflmin 1 g; offense.py
+    ("frosty peters", 1930): "PRT/PRV",     # PFA 1930nflpro 9 g 7 PAT 2 FG + 1930nflpor 3 g
+    ("mally nydall", 1930): "FRN/MIN",      # PFA ("Mally Nydahl") 1930nflmin 8 g 1 PAT + 1930nflfra 4 g
+    ("art pharmer", 1930): "FRN/MIN",       # PFA 1930nflfra 5 g 4 PAT + 1930nflmin 8 g 2 PAT
+    ("tony kostos", 1930): "FRN/MIN",       # PFA 1930nflfra 15 g + 1930nflmin 2 g (PFA credits no PAT; PFR 1)
+    ("jim mooney", 1930): "BKN/TOR",        # PFA 1930nflnew (Newark) 12 g 2 PAT + 1930nflbkn 3 g
+    ("george bogue", 1930): "CRD/TOR",      # PFA 1930nflchic 3 g 1 PAT + 1930nflnew 3 g
+    ("deck shelley", 1931): "PRT/PRV",      # PFA ("Dexter Shelley") 1931nflpro 8 g 4 PAT + 1931nflpor 2 g
+    ("bo molenda", 1932): "GNB/NYG",        # PFA 1932nflnyg 10 g (4 PAT; PFR 3) + 1932nflgb 2 g; offense.py
+    ("algy clark", 1934): "CIN/PHI",        # PFA 1934nflcin 7 g 1 FG + 1934nflphi 3 g; offense.py (jt-sw)
+    ("bill shepherd", 1935): "BOS/DET",     # PFA 1935nflbos 7 g 1 PAT + 1935nfldet 5 g; offense.py (jt-sw)
+    ("dick tuckey", 1938): "RAM/WAS",       # PFA 1938nflcle 4 g 2 PAT + 1938nflwas 3 g; offense.py (jt-sw)
+    ("frank balazs", 1941): "CRD/GNB",      # PFA 1941nflgb 1 g 1 PAT + 1941nflchic 9 g
     ("george blanda", 1950): "BCL/CHI",    # Wikipedia (PFR) table: BAL 1 g, CHI 11 g 6/15
     ("rex grossman", 1950): "BCL/DET",     # PFR line via search: BAL 8 g 16/19 XP, DET no kicking
     ("tom tracy", 1963): "PIT/WAS",        # PFA 1963nflpit (2/2 PAT, 6 g) and 1963nflwas (2 g)
@@ -410,6 +629,19 @@ MANUAL_TEAMS = {
     ("doug brien", 1995): "NOR/SFO",       # released by SF, signed by NO; josephvm NO 12/17
     ("carlos huerta", 1996): "CHI/STL",    # nfl.com: STL 1 g, CHI 3 g 4/7
     ("scott bentley", 1997): "ATL/DEN",    # nfl.com: ATL 2 g, DEN 1 g 2/3
+}
+# 1991+ FG distance of a traded kicker's stint that neither josephvm nor kendallgillies splits:
+# (name key, season, team) -> made FGs (under 40, 40-49, 50+). Each from the PFA team page's
+# FIELD GOALS table (profootballarchives.com/<season>nfl<team>.html) and the NFL.com career page.
+MANUAL_BUCKETS = {
+    # 1995nflsf: 20-29 4/4, 30-39 0/1, 40-49 2/6, 50+ 1/1 (LG 51). nfl.com/players/doug-brien: 7/12,
+    # its splits miss one make; the 51-yarder is in PFR's box score 199510150clt (via search).
+    ("doug brien", 1995, "SFO"): (4, 2, 1),
+    ("ken willis", 1992, "TAM"): (4, 4, 0),     # 1992nfltb 3/3, 1/4, 4/7; nfl.com/players/ken-willis same
+    # 1992nflkc: 1/1 from 50+, LG 52; NFL.com shows 1/1 without a split; footballdb's 2-team line 50+ 1-1.
+    ("eddie murray", 1992, "KAN"): (0, 0, 1),
+    ("carlos huerta", 1996, "CHI"): (3, 1, 0),  # 1996nflchib 30-39 3/5, 40-49 1/2; nfl.com same
+    ("scott bentley", 1997, "DEN"): (2, 0, 0),  # 1997nflden 20-29 1/1, 30-39 1/1; nfl.com same
 }
 # PFR rows with blank attempts that another source fills (see the docstring).
 MANUAL_FILLS = {("dave smukler", 1938, "PHI"): dict(fg_att=2, xp_att=6)}  # PFA 1938nflphi
@@ -538,9 +770,9 @@ def num(series):
 
 
 # Every loader returns these columns. b_0_39/b_40_49/b_50 are made FGs by distance,
-# NaN when the source has no distance split.
+# NaN when the source has no distance split; b_team is the team whose stint they cover.
 ROW_COLS = ["name", "key", "season", "team", "games", "fg_made", "fg_att",
-            "b_0_39", "b_40_49", "b_50", "xp_made", "xp_att", "source", "pos"]
+            "b_0_39", "b_40_49", "b_50", "b_team", "xp_made", "xp_att", "source", "pos"]
 
 
 def frame(df):
@@ -621,6 +853,7 @@ def load_josephvm():
         "b_50": d["50+_M"].where(has_buckets),
         "source": "josephvm",
     })
+    out["b_team"] = out["team"].where(has_buckets)
     # "Wayne Walker (1)" is a different person from "Wayne Walker": keep the marker in the key.
     out["key"] = [name_key(n) + (f" {m + 1}" if m else "") for n, m in zip(out["name"], marker)]
     return frame(out)
@@ -686,6 +919,48 @@ def load_kg():
     })
     out["key"] = out["name"].map(name_key)
     return frame(out)
+
+
+KG_BUCKETS = ["FGs Made 20-29 Yards", "FGs Made 30-39 Yards", "FGs Made 40-49 Yards", "FGs Made 50+ Yards"]
+
+
+def load_kg_buckets():
+    """kendallgillies per-team distance splits, 1991+: (name key, season, team) -> (under 40,
+    40-49, 50+). The scrape has no 1-19 column, so a row counts only when 20-29 + 30-39 +
+    40-49 + 50+ equals its FGs Made (else a 1-19 make, or a gap, would go missing)."""
+    d = read_zip_csv("kendallgillies.zip", "Career_Stats_Field_Goal_Kickers.csv", dtype=str, low_memory=False)
+    d["season"] = num(d["Year"])
+    d = d[d["season"].between(BUCKETS_FROM, LAST_SEASON)].copy()
+    made = num(d["FGs Made"])
+    b = [num(d[c]) for c in KG_BUCKETS]
+    ok = made.notna() & (made > 0) & (b[0] + b[1] + b[2] + b[3] == made)
+    out = {}
+    for i in d.index[ok]:
+        season = int(d.at[i, "season"])
+        key = (name_key(first_last(d.at[i, "Name"])), season, code_from_name(d.at[i, "Team"], season))
+        out[key] = (b[0][i] + b[1][i], b[2][i], b[3][i])
+    return out
+
+
+def load_early():
+    """1920-1921 kicker stints from EARLY_KICKING (rows with a make; attempts not kept, as for
+    1922-1937) plus the kick-less stints of EARLY_STINTS."""
+    rows = []
+    for (season, team), (kickers, _totals) in EARLY_KICKING.items():
+        for name, xpm, _xpa, fgm, _fga, games in kickers:
+            if xpm or fgm:
+                rows.append({"name": name, "season": season, "team": team, "games": games,
+                             "fg_made": fgm, "xp_made": xpm, "source": "profootballarchives"})
+    kickers = {(r["name"], r["season"]) for r in rows}
+    for name, season, team, games in EARLY_STINTS:
+        assert (name, season) in kickers and (name, season, team) not in {
+            (r["name"], r["season"], r["team"]) for r in rows}, (name, season, team)
+        rows.append({"name": name, "season": season, "team": team, "games": games,
+                     "fg_made": 0, "xp_made": 0, "source": "profootballarchives"})
+    out = pd.DataFrame(rows)
+    assert (out["season"] < ATTEMPTS_FROM).all()
+    out["key"] = out["name"].map(name_key)
+    return frame(out)  # fg_att, xp_att stay NaN (unknown)
 
 
 def load_kg_index():
@@ -856,6 +1131,13 @@ def build(log):
 
     rows = []
 
+    # 1920-1921 APFA: PFA team pages (no other source has these seasons).
+    early = load_early()
+    assert not ((pfr["season"] <= 1921).any() or (kg["season"] <= 1921).any() or (jvm["season"] <= 1921).any())
+    rows.append(early)
+    log.append(f"  1920-1921 from PFA team pages: {len(early)} stints, "
+               f"{early.groupby('season')['key'].nunique().to_dict()} kickers per season")
+
     # 1922-1965 NFL: PFR, plus kendallgillies rows PFR lacks.
     pfr_old = pfr[pfr["season"] < 1966].reset_index(drop=True)
     drop = [run_pass_pat(r) and not confirmed_kick(r["key"], r["season"])
@@ -923,7 +1205,7 @@ def build(log):
                 f"{c} {j[c]:.0f}->{p[c]:.0f}" for c in diff))
         row = dict(p)
         if pd.notna(j["b_0_39"]) and j["fg_made"] <= p["fg_made"]:
-            row.update(b_0_39=j["b_0_39"], b_40_49=j["b_40_49"], b_50=j["b_50"])
+            row.update(b_0_39=j["b_0_39"], b_40_49=j["b_40_49"], b_50=j["b_50"], b_team=j["b_team"])
             row["source"] = "michaelmallari+josephvm"
         new_rows.append(row)
     # PFR rows josephvm lacks. Those without FG attempts and with a non-kicker position are
@@ -992,29 +1274,83 @@ def build(log):
     spellings = {}
     for other, pfr_key in alias.items():
         spellings.setdefault(pfr_key, set()).add(other)
-    unresolved, used = [], set()
+    unresolved, used, by_manual, by_kg = [], set(), 0, 0
     for i in df.index[df["team"].str.fullmatch(r"\dTM")]:
         n = int(df.at[i, "team"][0])
         key, season = df.at[i, "key"], df.at[i, "season"]
+        label = f"{df.at[i, 'name']} {season} {df.at[i, 'team']}"
         if (key, season) in MANUAL_TEAMS:
-            df.at[i, "team"] = MANUAL_TEAMS[(key, season)]
             used.add((key, season))
+            teams = MANUAL_TEAMS[(key, season)].split("/")
+            if len(set(teams)) != n or teams != sorted(teams):
+                unresolved.append(f"{label} (MANUAL_TEAMS gives {'/'.join(teams)})")
+                continue
+            df.at[i, "team"] = "/".join(teams)
+            by_manual += 1
             continue
         teams = set()
         for k in {key} | spellings.get(key, set()):
             teams |= kg_teams.get((k, season), set())
         if len(teams) == n:
             df.at[i, "team"] = "/".join(sorted(teams))
+            by_kg += 1
         else:
-            unresolved.append(f"{df.at[i, 'name']} {df.at[i, 'season']} {df.at[i, 'team']}")
+            unresolved.append(label)
     STATE["manual_teams_unused"] = sorted(set(MANUAL_TEAMS) - used)
-    log.append(f"  multi-team rows left as PFR's NTM (no per-team source): {len(unresolved)}")
-    log.append("    " + ", ".join(unresolved))
+    STATE["ntm_unresolved"] = unresolved
+    log.append(f"  multi-team PFR rows split: {by_manual} from MANUAL_TEAMS, {by_kg} from kendallgillies; "
+               f"left as PFR's NTM: {len(unresolved)} {unresolved}")
+
+    fill_buckets(df, spellings, log)
 
     # One spelling per person, PFR's where a fuzzy match found it.
     df["key"] = df["key"].map(lambda k: alias.get(k, k))
     STATE["pfr_pos"] = {(name_key(n), s): p for n, s, p in zip(pfr["name"], pfr["season"], pfr["pos"])}
     return df
+
+
+def fill_buckets(df, spellings, log):
+    """1991+ rows whose made FGs aren't all placed by distance (a traded kicker's josephvm row
+    holds one stint; a few kickers have no josephvm row): add each other team's stint from
+    MANUAL_BUCKETS, else kendallgillies' per-team row. Taken only if every made FG is then placed."""
+    kgb = load_kg_buckets()
+    filled, left, used = [], [], set()
+    late = df.index[(df["season"] >= BUCKETS_FROM) & (df["fg_made"] > 0)]
+    for i in late:
+        r = df.loc[i]
+        have = [0.0, 0.0, 0.0] if pd.isna(r["b_0_39"]) else [r["b_0_39"], r["b_40_49"], r["b_50"]]
+        if sum(have) == r["fg_made"]:
+            continue
+        covered = set() if pd.isna(r["b_team"]) else {r["b_team"]}
+        add, srcs = [0.0, 0.0, 0.0], []
+        for team in sorted(set(r["team"].split("/")) - covered):
+            mkey = (r["key"], r["season"], team)
+            if mkey in MANUAL_BUCKETS:
+                used.add(mkey)
+                part, src = MANUAL_BUCKETS[mkey], "manual"
+            else:
+                part = next((kgb[(k, r["season"], team)] for k in sorted({r["key"]} | spellings.get(r["key"], set()))
+                             if (k, r["season"], team) in kgb), None)
+                src = "kendallgillies"
+            if part is None:
+                continue
+            add = [a + b for a, b in zip(add, part)]
+            srcs.append(f"{team} {'/'.join(f'{x:.0f}' for x in part)} ({src})")
+        total = [a + b for a, b in zip(have, add)]
+        label = f"{r['name']} {r['season']} {r['team']} FG {r['fg_made']:.0f}"
+        if srcs and sum(total) == r["fg_made"]:
+            df.loc[i, ["b_0_39", "b_40_49", "b_50"]] = total
+            parts = set(r["source"].split("+")) | {s.split("(")[1][:-1] for s in srcs}
+            df.at[i, "source"] = "+".join(sorted(parts, key=SOURCE_ORDER.index))
+            filled.append(f"{label}: {'+'.join(srcs)} -> {'/'.join(f'{x:.0f}' for x in total)}")
+        else:
+            left.append(f"{label}: placed {sum(total):.0f} ({', '.join(srcs) or 'no per-team split'})")
+    STATE["buckets_left"] = left
+    STATE["manual_buckets_unused"] = sorted(set(MANUAL_BUCKETS) - used)
+    log.append(f"  1991+ stints given distances from kendallgillies/MANUAL_BUCKETS: {len(filled)}")
+    log += [f"    {f}" for f in filled]
+    if left:
+        log.append(f"  1991+ rows with made FGs of unknown distance: {left}")
 
 
 def assign_ids(df, log):
@@ -1034,7 +1370,8 @@ def assign_ids(df, log):
     return df
 
 
-SOURCE_ORDER = ["michaelmallari", "josephvm", "statscrew", "kendallgillies", "trevyoungquist", "manual"]
+SOURCE_ORDER = ["profootballarchives", "michaelmallari", "josephvm", "statscrew", "kendallgillies", "trevyoungquist",
+                "manual"]
 
 
 def aggregate(df):
@@ -1110,7 +1447,7 @@ def load_team_points():
     for season, name, pf, td in zip(d["season"], d["team_name"], d["points_for"], d["touchdowns"]):
         try:
             code = code_from_name(name, season)
-        except KeyError:  # a team with no kicker rows in TEAMS (e.g. 1920-21 clubs)
+        except KeyError:  # a team TEAMS doesn't know (a check asserts there is none)
             unmapped.append(f"{name} {season}")
             continue
         if code is not None:
@@ -1152,8 +1489,8 @@ def summarize(df):
     for col in ("fg_att", "xp_made", "xp_att", "pfr_id"):
         counts = df[df[col].isna()].groupby("decade").size()
         print(f"  {col:8s} " + ", ".join(f"{d}s:{n}" for d, n in counts.items()))
-    multi = df[df["team"].str.fullmatch(r"\dTM")]
-    print(f"\nRows whose teams no source splits ({len(multi)}, all 1922-1945): "
+    multi = df[df["team"].str.contains("TM")]
+    print(f"\nRows whose teams no source splits ({len(multi)}): "
           + ", ".join(f"{n} {s}" for n, s in zip(multi["name"], multi["season"])))
     print("\nTop 10 kickers per decade by fantasy points (unknown attempts = no misses):")
     for d, g in df.groupby("decade"):
@@ -1242,6 +1579,53 @@ def run_checks(df):
     stat_check("Greg Davis", 1989, "FG 23/34 over ATL+NWE", fg_made=23, fg_att=34, team="ATL/NWE")
     stat_check("Greg Davis", 1995, "FG 30/39 single team, buckets complete", fg_made=30, fg_att=39,
                fg_made_unknown=0)
+    print("  -- 1991+ traded kickers: every stint's FGs by distance (josephvm + kendallgillies/MANUAL_BUCKETS) --")
+    for name, season, teams, b in [
+            ("Greg Davis", 1997, "MIN/SDG", (20, 6, 0)),     # SDG 14/5/0 (josephvm) + MIN 6/1/0 (kendallgillies)
+            ("Doug Brien", 1995, "NOR/SFO", (12, 6, 1)),     # NOR 8/4/0 + SFO 4/2/1 (PFA 1995nflsf, 51-yarder)
+            ("Matt Bahr", 1993, "NWE/PHI", (11, 2, 0)),      # NWE 5/0/0 + PHI 6/2/0
+            ("Ken Willis", 1992, "NYG/TAM", (5, 5, 0)),      # NYG 1/1/0 + TAM 4/4/0 (nfl.com, PFA)
+            ("Eddie Murray", 1992, "KAN/TAM", (2, 2, 1)),    # TAM 2/2/0 + KAN 0/0/1 (PFA 1992nflkc: 52 yards)
+            ("Carlos Huerta", 1996, "CHI/STL", (3, 1, 0)),   # STL no FG + CHI 3/1/0
+            ("Lin Elliott", 1993, "DAL", (1, 1, 0)),         # no josephvm row; kendallgillies DAL
+            ("Tony Zendejas", 1995, "ATL/SFO", (1, 2, 0)),   # SFO 1/0/0 + ATL 0/2/0
+            ("Charlie Baumann", 1991, "MIA/NWE", (4, 5, 0)),  # NWE 3/4/0 + MIA 1/1/0
+            ("Raul Allegre", 1991, "NYG/NYJ", (4, 1, 0)),    # NYJ 2/1/0 + NYG 2/0/0
+            ("Brad Daluiso", 1991, "ATL/BUF", (2, 0, 0)),    # ATL 2/0/0, BUF no FG
+            ("Scott Bentley", 1997, "ATL/DEN", (2, 0, 0))]:  # DEN 2/0/0 (nfl.com, PFA), ATL no FG
+        stat_check(name, season, f"{teams} buckets {'/'.join(map(str, b))}, none unknown", team=teams,
+                   fg_made_0_39=b[0], fg_made_40_49=b[1], fg_made_50_plus=b[2], fg_made_unknown=0)
+    print("  -- 1920-1921 (PFA team pages; statscrew 1921) --")
+    stat_check("Elmer Oliphant", 1921, "BUF 5 FG 26 XP (statscrew; PFA 5/15, 26/26), attempts not kept", team="BUF",
+               fg_made=5, xp_made=26, fg_att=None, xp_att=None, games=10)
+    stat_check("Dutch Sternaman", 1921, "Staleys 5 FG 9 XP (statscrew, PFA)", team="CHI", fg_made=5, xp_made=9)
+    stat_check("Paddy Driscoll", 1921, "Cardinals 1 FG 4 XP (statscrew, PFA)", team="CRD", fg_made=1, xp_made=4)
+    stat_check("Charlie Copley", 1921, "Akron 10 XP (statscrew, PFA)", team="AKR", fg_made=0, xp_made=10)
+    stat_check("Benny Boynton", 1921, "RCH 8 XP 1 FG + WSN 3 XP, 3+2 g", team="RCH/WSN", fg_made=1, xp_made=11,
+               games=5)
+    stat_check("Ralph Horween", 1921, "the Cardinals' other FG (statscrew, PFR box score; PFA: Arnie)", fg_made=1)
+    check("Arnie Horween has no 1921 row", line("Arnie Horween", 1921) is None)
+    stat_check("Dutch Sternaman", 1920, "Decatur 3 FG 1 XP (PFA, APFA games)", team="DEC", fg_made=3, xp_made=1,
+               fg_att=None)
+    stat_check("Paddy Driscoll", 1920, "Cardinals 4 XP, plus 1 g for Decatur (PFA)", team="CRD/DEC", fg_made=0,
+               xp_made=4, games=7)
+    stat_check("Hugh Blacklock", 1920, "Decatur 6 XP (PFA)", team="DEC", xp_made=6, fg_made=0)
+    stern = df[df["name"] == "Dutch Sternaman"]
+    check("Dutch Sternaman (PFA: Ed) is one player_id, 1920-1926", stern["player_id"].nunique() == 1
+          and stern["season"].min() == 1920, str(sorted(set(stern["player_id"]))))
+    print("  -- 1922-1945 multi-team rows (PFA rosters and per-team kicking) --")
+    for name, season, teams in [
+            ("Pete Henry", 1927, "NYG/POT"), ("Joey Sternaman", 1923, "CHI/DUL"),
+            ("Jim Kendrick", 1925, "BUF/HAM/RCH/RII"),
+            ("Tillie Voss", 1922, "AKR/RII"), ("Hap Moran", 1927, "CRD/FRN"), ("Bo Molenda", 1928, "GNB/NYY"),
+            ("Benny Boynton", 1924, "BUF/RCH"), ("Jimmy Conzelman", 1922, "MIL/RII"),
+            ("Bill Shepherd", 1935, "BOS/DET"), ("Algy Clark", 1934, "CIN/PHI"), ("Bo Molenda", 1932, "GNB/NYG"),
+            ("Frosty Peters", 1930, "PRT/PRV"), ("Art Pharmer", 1930, "FRN/MIN"), ("Ed Halicki", 1930, "FRN/MIN"),
+            ("Deck Shelley", 1931, "PRT/PRV")]:
+        stat_check(name, season, teams, team=teams)
+    stat_check("Joey Sternaman", 1923, "Bears 1 FG 2 XP + Duluth 5 FG 2 XP (PFA) = PFR", fg_made=6, xp_made=4)
+    stat_check("Jim Kendrick", 1925, "team names", team_name="Buffalo Bisons / Hammond Pros / Rochester Jeffersons"
+               " / Rock Island Independents")
 
     print("\nSelf-checks (structure):")
     check("columns in canonical order", list(df.columns) == COLUMNS)
@@ -1267,17 +1651,23 @@ def run_checks(df):
     check("fg_made_unknown >= 0", (df["fg_made_unknown"] >= 0).all())
     check("no distance buckets before 1991", (df.loc[df["season"] < BUCKETS_FROM,
                                                      ["fg_made_0_39", "fg_made_40_49", "fg_made_50_plus"]] == 0).all().all())
-    check("1991+ distance mostly known", (df.loc[df["season"] >= BUCKETS_FROM, "fg_made_unknown"] == 0).mean() > 0.95)
+    late_unknown = df[(df["season"] >= BUCKETS_FROM) & (df["fg_made_unknown"] != 0)]
+    check("1991+: every made FG has a distance (fg_made_unknown 0 on every row)", late_unknown.empty,
+          ", ".join(f"{n} {s}" for n, s in zip(late_unknown["name"], late_unknown["season"])))
+    check("every MANUAL_BUCKETS entry used", not STATE["manual_buckets_unused"], str(STATE["manual_buckets_unused"]))
     known = df["fg_att"].notna()
     check("fg_made <= fg_att", (df.loc[known, "fg_made"] <= df.loc[known, "fg_att"]).all())
     known = df["xp_att"].notna() & df["xp_made"].notna()
     check("xp_made <= xp_att", (df.loc[known, "xp_made"] <= df.loc[known, "xp_att"]).all())
-    check("attempts empty exactly for 1922-1937",
+    check("attempts empty exactly for 1920-1937",
           df.loc[df["season"] < ATTEMPTS_FROM, ["fg_att", "xp_att"]].isna().all().all()
           and df.loc[df["season"] >= ATTEMPTS_FROM, ["fg_att", "xp_att"]].notna().all().all())
     check("fg_made and xp_made known for every row", df[["fg_made", "xp_made"]].notna().all().all())
-    late_ntm = df[(df["season"] > 1945) & df["team"].str.contains("TM")]
-    check("no 2TM/3TM team after 1945", late_ntm.empty, ", ".join(late_ntm["name"]))
+    ntm = df[df["team"].str.contains("TM") | df["team_name"].str.contains(r"\d teams")]
+    check("no 2TM/3TM/4TM placeholder team in any season", ntm.empty,
+          ", ".join(f"{n} {s}" for n, s in zip(ntm["name"], ntm["season"])))
+    check("every PFR multi-team row split into as many teams as PFR counts", not STATE["ntm_unresolved"],
+          "; ".join(STATE["ntm_unresolved"]))
     check("every MANUAL_TEAMS entry used", not STATE["manual_teams_unused"], str(STATE["manual_teams_unused"]))
     pos, confirmed = STATE["pfr_pos"], STATE["confirmed_kicks"]
     suspect = df[(df["season"] >= 1960) & (df["fg_att"] == 0) & (df["xp_att"] <= 2)]
@@ -1305,12 +1695,15 @@ def run_checks(df):
     late = rem[[s >= ATTEMPTS_FROM for _, s in rem.index]]
     check("1938-1998: no team-season has more kicking points than PF - 6*TD", (late >= 0).all() and len(late) > 900,
           f"{len(late)} team-seasons; negative: {list(late[late < 0].index)}")
-    early = rem[[s < ATTEMPTS_FROM for _, s in rem.index]]
+    early = rem[[1922 <= s < ATTEMPTS_FROM for _, s in rem.index]]
     print(f"  (info) 1922-1937: {(early < 0).sum()} of {len(early)} team-seasons negative: "
           f"{[(t, s, int(v)) for (t, s), v in early[early < 0].items()]}")
+    check("every team in the 1920-1998 standings maps to a TEAMS code", not STATE["standings_unmapped"],
+          ", ".join(STATE["standings_unmapped"]))
+    check_early(check, points)
+    compare_offense_teams(df)
     check("games known for every row", df["games"].notna().all(), str(df[df["games"].isna()][["name", "season"]].values[:5]))
     check("every row has a team_name", df["team_name"].notna().all() and (df["team_name"] != "").all())
-    check("1920-1921 have no rows (no source)", df[df["season"] <= 1921].empty)
     check("pfr_id only for kickers with 1990s seasons",
           df.loc[df["pfr_id"].notna(), "season"].groupby(df["player_id"]).max().min() >= 1990)
     check("Morten Andersen and Gary Anderson carry pfr_id",
@@ -1319,10 +1712,77 @@ def run_checks(df):
     check("two different Wayne Walkers in 1968 (DET, HOU)", sorted(ww["team"]) == ["DET", "HOU"]
           and ww["player_id"].nunique() == 2)
     per_season = df.groupby("season").size()
-    check("at least 15 kickers every season 1922-1998",
-          per_season.reindex(range(1922, LAST_SEASON + 1), fill_value=0).min() >= 15,
+    check(f"at least 15 kickers every season {FIRST_SEASON}-{LAST_SEASON}",
+          per_season.reindex(range(FIRST_SEASON, LAST_SEASON + 1), fill_value=0).min() >= 15,
           f"min {per_season.min()} in {per_season.idxmin()}")
     return all(results)
+
+
+def check_early(check, points):
+    """Self-checks of the 1920-21 PFA table (EARLY_KICKING) against its own Totals rows, NFL.com's
+    standings (octonion, `points`) and statscrew's 1921 pages."""
+    print("\nSelf-checks (1920-21 PFA table):")
+    made_bad, att_bad, left = [], set(), {}
+    for (season, team), (rows, (pts, td, xpm, xpa, fgm, fga)) in EARLY_KICKING.items():
+        if (sum(r[1] for r in rows), sum(r[3] for r in rows)) != (xpm, fgm):
+            made_bad.append((season, team))
+        for i, col, total in ((2, "xp_att", xpa), (4, "fg_att", fga)):
+            vals = [r[i] for r in rows]
+            if total is not None and None not in vals and sum(vals) != total:
+                att_bad.add((season, team, col))
+        left[(season, team)] = pts - 6 * td - xpm - 3 * fgm
+    check("PFA transcription: kicker rows' PATs and FGs add up to each page's Totals row", not made_bad,
+          str(made_bad))
+    check("PFA attempts add up to the Totals wherever every row has them (except 1921 AKR FGA: PFA rows 7, "
+          "Totals 6)", att_bad == {(1921, "AKR", "fg_att")}, str(sorted(att_bad)))
+    check("PFA 1920-21: points - 6*TD - PAT - 3*FG is 0, 2 or 4 on every page (safeties only)",
+          all(v in (0, 2, 4) for v in left.values()), str({k: v for k, v in left.items() if v not in (0, 2, 4)}))
+    teams = {s: sorted(t for t, y in points if y == s) for s in (1920, 1921)}
+    mine = {s: sorted(t for y, t in EARLY_KICKING if y == s) for s in (1920, 1921)}
+    check("PFA: every team in NFL.com's 1920 (14) and 1921 (21) standings transcribed, no other",
+          mine == teams and len(mine[1920]) == 14 and len(mine[1921]) == 21, str(mine))
+    off = [(t, s) for (s, t), (_, (pts, td, *_r)) in EARLY_KICKING.items()
+           if s == 1921 and points.get((t, s)) != (pts, td)]
+    check("1921: every PFA page's points and TDs equal NFL.com's standings (every official game covered)",
+          not off, str(off))
+    pfa20 = sum(tot[0] for (s, _), (_, tot) in EARLY_KICKING.items() if s == 1920)
+    nfl20 = sum(pf for (t, s), (pf, _) in points.items() if s == 1920)
+    print(f"  (info) 1920: PFA (APFA-vs-APFA games) has {pfa20} of the {nfl20} points NFL.com's standings count")
+    mine21 = {}
+    for (season, team), (rows, _tot) in EARLY_KICKING.items():
+        for name, xpm, _xpa, fgm, _fga, _g in rows:
+            if season == 1921 and (xpm or fgm):
+                mine21[(name, team)] = (xpm, fgm)
+    theirs = {(name, team): (xpm, fgm) for team, rows in STATSCREW_1921.items() for name, xpm, fgm in rows}
+    diff = {k for k in set(mine21) | set(theirs) if mine21.get(k) != theirs.get(k)}
+    check("1921 PFA table vs statscrew: every difference explained (STATSCREW_1921_DIFFERENCES)",
+          diff == set(STATSCREW_1921_DIFFERENCES), str(sorted(diff ^ set(STATSCREW_1921_DIFFERENCES))))
+    for k in sorted(diff):
+        print(f"  (info) vs statscrew {k[0]} {k[1]}: {mine21.get(k)} vs {theirs.get(k)} -- "
+              f"{STATSCREW_1921_DIFFERENCES.get(k, 'UNEXPLAINED')}")
+
+
+def compare_offense_teams(df):
+    """Review aid: multi-team kicker seasons before 1970 against the same player-season's teams in
+    sources/legacy_offense_seasons.csv (another script's output; info only)."""
+    try:
+        off = pd.read_csv(ROOT / "sources" / "legacy_offense_seasons.csv", usecols=["name", "season", "team"])
+    except Exception as e:  # noqa: BLE001 (missing or mid-rewrite)
+        print(f"  (info) offense table not compared: {e}")
+        return
+    off = {(name_key(n), s): set(str(t).split("/")) for n, s, t in zip(off["name"], off["season"], off["team"])}
+    multi = df[df["team"].str.contains("/") & (df["season"] < 1970)]
+    agree, differ = 0, []
+    for n, s, t in zip(multi["name"], multi["season"], multi["team"]):
+        theirs = off.get((name_key(n), s))
+        if theirs is None:
+            continue
+        if theirs == set(t.split("/")):
+            agree += 1
+        else:
+            differ.append(f"{n} {s} {t} vs {'/'.join(sorted(theirs))}")
+    print(f"  (info) multi-team kicker seasons before 1970 vs the offense table: {agree} agree, "
+          f"{len(differ)} differ: {differ}")
 
 
 def main():
